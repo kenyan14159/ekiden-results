@@ -131,7 +131,7 @@ export default async function HakoneYearPage({
       '@type': 'Organization',
       name: '関東学生陸上競技連盟',
     },
-    ...(data.teams[0] && {
+    ...(data.teams?.[0] && {
       winner: {
         '@type': 'Person',
         name: data.teams[0].name,

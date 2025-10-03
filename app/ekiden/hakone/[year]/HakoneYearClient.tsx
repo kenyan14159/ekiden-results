@@ -23,8 +23,8 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
     const section = i + 1
     const runners: RunnerWithTeam[] = []
     
-    data.teams.forEach(team => {
-      const runner = team.runners.find(r => r.section === section)
+    data.teams?.forEach(team => {
+      const runner = team.runners?.find(r => r.section === section)
       if (runner && team.rank !== 'OP') {
         runners.push({
           ...runner,
@@ -46,8 +46,8 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
   })
 
   // 選手検索（曖昧検索対応）
-  const filteredRunners = data.teams.flatMap(team =>
-    team.runners.map(runner => ({
+  const filteredRunners = (data.teams || []).flatMap(team =>
+    (team.runners || []).map(runner => ({
       ...runner,
       teamName: team.name,
       teamRank: team.rank,
@@ -92,7 +92,7 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
       <div className="container mx-auto px-4 lg:px-8 py-8">
         <TabPanel id="team" activeTab={activeTab}>
           <div className="space-y-8">
-            {data.teams.map((team) => {
+            {(data.teams || []).map((team) => {
               const isOP = team.rank === 'OP'
               return (
                 <div key={team.name} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -123,7 +123,7 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
                         </tr>
                       </thead>
                       <tbody className="text-gray-700 text-sm font-light">
-                        {team.runners.map((runner) => (
+                        {(team.runners || []).map((runner) => (
                           <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
                             <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
                             <td className="py-3 px-4 whitespace-nowrap">

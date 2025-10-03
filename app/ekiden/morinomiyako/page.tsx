@@ -104,7 +104,7 @@ export default function MorinomiyakoEkidenPage() {
                             <div className="flex items-center justify-center w-8 h-8 rounded text-white font-bold text-sm flex-shrink-0" style={{ backgroundColor: color }}>{rank}</div>
                             <div className="flex-1 min-w-0">
                               <p className="font-medium text-gray-900 text-sm truncate">{team}</p>
-                              {hasTime && <p className="text-xs text-gray-500">{result.times[teamIndex]}</p>}
+                              {hasTime && <p className="text-xs text-gray-500">{result.times?.[teamIndex]}</p>}
                             </div>
                           </div>
                         )

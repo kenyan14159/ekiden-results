@@ -140,8 +140,8 @@ export default function ZenjitsuYearDetailPage({ params }: { params: { year: str
   // 統計データ
   const fastestRunners = sectionData.map(({ section, runners }) => {
     const fastest = runners.find(r => r.rank === 1)
-    return fastest ? { section, ...fastest } : null
-  }).filter(Boolean)
+    return fastest ? { ...fastest, section } : null
+  }).filter((item): item is NonNullable<typeof item> => item !== null)
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">

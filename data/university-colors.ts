@@ -37,7 +37,6 @@ export const universityColors: Record<string, string> = {
   '福岡大学': '#8B0000',             // ダークレッド系（仮）
   '京都産業大学': '#4B0082',         // 紫系（仮）
   '中京大学': '#FF8C00',             // オレンジ系（仮）
-  '国士舘大学': '#1A1A1A',           // 黒系（仮）
   '東京国際大学': '#228B22',         // グリーン系（仮）
   '第一工業大学': '#4169E1',         // ブルー系（仮）
   '名城大学': '#DC143C',             // 赤系（仮）
@@ -61,7 +60,6 @@ export const universityColors: Record<string, string> = {
   '日本女子体育大学': '#FF1493',     // ピンク系（仮）
   'ｻﾝﾃﾞｨｴｲｺﾞ州立大学': '#4169E1',    // ブルー系（仮）
   '東京農業大学短期大学': '#228B22', // グリーン系（仮）
-  '創価大学': '#ef5350',             // 赤 (三色カラーの一部)
 }
 
 export function getUniversityColor(universityName: string): string {
