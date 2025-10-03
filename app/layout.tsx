@@ -3,6 +3,8 @@ import { Noto_Sans_JP, Inter } from "next/font/google"
 import "./globals.css"
 import { StructuredData } from "@/components/StructuredData"
 import { GoogleAnalytics } from "@/components/GoogleAnalytics"
+import { GoogleAdSense } from "@/components/GoogleAdSense"
+import { ContentProtection } from "@/components/ContentProtection"
 
 const notoSansJP = Noto_Sans_JP({ 
   subsets: ["latin"],
@@ -24,6 +26,10 @@ export const metadata: Metadata = {
   authors: [{ name: "駅伝リザルト" }],
   creator: "駅伝リザルト",
   publisher: "駅伝リザルト",
+  icons: {
+    icon: '/ekiden-logo.png',
+    apple: '/ekiden-logo.png',
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -70,18 +76,11 @@ export default function RootLayout({
     <html lang="ja" className={`${notoSansJP.variable} ${inter.variable}`}>
       <head>
         <StructuredData />
-        <script 
-          async 
-          custom-element="amp-auto-ads"
-          src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"
-        />
       </head>
       <body className="font-noto antialiased">
+        <ContentProtection />
         <GoogleAnalytics />
-        <amp-auto-ads 
-          type="adsense"
-          data-ad-client="ca-pub-7505086484817015"
-        />
+        <GoogleAdSense />
         {children}
       </body>
     </html>

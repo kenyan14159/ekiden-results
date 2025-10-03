@@ -43,7 +43,7 @@ export default function NewyearEkidenPage() {
               </svg>
               トップページに戻る
             </Link>
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -63,10 +63,20 @@ export default function NewyearEkidenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm text-gray-500"
+              className="text-sm text-gray-500 mb-4"
             >
               毎年1月1日開催 | 7区間 100.0km（群馬県）
             </motion.p>
+            
+            <Link 
+              href="/ekiden/newyear/about" 
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              ニューイヤー駅伝 区間特徴を見る
+            </Link>
           </div>
         </div>
 

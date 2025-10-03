@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { getEkidenByCategory } from "@/lib/ekiden-data"
 import { motion } from "framer-motion"
 
@@ -104,24 +105,13 @@ export function Footer() {
               transition={{ duration: 0.5 }}
               className="flex items-center space-x-4"
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-md opacity-50"></div>
-                <div className="relative bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-2xl">
-                  <svg
-                    className="w-7 h-7 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <Image
+                src="/ekiden-logo.png"
+                alt="駅伝リザルト"
+                width={50}
+                height={50}
+                className="rounded-lg"
+              />
               <div>
                 <p className="font-bold text-xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
                   駅伝リザルト

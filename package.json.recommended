@@ -1,0 +1,88 @@
+{
+  "name": "ekiden-results",
+  "version": "1.0.0",
+  "private": true,
+  "description": "日本全国の駅伝大会の結果を美しく表示するウェブサイト",
+  "author": "駅伝リザルト",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "analyze": "ANALYZE=true next build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "framer-motion": "^11.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0",
+    "lucide-react": "^0.344.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.0",
+    
+    "# 以下は推奨追加パッケージ（コメントアウト）": "",
+    
+    "# テスト関連": "",
+    "# vitest": "^1.0.0",
+    "# @testing-library/react": "^14.0.0",
+    "# @testing-library/jest-dom": "^6.1.0",
+    "# @testing-library/user-event": "^14.5.0",
+    "# @vitejs/plugin-react": "^4.2.0",
+    "# @playwright/test": "^1.40.0",
+    
+    "# コード品質": "",
+    "# prettier": "^3.1.0",
+    "# prettier-plugin-tailwindcss": "^0.5.9",
+    "# husky": "^8.0.0",
+    "# lint-staged": "^15.2.0",
+    
+    "# バンドル分析": "",
+    "# @next/bundle-analyzer": "^14.2.0",
+    
+    "# PWA対応": "",
+    "# next-pwa": "^5.6.0",
+    
+    "# 型チェック強化": "",
+    "# @typescript-eslint/eslint-plugin": "^6.0.0",
+    "# @typescript-eslint/parser": "^6.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  }
+}
+

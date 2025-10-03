@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { HakoneYearClient } from "./HakoneYearClient"
+import { NewYearYearClient } from "./NewYearYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -14,55 +14,53 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const year = params.year
   
-  // データを取得して優勝校を特定
+  // データを取得して優勝チームを特定
   let winner = ''
-  let count = getHakoneCount(parseInt(year))
+  let count = parseInt(year) - 1950 // 1951年が第1回
   
   try {
-    const data = await fetchHakoneData(year)
+    const data = await fetchNewYearData(year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `箱根駅伝 ${year}年 第${count}回大会 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `箱根駅伝 ${year}年（第${count}回大会）の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。往路・復路のタイム、区間賞、区間新記録も完全収録。`
+  const title = `ニューイヤー駅伝 ${year}年 第${count}回大会 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
+  const description = `全日本実業団対抗駅伝競走大会（ニューイヤー駅伝） ${year}年（第${count}回大会）の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
 
   return {
     title,
     description,
     keywords: [
-      '箱根駅伝',
-      `箱根駅伝${year}`,
-      `第${count}回箱根駅伝`,
+      'ニューイヤー駅伝',
+      `ニューイヤー駅伝${year}`,
+      `第${count}回ニューイヤー駅伝`,
       winner,
-      '箱根駅伝結果',
-      '箱根駅伝成績',
-      '区間記録',
-      '往路',
-      '復路',
-      '大学駅伝',
-      '東京箱根間往復大学駅伝競走'
+      '全日本実業団対抗駅伝',
+      '実業団駅伝',
+      '駅伝結果',
+      '駅伝成績',
+      '群馬',
     ].filter(Boolean),
     openGraph: {
       title,
       description,
       type: 'article',
-      publishedTime: `${year}-01-02T08:00:00+09:00`,
+      publishedTime: `${year}-01-01T09:00:00+09:00`,
       modifiedTime: new Date().toISOString(),
       authors: ['駅伝リザルト'],
-      section: '大学駅伝',
-      tags: ['箱根駅伝', `${year}年`, '大学駅伝', winner].filter(Boolean),
-      url: `https://ekiden-results.com/ekiden/hakone/${year}`,
+      section: '実業団駅伝',
+      tags: ['ニューイヤー駅伝', `${year}年`, '実業団駅伝', winner].filter(Boolean),
+      url: `https://ekiden-results.com/ekiden/newyear/${year}`,
       siteName: '駅伝リザルト',
       locale: 'ja_JP',
       images: [
         {
-          url: `https://ekiden-results.com/og-images/hakone-${year}.png`,
+          url: `https://ekiden-results.com/og-images/newyear-${year}.png`,
           width: 1200,
           height: 630,
-          alt: `箱根駅伝 ${year}年 結果`,
+          alt: `ニューイヤー駅伝 ${year}年 結果`,
         }
       ],
     },
@@ -71,10 +69,10 @@ export async function generateMetadata({
       site: '@ekiden_results',
       title,
       description,
-      images: [`https://ekiden-results.com/og-images/hakone-${year}.png`],
+      images: [`https://ekiden-results.com/og-images/newyear-${year}.png`],
     },
     alternates: {
-      canonical: `https://ekiden-results.com/ekiden/hakone/${year}`,
+      canonical: `https://ekiden-results.com/ekiden/newyear/${year}`,
     },
     robots: {
       index: true,
@@ -91,7 +89,7 @@ export async function generateMetadata({
 }
 
 // Server Component: データフェッチはサーバーサイドで
-export default async function HakoneYearPage({ 
+export default async function NewYearYearPage({ 
   params 
 }: { 
   params: { year: string } 
@@ -101,7 +99,7 @@ export default async function HakoneYearPage({
   let data: EkidenData | null = null
   
   try {
-    data = await fetchHakoneData(params.year)
+    data = await fetchNewYearData(params.year)
   } catch (error) {
     console.error('データ読み込みエラー:', error)
   }
@@ -111,29 +109,30 @@ export default async function HakoneYearPage({
   }
 
   // 構造化データ (JSON-LD)
+  const count = year - 1950
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
-    name: `${data.eventName} ${year}年 第${data.count || getHakoneCount(year)}回大会`,
-    description: `箱根駅伝 ${year}年大会の詳細結果`,
-    startDate: `${year}-01-02T08:00:00+09:00`,
-    endDate: `${year}-01-03T14:00:00+09:00`,
+    name: `${data.eventName} ${year}年 第${count}回大会`,
+    description: `ニューイヤー駅伝 ${year}年大会の詳細結果`,
+    startDate: `${year}-01-01T09:00:00+09:00`,
+    endDate: `${year}-01-01T12:30:00+09:00`,
     location: {
       '@type': 'Place',
-      name: '東京・箱根間',
+      name: '群馬県',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'JP',
-        addressRegion: '東京都・神奈川県',
+        addressRegion: '群馬県',
       },
     },
     organizer: {
       '@type': 'Organization',
-      name: '関東学生陸上競技連盟',
+      name: '日本実業団陸上競技連合',
     },
     ...(data.teams[0] && {
       winner: {
-        '@type': 'Person',
+        '@type': 'SportsTeam',
         name: data.teams[0].name,
       },
     }),
@@ -142,9 +141,9 @@ export default async function HakoneYearPage({
   // パンくずリスト
   const breadcrumbItems = [
     { name: 'ホーム', url: '/' },
-    { name: '大学駅伝', url: '/#university' },
-    { name: '箱根駅伝', url: '/ekiden/hakone' },
-    { name: `${year}年`, url: `/ekiden/hakone/${year}` },
+    { name: '実業団駅伝', url: '/#corporate' },
+    { name: 'ニューイヤー駅伝', url: '/ekiden/newyear' },
+    { name: `${year}年`, url: `/ekiden/newyear/${year}` },
   ]
 
   return (
@@ -156,7 +155,7 @@ export default async function HakoneYearPage({
       />
       <Header />
       <main className="flex-grow pt-20">
-        <HakoneYearClient data={data} year={year} />
+        <NewYearYearClient data={data} year={year} />
       </main>
       <Footer />
     </div>
@@ -164,52 +163,33 @@ export default async function HakoneYearPage({
 }
 
 // データフェッチ関数（サーバーサイド）
-async function fetchHakoneData(year: string): Promise<EkidenData | null> {
+async function fetchNewYearData(year: string): Promise<EkidenData | null> {
   try {
-    // Server Componentでは直接ファイルを読み込むことも可能
     const fs = await import('fs/promises')
     const path = await import('path')
     
-    const filePath = path.join(process.cwd(), 'public', 'data', 'university', 'hakone', `${year}.json`)
+    const filePath = path.join(process.cwd(), 'public', 'data', 'corporate', 'newyear', `${year}.json`)
     const fileContent = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(fileContent)
     
     return data
   } catch (error) {
-    console.error(`箱根駅伝 ${year}年のデータ読み込みエラー:`, error)
+    console.error(`ニューイヤー駅伝 ${year}年のデータ読み込みエラー:`, error)
     return null
   }
 }
 
-// 箱根駅伝の回数計算
-function getHakoneCount(year: number): number {
-  const canceledYears = [1944, 1945, 1946]
-  let count = year - 1920 + 1
-  
-  for (const canceledYear of canceledYears) {
-    if (year > canceledYear) {
-      count--
-    }
-  }
-  
-  return count
-}
-
 // 静的パスの生成（ビルド時に全ページを生成）
 export async function generateStaticParams() {
-  // 1920年から現在までの箱根駅伝
   const currentYear = new Date().getFullYear()
   const years: string[] = []
   
-  for (let year = 1920; year <= currentYear; year++) {
-    // 中止年を除く
-    if (![1944, 1945, 1946].includes(year)) {
-      years.push(year.toString())
-    }
+  // 1951年から現在+1年まで
+  for (let year = 1951; year <= currentYear + 1; year++) {
+    years.push(year.toString())
   }
   
   return years.map((year) => ({
     year,
   }))
 }
-

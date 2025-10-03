@@ -1,0 +1,353 @@
+"use client"
+
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import Link from "next/link"
+import { getCorporateColor } from "@/data/corporate-colors"
+import { useState, useEffect } from "react"
+
+interface Runner {
+  section: number
+  dist: string
+  time: string
+  name: string
+  rank: number | string
+  isSectionRecord: boolean
+}
+
+interface Team {
+  rank: number | string
+  name: string
+  totalTime: string
+  runners: Runner[]
+}
+
+interface NewyearData {
+  eventName: string
+  year: number
+  teams: Team[]
+}
+
+type TabType = 'team' | 'section' | 'search' | 'stats'
+
+export default function NewyearYearDetailPage({ params }: { params: { year: string } }) {
+  const year = parseInt(params.year)
+  const [data, setData] = useState<NewyearData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState<TabType>('team')
+  const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const response = await fetch(`/data/corporate/newyear/${year}.json`)
+        if (response.ok) {
+          const jsonData = await response.json()
+          setData(jsonData)
+        }
+      } catch (error) {
+        console.error('データの読み込みに失敗しました:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadData()
+  }, [year])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        <main className="flex-grow pt-20 flex items-center justify-center">
+          <p className="text-gray-500">読み込み中...</p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
+  if (!data) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        <main className="flex-grow pt-20 flex items-center justify-center">
+          <div className="text-center">
+            <p className="text-gray-500 mb-4">データが見つかりません</p>
+            <Link href="/ekiden/newyear" className="text-blue-600 hover:underline">
+              ニューイヤー駅伝トップに戻る
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
+  const getMedalEmoji = (rank: number | string) => {
+    if (rank === 1) return '🥇'
+    if (rank === 2) return '🥈'
+    if (rank === 3) return '🥉'
+    return ''
+  }
+
+  // 区間別データを作成
+  const sectionData = Array.from({ length: 7 }, (_, i) => {
+    const section = i + 1
+    const runners: Array<Runner & { teamName: string; teamRank: number | string; color: string }> = []
+    
+    data.teams.forEach(team => {
+      const runner = team.runners.find(r => r.section === section)
+      if (runner) {
+        runners.push({
+          ...runner,
+          teamName: team.name,
+          teamRank: team.rank,
+          color: getCorporateColor(team.name),
+        })
+      }
+    })
+    
+    runners.sort((a, b) => {
+      if (typeof a.rank === 'number' && typeof b.rank === 'number') {
+        return a.rank - b.rank
+      }
+      return 0
+    })
+    
+    return { section, runners }
+  })
+
+  // 選手検索
+  const searchResults = data.teams.flatMap(team =>
+    team.runners
+      .filter(runner =>
+        runner.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+      .map(runner => ({
+        ...runner,
+        teamName: team.name,
+        teamRank: team.rank,
+        color: getCorporateColor(team.name),
+      }))
+  )
+
+  // 統計データ
+  const fastestRunners = sectionData.map(({ section, runners }) => {
+    const fastest = runners.find(r => r.rank === 1)
+    return fastest ? { section, ...fastest } : null
+  }).filter(Boolean)
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Header />
+      <main className="flex-grow pt-20">
+        {/* ヘッダー */}
+        <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 border-b">
+          <div className="container mx-auto px-4 lg:px-8 py-12">
+            <Link
+              href="/ekiden/newyear"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              ニューイヤー駅伝 歴代結果に戻る
+            </Link>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+              {data.eventName || `ニューイヤー駅伝 ${year}年大会`}
+            </h1>
+            <p className="text-lg text-gray-600">第{data.teams[0]?.rank !== 'OP' ? data.teams.length : data.teams.length - 1}回大会 詳細結果</p>
+          </div>
+        </div>
+
+        {/* タブナビゲーション */}
+        <div className="bg-white border-b sticky top-20 z-10">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="flex overflow-x-auto">
+              {[
+                { id: 'team', label: 'チーム別成績', icon: '🏆' },
+                { id: 'section', label: '区間別成績', icon: '📊' },
+                { id: 'search', label: '選手検索', icon: '🔍' },
+                { id: 'stats', label: '統計・記録', icon: '📈' },
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as TabType)}
+                  className={`px-6 py-4 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
+                    activeTab === tab.id
+                      ? 'border-blue-600 text-blue-600'
+                      : 'border-transparent text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <span className="mr-2">{tab.icon}</span>
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* タブコンテンツ */}
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          {/* チーム別成績 */}
+          {activeTab === 'team' && (
+            <div className="space-y-6">
+              {data.teams.map((team, index) => (
+                <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                  <div
+                    className="px-6 py-4 border-l-4"
+                    style={{ borderLeftColor: getCorporateColor(team.name) }}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {typeof team.rank === 'number' ? `${team.rank}位` : team.rank} {team.name}
+                      </h3>
+                      <span className="text-2xl font-bold text-gray-900">{team.totalTime}</span>
+                    </div>
+                  </div>
+
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">区間</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">距離</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">選手名</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">記録</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">区間順位</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        {team.runners.map((runner, rIndex) => (
+                          <tr key={rIndex} className={runner.isSectionRecord ? 'bg-yellow-50' : ''}>
+                            <td className="px-4 py-3 text-sm text-gray-900">{runner.section}区</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{runner.dist}</td>
+                            <td className="px-4 py-3 text-sm font-medium text-gray-900">{runner.name}</td>
+                            <td className="px-4 py-3 text-sm text-gray-900">
+                              {runner.time}
+                              {runner.isSectionRecord && <span className="ml-1 text-orange-600">★区間新</span>}
+                            </td>
+                            <td className="px-4 py-3 text-sm">
+                              <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${
+                                runner.rank === 1 ? 'bg-yellow-100 text-yellow-800' :
+                                runner.rank === 2 ? 'bg-gray-100 text-gray-800' :
+                                runner.rank === 3 ? 'bg-orange-100 text-orange-800' :
+                                'bg-gray-50 text-gray-600'
+                              }`}>
+                                {runner.rank}位{getMedalEmoji(runner.rank)}
+                              </span>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* 区間別成績 */}
+          {activeTab === 'section' && (
+            <div className="grid md:grid-cols-2 gap-6">
+              {sectionData.map(({ section, runners }) => (
+                <div key={section} className="bg-white rounded-lg border border-gray-200 p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">{section}区</h3>
+                  <div className="space-y-3">
+                    {runners.slice(0, 10).map((runner, index) => (
+                      <div key={index} className="flex items-center justify-between text-sm">
+                        <div className="flex items-center gap-3">
+                          <span className={`inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold ${
+                            runner.rank === 1 ? 'bg-yellow-100 text-yellow-800' :
+                            runner.rank === 2 ? 'bg-gray-200 text-gray-800' :
+                            runner.rank === 3 ? 'bg-orange-100 text-orange-800' :
+                            'bg-gray-100 text-gray-600'
+                          }`}>
+                            {runner.rank}
+                          </span>
+                          <div>
+                            <p className="font-medium text-gray-900">{runner.name}</p>
+                            <p className="text-xs" style={{ color: runner.color }}>{runner.teamName}</p>
+                          </div>
+                        </div>
+                        <span className="font-mono text-gray-900">{runner.time}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* 選手検索 */}
+          {activeTab === 'search' && (
+            <div>
+              <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+                <input
+                  type="text"
+                  placeholder="選手名で検索..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+
+              {searchQuery && (
+                <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">選手名</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">チーム</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">区間</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">記録</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500">順位</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-200">
+                        {searchResults.map((runner, index) => (
+                          <tr key={index}>
+                            <td className="px-4 py-3 text-sm font-medium text-gray-900">{runner.name}</td>
+                            <td className="px-4 py-3 text-sm" style={{ color: runner.color }}>{runner.teamName}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{runner.section}区</td>
+                            <td className="px-4 py-3 text-sm font-mono text-gray-900">{runner.time}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600">{runner.rank}位</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* 統計・記録 */}
+          {activeTab === 'stats' && (
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">区間賞一覧</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {fastestRunners.map((runner, index) => (
+                    <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                      <div>
+                        <p className="text-sm text-gray-600">{runner.section}区</p>
+                        <p className="font-medium text-gray-900">{runner.name}</p>
+                        <p className="text-xs" style={{ color: runner.color }}>{runner.teamName}</p>
+                      </div>
+                      <p className="text-lg font-mono font-bold text-gray-900">{runner.time}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+

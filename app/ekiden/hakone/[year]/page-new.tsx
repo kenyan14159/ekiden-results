@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { HakoneYearClient } from "./HakoneYearClient"
-import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
@@ -139,17 +138,8 @@ export default async function HakoneYearPage({
     }),
   }
 
-  // パンくずリスト
-  const breadcrumbItems = [
-    { name: 'ホーム', url: '/' },
-    { name: '大学駅伝', url: '/#university' },
-    { name: '箱根駅伝', url: '/ekiden/hakone' },
-    { name: `${year}年`, url: `/ekiden/hakone/${year}` },
-  ]
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <BreadcrumbStructuredData items={breadcrumbItems} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

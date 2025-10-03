@@ -25,6 +25,9 @@ export default function ContactPage() {
               <br className="hidden md:block" />
               お気軽にお問い合わせください。
             </p>
+            <p className="text-sm text-gray-500 mt-2">
+              メール: <a href="mailto:contact@ekiden-results.com" className="text-blue-600 hover:underline">contact@ekiden-results.com</a>
+            </p>
           </div>
         </div>
 
@@ -33,7 +36,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-lg border border-gray-200 p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">お問い合わせフォーム</h2>
 
-              <form action="https://formspree.io/f/mvgrvzal" method="POST" className="space-y-6">
+              <form action="https://formspree.io/f/mwprebaa" method="POST" className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     お名前 <span className="text-red-500">*</span>
