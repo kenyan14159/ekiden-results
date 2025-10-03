@@ -1,0 +1,28 @@
+{
+    "config": {
+      "type": "university",
+      "term": { "singular": "大学", "plural": "大学" },
+      "sections": 8,
+      "hasHalfway": false,
+      "showGrade": true
+    },
+    "teamName": "福井工業大学",
+    "history": [
+        {
+            "kai": 24,
+            "year": 1992,
+            "rank": 23,
+            "totalTime": "5:55:08",
+            "runners": [
+                { "section": 1, "name": "永松 憲治", "grade": 3, "rank": 22, "time": "0:48:11" },
+                { "section": 2, "name": "福光 崇", "grade": 1, "rank": 24, "time": "0:43:42" },
+                { "section": 3, "name": "松原 直紀", "grade": 1, "rank": 24, "time": "0:32:40" },
+                { "section": 4, "name": "生嶋 宏光", "grade": 3, "rank": 23, "time": "0:47:05" },
+                { "section": 5, "name": "青能 剛", "grade": 1, "rank": 23, "time": "0:38:07" },
+                { "section": 6, "name": "山本 浩史", "grade": 1, "rank": 21, "time": "0:40:24" },
+                { "section": 7, "name": "竹中 泰知", "grade": 1, "rank": 22, "time": "0:39:42" },
+                { "section": 8, "name": "林 雅宏", "grade": 4, "rank": 19, "time": "1:05:17" }
+            ]
+        }
+    ]
+  }

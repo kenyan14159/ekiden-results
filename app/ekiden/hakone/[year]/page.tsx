@@ -1,0 +1,453 @@
+"use client"
+
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
+import Link from "next/link"
+import { getUniversityColor } from "@/data/university-colors"
+import { useState, useEffect } from "react"
+
+interface Runner {
+  section: number
+  dist: string
+  time: string
+  name: string
+  grade: number
+  rank: number | string
+  isSectionRecord: boolean
+}
+
+interface Team {
+  rank: number | string
+  name: string
+  totalTime: string
+  outboundTime?: string
+  inboundTime?: string
+  runners: Runner[]
+}
+
+interface HakoneData {
+  eventName: string
+  year: number
+  teams: Team[]
+}
+
+type TabType = 'team' | 'section' | 'search' | 'stats'
+
+export default function HakoneYearDetailPage({ params }: { params: { year: string } }) {
+  const year = parseInt(params.year)
+  const [data, setData] = useState<HakoneData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState<TabType>('team')
+  const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const response = await fetch(`/data/university/hakone/${year}.json`)
+        if (response.ok) {
+          const jsonData = await response.json()
+          setData(jsonData)
+        }
+      } catch (error) {
+        console.error('データの読み込みに失敗しました:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadData()
+  }, [year])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        <main className="flex-grow pt-20 flex items-center justify-center">
+          <p className="text-gray-500">読み込み中...</p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
+  if (!data) {
+    return (
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        <main className="flex-grow pt-20 flex items-center justify-center">
+          <p className="text-gray-500">データが見つかりません</p>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+
+  const getGradeDisplay = (grade: number) => {
+    const gradeMap: Record<number, string> = { 1: '①', 2: '②', 3: '③', 4: '④' }
+    return gradeMap[grade] || ''
+  }
+
+  // 区間別データを作成
+  const sectionData = Array.from({ length: 10 }, (_, i) => {
+    const section = i + 1
+    const runners: Array<Runner & { teamName: string; teamRank: number | string; color: string }> = []
+    
+    data.teams.forEach(team => {
+      const runner = team.runners.find(r => r.section === section)
+      if (runner && team.rank !== 'OP') {
+        runners.push({
+          ...runner,
+          teamName: team.name,
+          teamRank: team.rank,
+          color: getUniversityColor(team.name)
+        })
+      }
+    })
+    
+    // タイム順にソート
+    runners.sort((a, b) => {
+      const timeA = a.time.split(':').reduce((acc, val) => acc * 60 + parseInt(val), 0)
+      const timeB = b.time.split(':').reduce((acc, val) => acc * 60 + parseInt(val), 0)
+      return timeA - timeB
+    })
+    
+    return { section, dist: runners[0]?.dist || '', runners }
+  })
+
+  // 選手検索用
+  const allRunners = data.teams.flatMap(team => 
+    team.runners.map(runner => ({
+      ...runner,
+      teamName: team.name,
+      teamRank: team.rank,
+      color: getUniversityColor(team.name)
+    }))
+  ).filter(runner => runner.teamName !== '関東学生連合')
+
+  const filteredRunners = searchQuery
+    ? allRunners.filter(runner => 
+        runner.name.includes(searchQuery) || runner.teamName.includes(searchQuery)
+      )
+    : allRunners
+
+  // 統計データ
+  const sectionRecords = sectionData.map(sec => sec.runners[0]).filter(Boolean)
+  const totalRunners = data.teams.reduce((sum, team) => sum + team.runners.length, 0)
+  const newRecords = allRunners.filter(r => r.isSectionRecord)
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Header />
+      <main className="flex-grow pt-20">
+        {/* ヘッダー */}
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 lg:px-8 py-12">
+            <Link 
+              href="/ekiden/hakone" 
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              箱根駅伝一覧に戻る
+            </Link>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{data.eventName}</h1>
+            <p className="text-sm text-gray-600">{year}年 1月2日・3日開催 | 往復10区間 217.1km</p>
+          </div>
+        </div>
+
+        {/* タブナビゲーション */}
+        <div className="bg-white border-b sticky top-20 z-10">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="flex gap-1 overflow-x-auto">
+              <button
+                onClick={() => setActiveTab('team')}
+                className={`px-6 py-3 text-sm font-medium whitespace-nowrap border-b-2 ${
+                  activeTab === 'team'
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                チーム別成績
+              </button>
+              <button
+                onClick={() => setActiveTab('section')}
+                className={`px-6 py-3 text-sm font-medium whitespace-nowrap border-b-2 ${
+                  activeTab === 'section'
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                区間別成績
+              </button>
+              <button
+                onClick={() => setActiveTab('search')}
+                className={`px-6 py-3 text-sm font-medium whitespace-nowrap border-b-2 ${
+                  activeTab === 'search'
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                選手検索
+              </button>
+              <button
+                onClick={() => setActiveTab('stats')}
+                className={`px-6 py-3 text-sm font-medium whitespace-nowrap border-b-2 ${
+                  activeTab === 'stats'
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                統計・記録
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* コンテンツ */}
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          {/* チーム別成績 */}
+          {activeTab === 'team' && (
+            <div className="space-y-3">
+              {data.teams.map((team) => {
+                const color = getUniversityColor(team.name)
+                const isOP = team.rank === 'OP'
+                
+                return (
+                  <details key={team.name} className="bg-white border border-gray-200 rounded">
+                    <summary className="px-4 py-4 cursor-pointer list-none">
+                      <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+                        <div className="flex items-center gap-4 min-w-fit">
+                          <div 
+                            className="flex items-center justify-center w-12 h-12 rounded text-white font-bold text-lg flex-shrink-0"
+                            style={{ backgroundColor: color }}
+                          >
+                            {isOP ? 'OP' : team.rank}
+                          </div>
+                          <div className="flex-1">
+                            <p className="font-bold text-gray-900">{team.name}</p>
+                            <p className="text-sm text-gray-500">総合タイム: {team.totalTime}</p>
+                          </div>
+                        </div>
+                        {team.outboundTime && team.inboundTime && (
+                          <div className="flex gap-6 text-sm text-gray-600">
+                            <div>
+                              <span className="text-gray-500">往路:</span> {team.outboundTime}
+                            </div>
+                            <div>
+                              <span className="text-gray-500">復路:</span> {team.inboundTime}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </summary>
+                    <div className="border-t border-gray-200 p-4">
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-sm">
+                          <thead className="bg-gray-50">
+                            <tr>
+                              <th className="px-4 py-2 text-left">区間</th>
+                              <th className="px-4 py-2 text-left">選手</th>
+                              <th className="px-4 py-2 text-left">タイム</th>
+                              <th className="px-4 py-2 text-left">順位</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-100">
+                            {team.runners.map((runner) => (
+                              <tr key={runner.section}>
+                                <td className="px-4 py-2">{runner.section}区</td>
+                                <td className="px-4 py-2">
+                                  {runner.name} <span className="text-gray-500">{getGradeDisplay(runner.grade)}</span>
+                                </td>
+                                <td className="px-4 py-2">
+                                  {runner.time}
+                                  {runner.isSectionRecord && <span className="ml-2 text-red-600 text-xs">★区間新</span>}
+                                </td>
+                                <td className="px-4 py-2">
+                                  {isOP ? '-' : `${runner.rank}位`}
+                                  {runner.rank === 1 && <span className="ml-2">🥇</span>}
+                                  {runner.rank === 2 && <span className="ml-2">🥈</span>}
+                                  {runner.rank === 3 && <span className="ml-2">🥉</span>}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </details>
+                )
+              })}
+            </div>
+          )}
+
+          {/* 区間別成績 */}
+          {activeTab === 'section' && (
+            <div className="space-y-3">
+              {sectionData.map((sec) => (
+                <details key={sec.section} className="bg-white border border-gray-200 rounded">
+                  <summary className="px-4 py-4 cursor-pointer list-none">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-bold text-gray-900">{sec.section}区 ({sec.dist})</p>
+                        {sec.runners[0] && (
+                          <p className="text-sm text-gray-500">
+                            区間賞: {sec.runners[0].name} ({sec.runners[0].teamName}) {sec.runners[0].time}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </summary>
+                  <div className="border-t border-gray-200 p-4">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead className="bg-gray-50">
+                          <tr>
+                            <th className="px-4 py-2 text-left">順位</th>
+                            <th className="px-4 py-2 text-left">選手</th>
+                            <th className="px-4 py-2 text-left">大学</th>
+                            <th className="px-4 py-2 text-left">タイム</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                          {sec.runners.map((runner, index) => (
+                            <tr key={`${runner.teamName}-${runner.name}`}>
+                              <td className="px-4 py-2">
+                                {index + 1}位
+                                {index === 0 && <span className="ml-2">🥇</span>}
+                                {index === 1 && <span className="ml-2">🥈</span>}
+                                {index === 2 && <span className="ml-2">🥉</span>}
+                              </td>
+                              <td className="px-4 py-2">
+                                {runner.name} <span className="text-gray-500">{getGradeDisplay(runner.grade)}</span>
+                              </td>
+                              <td className="px-4 py-2">
+                                <div className="flex items-center gap-2">
+                                  <div 
+                                    className="w-3 h-3 rounded-full" 
+                                    style={{ backgroundColor: runner.color }}
+                                  ></div>
+                                  {runner.teamName}
+                                </div>
+                              </td>
+                              <td className="px-4 py-2">
+                                {runner.time}
+                                {runner.isSectionRecord && <span className="ml-2 text-red-600 text-xs">★区間新</span>}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </details>
+              ))}
+            </div>
+          )}
+
+          {/* 選手検索 */}
+          {activeTab === 'search' && (
+            <div>
+              <div className="bg-white border border-gray-200 rounded p-4 mb-4">
+                <input
+                  type="text"
+                  placeholder="選手名または大学名を入力..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
+                />
+                <p className="text-sm text-gray-500 mt-2">
+                  {searchQuery ? `${filteredRunners.length}件の検索結果` : '全選手を表示中'}
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                {filteredRunners.map((runner, index) => (
+                  <div key={`${runner.teamName}-${runner.section}-${index}`} className="bg-white border border-gray-200 rounded p-4">
+                    <div className="flex items-center gap-4">
+                      <div 
+                        className="flex items-center justify-center w-10 h-10 rounded text-white font-bold text-sm flex-shrink-0"
+                        style={{ backgroundColor: runner.color }}
+                      >
+                        {runner.section}
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-bold text-gray-900">
+                          {runner.name} <span className="text-gray-500 font-normal">{getGradeDisplay(runner.grade)}</span>
+                        </p>
+                        <p className="text-sm text-gray-600">{runner.teamName}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="font-bold text-gray-900">{runner.time}</p>
+                        <p className="text-sm text-gray-500">{runner.rank}位</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 統計・記録 */}
+          {activeTab === 'stats' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-white border border-gray-200 rounded p-6">
+                <h3 className="font-bold text-gray-900 mb-4">参加統計</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">参加大学数</span>
+                    <span className="font-bold">{data.teams.filter(t => t.rank !== 'OP').length}校</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">総選手数</span>
+                    <span className="font-bold">{totalRunners}名</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">区間新記録</span>
+                    <span className="font-bold text-red-600">{newRecords.length}個</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded p-6 md:col-span-2">
+                <h3 className="font-bold text-gray-900 mb-4">区間賞一覧</h3>
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-3 text-sm">
+                  {sectionRecords.map((runner) => (
+                    <div key={runner.section} className="text-center">
+                      <p className="text-gray-500 mb-1">{runner.section}区</p>
+                      <p className="font-bold text-gray-900">{runner.time}</p>
+                      <p className="text-xs text-gray-600">{runner.name}</p>
+                      <p className="text-xs text-gray-500">{runner.teamName}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {newRecords.length > 0 && (
+                <div className="bg-white border border-gray-200 rounded p-6 md:col-span-full">
+                  <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="text-red-600">★</span>
+                    区間新記録
+                  </h3>
+                  <div className="space-y-2 text-sm">
+                    {newRecords.map((runner, index) => (
+                      <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                        <div className="flex items-center gap-3">
+                          <span className="text-gray-500">{runner.section}区</span>
+                          <span className="font-bold">{runner.name}</span>
+                          <span className="text-gray-600">({runner.teamName})</span>
+                        </div>
+                        <span className="font-bold text-red-600">{runner.time}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}

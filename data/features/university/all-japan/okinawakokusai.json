@@ -1,0 +1,43 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "沖縄国際大学",
+  "history": [
+      {
+          "kai": 21,
+          "year": 1989,
+          "rank": 19,
+          "totalTime": "6:03:49",
+          "runners": [
+              { "section": 1, "name": "當山 俊典", "grade": 1, "rank": 22, "time": "0:48:41" },
+              { "section": 2, "name": "本地 忍", "grade": 1, "rank": 22, "time": "0:45:58" },
+              { "section": 3, "name": "座間味 弘樹", "grade": 4, "rank": 20, "time": "0:31:29" },
+              { "section": 4, "name": "平敷 直樹", "grade": 3, "rank": 17, "time": "0:46:35" },
+              { "section": 5, "name": "大城 和幸", "grade": 1, "rank": 19, "time": "0:41:22" },
+              { "section": 6, "name": "大城 護", "grade": 2, "rank": 19, "time": "0:40:49" },
+              { "section": 7, "name": "太田 勝", "grade": 2, "rank": 22, "time": "0:42:23" },
+              { "section": 8, "name": "太田 守和", "grade": 1, "rank": 17, "time": "1:06:32" }
+          ]
+      },
+      {
+          "kai": 19,
+          "year": 1988,
+          "rank": 13,
+          "totalTime": "5:46:11",
+          "runners": [
+              { "section": 1, "name": "浜川 武晴", "grade": 4, "rank": 6, "time": "0:44:56" },
+              { "section": 2, "name": "上間 喜仁", "grade": 4, "rank": 18, "time": "0:44:04" },
+              { "section": 3, "name": "宮里 晃", "grade": 4, "rank": 10, "time": "1:15:00" },
+              { "section": 4, "name": "長浜 正典", "grade": 4, "rank": 16, "time": "0:35:39" },
+              { "section": 5, "name": "本村 三男", "grade": 2, "rank": 15, "time": "0:43:42" },
+              { "section": 6, "name": "座間味弘樹", "grade": 2, "rank": 12, "time": "0:38:46" },
+              { "section": 7, "name": "金良 勝夫", "grade": 3, "rank": 13, "time": "1:04:04" }
+          ]
+      }
+  ]
+}

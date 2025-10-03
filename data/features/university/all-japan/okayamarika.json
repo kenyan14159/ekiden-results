@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "岡山理科大学",
+  "history": [
+      {
+          "kai": 23,
+          "year": 1991,
+          "rank": 20,
+          "totalTime": "5:51:04",
+          "runners": [
+              { "section": 1, "name": "柏谷 武美", "grade": 3, "rank": 19, "time": "0:47:10" },
+              { "section": 2, "name": "福居 利章", "grade": 1, "rank": 22, "time": "0:42:38" },
+              { "section": 3, "name": "小林 正直", "grade": 1, "rank": 19, "time": "0:30:08" },
+              { "section": 4, "name": "岡村 信之", "grade": 3, "rank": 18, "time": "0:45:13" },
+              { "section": 5, "name": "細川 貴雄", "grade": 3, "rank": 23, "time": "0:41:47" },
+              { "section": 6, "name": "沢田 岳彦", "grade": 2, "rank": 20, "time": "0:39:51" },
+              { "section": 7, "name": "林 喜一郎", "grade": 3, "rank": 14, "time": "0:39:09" },
+              { "section": 8, "name": "国増 和明", "grade": 2, "rank": 12, "time": "1:05:08" }
+          ]
+      }
+  ]
+}

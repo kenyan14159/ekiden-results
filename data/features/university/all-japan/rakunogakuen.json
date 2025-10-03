@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "酪農学園大学",
+  "history": [
+      {
+          "kai": 7,
+          "year": 1976,
+          "rank": 20,
+          "totalTime": "6:51:01",
+          "runners": [
+              { "section": 1, "name": "鈴木 哲", "grade": null, "rank": 20, "time": "0:54:37" },
+              { "section": 2, "name": "岩本 明", "grade": null, "rank": 20, "time": "0:43:13" },
+              { "section": 3, "name": "川又 信彦", "grade": null, "rank": 20, "time": "0:23:56" },
+              { "section": 4, "name": "田村 裕一", "grade": null, "rank": 20, "time": "1:26:35" },
+              { "section": 5, "name": "小林 健二", "grade": null, "rank": 19, "time": "0:52:08" },
+              { "section": 6, "name": "吉住 二郎", "grade": null, "rank": 20, "time": "0:32:26" },
+              { "section": 7, "name": "浅田 広志", "grade": null, "rank": 20, "time": "0:50:16" },
+              { "section": 8, "name": "星野 昌一", "grade": null, "rank": 16, "time": "1:07:50" }
+          ]
+      }
+  ]
+}

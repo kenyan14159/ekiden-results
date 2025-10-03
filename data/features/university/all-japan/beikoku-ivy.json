@@ -1,0 +1,60 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "米国アイビー",
+  "history": [
+    {
+      "kai": 24,
+      "year": 1992,
+      "rank": 12,
+      "totalTime": "5:33:07",
+      "runners": [
+        { "section": 1, "name": "レイ・バグズリー", "grade": null, "rank": 4, "time": "0:44:39" },
+        { "section": 2, "name": "ウィリアム・バーク", "grade": null, "rank": 9, "time": "0:39:58" },
+        { "section": 3, "name": "ジェムス・ギブソン", "grade": null, "rank": 15, "time": "0:29:46" },
+        { "section": 4, "name": "ダニエル・ゴフ", "grade": null, "rank": 8, "time": "0:42:34" },
+        { "section": 5, "name": "トッド・ウェルズ", "grade": null, "rank": 11, "time": "0:36:20" },
+        { "section": 6, "name": "テリー・M・スティルマン", "grade": null, "rank": 8, "time": "0:38:02" },
+        { "section": 7, "name": "ジェイソン・ミッシェル", "grade": null, "rank": 10, "time": "0:37:41" },
+        { "section": 8, "name": "グレイン・メイズ", "grade": null, "rank": 16, "time": "1:04:07" }
+      ]
+    },
+    {
+      "kai": 23,
+      "year": 1991,
+      "rank": 11,
+      "totalTime": "5:40:51",
+      "runners": [
+        { "section": 1, "name": "ウィリアム・バーク", "grade": null, "rank": 9, "time": "0:45:13" },
+        { "section": 2, "name": "ダン・ゴフ", "grade": null, "rank": 7, "time": "0:40:17" },
+        { "section": 3, "name": "ジム・ギブソン", "grade": null, "rank": 7, "time": "0:29:06" },
+        { "section": 4, "name": "リチャード・ビーバー", "grade": null, "rank": 7, "time": "0:43:30" },
+        { "section": 5, "name": "ジェイソン・ミッシェル", "grade": null, "rank": 11, "time": "0:39:04" },
+        { "section": 6, "name": "バリー・ローガン", "grade": null, "rank": 8, "time": "0:37:45" },
+        { "section": 7, "name": "ダグ・マクドナルド", "grade": null, "rank": 15, "time": "0:39:11" },
+        { "section": 8, "name": "シーマス・オローン", "grade": null, "rank": 18, "time": "1:06:45" }
+      ]
+    },
+    {
+      "kai": 22,
+      "year": 1990,
+      "rank": 9,
+      "totalTime": "5:38:19",
+      "runners": [
+        { "section": 1, "name": "クレッグ・ホワイトリー", "grade": null, "rank": 11, "time": "0:45:20" },
+        { "section": 2, "name": "ブライアン・キャン", "grade": null, "rank": 8, "time": "0:40:35" },
+        { "section": 3, "name": "トマス・バスカス", "grade": null, "rank": 4, "time": "0:28:21" },
+        { "section": 4, "name": "ロン・フェイス", "grade": null, "rank": 14, "time": "0:43:43" },
+        { "section": 5, "name": "クリス・グーリー", "grade": null, "rank": 7, "time": "0:37:52" },
+        { "section": 6, "name": "ウージン・バク", "grade": null, "rank": 14, "time": "0:39:43" },
+        { "section": 7, "name": "ティム・ハート", "grade": null, "rank": 3, "time": "0:38:25" },
+        { "section": 8, "name": "エリック・グロスマン", "grade": null, "rank": 7, "time": "1:04:20" }
+      ]
+    }
+  ]
+}

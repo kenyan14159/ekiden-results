@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "東北学連選抜",
+  "history": [
+      {
+          "kai": 43,
+          "year": 2011,
+          "rank": 22,
+          "totalTime": "5:47:45",
+          "runners": [
+              { "section": 1, "name": "小野寺 敬(富士大学)", "grade": 2, "rank": 23, "time": "0:46:42" },
+              { "section": 2, "name": "吉田 義宏(福島大学)", "grade": 4, "rank": 19, "time": "0:41:30" },
+              { "section": 3, "name": "樋渡 翔太(富士大学)", "grade": 4, "rank": 16, "time": "0:29:30" },
+              { "section": 4, "name": "伊東 直之(東北学院大学)", "grade": 4, "rank": 26, "time": "0:46:21" },
+              { "section": 5, "name": "深渡慎一郎(東北大学)", "grade": 2, "rank": 17, "time": "0:37:10" },
+              { "section": 6, "name": "菅野 均(東北大学)", "grade": 3, "rank": 24, "time": "0:41:33" },
+              { "section": 7, "name": "大谷 宗平(岩手大学)", "grade": 1, "rank": 21, "time": "0:38:55" },
+              { "section": 8, "name": "渡辺 航旗(東北学院大学)", "grade": 3, "rank": 21, "time": "1:06:04" }
+          ]
+      }
+  ]
+}

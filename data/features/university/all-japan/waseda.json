@@ -1,0 +1,492 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "早稲田大学",
+  "history": [
+    {
+      "kai": 56,
+      "year": 2024,
+      "rank": 5,
+      "totalTime": "5:14:24",
+      "runners": [
+        { "section": 1, "name": "間瀬田 純平", "grade": 3, "rank": 19, "time": "28:30" },
+        { "section": 2, "name": "山口 智規", "grade": 3, "rank": 5, "time": "31:48" },
+        { "section": 3, "name": "藤本 進次郎", "grade": 3, "rank": 15, "time": "35:32" },
+        { "section": 4, "name": "伊藤 大志", "grade": 4, "rank": 5, "time": "34:04" },
+        { "section": 5, "name": "山口 竣平", "grade": 1, "rank": 3, "time": "36:08" },
+        { "section": 6, "name": "伊福 陽太", "grade": 4, "rank": 10, "time": "38:21" },
+        { "section": 7, "name": "長屋 匡起", "grade": 2, "rank": 5, "time": "51:49" },
+        { "section": 8, "name": "工藤 慎作", "grade": 2, "rank": 3, "time": "58:12" }
+      ]
+    },
+    {
+      "kai": 55,
+      "year": 2023,
+      "rank": 10,
+      "totalTime": "5:22:36",
+      "runners": [
+        { "section": 1, "name": "間瀬田 純平", "grade": 2, "rank": 2, "time": "0:27:20" },
+        { "section": 2, "name": "山口 智規", "grade": 2, "rank": 4, "time": "0:31:20" },
+        { "section": 3, "name": "石塚 陽士", "grade": 3, "rank": 7, "time": "0:34:20" },
+        { "section": 4, "name": "工藤 慎作", "grade": 1, "rank": 13, "time": "0:35:36" },
+        { "section": 5, "name": "菖蒲 敦司", "grade": 4, "rank": 12, "time": "0:37:49" },
+        { "section": 6, "name": "菅野 雄太", "grade": 3, "rank": 11, "time": "0:38:53" },
+        { "section": 7, "name": "伊藤 大志", "grade": 3, "rank": 6, "time": "0:52:37" },
+        { "section": 8, "name": "伊福 陽太", "grade": 3, "rank": 19, "time": "1:04:41" }
+      ]
+    },
+    {
+      "kai": 54,
+      "year": 2022,
+      "rank": 6,
+      "totalTime": "5:12:53",
+      "runners": [
+        { "section": 1, "name": "間瀬田 純平", "grade": 1, "rank": 11, "time": "0:27:24" },
+        { "section": 2, "name": "井川 龍人", "grade": 4, "rank": 6, "time": "0:31:49" },
+        { "section": 3, "name": "石塚 陽士", "grade": 2, "rank": 3, "time": "0:33:59" },
+        { "section": 4, "name": "山口 智規", "grade": 1, "rank": 3, "time": "0:34:01" },
+        { "section": 5, "name": "小指 卓也", "grade": 4, "rank": 11, "time": "0:37:12" },
+        { "section": 6, "name": "菖蒲 敦司", "grade": 3, "rank": 15, "time": "0:38:58" },
+        { "section": 7, "name": "伊藤 大志", "grade": 2, "rank": 5, "time": "0:51:18" },
+        { "section": 8, "name": "佐藤 航希", "grade": 3, "rank": 5, "time": "0:58:12" }
+      ]
+    },
+    {
+      "kai": 53,
+      "year": 2021,
+      "rank": 6,
+      "totalTime": "5:16:29",
+      "runners": [
+        { "section": 1, "name": "伊藤 大志", "grade": 1, "rank": 7, "time": "27:18" },
+        { "section": 2, "name": "井川 龍人", "grade": 3, "rank": 2, "time": "31:48" },
+        { "section": 3, "name": "中谷 雄飛", "grade": 4, "rank": 4, "time": "33:57" },
+        { "section": 4, "name": "菖蒲 敦司", "grade": 2, "rank": 5, "time": "34:21" },
+        { "section": 5, "name": "石塚 陽士", "grade": 1, "rank": 4, "time": "36:25" },
+        { "section": 6, "name": "佐藤 航希", "grade": 2, "rank": 17, "time": "39:50" },
+        { "section": 7, "name": "鈴木 創士", "grade": 3, "rank": 5, "time": "52:32" },
+        { "section": 8, "name": "山口 賢助", "grade": 4, "rank": 9, "time": "1:00:18" }
+      ]
+    },
+    {
+      "kai": 52,
+      "year": 2020,
+      "rank": 5,
+      "totalTime": "5:13:04",
+      "runners": [
+        { "section": 1, "name": "辻 文哉", "grade": 1, "rank": 6, "time": "27:18" },
+        { "section": 2, "name": "井川 龍人", "grade": 2, "rank": 5, "time": "31:51" },
+        { "section": 3, "name": "中谷 雄飛", "grade": 3, "rank": 1, "time": "33:42" },
+        { "section": 4, "name": "太田 直希", "grade": 3, "rank": 2, "time": "33:23" },
+        { "section": 5, "name": "菖蒲 敦司", "grade": 1, "rank": 9, "time": "36:54" },
+        { "section": 6, "name": "諸冨 湧", "grade": 1, "rank": 8, "time": "38:08" },
+        { "section": 7, "name": "鈴木 創士", "grade": 2, "rank": 9, "time": "52:38" },
+        { "section": 8, "name": "山口 賢助", "grade": 3, "rank": 6, "time": "59:10" }
+      ]
+    },
+    {
+      "kai": 51,
+      "year": 2019,
+      "rank": 6,
+      "totalTime": "5:17:04",
+      "runners": [
+        { "section": 1, "name": "井川 龍人", "grade": 1, "rank": 16, "time": "28:21" },
+        { "section": 2, "name": "太田 智樹", "grade": 4, "rank": 4, "time": "31:48" },
+        { "section": 3, "name": "中谷 雄飛", "grade": 2, "rank": 6, "time": "34:21" },
+        { "section": 4, "name": "千明龍之佑", "grade": 2, "rank": 3, "time": "34:08" },
+        { "section": 5, "name": "太田 直希", "grade": 2, "rank": 5, "time": "36:36" },
+        { "section": 6, "name": "鈴木 創士", "grade": 1, "rank": 6, "time": "38:24" },
+        { "section": 7, "name": "新迫 志希", "grade": 4, "rank": 9, "time": "53:35" },
+        { "section": 8, "name": "吉田 匠", "grade": 3, "rank": 9, "time": "59:51" }
+      ]
+    },
+    {
+      "kai": 50,
+      "year": 2018,
+      "rank": 15,
+      "totalTime": "5:23:21",
+      "runners": [
+        { "section": 1, "name": "千明龍之佑", "grade": 1, "rank": 12, "time": "27:44" },
+        { "section": 2, "name": "宍倉 健浩", "grade": 2, "rank": 13, "time": "33:10" },
+        { "section": 3, "name": "中谷 雄飛", "grade": 1, "rank": 2, "time": "34:19" },
+        { "section": 4, "name": "太田 直希", "grade": 1, "rank": 10, "time": "35:36" },
+        { "section": 5, "name": "半澤 黎斗", "grade": 1, "rank": 14, "time": "37:59" },
+        { "section": 6, "name": "小澤 直人", "grade": 4, "rank": 12, "time": "38:57" },
+        { "section": 7, "name": "遠藤 宏夢", "grade": 3, "rank": 16, "time": "55:37" },
+        { "section": 8, "name": "清水 歓太", "grade": 4, "rank": 10, "time": "59:59" }
+      ]
+    },
+    {
+      "kai": 49,
+      "year": 2017,
+      "rank": 7,
+      "totalTime": "5:19:08",
+      "runners": [
+        { "section": 1, "name": "太田 智樹", "grade": 2, "rank": 3, "time": "43:28" },
+        { "section": 2, "name": "安井 雄一", "grade": 4, "rank": 8, "time": "39:00" },
+        { "section": 3, "name": "新迫 志希", "grade": 2, "rank": 9, "time": "28:01" },
+        { "section": 4, "name": "藤原 滋記", "grade": 4, "rank": 13, "time": "41:23" },
+        { "section": 5, "name": "宍倉 健浩", "grade": 1, "rank": 20, "time": "36:07" },
+        { "section": 6, "name": "永山 博基", "grade": 3, "rank": 3, "time": "36:03" },
+        { "section": 7, "name": "吉田 匠", "grade": 1, "rank": 15, "time": "35:55" },
+        { "section": 8, "name": "石田 康幸", "grade": 4, "rank": 6, "time": "59:11" }
+      ]
+    },
+    {
+      "kai": 48,
+      "year": 2016,
+      "rank": 2,
+      "totalTime": "5:16:11",
+      "runners": [
+        { "section": 1, "name": "武田凜太郎", "grade": 4, "rank": 2, "time": "43:45" },
+        { "section": 2, "name": "平 和真", "grade": 4, "rank": 2, "time": "38:27" },
+        { "section": 3, "name": "鈴木 洋平", "grade": 4, "rank": 2, "time": "27:28" },
+        { "section": 4, "name": "永山 博基", "grade": 2, "rank": 1, "time": "40:37" },
+        { "section": 5, "name": "新迫 志希", "grade": 1, "rank": 2, "time": "35:12" },
+        { "section": 6, "name": "藤原 滋記", "grade": 3, "rank": 3, "time": "36:04" },
+        { "section": 7, "name": "太田 智樹", "grade": 1, "rank": 3, "time": "35:05" },
+        { "section": 8, "name": "安井 雄一", "grade": 3, "rank": 5, "time": "59:33" }
+      ]
+    },
+    {
+      "kai": 47,
+      "year": 2015,
+      "rank": 4,
+      "totalTime": "5:15:36",
+      "runners": [
+        { "section": 1, "name": "中村信一郎", "grade": 4, "rank": 3, "time": "43:11" },
+        { "section": 2, "name": "平 和真", "grade": 3, "rank": 6, "time": "38:11" },
+        { "section": 3, "name": "藤原 滋記", "grade": 2, "rank": 6, "time": "27:41" },
+        { "section": 4, "name": "武田凜太郎", "grade": 3, "rank": 2, "time": "40:53" },
+        { "section": 5, "name": "光延 誠", "grade": 2, "rank": 4, "time": "34:19" },
+        { "section": 6, "name": "井戸 浩貴", "grade": 3, "rank": 3, "time": "36:12" },
+        { "section": 7, "name": "永山 博基", "grade": 1, "rank": 2, "time": "35:26" },
+        { "section": 8, "name": "佐藤 淳", "grade": 3, "rank": 7, "time": "59:43" }
+      ]
+    },
+    {
+      "kai": 46,
+      "year": 2014,
+      "rank": 7,
+      "totalTime": "5:22:33",
+      "runners": [
+        { "section": 1, "name": "柳 利幸", "grade": 3, "rank": 8, "time": "44:05" },
+        { "section": 2, "name": "高田 康暉", "grade": 3, "rank": 7, "time": "39:25" },
+        { "section": 3, "name": "中村信一郎", "grade": 3, "rank": 15, "time": "28:55" },
+        { "section": 4, "name": "山本 修平", "grade": 4, "rank": 2, "time": "41:09" },
+        { "section": 5, "name": "光延 誠", "grade": 1, "rank": 11, "time": "35:27" },
+        { "section": 6, "name": "井戸 浩貴", "grade": 2, "rank": 3, "time": "36:41" },
+        { "section": 7, "name": "佐藤 淳", "grade": 2, "rank": 12, "time": "36:18" },
+        { "section": 8, "name": "田口 大貴", "grade": 4, "rank": 11, "time": "1:00:33" }
+      ]
+    },
+    {
+      "kai": 45,
+      "year": 2013,
+      "rank": 4,
+      "totalTime": "5:19:22",
+      "runners": [
+        { "section": 1, "name": "柳 利幸", "grade": 2, "rank": 15, "time": "45:19" },
+        { "section": 2, "name": "大迫 傑", "grade": 4, "rank": 1, "time": "38:08" },
+        { "section": 3, "name": "平 和真", "grade": 1, "rank": 7, "time": "28:06" },
+        { "section": 4, "name": "山本 修平", "grade": 3, "rank": 3, "time": "41:05" },
+        { "section": 5, "name": "武田凛太郎", "grade": 1, "rank": 4, "time": "34:56" },
+        { "section": 6, "name": "高田 康暉", "grade": 2, "rank": 3, "time": "36:27" },
+        { "section": 7, "name": "井戸 浩貴", "grade": 1, "rank": 3, "time": "35:55" },
+        { "section": 8, "name": "田中 鴻佑", "grade": 4, "rank": 6, "time": "59:26" }
+      ]
+    },
+    {
+      "kai": 44,
+      "year": 2012,
+      "rank": 3,
+      "totalTime": "5:15:08",
+      "runners": [
+        { "section": 1, "name": "柳 利幸", "grade": 1, "rank": 12, "time": "0:44:15" },
+        { "section": 2, "name": "大迫 傑", "grade": 3, "rank": 2, "time": "0:37:25" },
+        { "section": 3, "name": "佐々木寛文", "grade": 4, "rank": 4, "time": "0:27:42" },
+        { "section": 4, "name": "山本 修平", "grade": 2, "rank": 2, "time": "0:40:42" },
+        { "section": 5, "name": "高田 康暉", "grade": 1, "rank": 6, "time": "0:34:53" },
+        { "section": 6, "name": "前田 悠貴", "grade": 4, "rank": 1, "time": "0:35:30" },
+        { "section": 7, "name": "市川宗一朗", "grade": 4, "rank": 10, "time": "0:36:03" },
+        { "section": 8, "name": "平賀 翔太", "grade": 4, "rank": 4, "time": "0:58:38" }
+      ]
+    },
+    {
+      "kai": 43,
+      "year": 2011,
+      "rank": 3,
+      "totalTime": "5:21:06",
+      "runners": [
+        { "section": 1, "name": "山本 修平", "grade": 1, "rank": 12, "time": "0:44:42" },
+        { "section": 2, "name": "大迫 傑", "grade": 2, "rank": 2, "time": "0:38:18" },
+        { "section": 3, "name": "矢澤 曜", "grade": 4, "rank": 3, "time": "0:27:39" },
+        { "section": 4, "name": "三田 裕介", "grade": 4, "rank": 2, "time": "0:41:35" },
+        { "section": 5, "name": "前田 悠貴", "grade": 3, "rank": 4, "time": "0:35:07" },
+        { "section": 6, "name": "市川宗一朗", "grade": 3, "rank": 6, "time": "0:37:13" },
+        { "section": 7, "name": "佐々木寛文", "grade": 3, "rank": 4, "time": "0:36:40" },
+        { "section": 8, "name": "平賀 翔太", "grade": 3, "rank": 5, "time": "0:59:52" }
+      ]
+    },
+    {
+      "kai": 42,
+      "year": 2010,
+      "rank": 1,
+      "totalTime": "5:13:02",
+      "runners": [
+        { "section": 1, "name": "矢澤 曜", "grade": 3, "rank": 9, "time": "43:28" },
+        { "section": 2, "name": "大迫 傑", "grade": 1, "rank": 3, "time": "37:55" },
+        { "section": 3, "name": "八木 勇樹", "grade": 3, "rank": 3, "time": "27:20" },
+        { "section": 4, "name": "佐々木 寛文", "grade": 2, "rank": 1, "time": "40:23" },
+        { "section": 5, "name": "志方 文典", "grade": 1, "rank": 1, "time": "33:47" },
+        { "section": 6, "name": "猪俣 英希", "grade": 4, "rank": 2, "time": "36:08" },
+        { "section": 7, "name": "前田 悠貴", "grade": 2, "rank": 2, "time": "35:37" },
+        { "section": 8, "name": "平賀 翔太", "grade": 2, "rank": 3, "time": "58:24" }
+      ]
+    },
+    {
+      "kai": 41,
+      "year": 2009,
+      "rank": 4,
+      "totalTime": "5:25:46",
+      "runners": [
+        { "section": 1, "name": "矢澤 曜", "grade": 2, "rank": 3, "time": "0:43:55" },
+        { "section": 2, "name": "八木 勇樹", "grade": 2, "rank": 5, "time": "0:39:19" },
+        { "section": 3, "name": "佐々木寛文", "grade": 1, "rank": 2, "time": "0:28:10" },
+        { "section": 4, "name": "平賀 翔太", "grade": 1, "rank": 3, "time": "0:42:06" },
+        { "section": 5, "name": "三田 裕介", "grade": 2, "rank": 12, "time": "0:36:21" },
+        { "section": 6, "name": "神沢 陽一", "grade": 4, "rank": 5, "time": "0:37:38" },
+        { "section": 7, "name": "前田 悠貴", "grade": 1, "rank": 13, "time": "0:37:13" },
+        { "section": 8, "name": "尾崎 貴宏", "grade": 4, "rank": 5, "time": "1:01:04" }
+      ]
+    },
+    {
+      "kai": 40,
+      "year": 2008,
+      "rank": 2,
+      "totalTime": "5:17:01",
+      "runners": [
+        { "section": 1, "name": "矢澤 曜", "grade": 1, "rank": 5, "time": "0:43:17" },
+        { "section": 2, "name": "竹澤 健介", "grade": 4, "rank": 3, "time": "0:37:45" },
+        { "section": 3, "name": "八木 勇樹", "grade": 1, "rank": 2, "time": "0:27:42" },
+        { "section": 4, "name": "三田 裕介", "grade": 1, "rank": 6, "time": "0:41:34" },
+        { "section": 5, "name": "高原 聖典", "grade": 3, "rank": 1, "time": "0:34:33" },
+        { "section": 6, "name": "朝日 嗣也", "grade": 4, "rank": 3, "time": "0:36:46" },
+        { "section": 7, "name": "三戸 格", "grade": 4, "rank": 3, "time": "0:35:43" },
+        { "section": 8, "name": "尾崎 貴宏", "grade": 3, "rank": 4, "time": "0:59:41" }
+      ]
+    },
+    {
+      "kai": 39,
+      "year": 2007,
+      "rank": 5,
+      "totalTime": "5:20:41",
+      "runners": [
+        { "section": 1, "name": "高原 聖典", "grade": 2, "rank": 7, "time": "43:35" },
+        { "section": 2, "name": "竹澤 健介", "grade": 3, "rank": 1, "time": "37:42" },
+        { "section": 3, "name": "中島 賢士", "grade": 1, "rank": 9, "time": "28:27" },
+        { "section": 4, "name": "駒野 亮太", "grade": 4, "rank": 4, "time": "41:39" },
+        { "section": 5, "name": "尾崎 貴宏", "grade": 2, "rank": 4, "time": "35:04" },
+        { "section": 6, "name": "神沢 陽一", "grade": 2, "rank": 7, "time": "37:09" },
+        { "section": 7, "name": "三輪 真之", "grade": 3, "rank": 6, "time": "36:17" },
+        { "section": 8, "name": "加藤 創大", "grade": 2, "rank": 8, "time": "1:00:48" }
+      ]
+    },
+    {
+      "kai": 35,
+      "year": 2003,
+      "rank": null,
+      "totalTime": null,
+      "runners": [
+        { "section": 1, "name": "森村 哲", "grade": 4, "rank": 6, "time": "43:34" },
+        { "section": 2, "name": "篠浦 辰徳", "grade": 3, "rank": 4, "time": "38:56" },
+        { "section": 3, "name": "藤森 憲秀", "grade": 1, "rank": 4, "time": "28:17" },
+        { "section": 4, "name": "原 英嗣", "grade": 2, "rank": null, "time": "DNF" },
+        { "section": 5, "name": "五十嵐 毅", "grade": 4, "rank": 7, "time": "35:55" },
+        { "section": 6, "name": "河津 直行", "grade": 4, "rank": 12, "time": "38:13" },
+        { "section": 7, "name": "高岡 弘", "grade": 2, "rank": 11, "time": "37:38" },
+        { "section": 8, "name": "杉山 一介", "grade": 3, "rank": 6, "time": "1:01:39" }
+      ]
+    },
+    {
+      "kai": 34,
+      "year": 2002,
+      "rank": 6,
+      "totalTime": "5:23:44",
+      "runners": [
+        { "section": 1, "name": "森村 哲", "grade": 4, "rank": 6, "time": "43:34" },
+        { "section": 2, "name": "空山 隆児", "grade": 2, "rank": 10, "time": "39:28" },
+        { "section": 3, "name": "篠浦 辰徳", "grade": 2, "rank": 5, "time": "28:46" },
+        { "section": 4, "name": "五十嵐 毅", "grade": 3, "rank": 7, "time": "42:38" },
+        { "section": 5, "name": "杉山 一介", "grade": 2, "rank": 4, "time": "35:47" },
+        { "section": 6, "name": "中尾 栄二", "grade": 4, "rank": 5, "time": "37:14" },
+        { "section": 7, "name": "原 英嗣", "grade": 1, "rank": 11, "time": "36:52" },
+        { "section": 8, "name": "後藤 信二", "grade": 4, "rank": 7, "time": "59:25" }
+      ]
+    },
+    {
+      "kai": 33,
+      "year": 2001,
+      "rank": 6,
+      "totalTime": "5:19:49",
+      "runners": [
+        { "section": 1, "name": "中尾 栄二", "grade": 3, "rank": 9, "time": "43:58" },
+        { "section": 2, "name": "森村 哲", "grade": 3, "rank": 7, "time": "39:09" },
+        { "section": 3, "name": "新井 広憲", "grade": 4, "rank": 5, "time": "28:07" },
+        { "section": 4, "name": "原田 正彦", "grade": 4, "rank": 1, "time": "40:24" },
+        { "section": 5, "name": "空山 隆児", "grade": 1, "rank": 6, "time": "35:06" },
+        { "section": 6, "name": "五十嵐 毅", "grade": 2, "rank": 5, "time": "36:26" },
+        { "section": 7, "name": "櫻井 勇樹", "grade": 4, "rank": 6, "time": "35:43" },
+        { "section": 8, "name": "後藤 信二", "grade": 3, "rank": 13, "time": "1:00:56" }
+      ]
+    },
+    {
+      "kai": 32,
+      "year": 2000,
+      "rank": 11,
+      "totalTime": "5:30:53",
+      "runners": [
+        { "section": 1, "name": "森村 哲", "grade": 2, "rank": 7, "time": "43:55" },
+        { "section": 2, "name": "五十嵐 毅", "grade": 1, "rank": 10, "time": "40:09" },
+        { "section": 3, "name": "尾崎 章嗣", "grade": 3, "rank": 11, "time": "28:51" },
+        { "section": 4, "name": "櫻井 勇樹", "grade": 3, "rank": 19, "time": "45:26" },
+        { "section": 5, "name": "久場 潔実", "grade": 4, "rank": 9, "time": "35:48" },
+        { "section": 6, "name": "矢花 誠", "grade": 3, "rank": 6, "time": "37:52" },
+        { "section": 7, "name": "大角 重人", "grade": 4, "rank": 5, "time": "36:58" },
+        { "section": 8, "name": "鈴木 陽介", "grade": 4, "rank": 8, "time": "1:01:54" }
+      ]
+    },
+    {
+      "kai": 31,
+      "year": 1999,
+      "rank": 9,
+      "totalTime": "5:28:28",
+      "runners": [
+        { "section": 1, "name": "原田 正彦", "grade": 2, "rank": 11, "time": "44:35" },
+        { "section": 2, "name": "佐藤 敦之", "grade": 3, "rank": 2, "time": "38:32" },
+        { "section": 3, "name": "櫻井 勇樹", "grade": 2, "rank": 12, "time": "29:04" },
+        { "section": 4, "name": "新井 広憲", "grade": 2, "rank": 9, "time": "42:58" },
+        { "section": 5, "name": "平下 修", "grade": 4, "rank": 5, "time": "35:31" },
+        { "section": 6, "name": "森村 哲", "grade": 1, "rank": 10, "time": "38:01" },
+        { "section": 7, "name": "矢花 誠", "grade": 2, "rank": 11, "time": "37:04" },
+        { "section": 8, "name": "久場 潔実", "grade": 3, "rank": 14, "time": "1:02:43" }
+      ]
+    },
+    {
+      "kai": 30,
+      "year": 1998,
+      "rank": 9,
+      "totalTime": "5:29:57",
+      "runners": [
+        { "section": 1, "name": "山崎 慎治", "grade": 4, "rank": 9, "time": "44:27" },
+        { "section": 2, "name": "郷原 剛", "grade": 4, "rank": 8, "time": "39:28" },
+        { "section": 3, "name": "櫻井 勇樹", "grade": 1, "rank": 12, "time": "28:59" },
+        { "section": 4, "name": "増田 創至", "grade": 4, "rank": 9, "time": "43:15" },
+        { "section": 5, "name": "佐藤 智彦", "grade": 2, "rank": 16, "time": "37:28" },
+        { "section": 6, "name": "上田 健治", "grade": 3, "rank": 9, "time": "38:15" },
+        { "section": 7, "name": "矢花 誠", "grade": 1, "rank": 9, "time": "37:56" },
+        { "section": 8, "name": "佐藤 敦之", "grade": 2, "rank": 6, "time": "1:00:09" }
+      ]
+    },
+    {
+      "kai": 29,
+      "year": 1997,
+      "rank": 3,
+      "totalTime": "5:20:06",
+      "runners": [
+        { "section": 1, "name": "山崎 慎治", "grade": 3, "rank": 3, "time": "0:43:11" },
+        { "section": 2, "name": "梅木 蔵雄", "grade": 4, "rank": 1, "time": "0:38:05" },
+        { "section": 3, "name": "中村 英幸", "grade": 4, "rank": 1, "time": "0:27:31" },
+        { "section": 4, "name": "佐藤 敦之", "grade": 1, "rank": 2, "time": "0:41:29" },
+        { "section": 5, "name": "増田 創至", "grade": 3, "rank": 6, "time": "0:35:12" },
+        { "section": 6, "name": "前田 泰秀", "grade": 2, "rank": 5, "time": "0:37:05" },
+        { "section": 7, "name": "湯朝 育広", "grade": 2, "rank": 8, "time": "0:37:09" },
+        { "section": 8, "name": "荒川 誠", "grade": 4, "rank": 5, "time": "1:00:24" }
+      ]
+    },
+    {
+      "kai": 28,
+      "year": 1996,
+      "rank": 4,
+      "totalTime": "5:26:02",
+      "runners": [
+        { "section": 1, "name": "荒川 誠", "grade": 3, "rank": 19, "time": "0:46:45" },
+        { "section": 2, "name": "藤井 一博", "grade": 4, "rank": 4, "time": "0:39:50" },
+        { "section": 3, "name": "前田 泰秀", "grade": 1, "rank": 4, "time": "0:28:30" },
+        { "section": 4, "name": "梅木 蔵雄", "grade": 3, "rank": 3, "time": "0:42:28" },
+        { "section": 5, "name": "山崎 慎治", "grade": 2, "rank": 4, "time": "0:35:31" },
+        { "section": 6, "name": "中村 英幸", "grade": 3, "rank": 3, "time": "0:37:23" },
+        { "section": 7, "name": "上田 健治", "grade": 1, "rank": 11, "time": "0:37:49" },
+        { "section": 8, "name": "小林 雅幸", "grade": 4, "rank": 1, "time": "0:57:46" }
+      ]
+    },
+    {
+      "kai": 27,
+      "year": 1995,
+      "rank": 1,
+      "totalTime": "5:20:46",
+      "runners": [
+        { "section": 1, "name": "小林 雅幸", "grade": 3, "rank": 1, "time": "0:42:53" },
+        { "section": 2, "name": "中村 英幸", "grade": 2, "rank": 3, "time": "0:39:23" },
+        { "section": 3, "name": "山崎 慎治", "grade": 1, "rank": 5, "time": "0:28:20" },
+        { "section": 4, "name": "荒川 誠", "grade": 2, "rank": 8, "time": "0:42:54" },
+        { "section": 5, "name": "梅木 蔵雄", "grade": 2, "rank": 7, "time": "0:36:04" },
+        { "section": 6, "name": "村松 大吾", "grade": 3, "rank": 3, "time": "0:37:39" },
+        { "section": 7, "name": "小倉 圭介", "grade": 4, "rank": 7, "time": "0:36:34" },
+        { "section": 8, "name": "渡辺 康幸", "grade": 4, "rank": 1, "time": "0:56:59" }
+      ]
+    },
+    {
+      "kai": 26,
+      "year": 1994,
+      "rank": 1,
+      "totalTime": "5:19:33",
+      "runners": [
+        { "section": 1, "name": "小林 雅幸", "grade": 2, "rank": 2, "time": "0:42:55" },
+        { "section": 2, "name": "小林 正幹", "grade": 4, "rank": 1, "time": "0:39:17" },
+        { "section": 3, "name": "梅木 蔵雄", "grade": 1, "rank": 5, "time": "0:28:36" },
+        { "section": 4, "name": "大関 篤史", "grade": 4, "rank": 1, "time": "0:42:20" },
+        { "section": 5, "name": "荒川 誠", "grade": 1, "rank": 4, "time": "0:35:32" },
+        { "section": 6, "name": "後宮 正幸", "grade": 4, "rank": 2, "time": "0:37:12" },
+        { "section": 7, "name": "藤井 一博", "grade": 2, "rank": 2, "time": "0:36:22" },
+        { "section": 8, "name": "渡辺 康幸", "grade": 3, "rank": 1, "time": "0:57:19" }
+      ]
+    },
+    {
+      "kai": 25,
+      "year": 1993,
+      "rank": 1,
+      "totalTime": "5:19:21",
+      "runners": [
+        { "section": 1, "name": "渡辺 康幸", "grade": 2, "rank": 1, "time": "0:43:02" },
+        { "section": 2, "name": "櫛部 静二", "grade": 4, "rank": 1, "time": "0:38:57" },
+        { "section": 3, "name": "小林 正幹", "grade": 3, "rank": 2, "time": "0:27:41" },
+        { "section": 4, "name": "小林 雅幸", "grade": 1, "rank": 1, "time": "0:41:54" },
+        { "section": 5, "name": "武井 隆次", "grade": 4, "rank": 2, "time": "0:35:41" },
+        { "section": 6, "name": "高瀬 豪史", "grade": 4, "rank": 4, "time": "0:37:33" },
+        { "section": 7, "name": "大関 篤史", "grade": 3, "rank": 4, "time": "0:36:26" },
+        { "section": 8, "name": "花田 勝彦", "grade": 4, "rank": 1, "time": "0:58:07" }
+      ]
+    },
+    {
+      "kai": 24,
+      "year": 1992,
+      "rank": 1,
+      "totalTime": "5:20:32",
+      "runners": [
+        { "section": 1, "name": "花田 勝彦", "grade": 3, "rank": 1, "time": "0:44:11" },
+        { "section": 2, "name": "渡辺 康幸", "grade": 1, "rank": 2, "time": "0:38:51" },
+        { "section": 3, "name": "小林 正幹", "grade": 2, "rank": 1, "time": "0:27:51" },
+        { "section": 4, "name": "武井 隆次", "grade": 3, "rank": 3, "time": "0:41:38" },
+        { "section": 5, "name": "小林 修", "grade": 2, "rank": 4, "time": "0:35:16" },
+        { "section": 6, "name": "豊福 知徳", "grade": 4, "rank": 1, "time": "0:36:36" },
+        { "section": 7, "name": "富田 雄也", "grade": 4, "rank": 2, "time": "0:36:02" },
+        { "section": 8, "name": "櫛部 静二", "grade": 3, "rank": 4, "time": "1:00:07" }
+      ]
+    }
+  ]
+}

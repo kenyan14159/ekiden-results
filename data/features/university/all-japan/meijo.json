@@ -1,0 +1,43 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "名城大学",
+  "history": [
+      {
+          "kai": 13,
+          "year": 1982,
+          "rank": 19,
+          "totalTime": "6:05:33",
+          "runners": [
+              { "section": 1, "name": "後鳥 研司", "grade": null, "rank": 14, "time": "0:47:41" },
+              { "section": 2, "name": "沢野 元始", "grade": null, "rank": 20, "time": "0:48:03" },
+              { "section": 3, "name": "森 隆史", "grade": null, "rank": 17, "time": "1:15:41" },
+              { "section": 4, "name": "山崎 知巳", "grade": null, "rank": 20, "time": "0:40:08" },
+              { "section": 5, "name": "木村 元彦", "grade": null, "rank": 17, "time": "0:43:58" },
+              { "section": 6, "name": "高橋 克佳", "grade": null, "rank": 20, "time": "0:37:02" },
+              { "section": 7, "name": "福田 和男", "grade": null, "rank": 19, "time": "1:13:00" }
+          ]
+      },
+      {
+          "kai": 2,
+          "year": 1971,
+          "rank": 13,
+          "totalTime": "6:22:46",
+          "runners": [
+              { "section": 1, "name": "石原 昇", "grade": null, "rank": 19, "time": "0:55:55" },
+              { "section": 2, "name": "杉山 英治", "grade": null, "rank": 14, "time": "0:39:25" },
+              { "section": 3, "name": "須郷 徳美", "grade": null, "rank": 12, "time": "0:18:30" },
+              { "section": 4, "name": "高井 康利", "grade": null, "rank": 11, "time": "1:16:04" },
+              { "section": 5, "name": "入場 治和", "grade": null, "rank": 12, "time": "0:53:06" },
+              { "section": 6, "name": "森 宏一郎", "grade": null, "rank": 15, "time": "0:28:14" },
+              { "section": 7, "name": "松尾 修治", "grade": null, "rank": 10, "time": "0:41:50" },
+              { "section": 8, "name": "西 文生", "grade": null, "rank": 15, "time": "1:09:42" }
+          ]
+      }
+  ]
+}

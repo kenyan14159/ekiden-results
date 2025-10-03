@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "岐阜協立大学",
+  "history": [
+      {
+          "kai": 53,
+          "year": 2021,
+          "rank": 22,
+          "totalTime": "5:38:18",
+          "runners": [
+              { "section": 1, "name": "中尾 啓哉", "grade": 3, "rank": 25, "time": "0:28:59" },
+              { "section": 2, "name": "加藤 凌平", "grade": 3, "rank": 23, "time": "0:34:35" },
+              { "section": 3, "name": "榊原 陸", "grade": 4, "rank": 24, "time": "0:37:21" },
+              { "section": 4, "name": "鵜飼 蓮", "grade": 2, "rank": 20, "time": "0:36:35" },
+              { "section": 5, "name": "伊澤 葵", "grade": 2, "rank": 18, "time": "0:38:30" },
+              { "section": 6, "name": "天野 佑哉", "grade": 1, "rank": 23, "time": "0:41:28" },
+              { "section": 7, "name": "大橋光太郎", "grade": 4, "rank": 18, "time": "0:55:41" },
+              { "section": 8, "name": "渡辺 翔哉", "grade": 4, "rank": 24, "time": "1:05:09" }
+          ]
+      }
+  ]
+}

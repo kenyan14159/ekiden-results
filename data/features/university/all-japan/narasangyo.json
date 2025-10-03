@@ -1,0 +1,76 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "奈良産業大学",
+  "history": [
+    {
+      "kai": 42,
+      "year": 2010,
+      "rank": 18,
+      "totalTime": "5:37:46",
+      "runners": [
+        { "section": 1, "name": "ｼﾞｬｸｿﾝ･ｸｱﾗｲ", "grade": 3, "rank": 17, "time": "0:45:04" },
+        { "section": 2, "name": "松本 信行", "grade": 5, "rank": 22, "time": "0:41:39" },
+        { "section": 3, "name": "天野 正治", "grade": 3, "rank": 17, "time": "0:29:01" },
+        { "section": 4, "name": "上村 康成", "grade": 3, "rank": 16, "time": "0:43:04" },
+        { "section": 5, "name": "ﾀｲﾀｽ･ｷﾊﾗ", "grade": 1, "rank": 22, "time": "0:37:26" },
+        { "section": 6, "name": "用木 大地", "grade": 2, "rank": 16, "time": "0:38:51" },
+        { "section": 7, "name": "森 友哉", "grade": 1, "rank": 23, "time": "0:39:02" },
+        { "section": 8, "name": "平田 一真", "grade": 4, "rank": 20, "time": "1:03:39" }
+      ]
+    },
+    {
+      "kai": 40,
+      "year": 2008,
+      "rank": 19,
+      "totalTime": "5:39:43",
+      "runners": [
+        { "section": 1, "name": "ジャクソン･クアライ", "grade": 1, "rank": 18, "time": "0:45:44" },
+        { "section": 2, "name": "松本 信行", "grade": 3, "rank": 19, "time": "0:41:05" },
+        { "section": 3, "name": "天野 正治", "grade": 1, "rank": 22, "time": "0:29:53" },
+        { "section": 4, "name": "清水 博也", "grade": 4, "rank": 22, "time": "0:45:21" },
+        { "section": 5, "name": "平田 一真", "grade": 2, "rank": 21, "time": "0:37:02" },
+        { "section": 6, "name": "礒野 晃嗣", "grade": 3, "rank": 17, "time": "0:39:02" },
+        { "section": 7, "name": "竹内 源", "grade": 1, "rank": 22, "time": "0:38:06" },
+        { "section": 8, "name": "大屋 直士", "grade": 4, "rank": 18, "time": "1:03:30" }
+      ]
+    },
+    {
+      "kai": 38,
+      "year": 2006,
+      "rank": 22,
+      "totalTime": "5:44:18",
+      "runners": [
+        { "section": 1, "name": "ダニエル・ムリュウ", "grade": 3, "rank": 10, "time": "0:44:17" },
+        { "section": 2, "name": "元田 幸祐", "grade": 1, "rank": 17, "time": "0:40:43" },
+        { "section": 3, "name": "清水 博也", "grade": 2, "rank": 22, "time": "0:30:06" },
+        { "section": 4, "name": "奥中 洋貴", "grade": 4, "rank": 16, "time": "0:43:35" },
+        { "section": 5, "name": "松本 信行", "grade": 1, "rank": 26, "time": "0:38:25" },
+        { "section": 6, "name": "横手 利光", "grade": 2, "rank": 24, "time": "0:40:58" },
+        { "section": 7, "name": "新宅 祐太", "grade": 1, "rank": 23, "time": "0:38:36" },
+        { "section": 8, "name": "大屋 直士", "grade": 2, "rank": 25, "time": "1:07:38" }
+      ]
+    },
+    {
+      "kai": 30,
+      "year": 1998,
+      "rank": 17,
+      "totalTime": "5:48:04",
+      "runners": [
+        { "section": 1, "name": "高尾 浩史", "grade": 1, "rank": 20, "time": "0:47:00" },
+        { "section": 2, "name": "松原 大剛", "grade": 2, "rank": 17, "time": "0:41:59" },
+        { "section": 3, "name": "森 浩記", "grade": 4, "rank": 16, "time": "0:30:10" },
+        { "section": 4, "name": "折本 岳志", "grade": 2, "rank": 18, "time": "0:45:53" },
+        { "section": 5, "name": "瀬尾 良平", "grade": 4, "rank": 10, "time": "0:36:39" },
+        { "section": 6, "name": "采本 知己", "grade": 3, "rank": 16, "time": "0:39:45" },
+        { "section": 7, "name": "勢井 球一", "grade": 3, "rank": 16, "time": "0:39:05" },
+        { "section": 8, "name": "村元 雅弘", "grade": 4, "rank": 20, "time": "1:07:33" }
+      ]
+    }
+  ]
+}

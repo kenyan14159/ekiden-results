@@ -1,0 +1,207 @@
+{
+    "config": {
+      "type": "university",
+      "term": {
+        "singular": "大学",
+        "plural": "大学"
+      },
+      "sections": 10,
+      "hasHalfway": true,
+      "showGrade": false,
+      "specialTeams": []
+    },
+    "eventName": "第21回東京箱根間往復大学駅伝競走",
+    "year": 1940,
+    "teams": [
+      {
+        "rank": 1,
+        "name": "日本大学",
+        "totalTime": "13:12:27",
+        "outboundTime": "06:37:03",
+        "inboundTime": "06:35:24",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:15:55", "name": "郷野 喜一", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:10:57", "name": "永野準一郎", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:16:09", "name": "大沢 竜雄", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:13:16", "name": "手島 弘信", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:40:46", "name": "鈴木 房重", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:21:44", "name": "渡辺 安雄", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:18:02", "name": "片岡 忠司", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:22:27", "name": "長谷川 登", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:12:50", "name": "永野 常平", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:20:21", "name": "小島 武雄", "grade": null, "rank": 1, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 2,
+        "name": "東京文理科大学",
+        "totalTime": "13:44:26",
+        "outboundTime": "06:56:09",
+        "inboundTime": "06:48:17",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:17:30", "name": "井坂 信勝", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:09:20", "name": "勝亦 清政", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:18:36", "name": "高橋 進", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:19:38", "name": "竹崎 敏夫", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:51:05", "name": "吉川 義春", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:29:14", "name": "市毛 徳夫", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:19:19", "name": "末政 清一", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:22:06", "name": "岡田 正美", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:14:25", "name": "石野八百治", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:23:13", "name": "鈴木 勝枝", "grade": null, "rank": 2, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 3,
+        "name": "中央大学",
+        "totalTime": "13:56:35",
+        "outboundTime": "06:58:15",
+        "inboundTime": "06:58:20",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:17:10", "name": "新名 済", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:15:16", "name": "本間 良吉", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:22:07", "name": "黒木 政晴", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:20:06", "name": "李 煕台", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:43:36", "name": "鵜沢 実", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:22:11", "name": "岩村 英夫", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:20:36", "name": "金 新徳", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:30:50", "name": "滝口 行雄", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:15:16", "name": "千葉 治", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:29:27", "name": "朱 尚英", "grade": null, "rank": 3, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 4,
+        "name": "専修大学",
+        "totalTime": "14:06:51",
+        "outboundTime": "06:47:21",
+        "inboundTime": "07:19:30",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:18:50", "name": "渡辺裕三郎", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:10:26", "name": "金 三植", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:14:32", "name": "山下 勝", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:18:45", "name": "堀 勇次", "grade": null, "rank": 2, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:44:48", "name": "細野 博", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:25:51", "name": "高瀬 敏夫", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:21:42", "name": "和田 潔", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:30:23", "name": "平田 卓志", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:20:56", "name": "堀池善三郎", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:40:38", "name": "青山 義", "grade": null, "rank": 10, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 5,
+        "name": "東洋大学",
+        "totalTime": "14:21:42",
+        "outboundTime": "06:57:44",
+        "inboundTime": "07:23:58",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:24:25", "name": "高岡 幸男", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:14:12", "name": "高瀬 登", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:17:44", "name": "池中 康雄", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:20:49", "name": "小椋 実", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:40:34", "name": "朴 鍈采", "grade": null, "rank": 1, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:32:46", "name": "松尾 喜雄", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:24:08", "name": "赤木 義夫", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:29:18", "name": "小川 務", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:22:18", "name": "安城敬二郎", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:35:28", "name": "武智 徳令", "grade": null, "rank": 7, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 6,
+        "name": "法政大学",
+        "totalTime": "14:36:28",
+        "outboundTime": "07:12:01",
+        "inboundTime": "07:24:27",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:20:00", "name": "金 赫鎮", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:11:37", "name": "石黒 信男", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:16:44", "name": "下川 六郎", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:29:20", "name": "渡部 正義", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:54:20", "name": "立花 通夫", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:34:42", "name": "大浜 幸彦", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:24:39", "name": "浜田 嘉一", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:30:44", "name": "山崎 英丸", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:21:52", "name": "阿部 正三", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:32:30", "name": "平山 久光", "grade": null, "rank": 5, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 7,
+        "name": "横浜専門学校",
+        "totalTime": "14:41:28",
+        "outboundTime": "07:15:06",
+        "inboundTime": "07:26:22",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:23:55", "name": "佐川久三郎", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:17:31", "name": "加藤 嘉明", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:28:20", "name": "高木 彬雄", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:20:59", "name": "谷口 哲", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:44:21", "name": "金 鐘文", "grade": null, "rank": 4, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:39:22", "name": "田村 三郎", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:19:58", "name": "田渡 清司", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:28:05", "name": "菊地 啓一", "grade": null, "rank": 3, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:23:42", "name": "真船 信夫", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:35:15", "name": "野村 三夫", "grade": null, "rank": 6, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 8,
+        "name": "東京農業大学",
+        "totalTime": "15:32:23",
+        "outboundTime": "07:24:33",
+        "inboundTime": "08:07:50",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:31:45", "name": "栗田 嘉高", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:13:31", "name": "照井 悌治", "grade": null, "rank": 5, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:24:22", "name": "山田 寿一", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:21:07", "name": "今泉 良美", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:53:48", "name": "杉崎 喜治", "grade": null, "rank": 7, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "01:45:44", "name": "池部 正明", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:26:30", "name": "衣川 富雄", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:39:24", "name": "金 鎮穆", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:35:52", "name": "山本 寿一", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:40:20", "name": "大川 泰弘", "grade": null, "rank": 9, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 9,
+        "name": "拓殖大学",
+        "totalTime": "16:01:25",
+        "outboundTime": "07:51:27",
+        "inboundTime": "08:09:58",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:20:40", "name": "浜野 頼幸", "grade": null, "rank": 6, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:25:24", "name": "筑摩 信彦", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:29:28", "name": "増田 寿", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:38:19", "name": "大童 親良", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "01:57:36", "name": "加藤 正夫", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "02:07:51", "name": "倉方 豊", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:28:21", "name": "小板橋儀平", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:32:52", "name": "浅野亀一郎", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:30:57", "name": "鈴木 巧", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:29:57", "name": "神田 勉", "grade": null, "rank": 4, "isSectionRecord": false }
+        ]
+      },
+      {
+        "rank": 10,
+        "name": "日本歯科医専門",
+        "totalTime": "16:06:38",
+        "outboundTime": "07:44:29",
+        "inboundTime": "08:22:09",
+        "runners": [
+          { "section": 1, "dist": "21.36km", "time": "01:24:50", "name": "太田 隆邦", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 2, "dist": "19.42km", "time": "01:19:13", "name": "青木 鶴雄", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 3, "dist": "21.36km", "time": "01:26:44", "name": "石本 正孝", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 4, "dist": "21.58km", "time": "01:28:36", "name": "中沢 利久", "grade": null, "rank": 8, "isSectionRecord": false },
+          { "section": 5, "dist": "25.46km", "time": "02:05:06", "name": "細見 忠雄", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 6, "dist": "25.46km", "time": "02:03:48", "name": "田中 智彦", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 7, "dist": "21.58km", "time": "01:29:23", "name": "入山 速美", "grade": null, "rank": 10, "isSectionRecord": false },
+          { "section": 8, "dist": "21.36km", "time": "01:36:21", "name": "李 後興", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 9, "dist": "19.42km", "time": "01:34:14", "name": "古屋 明", "grade": null, "rank": 9, "isSectionRecord": false },
+          { "section": 10, "dist": "21.36km", "time": "01:38:23", "name": "北田謙二郎", "grade": null, "rank": 8, "isSectionRecord": false }
+        ]
+      }
+    ]
+  }

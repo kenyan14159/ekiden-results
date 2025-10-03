@@ -1,0 +1,39 @@
+{
+    "config": {
+        "type": "university",
+        "term": { "singular": "大学", "plural": "大学" },
+        "sections": 8,
+        "hasHalfway": false,
+        "showGrade": true,
+        "specialTeams": []
+    },
+    "eventName": "第32回全日本大学駅伝対校選手権大会",
+    "year": 2000,
+    "teams": [
+        { "rank": 1, "name": "順天堂大学", "totalTime": "5:20:16", "runners": [{ "section": 4, "dist": "14.0km", "time": "41:16", "name": "野口 英盛", "grade": 3, "rank": 1, "isNewRecord": false }, { "section": 6, "dist": "12.3km", "time": "36:08", "name": "坂井 隆則", "grade": 3, "rank": 1, "isNewRecord": true }, { "section": 8, "dist": "19.7km", "time": "59:56", "name": "高橋 謙介", "grade": 4, "rank": 1, "isNewRecord": false }] },
+        { "rank": 2, "name": "駒澤大学", "totalTime": "5:21:42", "runners": [{ "section": 3, "dist": "9.5km", "time": "27:30", "name": "揖斐 祐治", "grade": 3, "rank": 1, "isNewRecord": false }] },
+        { "rank": 3, "name": "大東文化大学", "totalTime": "5:21:47", "runners": [{ "section": 7, "dist": "11.9km", "time": "35:44", "name": "金子 宣隆", "grade": 3, "rank": 1, "isNewRecord": false }] },
+        { "rank": 4, "name": "山梨学院大学", "totalTime": "5:25:22", "runners": [{ "section": 5, "dist": "11.6km", "time": "34:44", "name": "デビット・カリウキ", "grade": 2, "rank": 1, "isNewRecord": false }] },
+        { "rank": 5, "name": "日本大学", "totalTime": "5:26:35", "runners": [] },
+        { "rank": 6, "name": "神奈川大学", "totalTime": "5:26:49", "runners": [] },
+        { "rank": 7, "name": "中央大学", "totalTime": "5:27:38", "runners": [] },
+        { "rank": 8, "name": "法政大学", "totalTime": "5:28:59", "runners": [{ "section": 2, "dist": "13.2km", "time": "38:36", "name": "徳本 一善", "grade": 3, "rank": 1, "isNewRecord": false }] },
+        { "rank": 9, "name": "東海大学", "totalTime": "5:29:15", "runners": [] },
+        { "rank": 10, "name": "京都産業大学", "totalTime": "5:29:43", "runners": [] },
+        { "rank": 11, "name": "早稲田大学", "totalTime": "5:30:53", "runners": [] },
+        { "rank": 12, "name": "鹿屋体育大学", "totalTime": "5:31:04", "runners": [{ "section": 1, "dist": "14.6km", "time": "41:56", "name": "永田宏一郎", "grade": 4, "rank": 1, "isNewRecord": true }] },
+        { "rank": 13, "name": "第一工業大学", "totalTime": "5:31:22", "runners": [] },
+        { "rank": 14, "name": "拓殖大学", "totalTime": "5:33:58", "runners": [] },
+        { "rank": 15, "name": "四日市大学", "totalTime": "5:41:18", "runners": [] },
+        { "rank": 16, "name": "広島経済大学", "totalTime": "5:44:13", "runners": [] },
+        { "rank": 17, "name": "徳山大学", "totalTime": "5:44:31", "runners": [] },
+        { "rank": 18, "name": "名古屋商科大学", "totalTime": "5:46:40", "runners": [] },
+        { "rank": 19, "name": "関西大学", "totalTime": "5:46:41", "runners": [] },
+        { "rank": 20, "name": "愛知工業大学", "totalTime": "5:48:19", "runners": [] },
+        { "rank": 21, "name": "近畿大学", "totalTime": "5:49:20", "runners": [] },
+        { "rank": 22, "name": "仙台大学", "totalTime": "5:53:59", "runners": [] },
+        { "rank": 23, "name": "福岡大学", "totalTime": "5:54:00", "runners": [] },
+        { "rank": 24, "name": "札幌学院大学", "totalTime": "5:58:49", "runners": [] },
+        { "rank": 25, "name": "金沢経済大学", "totalTime": "6:00:02", "runners": [] }
+    ]
+}

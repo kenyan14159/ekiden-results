@@ -1,0 +1,29 @@
+{
+    "config": {
+      "type": "corporate",
+      "term": { "singular": "チーム", "plural": "チーム" },
+      "sections": 7,
+      "hasHalfway": false,
+      "showGrade": false,
+      "specialTeams": []
+    },
+    "eventName": "第3回全日本実業団対抗駅伝競走大会",
+    "year": 1959,
+    "teams": [
+      { "rank": 1, "name": "リッカーミシン", "federation": "", "totalTime": "4:27:56", "runners": [] },
+      { "rank": 2, "name": "八幡製鐵", "federation": "", "totalTime": "4:30:57", "runners": [] },
+      { "rank": 3, "name": "東洋ベアリング", "federation": "", "totalTime": "4:36:14", "runners": [] },
+      { "rank": 4, "name": "中央発條", "federation": "", "totalTime": "4:36:14", "runners": [] },
+      { "rank": 5, "name": "倉敷レーヨン", "federation": "", "totalTime": "4:38:14", "runners": [] },
+      { "rank": 6, "name": "富士製鉄", "federation": "", "totalTime": "4:41:42", "runners": [] },
+      { "rank": 7, "name": "大阪府警", "federation": "", "totalTime": "4:45:23", "runners": [] },
+      { "rank": 8, "name": "大阪ガス", "federation": "", "totalTime": "4:46:25", "runners": [] },
+      { "rank": 9, "name": "帝国産業", "federation": "", "totalTime": "4:48:08", "runners": [] },
+      { "rank": 10, "name": "新三菱重工", "federation": "", "totalTime": "4:53:48", "runners": [] },
+      { "rank": 11, "name": "日紡大阪", "federation": "", "totalTime": "---", "runners": [] },
+      { "rank": 12, "name": "大日本紡績", "federation": "", "totalTime": "---", "runners": [] },
+      { "rank": 13, "name": "電電近畿", "federation": "", "totalTime": "---", "runners": [] },
+      { "rank": 14, "name": "神鋼電機", "federation": "", "totalTime": "---", "runners": [] }
+    ],
+    "ranka
+a

@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "九州国際大学",
+  "history": [
+    {
+      "kai": 22,
+      "year": 1990,
+      "rank": 21,
+      "totalTime": "5:55:20",
+      "runners": [
+        { "section": 1, "name": "山崎 利繁", "grade": 3, "rank": 21, "time": "0:47:31" },
+        { "section": 2, "name": "赤治 直和", "grade": 4, "rank": 14, "time": "0:41:26" },
+        { "section": 3, "name": "正木 英二", "grade": 1, "rank": 16, "time": "0:29:39" },
+        { "section": 4, "name": "堀田 輝雄", "grade": 3, "rank": 21, "time": "0:47:00" },
+        { "section": 5, "name": "安松 敏郎", "grade": 4, "rank": 17, "time": "0:39:42" },
+        { "section": 6, "name": "神野与志男", "grade": 1, "rank": 16, "time": "0:39:56" },
+        { "section": 7, "name": "山吉 公雄", "grade": 4, "rank": 15, "time": "0:39:27" },
+        { "section": 8, "name": "岩田 茂", "grade": 2, "rank": 22, "time": "1:10:39" }
+      ]
+    }
+  ]
+}

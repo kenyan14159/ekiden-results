@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "東京学芸大学",
+  "history": [
+    {
+      "kai": 1,
+      "year": 1970,
+      "rank": 13,
+      "totalTime": "6:56:22",
+      "runners": [
+        { "section": 1, "name": "中野 喜夫", "grade": null, "rank": 15, "time": "0:55:22" },
+        { "section": 2, "name": "古沢 昇", "grade": null, "rank": 16, "time": "0:41:28" },
+        { "section": 3, "name": "杉本 三郎", "grade": null, "rank": 11, "time": "0:44:10" },
+        { "section": 4, "name": "松本 実", "grade": null, "rank": 12, "time": "1:17:39" },
+        { "section": 5, "name": "大竹 康夫", "grade": null, "rank": 16, "time": "0:53:26" },
+        { "section": 6, "name": "小池 勲", "grade": null, "rank": 11, "time": "0:28:06" },
+        { "section": 7, "name": "増田 勉", "grade": null, "rank": 15, "time": "0:45:33" },
+        { "section": 8, "name": "佐々木孝志", "grade": null, "rank": 15, "time": "1:10:38" }
+      ]
+    }
+  ]
+}

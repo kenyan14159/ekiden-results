@@ -1,0 +1,44 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "高知大学",
+  "history": [
+    {
+      "kai": 8,
+      "year": 1977,
+      "rank": 16,
+      "totalTime": "6:16:24",
+      "runners": [
+        { "section": 1, "name": "石田 英樹", "grade": null, "rank": 19, "time": "0:48:30" },
+        { "section": 2, "name": "田頭 順一", "grade": null, "rank": 14, "time": "0:38:30" },
+        { "section": 3, "name": "尾崎 浩", "grade": null, "rank": 13, "time": "0:20:04" },
+        { "section": 4, "name": "石野 真也", "grade": null, "rank": 20, "time": "1:21:26" },
+        { "section": 5, "name": "坂本 英透", "grade": null, "rank": 20, "time": "0:51:40" },
+        { "section": 6, "name": "岩井 秋雄", "grade": null, "rank": 15, "time": "0:27:38" },
+        { "section": 7, "name": "松井 幸也", "grade": null, "rank": 15, "time": "0:43:03" },
+        { "section": 8, "name": "横山 暁", "grade": null, "rank": 12, "time": "1:05:33" }
+      ]
+    },
+    {
+      "kai": 6,
+      "year": 1975,
+      "rank": 17,
+      "totalTime": "6:28:17",
+      "runners": [
+        { "section": 1, "name": "佐藤 日出男", "grade": null, "rank": 16, "time": "0:47:57" },
+        { "section": 2, "name": "石田 英樹", "grade": null, "rank": 14, "time": "0:40:58" },
+        { "section": 3, "name": "中川 順博", "grade": null, "rank": 15, "time": "0:19:05" },
+        { "section": 4, "name": "石野 真也", "grade": null, "rank": 18, "time": "1:28:48" },
+        { "section": 5, "name": "出井 秀樹", "grade": null, "rank": 19, "time": "0:51:01" },
+        { "section": 6, "name": "国重 輝夫", "grade": null, "rank": 16, "time": "0:28:35" },
+        { "section": 7, "name": "横山 暁", "grade": null, "rank": 17, "time": "0:44:15" },
+        { "section": 8, "name": "森下 誠", "grade": null, "rank": 15, "time": "1:07:38" }
+      ]
+    }
+  ]
+}

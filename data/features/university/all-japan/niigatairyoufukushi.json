@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "新潟医療福祉大学",
+  "history": [
+      {
+          "kai": 50,
+          "year": 2018,
+          "rank": 26,
+          "totalTime": "5:46:46",
+          "runners": [
+              { "section": 1, "name": "高山 雅弘", "grade": 4, "rank": 27, "time": "0:30:45" },
+              { "section": 2, "name": "本間 豊", "grade": 1, "rank": 27, "time": "0:36:09" },
+              { "section": 3, "name": "小熊 玲央", "grade": 4, "rank": 26, "time": "0:38:42" },
+              { "section": 4, "name": "阿部 智輝", "grade": 3, "rank": 25, "time": "0:38:43" },
+              { "section": 5, "name": "村越 大知", "grade": 1, "rank": 26, "time": "0:40:46" },
+              { "section": 6, "name": "山下 惠大", "grade": 2, "rank": 26, "time": "0:42:38" },
+              { "section": 7, "name": "小林 史弥", "grade": 3, "rank": 18, "time": "0:55:57" },
+              { "section": 8, "name": "若澤 新也", "grade": 4, "rank": 22, "time": "1:03:06" }
+          ]
+      }
+  ]
+}

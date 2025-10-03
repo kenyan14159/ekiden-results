@@ -1,0 +1,27 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "山形大学",
+  "history": [
+    {
+      "kai": 19,
+      "year": 1988,
+      "rank": 14,
+      "totalTime": "5:48:27",
+      "runners": [
+        { "section": 1, "name": "山口 欣也", "grade": 2, "rank": 17, "time": "0:47:32" },
+        { "section": 2, "name": "赤沢 正樹", "grade": 4, "rank": 11, "time": "0:41:30" },
+        { "section": 3, "name": "佐藤 博之", "grade": 3, "rank": 16, "time": "1:17:13" },
+        { "section": 4, "name": "佐藤 淳", "grade": 4, "rank": 18, "time": "0:36:20" },
+        { "section": 5, "name": "向山 直樹", "grade": 4, "rank": 14, "time": "0:42:48" },
+        { "section": 6, "name": "五十嵐修二", "grade": 3, "rank": 15, "time": "0:39:12" },
+        { "section": 7, "name": "井上 敏春", "grade": 4, "rank": 12, "time": "1:03:52" }
+      ]
+    }
+  ]
+}

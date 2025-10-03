@@ -1,0 +1,43 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "熊本商科大学",
+  "history": [
+    {
+      "kai": 12,
+      "year": 1981,
+      "rank": 13,
+      "totalTime": "5:51:44",
+      "runners": [
+        { "section": 1, "name": "出水田 浩", "grade": null, "rank": 14, "time": "48:01" },
+        { "section": 2, "name": "石川 勝", "grade": null, "rank": 13, "time": "43:11" },
+        { "section": 3, "name": "宮崎 幸仁", "grade": null, "rank": 16, "time": "1:16:23" },
+        { "section": 4, "name": "村上 康治", "grade": null, "rank": 12, "time": "36:06" },
+        { "section": 5, "name": "西田 司", "grade": null, "rank": 13, "time": "43:33" },
+        { "section": 6, "name": "尾崎 秀一", "grade": null, "rank": 10, "time": "34:23" },
+        { "section": 7, "name": "清田 寛", "grade": null, "rank": 11, "time": "1:10:07" }
+      ]
+    },
+    {
+      "kai": 2,
+      "year": 1971,
+      "rank": 15,
+      "totalTime": "6:28:33",
+      "runners": [
+        { "section": 1, "name": "河村 義照", "grade": null, "rank": 10, "time": "0:52:01" },
+        { "section": 2, "name": "福村 光能", "grade": null, "rank": 12, "time": "0:39:10" },
+        { "section": 3, "name": "福田 幸夫", "grade": null, "rank": 19, "time": "0:19:11" },
+        { "section": 4, "name": "山田日出男", "grade": null, "rank": 20, "time": "1:25:34" },
+        { "section": 5, "name": "山県 由幸", "grade": null, "rank": 13, "time": "0:53:32" },
+        { "section": 6, "name": "斎藤慎次郎", "grade": null, "rank": 11, "time": "0:26:58" },
+        { "section": 7, "name": "加茂田憲治", "grade": null, "rank": 9, "time": "0:41:22" },
+        { "section": 8, "name": "鏡 鉄郎", "grade": null, "rank": 17, "time": "1:10:45" }
+      ]
+    }
+  ]
+}

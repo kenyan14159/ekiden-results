@@ -1,0 +1,60 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "創価大学",
+  "history": [
+      {
+          "kai": 56,
+          "year": 2024,
+          "rank": 4,
+          "totalTime": "5:13:17",
+          "runners": [
+              { "section": 1, "name": "小暮 栄輝", "grade": 4, "rank": 3, "time": "0:28:20" },
+              { "section": 2, "name": "吉田 響", "grade": 4, "rank": 2, "time": "0:31:05" },
+              { "section": 3, "name": "石丸 惇那", "grade": 3, "rank": 10, "time": "0:34:52" },
+              { "section": 4, "name": "山口 翔輝", "grade": 1, "rank": 8, "time": "0:34:15" },
+              { "section": 5, "name": "ｽﾃｨｰﾌﾞﾝ ﾑﾁｰﾆ", "grade": 2, "rank": 2, "time": "0:35:41" },
+              { "section": 6, "name": "黒木 陽向", "grade": 3, "rank": 9, "time": "0:38:20" },
+              { "section": 7, "name": "吉田 凌", "grade": 4, "rank": 12, "time": "0:52:56" },
+              { "section": 8, "name": "野沢 悠真", "grade": 3, "rank": 2, "time": "0:57:48" }
+          ]
+      },
+      {
+          "kai": 55,
+          "year": 2023,
+          "rank": 6,
+          "totalTime": "5:18:21",
+          "runners": [
+              { "section": 1, "name": "織橋 巧", "grade": 1, "rank": 4, "time": "0:27:25" },
+              { "section": 2, "name": "山森 龍暁", "grade": 4, "rank": 13, "time": "0:32:39" },
+              { "section": 3, "name": "石丸 惇那", "grade": 2, "rank": 13, "time": "0:34:47" },
+              { "section": 4, "name": "小池 莉希", "grade": 1, "rank": 16, "time": "0:36:19" },
+              { "section": 5, "name": "吉田 響", "grade": 3, "rank": 1, "time": "0:35:18" },
+              { "section": 6, "name": "山下 蓮", "grade": 2, "rank": 16, "time": "0:39:57" },
+              { "section": 7, "name": "ｽﾃｨｰﾌﾞﾝ ﾑﾁｰﾆ", "grade": 1, "rank": 4, "time": "0:51:34" },
+              { "section": 8, "name": "吉田 凌", "grade": 3, "rank": 7, "time": "1:00:22" }
+          ]
+      },
+      {
+          "kai": 54,
+          "year": 2022,
+          "rank": 5,
+          "totalTime": "5:12:10",
+          "runners": [
+              { "section": 1, "name": "横山 魁哉", "grade": 4, "rank": 5, "time": "0:27:17" },
+              { "section": 2, "name": "葛西 潤", "grade": 4, "rank": 1, "time": "0:31:12" },
+              { "section": 3, "name": "吉田 凌", "grade": 2, "rank": 12, "time": "0:34:58" },
+              { "section": 4, "name": "石丸 惇那", "grade": 1, "rank": 11, "time": "0:34:51" },
+              { "section": 5, "name": "嶋津 雄大", "grade": 4, "rank": 3, "time": "0:36:10" },
+              { "section": 6, "name": "新家 裕太郎", "grade": 4, "rank": 7, "time": "0:37:57" },
+              { "section": 7, "name": "ﾌｨﾘｯﾌﾟ ﾑﾙﾜ", "grade": 4, "rank": 3, "time": "0:50:37" },
+              { "section": 8, "name": "山森 龍暁", "grade": 3, "rank": 11, "time": "0:59:08" }
+          ]
+      }
+  ]
+}

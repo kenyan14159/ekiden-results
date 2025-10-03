@@ -1,0 +1,27 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "中部工業大学",
+  "history": [
+    {
+      "kai": 15,
+      "year": 1984,
+      "rank": 18,
+      "totalTime": "6:01:27",
+      "runners": [
+        { "section": 1, "name": "岩附 稔浩", "grade": null, "rank": 17, "time": "0:48:42" },
+        { "section": 2, "name": "永田 貴司", "grade": 1, "rank": 17, "time": "0:43:36" },
+        { "section": 3, "name": "菊地 彰隆", "grade": null, "rank": 14, "time": "1:17:10" },
+        { "section": 4, "name": "久米 清隆", "grade": null, "rank": 19, "time": "0:38:20" },
+        { "section": 5, "name": "水野 伸克", "grade": null, "rank": 15, "time": "0:44:16" },
+        { "section": 6, "name": "岡本 繁雄", "grade": null, "rank": 16, "time": "0:35:18" },
+        { "section": 7, "name": "沼口 敬史", "grade": null, "rank": 19, "time": "1:14:05" }
+      ]
+    }
+  ]
+}

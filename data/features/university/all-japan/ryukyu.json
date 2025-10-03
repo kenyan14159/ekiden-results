@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "琉球大学",
+  "history": [
+    {
+      "kai": 8,
+      "year": 1977,
+      "rank": 13,
+      "totalTime": "6:05:29",
+      "runners": [
+        { "section": 1, "name": "富川 泰幸", "grade": null, "rank": 15, "time": "0:45:29" },
+        { "section": 2, "name": "島田 豊", "grade": null, "rank": 17, "time": "0:39:35" },
+        { "section": 3, "name": "大里 耕作", "grade": null, "rank": 18, "time": "0:21:01" },
+        { "section": 4, "name": "久保 啓昭", "grade": null, "rank": 13, "time": "1:16:28" },
+        { "section": 5, "name": "本村 邦彦", "grade": null, "rank": 16, "time": "0:48:16" },
+        { "section": 6, "name": "西村津樹雄", "grade": null, "rank": 16, "time": "0:27:39" },
+        { "section": 7, "name": "湊 圭三", "grade": null, "rank": 13, "time": "0:42:04" },
+        { "section": 8, "name": "上間 哲", "grade": null, "rank": 10, "time": "1:04:57" }
+      ]
+    }
+  ]
+}

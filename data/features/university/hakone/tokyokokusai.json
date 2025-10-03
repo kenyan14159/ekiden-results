@@ -1,0 +1,172 @@
+{
+    "config": {
+      "type": "university",
+      "term": { "singular": "大学", "plural": "大学" },
+      "sections": 10,
+      "hasHalfway": true,
+      "showGrade": true
+    },
+    "teamName": "東京国際大学",
+    "history": [
+        {
+            "kai": 101,
+            "year": 2025,
+            "rank": 8,
+            "totalTime": "10:54:55",
+            "outbound": { "rank": 11, "time": "05:28:34" },
+            "inbound": { "rank": 5, "time": "05:26:21" },
+            "runners": [
+                { "section": 1, "name": "木村海斗", "rank": 14, "time": "01:02:55" },
+                { "section": 2, "name": "エティーリ", "rank": 1, "time": "01:05:31" },
+                { "section": 3, "name": "佐藤榛紀", "rank": 14, "time": "01:03:29" },
+                { "section": 4, "name": "大林洸己", "rank": 10, "time": "01:02:35" },
+                { "section": 5, "name": "楠木悠人", "rank": 18, "time": "01:14:04" },
+                { "section": 6, "name": "中山拓真", "rank": 10, "time": "00:59:00" },
+                { "section": 7, "name": "冨永昌輝", "rank": 4, "time": "01:02:30" },
+                { "section": 8, "name": "益田郁也", "rank": 14, "time": "01:06:12" },
+                { "section": 9, "name": "菅野裕二郎", "rank": 3, "time": "01:09:01" },
+                { "section": 10, "name": "大村良紀", "rank": 6, "time": "01:09:38" }
+            ]
+        },
+        {
+            "kai": 99,
+            "year": 2023,
+            "rank": 11,
+            "totalTime": "10:59:58",
+            "outbound": { "rank": 7, "time": "05:27:49" },
+            "inbound": { "rank": 17, "time": "05:32:09" },
+            "runners": [
+                { "section": 1, "name": "山谷昌也", "rank": 10, "time": "01:03:09" },
+                { "section": 2, "name": "丹所健", "rank": 11, "time": "01:08:06" },
+                { "section": 3, "name": "白井勇佑", "rank": 12, "time": "01:02:44" },
+                { "section": 4, "name": "ビンセント", "rank": 1, "time": "01:00:00" },
+                { "section": 5, "name": "川端拳史", "rank": 14, "time": "01:13:50" },
+                { "section": 6, "name": "吉住颯", "rank": 18, "time": "01:01:49" },
+                { "section": 7, "name": "山岸柊斗", "rank": 13, "time": "01:04:21" },
+                { "section": 8, "name": "宗像聖", "rank": 19, "time": "01:06:32" },
+                { "section": 9, "name": "村松敬哲", "rank": 7, "time": "01:09:07" },
+                { "section": 10, "name": "堀畑佳吾", "rank": 11, "time": "01:10:20" }
+            ]
+        },
+        {
+            "kai": 98,
+            "year": 2022,
+            "rank": 5,
+            "totalTime": "10:55:14",
+            "outbound": { "rank": 7, "time": "05:26:55" },
+            "inbound": { "rank": 4, "time": "05:28:19" },
+            "runners": [
+                { "section": 1, "name": "山谷昌也", "rank": 7, "time": "01:01:49" },
+                { "section": 2, "name": "ビンセント", "rank": 5, "time": "01:07:02" },
+                { "section": 3, "name": "丹所健", "rank": 1, "time": "01:00:55" },
+                { "section": 4, "name": "堀畑佳吾", "rank": 12, "time": "01:03:11" },
+                { "section": 5, "name": "倉掛響", "rank": 14, "time": "01:13:58" },
+                { "section": 6, "name": "林優策", "rank": 13, "time": "00:59:33" },
+                { "section": 7, "name": "冨永昌輝", "rank": 6, "time": "01:04:06" },
+                { "section": 8, "name": "村松敬哲", "rank": 6, "time": "01:05:37" },
+                { "section": 9, "name": "宗像聖", "rank": 9, "time": "01:09:57" },
+                { "section": 10, "name": "野沢巧理", "rank": 3, "time": "01:09:06" }
+            ]
+        },
+        {
+            "kai": 97,
+            "year": 2021,
+            "rank": 10,
+            "totalTime": "11:05:49",
+            "outbound": { "rank": 6, "time": "05:32:06" },
+            "inbound": { "rank": 12, "time": "05:33:43" },
+            "runners": [
+                { "section": 1, "name": "丹所健", "rank": 14, "time": "01:03:45" },
+                { "section": 2, "name": "ビンセント", "rank": 1, "time": "01:05:49" },
+                { "section": 3, "name": "内田光", "rank": 9, "time": "01:04:06" },
+                { "section": 4, "name": "宗像聖", "rank": 13, "time": "01:04:30" },
+                { "section": 5, "name": "荒井雄哉", "rank": 10, "time": "01:13:56" },
+                { "section": 6, "name": "芳賀宏太郎", "rank": 19, "time": "01:01:09" },
+                { "section": 7, "name": "佐伯涼", "rank": 1, "time": "01:03:10" },
+                { "section": 8, "name": "熊谷真澄", "rank": 14, "time": "01:06:28" },
+                { "section": 9, "name": "加藤純平", "rank": 14, "time": "01:11:27" },
+                { "section": 10, "name": "杉崎翼", "rank": 12, "time": "01:11:29" }
+            ]
+        },
+        {
+            "kai": 96,
+            "year": 2020,
+            "rank": 5,
+            "totalTime": "10:54:27",
+            "outbound": { "rank": 3, "time": "05:24:33" },
+            "inbound": { "rank": 6, "time": "05:29:54" },
+            "runners": [
+                { "section": 1, "name": "丹所健", "rank": 13, "time": "01:03:02" },
+                { "section": 2, "name": "伊藤達彦", "rank": 2, "time": "01:06:18" },
+                { "section": 3, "name": "ビンセント", "rank": 1, "time": "00:59:25" },
+                { "section": 4, "name": "佐伯涼", "rank": 12, "time": "01:02:53" },
+                { "section": 5, "name": "山瀬大成", "rank": 10, "time": "01:12:55" },
+                { "section": 6, "name": "大上颯麻", "rank": 17, "time": "01:00:26" },
+                { "section": 7, "name": "真船恭輔", "rank": 7, "time": "01:04:02" },
+                { "section": 8, "name": "芳賀宏太郎", "rank": 5, "time": "01:05:51" },
+                { "section": 9, "name": "相沢悠斗", "rank": 3, "time": "01:09:04" },
+                { "section": 10, "name": "内山涼太", "rank": 9, "time": "01:10:31" }
+            ]
+        },
+        {
+            "kai": 95,
+            "year": 2019,
+            "rank": 15,
+            "totalTime": "11:14:42",
+            "outbound": { "rank": 17, "time": "05:37:15" },
+            "inbound": { "rank": 16, "time": "05:37:27" },
+            "runners": [
+                { "section": 1, "name": "タイタス", "rank": 8, "time": "01:02:50" },
+                { "section": 2, "name": "伊藤達彦", "rank": 11, "time": "01:08:36" },
+                { "section": 3, "name": "真船恭輔", "rank": 11, "time": "01:03:37" },
+                { "section": 4, "name": "相沢悠斗", "rank": 17, "time": "01:04:35" },
+                { "section": 5, "name": "加藤純平", "rank": 21, "time": "01:17:37" },
+                { "section": 6, "name": "河野歩", "rank": 14, "time": "01:00:20" },
+                { "section": 7, "name": "芳賀宏太郎", "rank": 6, "time": "01:04:28" },
+                { "section": 8, "name": "山瀬大成", "rank": 6, "time": "01:06:21" },
+                { "section": 9, "name": "浦馬場裕也", "rank": 21, "time": "01:12:42" },
+                { "section": 10, "name": "内山涼太", "rank": 18, "time": "01:13:36" }
+            ]
+        },
+        {
+            "kai": 94,
+            "year": 2018,
+            "rank": 17,
+            "totalTime": "11:22:59",
+            "outbound": { "rank": 19, "time": "05:41:45" },
+            "inbound": { "rank": 15, "time": "05:41:14" },
+            "runners": [
+                { "section": 1, "name": "真船恭輔", "rank": 20, "time": "01:03:55" },
+                { "section": 2, "name": "伊藤達彦", "rank": 15, "time": "01:10:16" },
+                { "section": 3, "name": "スタンレイ", "rank": 20, "time": "01:07:04" },
+                { "section": 4, "name": "鈴木博斗", "rank": 15, "time": "01:04:14" },
+                { "section": 5, "name": "浜登貴也", "rank": 15, "time": "01:16:16" },
+                { "section": 6, "name": "河野歩", "rank": 8, "time": "01:00:19" },
+                { "section": 7, "name": "渡辺和也", "rank": 7, "time": "01:05:20" },
+                { "section": 8, "name": "佐伯涼", "rank": 17, "time": "01:09:05" },
+                { "section": 9, "name": "鈴木聖人", "rank": 20, "time": "01:14:18" },
+                { "section": 10, "name": "相沢悠斗", "rank": 6, "time": "01:12:12" }
+            ]
+        },
+        {
+            "kai": 92,
+            "year": 2016,
+            "rank": 17,
+            "totalTime": "11:24:00",
+            "outbound": { "rank": 12, "time": "05:38:06" },
+            "inbound": { "rank": 18, "time": "05:45:54" },
+            "runners": [
+                { "section": 1, "name": "関竜大", "rank": 17, "time": "01:03:53" },
+                { "section": 2, "name": "スタンレイ", "rank": 13, "time": "01:09:56" },
+                { "section": 3, "name": "照井明人", "rank": 13, "time": "01:05:23" },
+                { "section": 4, "name": "鈴木博斗", "rank": 11, "time": "00:56:53" },
+                { "section": 5, "name": "浜登貴也", "rank": 7, "time": "01:22:01" },
+                { "section": 6, "name": "熊谷光", "rank": 9, "time": "01:00:43" },
+                { "section": 7, "name": "山中章弘", "rank": 19, "time": "01:08:27" },
+                { "section": 8, "name": "鈴木大貴", "rank": 20, "time": "01:10:23" },
+                { "section": 9, "name": "石井辰樹", "rank": 16, "time": "01:14:05" },
+                { "section": 10, "name": "小針旭人", "rank": 11, "time": "01:12:16" }
+            ]
+        }
+    ]
+}

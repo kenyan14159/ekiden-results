@@ -1,0 +1,52 @@
+{
+    "config": {
+      "type": "university",
+      "term": { "singular": "大学", "plural": "大学" },
+      "sections": 10,
+      "hasHalfway": true,
+      "showGrade": true
+    },
+    "teamName": "駿河台大学",
+    "history": [
+        {
+            "kai": 100,
+            "year": 2024,
+            "rank": 18,
+            "totalTime": "11:06:58",
+            "outbound": { "rank": 14, "time": "05:30:51" },
+            "inbound": { "rank": 21, "time": "05:36:07" },
+            "runners": [
+                { "section": 1, "name": "レマイヤン", "rank": 6, "time": "01:01:34" },
+                { "section": 2, "name": "新山舜心", "rank": 21, "time": "01:10:13" },
+                { "section": 3, "name": "古橋希翁", "rank": 18, "time": "01:04:11" },
+                { "section": 4, "name": "東泉大河", "rank": 14, "time": "01:02:52" },
+                { "section": 5, "name": "倉島啓人", "rank": 5, "time": "01:12:01" },
+                { "section": 6, "name": "塩路悠耀", "rank": 23, "time": "01:01:44" },
+                { "section": 7, "name": "藤井空大", "rank": 21, "time": "01:05:39" },
+                { "section": 8, "name": "岡崎樹", "rank": 12, "time": "01:05:37" },
+                { "section": 9, "name": "長田拓巳", "rank": 21, "time": "01:12:40" },
+                { "section": 10, "name": "久保俊翔", "rank": 13, "time": "01:10:27" }
+            ]
+        },
+        {
+            "kai": 98,
+            "year": 2022,
+            "rank": 19,
+            "totalTime": "11:13:42",
+            "outbound": { "rank": 20, "time": "05:41:11" },
+            "inbound": { "rank": 15, "time": "05:32:31" },
+            "runners": [
+                { "section": 1, "name": "清野太成", "rank": 17, "time": "01:03:20" },
+                { "section": 2, "name": "ブヌカ", "rank": 19, "time": "01:10:19" },
+                { "section": 3, "name": "町田康誠", "rank": 12, "time": "01:03:35" },
+                { "section": 4, "name": "今井隆生", "rank": 20, "time": "01:06:58" },
+                { "section": 5, "name": "永井竜二", "rank": 20, "time": "01:16:59" },
+                { "section": 6, "name": "小泉謙", "rank": 3, "time": "00:58:47" },
+                { "section": 7, "name": "新山舜心", "rank": 15, "time": "01:05:26" },
+                { "section": 8, "name": "出仙龍之介", "rank": 15, "time": "01:06:56" },
+                { "section": 9, "name": "田尻健", "rank": 18, "time": "01:11:11" },
+                { "section": 10, "name": "阪本大貴", "rank": 7, "time": "01:10:11" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2933 @@
+{
+    "config": {
+        "type": "high_school",
+        "term": {
+            "singular": "高校",
+            "plural": "高校"
+        },
+        "sections": 5,
+        "hasHalfway": false,
+        "showGrade": true,
+        "specialTeams": []
+    },
+    "eventName": "女子第34回全国高等学校駅伝競走大会（都大路）",
+    "year": 2022,
+    "teams": [
+        {
+            "rank": 1,
+            "name": "長野東(長野)",
+            "totalTime": "1:07:37",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:26",
+                    "name": "名和 夏乃子",
+                    "grade": 2,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:12",
+                    "name": "窪田 舞",
+                    "grade": 1,
+                    "rank": 7,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:09:56",
+                    "name": "仁科 玲美",
+                    "grade": 3,
+                    "rank": 3,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:18",
+                    "name": "佐藤 悠花",
+                    "grade": 3,
+                    "rank": 1,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:15:45",
+                    "name": "村岡 美玖",
+                    "grade": 3,
+                    "rank": 3,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 2,
+            "name": "仙台育英(宮城)",
+            "totalTime": "1:07:51",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:24",
+                    "name": "杉森 心音",
+                    "grade": 3,
+                    "rank": 2,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:01",
+                    "name": "ﾃﾞｲｼｰ ｼﾞｪﾛｯﾌﾟ",
+                    "grade": 1,
+                    "rank": 2,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:09:52",
+                    "name": "長岡 みさき",
+                    "grade": 1,
+                    "rank": 2,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:22",
+                    "name": "渡邉 来愛",
+                    "grade": 2,
+                    "rank": 2,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:12",
+                    "name": "細川 あおい",
+                    "grade": 1,
+                    "rank": 6,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 3,
+            "name": "神村学園(鹿児島)",
+            "totalTime": "1:08:03",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:52",
+                    "name": "田島 愛梨",
+                    "grade": 3,
+                    "rank": 11,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:17",
+                    "name": "上野 優月",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:06",
+                    "name": "小倉 陽菜",
+                    "grade": 1,
+                    "rank": 9,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:39",
+                    "name": "沖田 萌々",
+                    "grade": 3,
+                    "rank": 9,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:15:09",
+                    "name": "ｶﾘﾊﾞ ｶﾛﾗｲﾝ",
+                    "grade": 2,
+                    "rank": 1,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 4,
+            "name": "立命館宇治(京都)",
+            "totalTime": "1:08:12",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:25",
+                    "name": "山本 釉未",
+                    "grade": 2,
+                    "rank": 3,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:14",
+                    "name": "太田 咲雪",
+                    "grade": 3,
+                    "rank": 9,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:09:41",
+                    "name": "細谷 愛子",
+                    "grade": 3,
+                    "rank": 1,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:33",
+                    "name": "池田 悠音",
+                    "grade": 2,
+                    "rank": 8,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:19",
+                    "name": "瀨川 藍",
+                    "grade": 3,
+                    "rank": 8,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 5,
+            "name": "白鵬女(神奈川)",
+            "totalTime": "1:08:32",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:29",
+                    "name": "古田島 彩",
+                    "grade": 2,
+                    "rank": 5,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:20",
+                    "name": "勝呂 遥香",
+                    "grade": 1,
+                    "rank": 11,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:01",
+                    "name": "長谷川 美愛",
+                    "grade": 3,
+                    "rank": 5,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:27",
+                    "name": "高橋 ひより",
+                    "grade": 3,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:15",
+                    "name": "ｼﾞｪｼﾝﾀ ﾆｮｶﾋﾞ",
+                    "grade": 1,
+                    "rank": 7,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 6,
+            "name": "大阪薫英女(大阪)",
+            "totalTime": "1:08:42",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:20",
+                    "name": "水本 佳菜",
+                    "grade": 3,
+                    "rank": 1,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:29",
+                    "name": "塚本 夕藍",
+                    "grade": 1,
+                    "rank": 15,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:01",
+                    "name": "西澤 茉鈴",
+                    "grade": 3,
+                    "rank": 5,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:27",
+                    "name": "向井 友希",
+                    "grade": 2,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:25",
+                    "name": "薮谷 奈瑠",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 7,
+            "name": "筑紫女学園(福岡)",
+            "totalTime": "1:09:18",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:06",
+                    "name": "松本 明莉",
+                    "grade": 3,
+                    "rank": 12,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:23",
+                    "name": "金森 詩絵菜",
+                    "grade": 1,
+                    "rank": 12,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:01",
+                    "name": "有川 ひなの",
+                    "grade": 2,
+                    "rank": 5,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:27",
+                    "name": "福山 光",
+                    "grade": 2,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:21",
+                    "name": "北野 寧々",
+                    "grade": 3,
+                    "rank": 9,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 8,
+            "name": "興譲館(岡山)",
+            "totalTime": "1:09:34",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:44",
+                    "name": "奥本 菜瑠海",
+                    "grade": 2,
+                    "rank": 9,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:57",
+                    "name": "細見 芽生",
+                    "grade": 1,
+                    "rank": 23,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:19",
+                    "name": "杉森 月音",
+                    "grade": 2,
+                    "rank": 16,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:31",
+                    "name": "樋口 美桜",
+                    "grade": 2,
+                    "rank": 7,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:03",
+                    "name": "ﾁｪﾎﾞﾃｨﾋﾞﾝ ｶﾄﾞｺﾞ",
+                    "grade": 3,
+                    "rank": 5,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 9,
+            "name": "順天(東京)",
+            "totalTime": "1:09:43",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:37",
+                    "name": "小川 陽香",
+                    "grade": 3,
+                    "rank": 7,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:08",
+                    "name": "鈴木 美海",
+                    "grade": 2,
+                    "rank": 5,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:16",
+                    "name": "石上 栞理",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:46",
+                    "name": "今泉 日向花",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:56",
+                    "name": "林 凜華",
+                    "grade": 3,
+                    "rank": 20,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 10,
+            "name": "学法石川(福島)",
+            "totalTime": "1:10:04",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:46",
+                    "name": "岩崎 麻知子",
+                    "grade": 3,
+                    "rank": 26,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:07",
+                    "name": "平尾 暁絵",
+                    "grade": 3,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:12",
+                    "name": "鈴木 和香奈",
+                    "grade": 3,
+                    "rank": 13,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:24",
+                    "name": "佐藤 美空",
+                    "grade": 2,
+                    "rank": 3,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:35",
+                    "name": "山田 桃子",
+                    "grade": 2,
+                    "rank": 13,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 11,
+            "name": "山田(高知)",
+            "totalTime": "1:10:06",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:34",
+                    "name": "白木 ひなの",
+                    "grade": 3,
+                    "rank": 6,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:10",
+                    "name": "穗岐山 芽衣",
+                    "grade": 1,
+                    "rank": 6,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:22",
+                    "name": "安喜 梨花",
+                    "grade": 1,
+                    "rank": 18,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:07",
+                    "name": "石本 翔凪",
+                    "grade": 2,
+                    "rank": 30,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:53",
+                    "name": "吉松 真穂",
+                    "grade": 3,
+                    "rank": 17,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 12,
+            "name": "諫早(長崎)",
+            "totalTime": "1:10:13",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:23",
+                    "name": "田中 咲蘭",
+                    "grade": 3,
+                    "rank": 13,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:06",
+                    "name": "蔦野 萌々香",
+                    "grade": 3,
+                    "rank": 3,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:10",
+                    "name": "髙瀬 詩織",
+                    "grade": 1,
+                    "rank": 12,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:01",
+                    "name": "岩本 彩乃",
+                    "grade": 2,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:33",
+                    "name": "藤丸 結",
+                    "grade": 3,
+                    "rank": 12,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 13,
+            "name": "成田(千葉)",
+            "totalTime": "1:10:39",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:34",
+                    "name": "今西 紗世",
+                    "grade": 1,
+                    "rank": 18,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:41",
+                    "name": "鈴木 優菜",
+                    "grade": 3,
+                    "rank": 18,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:00",
+                    "name": "横澤 奈夏",
+                    "grade": 3,
+                    "rank": 4,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:54",
+                    "name": "南 莉花",
+                    "grade": 3,
+                    "rank": 18,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:30",
+                    "name": "長島 奈南",
+                    "grade": 3,
+                    "rank": 11,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 14,
+            "name": "青森山田(青森)",
+            "totalTime": "1:10:43",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:58",
+                    "name": "對馬 千紘",
+                    "grade": 3,
+                    "rank": 29,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:46",
+                    "name": "吉原 莉胡",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:23",
+                    "name": "今 絵里南",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:44",
+                    "name": "立花 來星々",
+                    "grade": 1,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:15:52",
+                    "name": "ﾙｰｼｰ ﾄﾞｩｰﾀ",
+                    "grade": 1,
+                    "rank": 4,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 15,
+            "name": "昌平(埼玉)",
+            "totalTime": "1:10:49",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:40",
+                    "name": "蛯名 夏音",
+                    "grade": 3,
+                    "rank": 22,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:24",
+                    "name": "仲西 梨花",
+                    "grade": 3,
+                    "rank": 13,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:07",
+                    "name": "後藤 舞桜",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:44",
+                    "name": "鈴木 陽渚",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:54",
+                    "name": "成瀬 結菜",
+                    "grade": 1,
+                    "rank": 18,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 16,
+            "name": "世羅(広島)",
+            "totalTime": "1:10:53",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:35",
+                    "name": "山田 依茉",
+                    "grade": 2,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:12:31",
+                    "name": "ﾛｰｽﾞ ﾜﾝｸﾞｲ",
+                    "grade": 1,
+                    "rank": 1,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:43",
+                    "name": "東 一葉",
+                    "grade": 3,
+                    "rank": 35,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:57",
+                    "name": "井上 菜名",
+                    "grade": 1,
+                    "rank": 21,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:07",
+                    "name": "後藤 彩香",
+                    "grade": 2,
+                    "rank": 25,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 17,
+            "name": "鯖江(福井)",
+            "totalTime": "1:10:53",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:46",
+                    "name": "山口 晏音衣",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:32",
+                    "name": "酒井 心希",
+                    "grade": 3,
+                    "rank": 17,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:33",
+                    "name": "宮川 陽",
+                    "grade": 1,
+                    "rank": 28,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:06",
+                    "name": "堀 結葉",
+                    "grade": 2,
+                    "rank": 28,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:56",
+                    "name": "木村 茉央",
+                    "grade": 2,
+                    "rank": 20,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 18,
+            "name": "ルーテル学院(熊本)",
+            "totalTime": "1:11:00",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:19:42",
+                    "name": "溝上 加菜",
+                    "grade": 3,
+                    "rank": 8,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:30",
+                    "name": "平田 優月",
+                    "grade": 3,
+                    "rank": 16,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:45",
+                    "name": "古木 愛莉",
+                    "grade": 1,
+                    "rank": 37,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:06",
+                    "name": "吉田 あゆ",
+                    "grade": 1,
+                    "rank": 28,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:57",
+                    "name": "中村 日菜多",
+                    "grade": 3,
+                    "rank": 22,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 19,
+            "name": "豊川(愛知)",
+            "totalTime": "1:11:20",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:33",
+                    "name": "吉田 莉帆",
+                    "grade": 3,
+                    "rank": 16,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:28",
+                    "name": "森 彩純",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:23",
+                    "name": "林 那優",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:56",
+                    "name": "内田 詩乃",
+                    "grade": 1,
+                    "rank": 20,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:00",
+                    "name": "秋竹 凛音",
+                    "grade": 1,
+                    "rank": 23,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 20,
+            "name": "西脇工(兵庫)",
+            "totalTime": "1:11:23",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:49",
+                    "name": "塩﨑 彩理",
+                    "grade": 2,
+                    "rank": 27,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:12",
+                    "name": "飯塚 菜月",
+                    "grade": 3,
+                    "rank": 7,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:37",
+                    "name": "吉田 優音",
+                    "grade": 3,
+                    "rank": 31,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:55",
+                    "name": "井澤 奈甫",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:50",
+                    "name": "藤城 さくら",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 21,
+            "name": "茨城キリスト(茨城)",
+            "totalTime": "1:11:31",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:29",
+                    "name": "小野 真緒",
+                    "grade": 3,
+                    "rank": 15,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:59",
+                    "name": "後藤 凜那",
+                    "grade": 3,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:07",
+                    "name": "渡邉 珠有",
+                    "grade": 3,
+                    "rank": 10,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:45",
+                    "name": "袴塚 乙愛",
+                    "grade": 3,
+                    "rank": 12,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:11",
+                    "name": "山形 一華",
+                    "grade": 2,
+                    "rank": 26,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 22,
+            "name": "小林(宮崎)",
+            "totalTime": "1:11:41",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:34",
+                    "name": "田中 那奈",
+                    "grade": 3,
+                    "rank": 17,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:58",
+                    "name": "西村 真里奈",
+                    "grade": 3,
+                    "rank": 24,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:17",
+                    "name": "片山 乙葉",
+                    "grade": 2,
+                    "rank": 15,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:57",
+                    "name": "永田 ひなの",
+                    "grade": 3,
+                    "rank": 21,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:55",
+                    "name": "榎木 颯月",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 23,
+            "name": "大分東明(大分)",
+            "totalTime": "1:11:57",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:27",
+                    "name": "多田 妃奈",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:53",
+                    "name": "和田 美月",
+                    "grade": 3,
+                    "rank": 43,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:46",
+                    "name": "浅倉 愛",
+                    "grade": 3,
+                    "rank": 39,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:19",
+                    "name": "藤戸 華",
+                    "grade": 1,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:15:32",
+                    "name": "ｽｰｻﾝ ｶﾓｿ",
+                    "grade": 3,
+                    "rank": 2,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 24,
+            "name": "旭川龍谷(北海道)",
+            "totalTime": "1:12:08",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:04",
+                    "name": "山本 望結",
+                    "grade": 2,
+                    "rank": 31,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:51",
+                    "name": "石川 苺",
+                    "grade": 3,
+                    "rank": 21,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:05",
+                    "name": "益塚 稀",
+                    "grade": 2,
+                    "rank": 8,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:16",
+                    "name": "工藤 凜果",
+                    "grade": 3,
+                    "rank": 35,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:52",
+                    "name": "中野 芽衣",
+                    "grade": 2,
+                    "rank": 16,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 25,
+            "name": "西京(山口)",
+            "totalTime": "1:12:09",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:12",
+                    "name": "中原 涼那",
+                    "grade": 3,
+                    "rank": 32,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:51",
+                    "name": "佐々木 凜",
+                    "grade": 1,
+                    "rank": 21,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:29",
+                    "name": "神田 青葉",
+                    "grade": 1,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:47",
+                    "name": "佐内 瑞希",
+                    "grade": 2,
+                    "rank": 15,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:16:50",
+                    "name": "土屋 実耶弥",
+                    "grade": 3,
+                    "rank": 14,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 26,
+            "name": "宇都宮文星女(栃木)",
+            "totalTime": "1:12:30",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:42",
+                    "name": "深澤 雫月",
+                    "grade": 2,
+                    "rank": 24,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:06",
+                    "name": "山田 未唯",
+                    "grade": 3,
+                    "rank": 27,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:30",
+                    "name": "渡邊 怜菜",
+                    "grade": 1,
+                    "rank": 26,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:53",
+                    "name": "蓬田 梨世蘭",
+                    "grade": 3,
+                    "rank": 17,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:19",
+                    "name": "粕谷 雫",
+                    "grade": 2,
+                    "rank": 30,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 27,
+            "name": "比叡山(滋賀)",
+            "totalTime": "1:12:37",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:42",
+                    "name": "荒田 悠良",
+                    "grade": 3,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:08",
+                    "name": "山中 彩愛",
+                    "grade": 1,
+                    "rank": 29,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:28",
+                    "name": "川端 愛実",
+                    "grade": 2,
+                    "rank": 23,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:00",
+                    "name": "大原 瑚子",
+                    "grade": 2,
+                    "rank": 24,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:19",
+                    "name": "肥後 彩羽",
+                    "grade": 1,
+                    "rank": 30,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 28,
+            "name": "平田(島根)",
+            "totalTime": "1:13:06",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:21",
+                    "name": "森山 紗仁美",
+                    "grade": 2,
+                    "rank": 34,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:14",
+                    "name": "角 桃子",
+                    "grade": 3,
+                    "rank": 31,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:35",
+                    "name": "門脇 花音",
+                    "grade": 2,
+                    "rank": 30,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:45",
+                    "name": "田邊 心",
+                    "grade": 3,
+                    "rank": 12,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:11",
+                    "name": "本田 琴弓",
+                    "grade": 2,
+                    "rank": 26,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 29,
+            "name": "白石(佐賀)",
+            "totalTime": "1:13:08",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:55",
+                    "name": "山口 綾",
+                    "grade": 2,
+                    "rank": 28,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:26",
+                    "name": "橋口 純怜",
+                    "grade": 2,
+                    "rank": 34,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:19",
+                    "name": "前田 穂乃香",
+                    "grade": 3,
+                    "rank": 16,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:08",
+                    "name": "前田 百伽",
+                    "grade": 2,
+                    "rank": 32,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:20",
+                    "name": "橋本 奏",
+                    "grade": 3,
+                    "rank": 32,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 30,
+            "name": "日大三島(静岡)",
+            "totalTime": "1:13:18",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:17",
+                    "name": "世古 凪沙",
+                    "grade": 1,
+                    "rank": 33,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:49",
+                    "name": "大橋 友聖",
+                    "grade": 2,
+                    "rank": 20,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:28",
+                    "name": "関口 楓花",
+                    "grade": 1,
+                    "rank": 23,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:59",
+                    "name": "武田 亜子",
+                    "grade": 2,
+                    "rank": 23,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:45",
+                    "name": "小澤 心羽",
+                    "grade": 3,
+                    "rank": 37,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 31,
+            "name": "花巻東(岩手)",
+            "totalTime": "1:13:23",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:28",
+                    "name": "角舘 音緒",
+                    "grade": 1,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:10",
+                    "name": "澤村 里桜菜",
+                    "grade": 2,
+                    "rank": 30,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:30",
+                    "name": "鬼柳 礼夢",
+                    "grade": 2,
+                    "rank": 26,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:09:48",
+                    "name": "白木 美樹",
+                    "grade": 2,
+                    "rank": 16,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:27",
+                    "name": "佐藤 祥",
+                    "grade": 2,
+                    "rank": 33,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 32,
+            "name": "富山商(富山)",
+            "totalTime": "1:13:36",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:36",
+                    "name": "石正 彩綾",
+                    "grade": 3,
+                    "rank": 21,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:33",
+                    "name": "鈴木 ちさと",
+                    "grade": 2,
+                    "rank": 38,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:37",
+                    "name": "阿部 楓愛",
+                    "grade": 3,
+                    "rank": 31,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:01",
+                    "name": "齊藤 鈴菜",
+                    "grade": 3,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:49",
+                    "name": "谷 純花",
+                    "grade": 3,
+                    "rank": 38,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 33,
+            "name": "美濃加茂(岐阜)",
+            "totalTime": "1:13:46",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:49",
+                    "name": "瀬木 彩花",
+                    "grade": 3,
+                    "rank": 45,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:13:59",
+                    "name": "宇納 杏莉",
+                    "grade": 1,
+                    "rank": 25,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:24",
+                    "name": "三島 柚姫",
+                    "grade": 3,
+                    "rank": 22,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:07",
+                    "name": "田坂 望愛",
+                    "grade": 3,
+                    "rank": 30,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:27",
+                    "name": "樋口 ほのか",
+                    "grade": 3,
+                    "rank": 33,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 34,
+            "name": "八幡浜(愛媛)",
+            "totalTime": "1:13:57",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:35",
+                    "name": "山本 瑚春",
+                    "grade": 3,
+                    "rank": 20,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:36",
+                    "name": "清家 綾乃",
+                    "grade": 2,
+                    "rank": 39,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:44",
+                    "name": "清水 ことね",
+                    "grade": 2,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:46",
+                    "name": "東 美桜",
+                    "grade": 2,
+                    "rank": 44,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:16",
+                    "name": "小野 鈴花",
+                    "grade": 3,
+                    "rank": 28,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 35,
+            "name": "十日町(新潟)",
+            "totalTime": "1:13:58",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:20:40",
+                    "name": "村山 愛美沙",
+                    "grade": 3,
+                    "rank": 23,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:46",
+                    "name": "福原 陽",
+                    "grade": 3,
+                    "rank": 41,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:33",
+                    "name": "阿部 和夏",
+                    "grade": 1,
+                    "rank": 28,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:05",
+                    "name": "南雲 穂香",
+                    "grade": 3,
+                    "rank": 27,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:54",
+                    "name": "山田 寿々菜",
+                    "grade": 2,
+                    "rank": 39,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 36,
+            "name": "智弁カレッジ(奈良)",
+            "totalTime": "1:14:04",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:01",
+                    "name": "岡本 藍里",
+                    "grade": 2,
+                    "rank": 30,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:26",
+                    "name": "縄田 雅",
+                    "grade": 3,
+                    "rank": 34,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:41",
+                    "name": "福井 実夏",
+                    "grade": 3,
+                    "rank": 33,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:15",
+                    "name": "梅本 温加",
+                    "grade": 2,
+                    "rank": 34,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:41",
+                    "name": "嶌田 咲希",
+                    "grade": 2,
+                    "rank": 36,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 37,
+            "name": "北山(沖縄)",
+            "totalTime": "1:14:18",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:31",
+                    "name": "仲村 奈穂",
+                    "grade": 2,
+                    "rank": 39,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:06",
+                    "name": "生一 風花",
+                    "grade": 1,
+                    "rank": 27,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:10",
+                    "name": "城間 風華",
+                    "grade": 2,
+                    "rank": 44,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:25",
+                    "name": "本村 琴美",
+                    "grade": 2,
+                    "rank": 39,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:06",
+                    "name": "親川 杏花",
+                    "grade": 1,
+                    "rank": 24,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 38,
+            "name": "常磐(群馬)",
+            "totalTime": "1:14:47",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:34",
+                    "name": "河野 愛沙美",
+                    "grade": 2,
+                    "rank": 40,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:27",
+                    "name": "髙橋 くるみ",
+                    "grade": 2,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:42",
+                    "name": "羽入田 暖愛",
+                    "grade": 2,
+                    "rank": 34,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:47",
+                    "name": "杉山 郁",
+                    "grade": 3,
+                    "rank": 45,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:17",
+                    "name": "横倉 紹",
+                    "grade": 3,
+                    "rank": 29,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 39,
+            "name": "山形城北(山形)",
+            "totalTime": "1:14:57",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:35",
+                    "name": "森谷 乙葉",
+                    "grade": 3,
+                    "rank": 41,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:20",
+                    "name": "渡部 莉奈",
+                    "grade": 3,
+                    "rank": 33,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:45",
+                    "name": "奥山 悠華",
+                    "grade": 3,
+                    "rank": 37,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:19",
+                    "name": "小野寺 美麗",
+                    "grade": 3,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:58",
+                    "name": "小松 めい",
+                    "grade": 2,
+                    "rank": 40,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 40,
+            "name": "山梨学院(山梨)",
+            "totalTime": "1:15:14",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:30",
+                    "name": "石井 れいな",
+                    "grade": 3,
+                    "rank": 37,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:14",
+                    "name": "川越 愛実",
+                    "grade": 1,
+                    "rank": 31,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:50",
+                    "name": "萩原 美優",
+                    "grade": 3,
+                    "rank": 41,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:39",
+                    "name": "井手 笑菜",
+                    "grade": 2,
+                    "rank": 42,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:18:01",
+                    "name": "ﾙﾌﾞﾗｽ 恵美里",
+                    "grade": 3,
+                    "rank": 41,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 41,
+            "name": "鳥取城北(鳥取)",
+            "totalTime": "1:15:24",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:41",
+                    "name": "河本 乙花",
+                    "grade": 2,
+                    "rank": 42,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:41",
+                    "name": "宮垣 葵",
+                    "grade": 1,
+                    "rank": 40,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:02",
+                    "name": "金子 りん",
+                    "grade": 1,
+                    "rank": 43,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:25",
+                    "name": "土橋 日菜子",
+                    "grade": 2,
+                    "rank": 39,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:17:35",
+                    "name": "濱上 小杏実",
+                    "grade": 3,
+                    "rank": 35,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 42,
+            "name": "智弁和歌山(和歌山)",
+            "totalTime": "1:15:33",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:43",
+                    "name": "楠本 七瀬",
+                    "grade": 1,
+                    "rank": 44,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:27",
+                    "name": "菱山 愛里",
+                    "grade": 2,
+                    "rank": 36,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:23",
+                    "name": "小倉 侑々",
+                    "grade": 3,
+                    "rank": 19,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:45",
+                    "name": "仲谷 瑠唯",
+                    "grade": 3,
+                    "rank": 43,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:18:15",
+                    "name": "出﨑 香菜",
+                    "grade": 2,
+                    "rank": 43,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 43,
+            "name": "鈴鹿(三重)",
+            "totalTime": "1:16:11",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:31",
+                    "name": "松本 未空",
+                    "grade": 2,
+                    "rank": 38,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:56",
+                    "name": "山中 千佳",
+                    "grade": 1,
+                    "rank": 44,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:11",
+                    "name": "林 里音",
+                    "grade": 1,
+                    "rank": 45,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:12",
+                    "name": "山田 和花",
+                    "grade": 1,
+                    "rank": 33,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:18:21",
+                    "name": "上嶋 乃愛",
+                    "grade": 2,
+                    "rank": 44,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 44,
+            "name": "大曲(秋田)",
+            "totalTime": "1:16:29",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:24",
+                    "name": "菅原 苺波",
+                    "grade": 2,
+                    "rank": 35,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:56",
+                    "name": "鈴木 彩花",
+                    "grade": 1,
+                    "rank": 44,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:15",
+                    "name": "柏谷 星来",
+                    "grade": 3,
+                    "rank": 46,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:27",
+                    "name": "田口 楠々瑚",
+                    "grade": 3,
+                    "rank": 41,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:18:27",
+                    "name": "清水川 藍",
+                    "grade": 2,
+                    "rank": 45,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 45,
+            "name": "四学大香川西(香川)",
+            "totalTime": "1:17:11",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:21:42",
+                    "name": "香川 莉々",
+                    "grade": 2,
+                    "rank": 43,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:14:49",
+                    "name": "大西 由菜",
+                    "grade": 1,
+                    "rank": 42,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:10:49",
+                    "name": "杉村 実優",
+                    "grade": 2,
+                    "rank": 40,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:10:23",
+                    "name": "吉田 のりか",
+                    "grade": 2,
+                    "rank": 38,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:19:28",
+                    "name": "藤尾 莉子",
+                    "grade": 3,
+                    "rank": 46,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 46,
+            "name": "徳島北(徳島)",
+            "totalTime": "1:17:51",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:22:08",
+                    "name": "大西 友菜",
+                    "grade": 2,
+                    "rank": 46,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:15:15",
+                    "name": "柘植 ゆり",
+                    "grade": 1,
+                    "rank": 47,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:00",
+                    "name": "久次米 七望",
+                    "grade": 1,
+                    "rank": 42,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:11:16",
+                    "name": "加藤 志歩",
+                    "grade": 1,
+                    "rank": 46,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:18:12",
+                    "name": "石井 愛理",
+                    "grade": 3,
+                    "rank": 42,
+                    "isNewRecord": false
+                }
+            ]
+        },
+        {
+            "rank": 47,
+            "name": "鵬学園(石川)",
+            "totalTime": "1:21:17",
+            "runners": [
+                {
+                    "section": 1,
+                    "dist": "6.0km",
+                    "time": "0:22:47",
+                    "name": "垣田 愛",
+                    "grade": 3,
+                    "rank": 47,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 2,
+                    "dist": "4.0975km",
+                    "time": "0:15:03",
+                    "name": "示野 悠奈",
+                    "grade": 3,
+                    "rank": 46,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 3,
+                    "dist": "3.0km",
+                    "time": "0:11:38",
+                    "name": "山本 乃愛",
+                    "grade": 3,
+                    "rank": 47,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 4,
+                    "dist": "3.0km",
+                    "time": "0:11:51",
+                    "name": "竹中 乃愛",
+                    "grade": 3,
+                    "rank": 47,
+                    "isNewRecord": false
+                },
+                {
+                    "section": 5,
+                    "dist": "5.0km",
+                    "time": "0:19:58",
+                    "name": "新野 莉璃",
+                    "grade": 3,
+                    "rank": 47,
+                    "isNewRecord": false
+                }
+            ]
+        }
+    ],
+    "rankProgression": [
+        {
+            "name": "長野東(長野)",
+            "ranks": [
+                4,
+                2,
+                3,
+                2,
+                1
+            ]
+        },
+        {
+            "name": "仙台育英(宮城)",
+            "ranks": [
+                2,
+                1,
+                1,
+                1,
+                2
+            ]
+        },
+        {
+            "name": "神村学園(鹿児島)",
+            "ranks": [
+                11,
+                9,
+                8,
+                7,
+                3
+            ]
+        },
+        {
+            "name": "立命館宇治(京都)",
+            "ranks": [
+                3,
+                3,
+                2,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "白鵬女(神奈川)",
+            "ranks": [
+                5,
+                7,
+                4,
+                5,
+                5
+            ]
+        },
+        {
+            "name": "大阪薫英女(大阪)",
+            "ranks": [
+                1,
+                6,
+                5,
+                4,
+                6
+            ]
+        },
+        {
+            "name": "筑紫女学園(福岡)",
+            "ranks": [
+                12,
+                12,
+                9,
+                8,
+                7
+            ]
+        },
+        {
+            "name": "興譲館(岡山)",
+            "ranks": [
+                9,
+                14,
+                14,
+                11,
+                8
+            ]
+        },
+        {
+            "name": "順天(東京)",
+            "ranks": [
+                7,
+                5,
+                6,
+                6,
+                9
+            ]
+        },
+        {
+            "name": "学法石川(福島)",
+            "ranks": [
+                26,
+                15,
+                15,
+                10,
+                10
+            ]
+        },
+        {
+            "name": "山田(高知)",
+            "ranks": [
+                6,
+                4,
+                7,
+                9,
+                11
+            ]
+        },
+        {
+            "name": "諫早(長崎)",
+            "ranks": [
+                13,
+                13,
+                10,
+                12,
+                12
+            ]
+        },
+        {
+            "name": "成田(千葉)",
+            "ranks": [
+                18,
+                19,
+                17,
+                17,
+                13
+            ]
+        },
+        {
+            "name": "青森山田(青森)",
+            "ranks": [
+                29,
+                22,
+                23,
+                22,
+                14
+            ]
+        },
+        {
+            "name": "昌平(埼玉)",
+            "ranks": [
+                22,
+                18,
+                16,
+                14,
+                15
+            ]
+        },
+        {
+            "name": "世羅(広島)",
+            "ranks": [
+                19,
+                8,
+                11,
+                13,
+                16
+            ]
+        },
+        {
+            "name": "鯖江(福井)",
+            "ranks": [
+                10,
+                11,
+                12,
+                15,
+                17
+            ]
+        },
+        {
+            "name": "ルーテル学院(熊本)",
+            "ranks": [
+                8,
+                10,
+                13,
+                16,
+                18
+            ]
+        },
+        {
+            "name": "豊川(愛知)",
+            "ranks": [
+                16,
+                17,
+                18,
+                18,
+                19
+            ]
+        },
+        {
+            "name": "西脇工(兵庫)",
+            "ranks": [
+                27,
+                16,
+                20,
+                20,
+                20
+            ]
+        },
+        {
+            "name": "茨城キリスト(茨城)",
+            "ranks": [
+                15,
+                20,
+                19,
+                19,
+                21
+            ]
+        },
+        {
+            "name": "小林(宮崎)",
+            "ranks": [
+                17,
+                21,
+                21,
+                21,
+                22
+            ]
+        },
+        {
+            "name": "大分東明(大分)",
+            "ranks": [
+                14,
+                30,
+                32,
+                35,
+                23
+            ]
+        },
+        {
+            "name": "旭川龍谷(北海道)",
+            "ranks": [
+                31,
+                25,
+                22,
+                24,
+                24
+            ]
+        },
+        {
+            "name": "西京(山口)",
+            "ranks": [
+                32,
+                26,
+                26,
+                26,
+                25
+            ]
+        },
+        {
+            "name": "宇都宮文星女(栃木)",
+            "ranks": [
+                24,
+                23,
+                24,
+                23,
+                26
+            ]
+        },
+        {
+            "name": "比叡山(滋賀)",
+            "ranks": [
+                25,
+                24,
+                25,
+                25,
+                27
+            ]
+        },
+        {
+            "name": "平田(島根)",
+            "ranks": [
+                34,
+                34,
+                35,
+                30,
+                28
+            ]
+        },
+        {
+            "name": "白石(佐賀)",
+            "ranks": [
+                28,
+                31,
+                28,
+                29,
+                29
+            ]
+        },
+        {
+            "name": "日大三島(静岡)",
+            "ranks": [
+                33,
+                27,
+                27,
+                27,
+                30
+            ]
+        },
+        {
+            "name": "花巻東(岩手)",
+            "ranks": [
+                36,
+                36,
+                33,
+                31,
+                31
+            ]
+        },
+        {
+            "name": "富山商(富山)",
+            "ranks": [
+                21,
+                28,
+                29,
+                28,
+                32
+            ]
+        },
+        {
+            "name": "美濃加茂(岐阜)",
+            "ranks": [
+                45,
+                38,
+                36,
+                33,
+                33
+            ]
+        },
+        {
+            "name": "八幡浜(愛媛)",
+            "ranks": [
+                20,
+                29,
+                30,
+                36,
+                34
+            ]
+        },
+        {
+            "name": "十日町(新潟)",
+            "ranks": [
+                23,
+                32,
+                31,
+                32,
+                35
+            ]
+        },
+        {
+            "name": "智弁カレッジ(奈良)",
+            "ranks": [
+                30,
+                33,
+                34,
+                34,
+                36
+            ]
+        },
+        {
+            "name": "北山(沖縄)",
+            "ranks": [
+                39,
+                35,
+                41,
+                38,
+                37
+            ]
+        },
+        {
+            "name": "常磐(群馬)",
+            "ranks": [
+                40,
+                40,
+                40,
+                41,
+                38
+            ]
+        },
+        {
+            "name": "山形城北(山形)",
+            "ranks": [
+                41,
+                39,
+                39,
+                37,
+                39
+            ]
+        },
+        {
+            "name": "山梨学院(山梨)",
+            "ranks": [
+                37,
+                37,
+                38,
+                39,
+                40
+            ]
+        },
+        {
+            "name": "鳥取城北(鳥取)",
+            "ranks": [
+                42,
+                43,
+                43,
+                43,
+                41
+            ]
+        },
+        {
+            "name": "智弁和歌山(和歌山)",
+            "ranks": [
+                44,
+                41,
+                37,
+                40,
+                42
+            ]
+        },
+        {
+            "name": "鈴鹿(三重)",
+            "ranks": [
+                38,
+                44,
+                45,
+                44,
+                43
+            ]
+        },
+        {
+            "name": "大曲(秋田)",
+            "ranks": [
+                35,
+                42,
+                44,
+                45,
+                44
+            ]
+        },
+        {
+            "name": "四学大香川西(香川)",
+            "ranks": [
+                43,
+                45,
+                42,
+                42,
+                45
+            ]
+        },
+        {
+            "name": "徳島北(徳島)",
+            "ranks": [
+                46,
+                46,
+                46,
+                46,
+                46
+            ]
+        },
+        {
+            "name": "鵬学園(石川)",
+            "ranks": [
+                47,
+                47,
+                47,
+                47,
+                47
+            ]
+        }
+    ]
+}

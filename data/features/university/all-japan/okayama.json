@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "岡山大学",
+  "history": [
+    {
+      "kai": 56,
+      "year": 2024,
+      "rank": 25,
+      "totalTime": "5:40:11",
+      "runners": [
+        { "section": 1, "name": "岩﨑 亮太", "grade": 5, "rank": 25, "time": "29:40" },
+        { "section": 2, "name": "木戸 颯", "grade": 2, "rank": 24, "time": "34:55" },
+        { "section": 3, "name": "旭 隼佑", "grade": null, "rank": 23, "time": "36:59" },
+        { "section": 4, "name": "石鍋 颯一", "grade": 4, "rank": 21, "time": "36:14" },
+        { "section": 5, "name": "日名子 泰明", "grade": 2, "rank": 24, "time": "39:51" },
+        { "section": 6, "name": "米倉 絃之介", "grade": 2, "rank": 26, "time": "42:50" },
+        { "section": 7, "name": "赤澤 京弥", "grade": 3, "rank": 21, "time": "54:56" },
+        { "section": 8, "name": "福永 伸之介", "grade": 3, "rank": 26, "time": "1:04:46" }
+      ]
+    }
+  ]
+}

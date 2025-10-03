@@ -1,0 +1,44 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "東京経済大学",
+  "history": [
+      {
+          "kai": 2,
+          "year": 1971,
+          "rank": 19,
+          "totalTime": "6:41:32",
+          "runners": [
+              { "section": 1, "name": "牧野 友保", "grade": null, "rank": 20, "time": "0:57:35" },
+              { "section": 2, "name": "奈良 昭三", "grade": null, "rank": 19, "time": "0:40:53" },
+              { "section": 3, "name": "三井 裕之", "grade": null, "rank": 11, "time": "0:18:20" },
+              { "section": 4, "name": "鈴木 孝", "grade": null, "rank": 16, "time": "1:18:02" },
+              { "section": 5, "name": "中島 久雄", "grade": null, "rank": 15, "time": "0:54:32" },
+              { "section": 6, "name": "伊田 正一", "grade": null, "rank": 18, "time": "0:29:36" },
+              { "section": 7, "name": "吉田 徹", "grade": null, "rank": 20, "time": "0:48:45" },
+              { "section": 8, "name": "荻原 正人", "grade": null, "rank": 19, "time": "1:13:49" }
+          ]
+      },
+      {
+          "kai": 1,
+          "year": 1970,
+          "rank": 20,
+          "totalTime": "7:20:23",
+          "runners": [
+              { "section": 1, "name": "奈良 昭三", "grade": null, "rank": 17, "time": "0:56:18" },
+              { "section": 2, "name": "伊田 正一", "grade": null, "rank": 17, "time": "0:42:02" },
+              { "section": 3, "name": "水谷 彰", "grade": null, "rank": 20, "time": "0:49:07" },
+              { "section": 4, "name": "荻原 正人", "grade": null, "rank": 20, "time": "1:24:11" },
+              { "section": 5, "name": "中島 久雄", "grade": null, "rank": 18, "time": "0:54:07" },
+              { "section": 6, "name": "岩井 宏行", "grade": null, "rank": 13, "time": "0:28:53" },
+              { "section": 7, "name": "三井 裕之", "grade": null, "rank": 19, "time": "0:47:45" },
+              { "section": 8, "name": "加藤 史朗", "grade": null, "rank": 20, "time": "1:18:00" }
+          ]
+      }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "甲南大学",
+  "history": [
+      {
+          "kai": 2,
+          "year": 1971,
+          "rank": 16,
+          "totalTime": "6:31:40",
+          "runners": [
+              { "section": 1, "name": "手束 順一", "grade": null, "rank": 18, "time": "0:54:33" },
+              { "section": 2, "name": "平 正明", "grade": null, "rank": 18, "time": "0:40:11" },
+              { "section": 3, "name": "矢野 邦雄", "grade": null, "rank": 17, "time": "0:18:54" },
+              { "section": 4, "name": "上林 靖幸", "grade": null, "rank": 16, "time": "1:18:02" },
+              { "section": 5, "name": "奥中 純夫", "grade": null, "rank": 18, "time": "0:55:39" },
+              { "section": 6, "name": "横部 公一", "grade": null, "rank": 17, "time": "0:28:18" },
+              { "section": 7, "name": "海本 正", "grade": null, "rank": 18, "time": "0:45:45" },
+              { "section": 8, "name": "定田 秀久", "grade": null, "rank": 16, "time": "1:10:18" }
+          ]
+      },
+      {
+          "kai": 1,
+          "year": 1970,
+          "rank": 18,
+          "totalTime": "7:08:38",
+          "runners": [
+              { "section": 1, "name": "奥中 純夫", "grade": null, "rank": 20, "time": "0:58:26" },
+              { "section": 2, "name": "横部 公一", "grade": null, "rank": 18, "time": "0:42:17" },
+              { "section": 3, "name": "海本 正", "grade": null, "rank": 19, "time": "0:46:11" },
+              { "section": 4, "name": "定田 秀久", "grade": null, "rank": 15, "time": "1:21:26" },
+              { "section": 5, "name": "手束 順一", "grade": null, "rank": 13, "time": "0:51:37" },
+              { "section": 6, "name": "塩浜 寿男", "grade": null, "rank": 9, "time": "0:27:48" },
+              { "section": 7, "name": "矢野 邦雄", "grade": null, "rank": 17, "time": "0:47:33" },
+              { "section": 8, "name": "本田 正尚", "grade": null, "rank": 18, "time": "1:13:20" }
+          ]
+      }
+  ]
+}

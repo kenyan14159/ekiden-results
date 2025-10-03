@@ -1,0 +1,60 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "同志社大学",
+  "history": [
+    {
+      "kai": 22,
+      "year": 1990,
+      "rank": 18,
+      "totalTime": "5:49:21",
+      "runners": [
+        { "section": 1, "name": "秋山 武史", "grade": 2, "rank": 8, "time": "0:44:51" },
+        { "section": 2, "name": "小林 大治", "grade": 2, "rank": 16, "time": "0:41:33" },
+        { "section": 3, "name": "鈴木 長陽", "grade": 2, "rank": 17, "time": "0:29:41" },
+        { "section": 4, "name": "八杉 明", "grade": 3, "rank": 17, "time": "0:44:17" },
+        { "section": 5, "name": "上田 素弘", "grade": 4, "rank": 22, "time": "0:40:21" },
+        { "section": 6, "name": "山添 久也", "grade": 3, "rank": 21, "time": "0:41:00" },
+        { "section": 7, "name": "檜垣 孝", "grade": 1, "rank": 11, "time": "0:39:05" },
+        { "section": 8, "name": "倉本 拓", "grade": 4, "rank": 20, "time": "1:08:33" }
+      ]
+    },
+    {
+      "kai": 7,
+      "year": 1976,
+      "rank": 16,
+      "totalTime": "6:20:39",
+      "runners": [
+        { "section": 1, "name": "薮内 正記", "grade": null, "rank": 13, "time": "0:47:53" },
+        { "section": 2, "name": "亀井 慎一", "grade": null, "rank": 14, "time": "0:38:54" },
+        { "section": 3, "name": "房岡 潔司", "grade": null, "rank": 19, "time": "0:23:16" },
+        { "section": 4, "name": "池田 正純", "grade": null, "rank": 17, "time": "1:20:18" },
+        { "section": 5, "name": "常深 達成", "grade": null, "rank": 18, "time": "0:51:38" },
+        { "section": 6, "name": "佐々木正男", "grade": null, "rank": 13, "time": "0:27:28" },
+        { "section": 7, "name": "吉原 穣", "grade": null, "rank": 11, "time": "0:42:22" },
+        { "section": 8, "name": "前田 渉", "grade": null, "rank": 17, "time": "1:08:50" }
+      ]
+    },
+    {
+      "kai": 1,
+      "year": 1970,
+      "rank": 9,
+      "totalTime": "6:39:12",
+      "runners": [
+        { "section": 1, "name": "武智 勇紀", "grade": null, "rank": 8, "time": "0:51:21" },
+        { "section": 2, "name": "小野 正治", "grade": null, "rank": 9, "time": "0:38:49" },
+        { "section": 3, "name": "谷 一生", "grade": null, "rank": 10, "time": "0:43:49" },
+        { "section": 4, "name": "荒谷 哲次", "grade": null, "rank": 13, "time": "1:18:43" },
+        { "section": 5, "name": "工藤 明人", "grade": null, "rank": 8, "time": "0:49:02" },
+        { "section": 6, "name": "笠井 哲夫", "grade": null, "rank": 6, "time": "0:25:54" },
+        { "section": 7, "name": "山名 達郎", "grade": null, "rank": 6, "time": "0:41:32" },
+        { "section": 8, "name": "沖田 稔", "grade": null, "rank": 13, "time": "1:10:02" }
+      ]
+    }
+  ]
+}

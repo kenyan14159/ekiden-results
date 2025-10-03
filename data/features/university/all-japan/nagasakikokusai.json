@@ -1,0 +1,44 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "長崎国際大学",
+  "history": [
+    {
+      "kai": 42,
+      "year": 2010,
+      "rank": 23,
+      "totalTime": "5:44:30",
+      "runners": [
+        { "section": 1, "name": "白石 勝美", "grade": 3, "rank": 25, "time": "0:47:04" },
+        { "section": 2, "name": "野中 裕輝", "grade": 1, "rank": 26, "time": "0:43:14" },
+        { "section": 3, "name": "赤瀬 慎弥", "grade": 1, "rank": 25, "time": "0:29:52" },
+        { "section": 4, "name": "山口 拓也", "grade": 2, "rank": 25, "time": "0:46:01" },
+        { "section": 5, "name": "内田 洋平", "grade": 3, "rank": 21, "time": "0:37:04" },
+        { "section": 6, "name": "渡邉 直也", "grade": 1, "rank": 22, "time": "0:40:13" },
+        { "section": 7, "name": "石井 達也", "grade": 1, "rank": 19, "time": "0:38:00" },
+        { "section": 8, "name": "近藤 直斗", "grade": 4, "rank": 17, "time": "1:03:02" }
+      ]
+    },
+    {
+      "kai": 39,
+      "year": 2007,
+      "rank": 17,
+      "totalTime": "5:37:11",
+      "runners": [
+        { "section": 1, "name": "伊東 佑二", "grade": 4, "rank": 15, "time": "0:44:03" },
+        { "section": 2, "name": "鹿子島雄一", "grade": 4, "rank": 23, "time": "0:41:21" },
+        { "section": 3, "name": "平瀬祐太郎", "grade": 3, "rank": 20, "time": "0:29:51" },
+        { "section": 4, "name": "近藤 直斗", "grade": 1, "rank": 17, "time": "0:44:07" },
+        { "section": 5, "name": "大石 侑来", "grade": 1, "rank": 24, "time": "0:37:23" },
+        { "section": 6, "name": "首藤 有弥", "grade": 2, "rank": 20, "time": "0:39:21" },
+        { "section": 7, "name": "新原 大樹", "grade": 2, "rank": 22, "time": "0:38:43" },
+        { "section": 8, "name": "高野 洋平", "grade": 4, "rank": 16, "time": "1:02:22" }
+      ]
+    }
+  ]
+}

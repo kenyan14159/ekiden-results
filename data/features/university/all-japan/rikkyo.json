@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "立教大学",
+  "history": [
+    {
+      "kai": 56,
+      "year": 2024,
+      "rank": 7,
+      "totalTime": "5:16:21",
+      "runners": [
+        { "section": 1, "name": "吉屋 佑晟", "grade": 3, "rank": 6, "time": "0:28:22" },
+        { "section": 2, "name": "國安 広人", "grade": 3, "rank": 15, "time": "0:33:13" },
+        { "section": 3, "name": "林 虎大朗", "grade": 4, "rank": 12, "time": "0:35:06" },
+        { "section": 4, "name": "稲塚 大祐", "grade": 4, "rank": 7, "time": "0:34:10" },
+        { "section": 5, "name": "小倉 史也", "grade": 3, "rank": 10, "time": "0:37:18" },
+        { "section": 6, "name": "山口 史朗", "grade": 4, "rank": 5, "time": "0:37:51" },
+        { "section": 7, "name": "馬場 賢人", "grade": 3, "rank": 4, "time": "0:51:11" },
+        { "section": 8, "name": "安藤 圭佑", "grade": 4, "rank": 8, "time": "0:59:10" }
+      ]
+    }
+  ]
+}

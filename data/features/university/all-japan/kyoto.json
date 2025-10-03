@@ -1,0 +1,44 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "京都大学",
+  "history": [
+      {
+          "kai": 46,
+          "year": 2014,
+          "rank": 18,
+          "totalTime": "5:35:36",
+          "runners": [
+              { "section": 1, "name": "平井健太郎", "grade": 3, "rank": 4, "time": "0:43:29" },
+              { "section": 2, "name": "横山 裕樹", "grade": "M1", "rank": 15, "time": "0:40:22" },
+              { "section": 3, "name": "久好 哲郎", "grade": "M1", "rank": 19, "time": "0:29:40" },
+              { "section": 4, "name": "下迫田啓太", "grade": 3, "rank": 20, "time": "0:43:42" },
+              { "section": 5, "name": "不破 佑太", "grade": "M2", "rank": 19, "time": "0:36:41" },
+              { "section": 6, "name": "柴田 裕平", "grade": 1, "rank": 24, "time": "0:39:30" },
+              { "section": 7, "name": "寶 雄也", "grade": 3, "rank": 22, "time": "0:38:43" },
+              { "section": 8, "name": "平井 幹", "grade": "M1", "rank": 20, "time": "1:03:29" }
+          ]
+      },
+      {
+          "kai": 4,
+          "year": 1973,
+          "rank": 17,
+          "totalTime": "6:34:58",
+          "runners": [
+              { "section": 1, "name": "林 徹", "grade": null, "rank": 13, "time": "0:52:41" },
+              { "section": 2, "name": "村中 重夫", "grade": null, "rank": 13, "time": "0:39:38" },
+              { "section": 3, "name": "石飛 光章", "grade": null, "rank": 19, "time": "0:20:41" },
+              { "section": 4, "name": "栗山 由彦", "grade": null, "rank": 18, "time": "1:25:02" },
+              { "section": 5, "name": "秋山 純一", "grade": null, "rank": 18, "time": "0:50:21" },
+              { "section": 6, "name": "宮下 欣二", "grade": null, "rank": 19, "time": "0:30:54" },
+              { "section": 7, "name": "長嶋 孝之", "grade": null, "rank": 12, "time": "0:44:50" },
+              { "section": 8, "name": "家村 芳次", "grade": null, "rank": 17, "time": "1:10:51" }
+          ]
+      }
+  ]
+}

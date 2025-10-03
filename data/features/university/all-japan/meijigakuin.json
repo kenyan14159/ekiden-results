@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "明治学院大学",
+  "history": [
+      {
+          "kai": 1,
+          "year": 1970,
+          "rank": 19,
+          "totalTime": "7:13:22",
+          "runners": [
+              { "section": 1, "name": "畑 高司", "grade": null, "rank": 14, "time": "0:55:12" },
+              { "section": 2, "name": "橋本 博", "grade": null, "rank": 14, "time": "0:40:50" },
+              { "section": 3, "name": "清水 道男", "grade": null, "rank": 12, "time": "0:44:37" },
+              { "section": 4, "name": "福田 道弘", "grade": null, "rank": 18, "time": "1:23:24" },
+              { "section": 5, "name": "布勢 哲夫", "grade": null, "rank": 17, "time": "0:54:00" },
+              { "section": 6, "name": "成瀬 和正", "grade": null, "rank": 20, "time": "0:31:37" },
+              { "section": 7, "name": "箱守 右守", "grade": null, "rank": 20, "time": "0:47:51" },
+              { "section": 8, "name": "松本 健", "grade": null, "rank": 19, "time": "1:15:51" }
+          ]
+      }
+  ]
+}

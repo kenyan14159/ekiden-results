@@ -1,0 +1,27 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "山口大学",
+  "history": [
+    {
+      "kai": 10,
+      "year": 1979,
+      "rank": 16,
+      "totalTime": "6:08:56",
+      "runners": [
+        { "section": 1, "name": "古家後啓太", "grade": null, "rank": 18, "time": "50:27" },
+        { "section": 2, "name": "川中 正昭", "grade": null, "rank": 16, "time": "44:56" },
+        { "section": 3, "name": "川崎 康紀", "grade": null, "rank": 13, "time": "1:18:09" },
+        { "section": 4, "name": "岡部 正美", "grade": null, "rank": 16, "time": "41:14" },
+        { "section": 5, "name": "三好 一哉", "grade": null, "rank": 16, "time": "46:34" },
+        { "section": 6, "name": "中村 英治", "grade": null, "rank": 16, "time": "35:32" },
+        { "section": 7, "name": "平川 正昭", "grade": null, "rank": 18, "time": "1:12:04" }
+      ]
+    }
+  ]
+}

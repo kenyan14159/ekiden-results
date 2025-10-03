@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "びわこ学院大学",
+  "history": [
+      {
+          "kai": 52,
+          "year": 2020,
+          "rank": 19,
+          "totalTime": "5:29:35",
+          "runners": [
+              { "section": 1, "name": "井上 亮真", "grade": 3, "rank": 22, "time": "0:27:52" },
+              { "section": 2, "name": "小久保星音", "grade": 1, "rank": 24, "time": "0:34:10" },
+              { "section": 3, "name": "永井 友也", "grade": 1, "rank": 19, "time": "0:35:58" },
+              { "section": 4, "name": "多賀井悠斗", "grade": 1, "rank": 20, "time": "0:36:11" },
+              { "section": 5, "name": "原 陽宏", "grade": 4, "rank": 19, "time": "0:38:19" },
+              { "section": 6, "name": "小松原遊波", "grade": 4, "rank": 17, "time": "0:40:08" },
+              { "section": 7, "name": "杉岡 洸樹", "grade": 3, "rank": 18, "time": "0:54:39" },
+              { "section": 8, "name": "湯川 達矢", "grade": 4, "rank": 17, "time": "1:02:18" }
+          ]
+      }
+  ]
+}

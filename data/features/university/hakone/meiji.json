@@ -1,0 +1,1312 @@
+{
+    "config": {
+      "type": "university",
+      "term": { "singular": "大学", "plural": "大学" },
+      "sections": 10,
+      "hasHalfway": true,
+      "showGrade": true
+    },
+    "teamName": "明治大学",
+    "history": [
+        {
+            "kai": 100,
+            "year": 2024,
+            "rank": 20,
+            "totalTime": "11:07:28",
+            "outbound": { "rank": 23, "time": "05:37:21" },
+            "inbound": { "rank": 8, "time": "05:30:07" },
+            "runners": [
+                { "section": 1, "name": "大湊柊翔", "rank": 8, "time": "01:01:37" },
+                { "section": 2, "name": "児玉真輝", "rank": 23, "time": "01:11:15" },
+                { "section": 3, "name": "杉彩文海", "rank": 11, "time": "01:03:30" },
+                { "section": 4, "name": "森下翔太", "rank": 22, "time": "01:05:46" },
+                { "section": 5, "name": "吉川響", "rank": 21, "time": "01:15:13" },
+                { "section": 6, "name": "堀颯介", "rank": 7, "time": "00:58:52" },
+                { "section": 7, "name": "尾崎健斗", "rank": 16, "time": "01:04:38" },
+                { "section": 8, "name": "綾一輝", "rank": 3, "time": "01:04:42" },
+                { "section": 9, "name": "鈴木祐太", "rank": 8, "time": "01:10:13" },
+                { "section": 10, "name": "古井康介", "rank": 22, "time": "01:11:42" }
+            ]
+        },
+        {
+            "kai": 99,
+            "year": 2023,
+            "rank": 12,
+            "totalTime": "11:01:37",
+            "outbound": { "rank": 12, "time": "05:31:29" },
+            "inbound": { "rank": 13, "time": "05:30:08" },
+            "runners": [
+                { "section": 1, "name": "富田峻平", "rank": 1, "time": "01:02:44" },
+                { "section": 2, "name": "小沢大輝", "rank": 14, "time": "01:08:43" },
+                { "section": 3, "name": "森下翔太", "rank": 4, "time": "01:02:05" },
+                { "section": 4, "name": "尾崎健斗", "rank": 11, "time": "01:02:48" },
+                { "section": 5, "name": "吉川響", "rank": 15, "time": "01:15:09" },
+                { "section": 6, "name": "堀颯介", "rank": 8, "time": "00:59:33" },
+                { "section": 7, "name": "杉彩文海", "rank": 1, "time": "01:02:43" },
+                { "section": 8, "name": "加藤大誠", "rank": 8, "time": "01:05:06" },
+                { "section": 9, "name": "下條乃将", "rank": 17, "time": "01:10:53" },
+                { "section": 10, "name": "漆畑瑠人", "rank": 18, "time": "01:11:53" }
+            ]
+        },
+        {
+            "kai": 98,
+            "year": 2022,
+            "rank": 14,
+            "totalTime": "11:00:28",
+            "outbound": { "rank": 17, "time": "05:32:20" },
+            "inbound": { "rank": 3, "time": "05:28:08" },
+            "runners": [
+                { "section": 1, "name": "手嶋杏丞", "rank": 13, "time": "01:02:13" },
+                { "section": 2, "name": "鈴木聖人", "rank": 16, "time": "01:09:11" },
+                { "section": 3, "name": "児玉真輝", "rank": 14, "time": "01:03:39" },
+                { "section": 4, "name": "小沢大輝", "rank": 7, "time": "01:02:23" },
+                { "section": 5, "name": "下條乃将", "rank": 18, "time": "01:14:54" },
+                { "section": 6, "name": "杉本龍陽", "rank": 12, "time": "00:59:28" },
+                { "section": 7, "name": "富田峻平", "rank": 2, "time": "01:03:02" },
+                { "section": 8, "name": "櫛田佳希", "rank": 11, "time": "01:06:01" },
+                { "section": 9, "name": "加藤大誠", "rank": 11, "time": "01:10:26" },
+                { "section": 10, "name": "橋本大輝", "rank": 4, "time": "01:09:11" }
+            ]
+        },
+        {
+            "kai": 97,
+            "year": 2021,
+            "rank": 11,
+            "totalTime": "11:06:15",
+            "outbound": { "rank": 14, "time": "05:36:03" },
+            "inbound": { "rank": 7, "time": "05:30:12" },
+            "runners": [
+                { "section": 1, "name": "児玉真輝", "rank": 16, "time": "01:04:06" },
+                { "section": 2, "name": "加藤大誠", "rank": 17, "time": "01:09:48" },
+                { "section": 3, "name": "小袖英人", "rank": 12, "time": "01:04:43" },
+                { "section": 4, "name": "櫛田佳希", "rank": 7, "time": "01:03:52" },
+                { "section": 5, "name": "鈴木聖人", "rank": 9, "time": "01:13:34" },
+                { "section": 6, "name": "前田舜平", "rank": 13, "time": "00:59:46" },
+                { "section": 7, "name": "手嶋杏丞", "rank": 11, "time": "01:04:44" },
+                { "section": 8, "name": "大保海士", "rank": 1, "time": "01:03:59" },
+                { "section": 9, "name": "富田峻平", "rank": 10, "time": "01:10:26" },
+                { "section": 10, "name": "長倉奨美", "rank": 10, "time": "01:11:17" }
+            ]
+        },
+        {
+            "kai": 96,
+            "year": 2020,
+            "rank": 6,
+            "totalTime": "10:54:46",
+            "outbound": { "rank": 5, "time": "05:27:11" },
+            "inbound": { "rank": 4, "time": "05:27:35" },
+            "runners": [
+                { "section": 1, "name": "小袖英人", "rank": 10, "time": "01:02:09" },
+                { "section": 2, "name": "加藤大誠", "rank": 10, "time": "01:07:52" },
+                { "section": 3, "name": "手嶋杏丞", "rank": 7, "time": "01:02:22" },
+                { "section": 4, "name": "金橋佳佑", "rank": 13, "time": "01:02:59" },
+                { "section": 5, "name": "鈴木聖人", "rank": 5, "time": "01:11:49" },
+                { "section": 6, "name": "前田舜平", "rank": 7, "time": "00:58:48" },
+                { "section": 7, "name": "阿部弘輝", "rank": 1, "time": "01:01:40" },
+                { "section": 8, "name": "櫛田佳希", "rank": 8, "time": "01:06:17" },
+                { "section": 9, "name": "村上純大", "rank": 11, "time": "01:10:07" },
+                { "section": 10, "name": "河村一輝", "rank": 10, "time": "01:10:43" }
+            ]
+        },
+        {
+            "kai": 95,
+            "year": 2019,
+            "rank": 17,
+            "totalTime": "11:16:42",
+            "outbound": { "rank": 11, "time": "05:34:14" },
+            "inbound": { "rank": 21, "time": "05:42:28" },
+            "runners": [
+                { "section": 1, "name": "鈴木聖人", "rank": 13, "time": "01:03:11" },
+                { "section": 2, "name": "中島大就", "rank": 19, "time": "01:10:26" },
+                { "section": 3, "name": "阿部弘輝", "rank": 2, "time": "01:02:07" },
+                { "section": 4, "name": "三輪軌道", "rank": 7, "time": "01:03:28" },
+                { "section": 5, "name": "酒井耀史", "rank": 15, "time": "01:15:02" },
+                { "section": 6, "name": "前田舜平", "rank": 8, "time": "00:59:41" },
+                { "section": 7, "name": "小袖英人", "rank": 18, "time": "01:05:48" },
+                { "section": 8, "name": "角出龍哉", "rank": 17, "time": "01:07:11" },
+                { "section": 9, "name": "村上純大", "rank": 10, "time": "01:11:03" },
+                { "section": 10, "name": "坂口裕之", "rank": 22, "time": "01:18:45" }
+            ]
+        },
+        {
+            "kai": 93,
+            "year": 2017,
+            "rank": 18,
+            "totalTime": "11:29:17",
+            "outbound": { "rank": 17, "time": "05:44:42" },
+            "inbound": { "rank": 16, "time": "05:44:35" },
+            "runners": [
+                { "section": 1, "name": "末次慶太", "rank": 18, "time": "01:05:06" },
+                { "section": 2, "name": "江頭賢太郎", "rank": 19, "time": "01:11:03" },
+                { "section": 3, "name": "三輪軌道", "rank": 13, "time": "01:04:59" },
+                { "section": 4, "name": "阿部弘輝", "rank": 13, "time": "01:06:51" },
+                { "section": 5, "name": "籔下響大", "rank": 15, "time": "01:16:43" },
+                { "section": 6, "name": "田中龍太", "rank": 15, "time": "01:01:23" },
+                { "section": 7, "name": "磯口晋平", "rank": 10, "time": "01:05:32" },
+                { "section": 8, "name": "東島清純", "rank": 17, "time": "01:09:20" },
+                { "section": 9, "name": "吉田楓", "rank": 15, "time": "01:14:58" },
+                { "section": 10, "name": "坂口裕之", "rank": 13, "time": "01:13:22" }
+            ]
+        },
+        {
+            "kai": 92,
+            "year": 2016,
+            "rank": 14,
+            "totalTime": "11:20:39",
+            "outbound": { "rank": 17, "time": "05:43:22" },
+            "inbound": { "rank": 9, "time": "05:37:17" },
+            "runners": [
+                { "section": 1, "name": "横手健", "rank": 2, "time": "01:01:44" },
+                { "section": 2, "name": "木村慎", "rank": 6, "time": "01:08:33" },
+                { "section": 3, "name": "坂口裕之", "rank": 20, "time": "01:07:28" },
+                { "section": 4, "name": "江頭賢太郎", "rank": 6, "time": "00:56:10" },
+                { "section": 5, "name": "籔下響大", "rank": 20, "time": "01:29:27" },
+                { "section": 6, "name": "小川誉高", "rank": 13, "time": "01:01:11" },
+                { "section": 7, "name": "牟田祐樹", "rank": 3, "time": "01:03:58" },
+                { "section": 8, "name": "吉田楓", "rank": 8, "time": "01:06:22" },
+                { "section": 9, "name": "斎田直輝", "rank": 4, "time": "01:10:54" },
+                { "section": 10, "name": "山田稜", "rank": 18, "time": "01:14:52" }
+            ]
+        },
+        {
+            "kai": 91,
+            "year": 2015,
+            "rank": 4,
+            "totalTime": "11:01:57",
+            "outbound": { "rank": 2, "time": "05:28:57" },
+            "inbound": { "rank": 6, "time": "05:33:00" },
+            "runners": [
+                { "section": 1, "name": "横手健", "rank": 3, "time": "01:02:07" },
+                { "section": 2, "name": "大六野秀畝", "rank": 5, "time": "01:07:56" },
+                { "section": 3, "name": "有村優樹", "rank": 2, "time": "01:02:41" },
+                { "section": 4, "name": "松井智靖", "rank": 3, "time": "00:55:00" },
+                { "section": 5, "name": "文元慧", "rank": 6, "time": "01:21:13" },
+                { "section": 6, "name": "山田速人", "rank": 7, "time": "00:59:54" },
+                { "section": 7, "name": "末次慶太", "rank": 14, "time": "01:05:45" },
+                { "section": 8, "name": "牟田祐樹", "rank": 13, "time": "01:07:14" },
+                { "section": 9, "name": "木村慎", "rank": 2, "time": "01:08:58" },
+                { "section": 10, "name": "江頭賢太郎", "rank": 10, "time": "01:11:09" }
+            ]
+        },
+        {
+            "kai": 90,
+            "year": 2014,
+            "rank": 6,
+            "totalTime": "11:10:09",
+            "outbound": { "rank": 7, "time": "05:36:01" },
+            "inbound": { "rank": 7, "time": "05:34:08" },
+            "runners": [
+                { "section": 1, "name": "文元慧", "rank": 4, "time": "01:02:02" },
+                { "section": 2, "name": "大六野秀畝", "rank": 5, "time": "01:09:15" },
+                { "section": 3, "name": "八木沢元樹", "rank": 2, "time": "01:03:27" },
+                { "section": 4, "name": "木村慎", "rank": 5, "time": "00:55:36" },
+                { "section": 5, "name": "横手健", "rank": 19, "time": "01:25:41" },
+                { "section": 6, "name": "廣瀬大貴", "rank": 1, "time": "00:58:16" },
+                { "section": 7, "name": "松井智靖", "rank": 8, "time": "01:04:43" },
+                { "section": 8, "name": "有村優樹", "rank": 2, "time": "01:05:21" },
+                { "section": 9, "name": "前野貴行", "rank": 14, "time": "01:11:34" },
+                { "section": 10, "name": "石間涼", "rank": 22, "time": "01:14:14" }
+            ]
+        },
+        {
+            "kai": 89,
+            "year": 2013,
+            "rank": 7,
+            "totalTime": "11:25:14",
+            "outbound": { "rank": 4, "time": "05:44:37" },
+            "inbound": { "rank": 13, "time": "05:40:37" },
+            "runners": [
+                { "section": 1, "name": "文元慧", "rank": 2, "time": "01:03:46" },
+                { "section": 2, "name": "大六野秀畝", "rank": 12, "time": "01:11:43" },
+                { "section": 3, "name": "菊池賢人", "rank": 5, "time": "01:06:27" },
+                { "section": 4, "name": "八木沢元樹", "rank": 7, "time": "00:58:21" },
+                { "section": 5, "name": "大江啓貴", "rank": 7, "time": "01:24:20" },
+                { "section": 6, "name": "廣瀬大貴", "rank": 2, "time": "00:58:19" },
+                { "section": 7, "name": "有村優樹", "rank": 3, "time": "01:05:01" },
+                { "section": 8, "name": "横手健", "rank": 9, "time": "01:07:38" },
+                { "section": 9, "name": "松井智靖", "rank": 18, "time": "01:15:29" },
+                { "section": 10, "name": "北魁道", "rank": 17, "time": "01:14:10" }
+            ]
+        },
+        {
+            "kai": 88,
+            "year": 2012,
+            "rank": 3,
+            "totalTime": "11:02:50",
+            "outbound": { "rank": 3, "time": "05:30:06" },
+            "inbound": { "rank": 3, "time": "05:32:44" },
+            "runners": [
+                { "section": 1, "name": "大六野秀畝", "rank": 6, "time": "01:02:46" },
+                { "section": 2, "name": "菊池賢人", "rank": 5, "time": "01:08:47" },
+                { "section": 3, "name": "石間涼", "rank": 13, "time": "01:04:06" },
+                { "section": 4, "name": "八木沢元樹", "rank": 2, "time": "00:54:53" },
+                { "section": 5, "name": "大江啓貴", "rank": 2, "time": "01:19:34" },
+                { "section": 6, "name": "廣瀬大貴", "rank": 8, "time": "01:00:19" },
+                { "section": 7, "name": "北魁道", "rank": 4, "time": "01:04:11" },
+                { "section": 8, "name": "有村優樹", "rank": 3, "time": "01:05:25" },
+                { "section": 9, "name": "細川勇介", "rank": 8, "time": "01:11:39" },
+                { "section": 10, "name": "鎧坂哲哉", "rank": 4, "time": "01:11:10" }
+            ]
+        },
+        {
+            "kai": 87,
+            "year": 2011,
+            "rank": 5,
+            "totalTime": "11:08:24",
+            "outbound": { "rank": 4, "time": "05:32:11" },
+            "inbound": { "rank": 7, "time": "05:36:13" },
+            "runners": [
+                { "section": 1, "name": "松本翔", "rank": 15, "time": "01:04:31" },
+                { "section": 2, "name": "鎧坂哲哉", "rank": 3, "time": "01:07:36" },
+                { "section": 3, "name": "菊池賢人", "rank": 4, "time": "01:03:23" },
+                { "section": 4, "name": "北魁道", "rank": 11, "time": "00:56:49" },
+                { "section": 5, "name": "大江啓貴", "rank": 2, "time": "01:19:52" },
+                { "section": 6, "name": "廣瀬大貴", "rank": 17, "time": "01:01:44" },
+                { "section": 7, "name": "渡辺真矢", "rank": 11, "time": "01:05:28" },
+                { "section": 8, "name": "岸本大直", "rank": 6, "time": "01:07:01" },
+                { "section": 9, "name": "細川勇介", "rank": 10, "time": "01:11:12" },
+                { "section": 10, "name": "小林優太", "rank": 5, "time": "01:10:39" }
+            ]
+        },
+        {
+            "kai": 86,
+            "year": 2010,
+            "rank": 10,
+            "totalTime": "11:21:57",
+            "outbound": { "rank": 6, "time": "05:37:45" },
+            "inbound": { "rank": 14, "time": "05:44:12" },
+            "runners": [
+                { "section": 1, "name": "北條尚", "rank": 1, "time": "01:02:27" },
+                { "section": 2, "name": "石川卓哉", "rank": 6, "time": "01:08:56" },
+                { "section": 3, "name": "鎧坂哲哉", "rank": 3, "time": "01:03:08" },
+                { "section": 4, "name": "安田昌倫", "rank": 1, "time": "00:55:57" },
+                { "section": 5, "name": "久国公也", "rank": 18, "time": "01:27:17" },
+                { "section": 6, "name": "大江啓貴", "rank": 11, "time": "01:01:12" },
+                { "section": 7, "name": "菊地賢人", "rank": 10, "time": "01:06:31" },
+                { "section": 8, "name": "岡本考平", "rank": 12, "time": "01:08:23" },
+                { "section": 9, "name": "遠藤寿寛", "rank": 16, "time": "01:13:47" },
+                { "section": 10, "name": "渡辺真矢", "rank": 17, "time": "01:14:19" }
+            ]
+        },
+        {
+            "kai": 85,
+            "year": 2009,
+            "rank": 8,
+            "totalTime": "11:18:16",
+            "outbound": { "rank": 7, "time": "05:38:58" },
+            "inbound": { "rank": 9, "time": "05:39:18" },
+            "runners": [
+                { "section": 1, "name": "鎧坂哲哉", "rank": 3, "time": "01:04:53" },
+                { "section": 2, "name": "石川卓哉", "rank": 8, "time": "01:09:47" },
+                { "section": 3, "name": "北條尚", "rank": 13, "time": "01:04:53" },
+                { "section": 4, "name": "松本昂大", "rank": 3, "time": "00:55:28" },
+                { "section": 5, "name": "小林優太", "rank": 18, "time": "01:23:57" },
+                { "section": 6, "name": "中村智春", "rank": 4, "time": "00:59:36" },
+                { "section": 7, "name": "安田昌倫", "rank": 3, "time": "01:05:10" },
+                { "section": 8, "name": "細川勇介", "rank": 7, "time": "01:07:27" },
+                { "section": 9, "name": "遠藤寿寛", "rank": 20, "time": "01:13:55" },
+                { "section": 10, "name": "卜部淳史", "rank": 12, "time": "01:13:10" }
+            ]
+        },
+        {
+            "kai": 83,
+            "year": 2007,
+            "rank": 16,
+            "totalTime": "11:27:57",
+            "outbound": { "rank": 11, "time": "05:39:53" },
+            "inbound": { "rank": 19, "time": "05:48:04" },
+            "runners": [
+                { "section": 1, "name": "石川卓哉", "rank": 16, "time": "01:05:52" },
+                { "section": 2, "name": "岡本直己", "rank": 9, "time": "01:09:24" },
+                { "section": 3, "name": "池辺稔", "rank": 15, "time": "01:05:42" },
+                { "section": 4, "name": "東野賢治", "rank": 18, "time": "00:58:16" },
+                { "section": 5, "name": "尾籠浩考", "rank": 2, "time": "01:20:39" },
+                { "section": 6, "name": "中村智春", "rank": 11, "time": "01:01:05" },
+                { "section": 7, "name": "安田昌倫", "rank": 15, "time": "01:07:13" },
+                { "section": 8, "name": "中門健", "rank": 17, "time": "01:09:55" },
+                { "section": 9, "name": "村上貴彦", "rank": 17, "time": "01:14:41" },
+                { "section": 10, "name": "藤田秀之", "rank": 20, "time": "01:15:10" }
+            ]
+        },
+        {
+            "kai": 82,
+            "year": 2006,
+            "rank": 18,
+            "totalTime": "11:27:38",
+            "outbound": { "rank": 16, "time": "05:42:49" },
+            "inbound": { "rank": 19, "time": "05:44:49" },
+            "runners": [
+                { "section": 1, "name": "岡本直己", "rank": 6, "time": "01:04:00" },
+                { "section": 2, "name": "田中文昭", "rank": 20, "time": "01:12:22" },
+                { "section": 3, "name": "幸田高明", "rank": 10, "time": "01:05:19" },
+                { "section": 4, "name": "吉岡秀司", "rank": 14, "time": "00:57:10" },
+                { "section": 5, "name": "尾籠浩考", "rank": 16, "time": "01:23:58" },
+                { "section": 6, "name": "辻村充", "rank": 18, "time": "01:01:50" },
+                { "section": 7, "name": "東野賢治", "rank": 10, "time": "01:05:39" },
+                { "section": 8, "name": "村上貴彦", "rank": 19, "time": "01:09:41" },
+                { "section": 9, "name": "池辺稔", "rank": 17, "time": "01:12:58" },
+                { "section": 10, "name": "細井崇明", "rank": 15, "time": "01:14:41" }
+            ]
+        },
+        {
+            "kai": 81,
+            "year": 2005,
+            "rank": 18,
+            "totalTime": "11:28:23",
+            "outbound": { "rank": 16, "time": "05:41:23" },
+            "inbound": { "rank": 19, "time": "05:47:00" },
+            "runners": [
+                { "section": 1, "name": "岡本直己", "rank": 16, "time": "01:04:14" },
+                { "section": 2, "name": "幸田高明", "rank": 12, "time": "01:10:45" },
+                { "section": 3, "name": "田中文昭", "rank": 10, "time": "01:05:38" },
+                { "section": 4, "name": "池辺稔", "rank": 10, "time": "01:04:43" },
+                { "section": 5, "name": "尾籠浩考", "rank": 17, "time": "01:16:03" },
+                { "section": 6, "name": "青田享", "rank": 13, "time": "01:01:28" },
+                { "section": 7, "name": "木村秀太朗", "rank": 19, "time": "01:08:02" },
+                { "section": 8, "name": "辻村充", "rank": 16, "time": "01:07:46" },
+                { "section": 9, "name": "細井崇明", "rank": 18, "time": "01:12:22" },
+                { "section": 10, "name": "佐藤慈", "rank": 20, "time": "01:17:22" }
+            ]
+        },
+        {
+            "kai": 67,
+            "year": 1991,
+            "rank": 14,
+            "totalTime": "11:48:13",
+            "outbound": { "rank": 6, "time": "05:45:20" },
+            "inbound": { "rank": 15, "time": "06:02:53" },
+            "runners": [
+                { "section": 1, "name": "渡辺重治", "rank": 9, "time": "01:05:59" },
+                { "section": 2, "name": "進藤吉紀", "rank": 2, "time": "01:08:54" },
+                { "section": 3, "name": "北沢義信", "rank": 2, "time": "01:05:20" },
+                { "section": 4, "name": "柳倫明", "rank": 11, "time": "01:08:09" },
+                { "section": 5, "name": "掛橋竜一", "rank": 9, "time": "01:16:58" },
+                { "section": 6, "name": "袴田良仁", "rank": 15, "time": "01:08:04" },
+                { "section": 7, "name": "富岡貴", "rank": 15, "time": "01:11:56" },
+                { "section": 8, "name": "高橋孝典", "rank": 15, "time": "01:12:28" },
+                { "section": 9, "name": "河本政之", "rank": 6, "time": "01:13:59" },
+                { "section": 10, "name": "佐藤亘", "rank": 15, "time": "01:16:26" }
+            ]
+        },
+        {
+            "kai": 65,
+            "year": 1989,
+            "rank": 11,
+            "totalTime": "11:43:21",
+            "outbound": { "rank": 13, "time": "05:56:42" },
+            "inbound": { "rank": 8, "time": "05:46:39" },
+            "runners": [
+                { "section": 1, "name": "岡田敦行", "rank": 13, "time": "01:07:29" },
+                { "section": 2, "name": "滝田治夫", "rank": 15, "time": "01:13:59" },
+                { "section": 3, "name": "進藤吉紀", "rank": 6, "time": "01:07:45" },
+                { "section": 4, "name": "深山晃", "rank": 14, "time": "01:09:12" },
+                { "section": 5, "name": "宮田藤夫", "rank": 10, "time": "01:18:17" },
+                { "section": 6, "name": "石井隆夫", "rank": 10, "time": "01:02:21" },
+                { "section": 7, "name": "掛橋竜一", "rank": 8, "time": "01:09:03" },
+                { "section": 8, "name": "渡辺重治", "rank": 10, "time": "01:11:29" },
+                { "section": 9, "name": "山本浩一", "rank": 11, "time": "01:15:32" },
+                { "section": 10, "name": "乗松圭太", "rank": 4, "time": "01:08:14" }
+            ]
+        },
+        {
+            "kai": 64,
+            "year": 1988,
+            "rank": 10,
+            "totalTime": "11:38:25",
+            "outbound": { "rank": 12, "time": "05:54:44" },
+            "inbound": { "rank": 6, "time": "05:43:41" },
+            "runners": [
+                { "section": 1, "name": "岡田敦行", "rank": 10, "time": "01:05:37" },
+                { "section": 2, "name": "滝田治夫", "rank": 10, "time": "01:13:18" },
+                { "section": 3, "name": "乗松圭太", "rank": 12, "time": "01:07:32" },
+                { "section": 4, "name": "山本浩一", "rank": 12, "time": "01:09:10" },
+                { "section": 5, "name": "宮田藤夫", "rank": 13, "time": "01:19:07" },
+                { "section": 6, "name": "石井隆夫", "rank": 9, "time": "01:03:08" },
+                { "section": 7, "name": "河本政之", "rank": 5, "time": "01:08:02" },
+                { "section": 8, "name": "進藤吉紀", "rank": 7, "time": "01:09:02" },
+                { "section": 9, "name": "佐藤寛文", "rank": 12, "time": "01:16:14" },
+                { "section": 10, "name": "牧野典彰", "rank": 2, "time": "01:07:15" }
+            ]
+        },
+        {
+            "kai": 63,
+            "year": 1987,
+            "rank": 14,
+            "totalTime": "11:43:17",
+            "outbound": { "rank": 14, "time": "05:54:51" },
+            "inbound": { "rank": 12, "time": "05:48:26" },
+            "runners": [
+                { "section": 1, "name": "滝田治夫", "rank": 4, "time": "01:05:40" },
+                { "section": 2, "name": "牧野典彰", "rank": 13, "time": "01:13:28" },
+                { "section": 3, "name": "岡田敦行", "rank": 12, "time": "01:07:33" },
+                { "section": 4, "name": "山本浩一", "rank": 15, "time": "01:10:24" },
+                { "section": 5, "name": "宮田藤夫", "rank": 12, "time": "01:17:46" },
+                { "section": 6, "name": "乗松圭太", "rank": 13, "time": "01:04:46" },
+                { "section": 7, "name": "井上晋一", "rank": 15, "time": "01:09:21" },
+                { "section": 8, "name": "細貝雅一", "rank": 5, "time": "01:09:21" },
+                { "section": 9, "name": "佐藤寛文", "rank": 10, "time": "01:14:55" },
+                { "section": 10, "name": "茂木善和", "rank": 8, "time": "01:10:04" }
+            ]
+        },
+        {
+            "kai": 62,
+            "year": 1986,
+            "rank": 15,
+            "totalTime": "12:05:01",
+            "outbound": { "rank": 12, "time": "06:01:49" },
+            "inbound": { "rank": 15, "time": "06:03:12" },
+            "runners": [
+                { "section": 1, "name": "井上晋一", "rank": 15, "time": "01:09:29" },
+                { "section": 2, "name": "牧野典彰", "rank": 13, "time": "01:14:41" },
+                { "section": 3, "name": "石井隆夫", "rank": 10, "time": "01:10:38" },
+                { "section": 4, "name": "宮田藤夫", "rank": 12, "time": "01:09:03" },
+                { "section": 5, "name": "畑山政浩", "rank": 10, "time": "01:17:58" },
+                { "section": 6, "name": "里木伸輔", "rank": 15, "time": "01:08:07" },
+                { "section": 7, "name": "滝田治夫", "rank": 13, "time": "01:10:26" },
+                { "section": 8, "name": "細貝雅一", "rank": 15, "time": "01:17:45" },
+                { "section": 9, "name": "佐藤寛文", "rank": 12, "time": "01:16:40" },
+                { "section": 10, "name": "山本浩一", "rank": 12, "time": "01:10:14" }
+            ]
+        },
+        {
+            "kai": 61,
+            "year": 1985,
+            "rank": 15,
+            "totalTime": "11:54:36",
+            "outbound": { "rank": 15, "time": "06:03:18" },
+            "inbound": { "rank": 14, "time": "05:51:18" },
+            "runners": [
+                { "section": 1, "name": "北山和人", "rank": 15, "time": "01:08:43" },
+                { "section": 2, "name": "牧野典彰", "rank": 7, "time": "01:12:14" },
+                { "section": 3, "name": "六反田雅宏", "rank": 15, "time": "01:11:27" },
+                { "section": 4, "name": "川崎幹男", "rank": 14, "time": "01:10:07" },
+                { "section": 5, "name": "細貝雅一", "rank": 15, "time": "01:20:47" },
+                { "section": 6, "name": "中村俊宏", "rank": 7, "time": "01:03:13" },
+                { "section": 7, "name": "管宏尚", "rank": 15, "time": "01:12:27" },
+                { "section": 8, "name": "園原健弘", "rank": 9, "time": "01:10:08" },
+                { "section": 9, "name": "井上晋一", "rank": 15, "time": "01:16:25" },
+                { "section": 10, "name": "畑山政浩", "rank": 11, "time": "01:09:05" }
+            ]
+        },
+        {
+            "kai": 60,
+            "year": 1984,
+            "rank": 18,
+            "totalTime": "12:19:43",
+            "outbound": { "rank": 18, "time": "06:12:40" },
+            "inbound": { "rank": 17, "time": "06:07:03" },
+            "runners": [
+                { "section": 1, "name": "北山和人", "rank": 10, "time": "01:07:18" },
+                { "section": 2, "name": "井上晋一", "rank": 19, "time": "01:18:58" },
+                { "section": 3, "name": "六反田雅宏", "rank": 19, "time": "01:12:42" },
+                { "section": 4, "name": "川崎幹男", "rank": 19, "time": "01:12:16" },
+                { "section": 5, "name": "細貝雅一", "rank": 17, "time": "01:20:56" },
+                { "section": 6, "name": "中村俊宏", "rank": 14, "time": "01:05:05" },
+                { "section": 7, "name": "茂手木聡", "rank": 17, "time": "01:13:28" },
+                { "section": 8, "name": "園原健弘", "rank": 14, "time": "01:12:50" },
+                { "section": 9, "name": "中沢保弘", "rank": 20, "time": "01:22:26" },
+                { "section": 10, "name": "畑山政浩", "rank": 18, "time": "01:13:14" }
+            ]
+        },
+        {
+            "kai": 50,
+            "year": 1974,
+            "rank": 17,
+            "totalTime": "12:54:13",
+            "outbound": { "rank": 15, "time": "06:22:16" },
+            "inbound": { "rank": 17, "time": "06:31:57" },
+            "runners": [
+                { "section": 1, "name": "梅田克己", "rank": 15, "time": "01:09:36" },
+                { "section": 2, "name": "三木和明", "rank": 19, "time": "01:24:14" },
+                { "section": 3, "name": "鈴木尚企", "rank": 11, "time": "01:10:26" },
+                { "section": 4, "name": "岡田頼明", "rank": 12, "time": "01:12:58" },
+                { "section": 5, "name": "小杉則雄", "rank": 17, "time": "01:25:02" },
+                { "section": 6, "name": "須藤純一", "rank": 18, "time": "01:09:43" },
+                { "section": 7, "name": "北峰義己", "rank": 14, "time": "01:13:46" },
+                { "section": 8, "name": "山岸達也", "rank": 15, "time": "01:19:18" },
+                { "section": 9, "name": "草島稔", "rank": 15, "time": "01:31:07" },
+                { "section": 10, "name": "坂口宗弘", "rank": 16, "time": "01:18:03" }
+            ]
+        },
+        {
+            "kai": 48,
+            "year": 1972,
+            "rank": 15,
+            "totalTime": "12:58:09",
+            "outbound": { "rank": 15, "time": "06:25:26" },
+            "inbound": { "rank": 15, "time": "06:32:43" },
+            "runners": [
+                { "section": 1, "name": "鈴木尚企", "rank": 15, "time": "01:13:36" },
+                { "section": 2, "name": "梅田克己", "rank": 15, "time": "01:28:25" },
+                { "section": 3, "name": "今井伸一", "rank": 14, "time": "01:11:51" },
+                { "section": 4, "name": "阿瀬川裕", "rank": 14, "time": "01:12:02" },
+                { "section": 5, "name": "滝田正博", "rank": 8, "time": "01:19:32" },
+                { "section": 6, "name": "岡田頼明", "rank": 13, "time": "01:05:14" },
+                { "section": 7, "name": "北峰義己", "rank": 14, "time": "01:15:42" },
+                { "section": 8, "name": "木村誠", "rank": 15, "time": "01:20:35" },
+                { "section": 9, "name": "三木和明", "rank": 15, "time": "01:32:51" },
+                { "section": 10, "name": "貝沼保信", "rank": 15, "time": "01:18:21" }
+            ]
+        },
+        {
+            "kai": 45,
+            "year": 1969,
+            "rank": 15,
+            "totalTime": "12:50:52",
+            "outbound": { "rank": 15, "time": "06:56:41" },
+            "inbound": { "rank": 9, "time": "05:54:11" },
+            "runners": [
+                { "section": 1, "name": "内田典之", "rank": 15, "time": "01:15:24" },
+                { "section": 2, "name": "小林芳行", "rank": 14, "time": "01:22:04" },
+                { "section": 3, "name": "古屋政樹", "rank": 14, "time": "01:18:13" },
+                { "section": 4, "name": "末広敬二郎", "rank": 15, "time": "01:29:57" },
+                { "section": 5, "name": "遠藤和生", "rank": 15, "time": "01:31:03" },
+                { "section": 6, "name": "石川治男", "rank": 11, "time": "01:05:38" },
+                { "section": 7, "name": "榎正登", "rank": 2, "time": "01:10:59" },
+                { "section": 8, "name": "今井伸一", "rank": 11, "time": "01:08:25" },
+                { "section": 9, "name": "鈴木重和", "rank": 4, "time": "01:15:50" },
+                { "section": 10, "name": "土屋好一", "rank": 14, "time": "01:13:19" }
+            ]
+        },
+        {
+            "kai": 43,
+            "year": 1967,
+            "rank": 15,
+            "totalTime": "12:45:00",
+            "outbound": { "rank": 15, "time": "06:37:03" },
+            "inbound": { "rank": 12, "time": "06:07:57" },
+            "runners": [
+                { "section": 1, "name": "末広敬二郎", "rank": 12, "time": "01:08:45" },
+                { "section": 2, "name": "榎正登", "rank": 13, "time": "01:21:56" },
+                { "section": 3, "name": "鈴木重和", "rank": 10, "time": "01:07:42" },
+                { "section": 4, "name": "三瓶好一", "rank": 15, "time": "01:38:56" },
+                { "section": 5, "name": "天野輝男", "rank": 9, "time": "01:19:44" },
+                { "section": 6, "name": "小倉源義", "rank": 5, "time": "01:01:02" },
+                { "section": 7, "name": "沼本敬純", "rank": 9, "time": "01:15:55" },
+                { "section": 8, "name": "永井豊", "rank": 15, "time": "01:14:03" },
+                { "section": 9, "name": "秋吉和俊", "rank": 14, "time": "01:26:13" },
+                { "section": 10, "name": "内田典之", "rank": 10, "time": "01:10:44" }
+            ]
+        },
+        {
+            "kai": 42,
+            "year": 1966,
+            "rank": 10,
+            "totalTime": "12:06:35",
+            "outbound": { "rank": 10, "time": "06:11:08" },
+            "inbound": { "rank": 8, "time": "05:55:27" },
+            "runners": [
+                { "section": 1, "name": "小倉源義", "rank": 8, "time": "01:06:34" },
+                { "section": 2, "name": "谷口共栄", "rank": 13, "time": "01:20:40" },
+                { "section": 3, "name": "林糺明", "rank": 10, "time": "01:07:58" },
+                { "section": 4, "name": "内田武夫", "rank": 6, "time": "01:08:44" },
+                { "section": 5, "name": "秋吉和俊", "rank": 10, "time": "01:27:12" },
+                { "section": 6, "name": "北城俊武", "rank": 7, "time": "01:06:51" },
+                { "section": 7, "name": "末広敬二郎", "rank": 9, "time": "01:10:29" },
+                { "section": 8, "name": "福山時義", "rank": 11, "time": "01:09:22" },
+                { "section": 9, "name": "沼本敬純", "rank": 9, "time": "01:19:27" },
+                { "section": 10, "name": "小林羊吉", "rank": 9, "time": "01:09:18" }
+            ]
+        },
+        {
+            "kai": 41,
+            "year": 1965,
+            "rank": 8,
+            "totalTime": "12:05:33",
+            "outbound": { "rank": 10, "time": "06:12:07" },
+            "inbound": { "rank": 7, "time": "05:53:26" },
+            "runners": [
+                { "section": 1, "name": "沼本敬純", "rank": 12, "time": "01:09:01" },
+                { "section": 2, "name": "鍋島勝幸", "rank": 11, "time": "01:20:01" },
+                { "section": 3, "name": "内田武夫", "rank": 8, "time": "01:05:44" },
+                { "section": 4, "name": "天野輝男", "rank": 9, "time": "01:07:20" },
+                { "section": 5, "name": "秋吉和俊", "rank": 9, "time": "01:30:01" },
+                { "section": 6, "name": "北城俊武", "rank": 3, "time": "01:10:41" },
+                { "section": 7, "name": "山口詔二", "rank": 9, "time": "01:07:17" },
+                { "section": 8, "name": "福山時義", "rank": 8, "time": "01:08:44" },
+                { "section": 9, "name": "谷口共栄", "rank": 6, "time": "01:19:22" },
+                { "section": 10, "name": "小林羊吉", "rank": 6, "time": "01:07:22" }
+            ]
+        },
+        {
+            "kai": 40,
+            "year": 1964,
+            "rank": 9,
+            "totalTime": "12:01:47",
+            "outbound": { "rank": 9, "time": "06:05:13" },
+            "inbound": { "rank": 8, "time": "05:56:34" },
+            "runners": [
+                { "section": 1, "name": "広田正美", "rank": 10, "time": "01:07:02" },
+                { "section": 2, "name": "沼本敬純", "rank": 11, "time": "01:20:19" },
+                { "section": 3, "name": "小林羊吉", "rank": 14, "time": "01:07:46" },
+                { "section": 4, "name": "天野輝男", "rank": 9, "time": "01:04:56" },
+                { "section": 5, "name": "羽生敏博", "rank": 2, "time": "01:25:10" },
+                { "section": 6, "name": "北城俊武", "rank": 4, "time": "01:10:09" },
+                { "section": 7, "name": "山口詔二", "rank": 11, "time": "01:08:32" },
+                { "section": 8, "name": "福山時義", "rank": 12, "time": "01:08:11" },
+                { "section": 9, "name": "谷口共栄", "rank": 11, "time": "01:21:14" },
+                { "section": 10, "name": "鍋島勝幸", "rank": 7, "time": "01:08:28" }
+            ]
+        },
+        {
+            "kai": 39,
+            "year": 1963,
+            "rank": 2,
+            "totalTime": "12:04:28",
+            "outbound": { "rank": 4, "time": "06:13:52" },
+            "inbound": { "rank": 1, "time": "05:50:36" },
+            "runners": [
+                { "section": 1, "name": "広田正美", "rank": 8, "time": "01:07:59" },
+                { "section": 2, "name": "西尾利雄", "rank": 10, "time": "01:21:45" },
+                { "section": 3, "name": "落合宏", "rank": 5, "time": "01:10:08" },
+                { "section": 4, "name": "北城俊武", "rank": 4, "time": "01:05:48" },
+                { "section": 5, "name": "川畑理修", "rank": 2, "time": "01:28:12" },
+                { "section": 6, "name": "稲見進", "rank": 2, "time": "01:11:17" },
+                { "section": 7, "name": "鍋島勝幸", "rank": 8, "time": "01:04:26" },
+                { "section": 8, "name": "荒川功", "rank": 1, "time": "01:08:12" },
+                { "section": 9, "name": "羽生敏博", "rank": 5, "time": "01:19:56" },
+                { "section": 10, "name": "安部喜代志", "rank": 1, "time": "01:06:45" }
+            ]
+        },
+        {
+            "kai": 38,
+            "year": 1962,
+            "rank": 2,
+            "totalTime": "12:26:13",
+            "outbound": { "rank": 4, "time": "06:21:23" },
+            "inbound": { "rank": 2, "time": "06:04:50" },
+            "runners": [
+                { "section": 1, "name": "安部喜代志", "rank": 6, "time": "01:08:22" },
+                { "section": 2, "name": "荒川功", "rank": 10, "time": "01:25:04" },
+                { "section": 3, "name": "川島利幸", "rank": 7, "time": "01:08:06" },
+                { "section": 4, "name": "落合宏", "rank": 4, "time": "01:11:04" },
+                { "section": 5, "name": "川畑理修", "rank": 1, "time": "01:28:47" },
+                { "section": 6, "name": "稲見進", "rank": 3, "time": "01:13:46" },
+                { "section": 7, "name": "山田豊", "rank": 5, "time": "01:09:17" },
+                { "section": 8, "name": "田中康生", "rank": 4, "time": "01:08:23" },
+                { "section": 9, "name": "西尾利雄", "rank": 3, "time": "01:23:00" },
+                { "section": 10, "name": "羽生敏博", "rank": 3, "time": "01:10:24" }
+            ]
+        },
+        {
+            "kai": 37,
+            "year": 1961,
+            "rank": 5,
+            "totalTime": "12:17:39",
+            "outbound": { "rank": 3, "time": "06:12:10" },
+            "inbound": { "rank": 5, "time": "06:05:29" },
+            "runners": [
+                { "section": 1, "name": "安部喜代志", "rank": 1, "time": "01:09:02" },
+                { "section": 2, "name": "西尾利雄", "rank": 10, "time": "01:18:48" },
+                { "section": 3, "name": "荒川功", "rank": 5, "time": "01:05:40" },
+                { "section": 4, "name": "羽生敏博", "rank": 4, "time": "01:08:45" },
+                { "section": 5, "name": "川畑理修", "rank": 7, "time": "01:29:55" },
+                { "section": 6, "name": "稲見進", "rank": 9, "time": "01:15:56" },
+                { "section": 7, "name": "守弘史", "rank": 6, "time": "01:09:28" },
+                { "section": 8, "name": "広田正美", "rank": 8, "time": "01:07:51" },
+                { "section": 9, "name": "田中康生", "rank": 6, "time": "01:19:09" },
+                { "section": 10, "name": "北村祐一", "rank": 5, "time": "01:13:05" }
+            ]
+        },
+        {
+            "kai": 36,
+            "year": 1960,
+            "rank": 10,
+            "totalTime": "12:36:38",
+            "outbound": { "rank": 10, "time": "06:22:19" },
+            "inbound": { "rank": 10, "time": "06:14:19" },
+            "runners": [
+                { "section": 1, "name": "安部喜代志", "rank": 4, "time": "01:11:26" },
+                { "section": 2, "name": "大谷直樹", "rank": 9, "time": "01:06:51" },
+                { "section": 3, "name": "荒川功", "rank": 12, "time": "01:22:17" },
+                { "section": 4, "name": "田中康生", "rank": 14, "time": "01:10:49" },
+                { "section": 5, "name": "川畑理修", "rank": 3, "time": "01:30:56" },
+                { "section": 6, "name": "稲見進", "rank": 8, "time": "01:16:51" },
+                { "section": 7, "name": "樋尻省三", "rank": 12, "time": "01:08:10" },
+                { "section": 8, "name": "西尾利雄", "rank": 6, "time": "01:21:42" },
+                { "section": 9, "name": "守弘史", "rank": 9, "time": "01:09:39" },
+                { "section": 10, "name": "北村祐一", "rank": 12, "time": "01:17:57" }
+            ]
+        },
+        {
+            "kai": 33,
+            "year": 1957,
+            "rank": 14,
+            "totalTime": "14:19:29",
+            "outbound": { "rank": 11, "time": "06:37:24" },
+            "inbound": { "rank": 15, "time": "07:42:05" },
+            "runners": [
+                { "section": 1, "name": "大谷直樹", "rank": 9, "time": "01:14:29" },
+                { "section": 2, "name": "今村弘志", "rank": 7, "time": "01:10:21" },
+                { "section": 3, "name": "末次瑞穂", "rank": 12, "time": "01:16:44" },
+                { "section": 4, "name": "佐藤健一", "rank": 11, "time": "01:14:29" },
+                { "section": 5, "name": "北見高直", "rank": 12, "time": "01:41:21" },
+                { "section": 6, "name": "松代大", "rank": 11, "time": "01:24:25" },
+                { "section": 7, "name": "高橋昭敏", "rank": 15, "time": "02:08:49" },
+                { "section": 8, "name": "川戸正木", "rank": 13, "time": "01:25:28" },
+                { "section": 9, "name": "南条嘉幸", "rank": 9, "time": "01:15:27" },
+                { "section": 10, "name": "滝原征一郎", "rank": 14, "time": "01:27:56" }
+            ]
+        },
+        {
+            "kai": 32,
+            "year": 1956,
+            "rank": 14,
+            "totalTime": "13:44:28",
+            "outbound": { "rank": 15, "time": "06:54:35" },
+            "inbound": { "rank": 13, "time": "06:49:53" },
+            "runners": [
+                { "section": 1, "name": "今村弘志", "rank": 13, "time": "01:16:50" },
+                { "section": 2, "name": "末次瑞穂", "rank": 10, "time": "01:14:51" },
+                { "section": 3, "name": "松代大", "rank": 13, "time": "01:19:17" },
+                { "section": 4, "name": "南条嘉幸", "rank": 14, "time": "01:17:17" },
+                { "section": 5, "name": "大門和夫", "rank": 15, "time": "01:46:20" },
+                { "section": 6, "name": "伊藤誠司", "rank": 15, "time": "01:26:10" },
+                { "section": 7, "name": "渡辺克彦", "rank": 15, "time": "01:21:25" },
+                { "section": 8, "name": "若山雄市", "rank": 13, "time": "01:20:50" },
+                { "section": 9, "name": "佐藤勇", "rank": 13, "time": "01:20:25" },
+                { "section": 10, "name": "川口将", "rank": 11, "time": "01:21:03" }
+            ]
+        },
+        {
+            "kai": 30,
+            "year": 1954,
+            "rank": 5,
+            "totalTime": "12:38:26",
+            "outbound": { "rank": 4, "time": "06:17:50" },
+            "inbound": { "rank": 5, "time": "06:20:36" },
+            "runners": [
+                { "section": 1, "name": "堀越好夫", "rank": 4, "time": "01:12:03" },
+                { "section": 2, "name": "山口良夫", "rank": 2, "time": "01:07:10" },
+                { "section": 3, "name": "楠雪高", "rank": 1, "time": "01:11:07" },
+                { "section": 4, "name": "樽木茂", "rank": 6, "time": "01:11:15" },
+                { "section": 5, "name": "菊地健吉", "rank": 6, "time": "01:36:15" },
+                { "section": 6, "name": "大野興一", "rank": 4, "time": "01:17:09" },
+                { "section": 7, "name": "粟津吉央", "rank": 6, "time": "01:13:12" },
+                { "section": 8, "name": "越川敏夫", "rank": 6, "time": "01:18:36" },
+                { "section": 9, "name": "蒲生正", "rank": 5, "time": "01:12:21" },
+                { "section": 10, "name": "須藤昭夫", "rank": 4, "time": "01:19:18" }
+            ]
+        },
+        {
+            "kai": 29,
+            "year": 1953,
+            "rank": 4,
+            "totalTime": "12:52:19",
+            "outbound": { "rank": 5, "time": "06:22:17" },
+            "inbound": { "rank": 7, "time": "06:30:02" },
+            "runners": [
+                { "section": 1, "name": "楠雪高", "rank": 6, "time": "01:11:56" },
+                { "section": 2, "name": "菊地健吉", "rank": 1, "time": "01:04:46" },
+                { "section": 3, "name": "堀越好夫", "rank": 8, "time": "01:16:30" },
+                { "section": 4, "name": "樽木茂", "rank": 3, "time": "01:09:32" },
+                { "section": 5, "name": "山口寿治", "rank": 11, "time": "01:39:33" },
+                { "section": 6, "name": "槙野敦宣", "rank": 6, "time": "01:19:09" },
+                { "section": 7, "name": "加賀亮三", "rank": 6, "time": "01:14:28" },
+                { "section": 8, "name": "越川敏夫", "rank": 4, "time": "01:19:05" },
+                { "section": 9, "name": "宮嶋俊彦", "rank": 11, "time": "01:16:14" },
+                { "section": 10, "name": "山口良夫", "rank": 9, "time": "01:21:06" }
+            ]
+        },
+        {
+            "kai": 28,
+            "year": 1952,
+            "rank": 4,
+            "totalTime": "12:52:26",
+            "outbound": { "rank": 3, "time": "06:32:22" },
+            "inbound": { "rank": 4, "time": "06:20:04" },
+            "runners": [
+                { "section": 1, "name": "堀越好男", "rank": 7, "time": "01:14:20" },
+                { "section": 2, "name": "楠雪高", "rank": 3, "time": "01:10:04" },
+                { "section": 3, "name": "山口良夫", "rank": 4, "time": "01:16:28" },
+                { "section": 4, "name": "槙野敦宣", "rank": 2, "time": "01:10:10" },
+                { "section": 5, "name": "山口寿治", "rank": 6, "time": "01:41:20" },
+                { "section": 6, "name": "小木曽市明", "rank": 4, "time": "01:20:35" },
+                { "section": 7, "name": "添田順", "rank": 3, "time": "01:12:59" },
+                { "section": 8, "name": "樽木茂", "rank": 4, "time": "01:16:58" },
+                { "section": 9, "name": "平茂", "rank": 1, "time": "01:10:41" },
+                { "section": 10, "name": "小谷野重雄", "rank": 5, "time": "01:18:51" }
+            ]
+        },
+        {
+            "kai": 27,
+            "year": 1951,
+            "rank": 2,
+            "totalTime": "12:41:42",
+            "outbound": { "rank": 2, "time": "06:21:10" },
+            "inbound": { "rank": 3, "time": "06:20:32" },
+            "runners": [
+                { "section": 1, "name": "島村和男", "rank": 3, "time": "01:16:35" },
+                { "section": 2, "name": "野崎浩司", "rank": 2, "time": "01:09:31" },
+                { "section": 3, "name": "堀越好夫", "rank": 2, "time": "01:14:48" },
+                { "section": 4, "name": "樽木茂", "rank": 2, "time": "01:07:20" },
+                { "section": 5, "name": "山口寿治", "rank": 2, "time": "01:32:56" },
+                { "section": 6, "name": "小木曽市明", "rank": 2, "time": "01:19:13" },
+                { "section": 7, "name": "佐原節男", "rank": 3, "time": "01:13:18" },
+                { "section": 8, "name": "槙野敦宣", "rank": 4, "time": "01:17:21" },
+                { "section": 9, "name": "平茂", "rank": 2, "time": "01:10:32" },
+                { "section": 10, "name": "小谷野重雄", "rank": 4, "time": "01:20:08" }
+            ]
+        },
+        {
+            "kai": 26,
+            "year": 1950,
+            "rank": 3,
+            "totalTime": "13:16:59",
+            "outbound": { "rank": 3, "time": "06:43:48" },
+            "inbound": { "rank": 4, "time": "06:33:11" },
+            "runners": [
+                { "section": 1, "name": "島村和男", "rank": 2, "time": "01:14:56" },
+                { "section": 2, "name": "吉田和夫", "rank": 4, "time": "01:13:16" },
+                { "section": 3, "name": "乙倉英雄", "rank": 5, "time": "01:18:40" },
+                { "section": 4, "name": "木渓博志", "rank": 2, "time": "01:13:21" },
+                { "section": 5, "name": "山口寿治", "rank": 6, "time": "01:43:35" },
+                { "section": 6, "name": "小木曽市明", "rank": 3, "time": "01:21:30" },
+                { "section": 7, "name": "林和夫", "rank": 2, "time": "01:12:45" },
+                { "section": 8, "name": "田中久夫", "rank": 6, "time": "01:24:18" },
+                { "section": 9, "name": "安田正", "rank": 3, "time": "01:12:06" },
+                { "section": 10, "name": "野崎浩司", "rank": 7, "time": "01:22:32" }
+            ]
+        },
+        {
+            "kai": 25,
+            "year": 1949,
+            "rank": 1,
+            "totalTime": "13:36:11",
+            "outbound": { "rank": 1, "time": "06:52:59" },
+            "inbound": { "rank": 2, "time": "06:43:12" },
+            "runners": [
+                { "section": 1, "name": "島村和男", "rank": 1, "time": "01:17:25" },
+                { "section": 2, "name": "峰尾裕之肋", "rank": 4, "time": "01:17:09" },
+                { "section": 3, "name": "田中久夫", "rank": 1, "time": "01:18:40" },
+                { "section": 4, "name": "久保晴良", "rank": 2, "time": "01:16:07" },
+                { "section": 5, "name": "岡正康", "rank": 1, "time": "01:43:38" },
+                { "section": 6, "name": "林和夫", "rank": 5, "time": "01:27:42" },
+                { "section": 7, "name": "乙倉英雄", "rank": 2, "time": "01:17:09" },
+                { "section": 8, "name": "槇野敦宣", "rank": 3, "time": "01:19:39" },
+                { "section": 9, "name": "安田正", "rank": 4, "time": "01:15:42" },
+                { "section": 10, "name": "木渓博志", "rank": 2, "time": "01:23:00" }
+            ]
+        },
+        {
+            "kai": 24,
+            "year": 1948,
+            "rank": 3,
+            "totalTime": "14:25:21",
+            "outbound": { "rank": 6, "time": "07:32:03" },
+            "inbound": { "rank": 4, "time": "06:53:18" },
+            "runners": [
+                { "section": 1, "name": "戸田省吾", "rank": 5, "time": "01:21:05" },
+                { "section": 2, "name": "中村俊尹", "rank": 4, "time": "01:14:46" },
+                { "section": 3, "name": "田中久夫", "rank": 12, "time": "01:53:28" },
+                { "section": 4, "name": "久保晴良", "rank": 2, "time": "01:18:35" },
+                { "section": 5, "name": "岡正康", "rank": 1, "time": "01:44:09" },
+                { "section": 6, "name": "林和夫", "rank": 5, "time": "01:26:59" },
+                { "section": 7, "name": "牧野博", "rank": 2, "time": "01:13:43" },
+                { "section": 8, "name": "沖田昭三", "rank": 8, "time": "01:30:40" },
+                { "section": 9, "name": "沢栗正夫", "rank": 2, "time": "01:14:21" },
+                { "section": 10, "name": "木渓博志", "rank": 5, "time": "01:27:35" }
+            ]
+        },
+        {
+            "kai": 23,
+            "year": 1947,
+            "rank": 1,
+            "totalTime": "14:42:48",
+            "outbound": { "rank": 1, "time": "07:20:42" },
+            "inbound": { "rank": 3, "time": "07:22:06" },
+            "runners": [
+                { "section": 1, "name": "戸田省吾", "rank": 3, "time": "01:38:15" },
+                { "section": 2, "name": "溝部隆", "rank": 2, "time": "01:14:59" },
+                { "section": 3, "name": "沖田昭三", "rank": 3, "time": "01:26:23" },
+                { "section": 4, "name": "沢栗正夫", "rank": 1, "time": "01:19:25" },
+                { "section": 5, "name": "岡正康", "rank": 3, "time": "01:41:30" },
+                { "section": 6, "name": "湯浅儀一郎", "rank": 6, "time": "01:33:45" },
+                { "section": 7, "name": "牧野博", "rank": 1, "time": "01:19:43" },
+                { "section": 8, "name": "君野幸一", "rank": 5, "time": "01:32:50" },
+                { "section": 9, "name": "小林一郎", "rank": 3, "time": "01:18:02" },
+                { "section": 10, "name": "田中久夫", "rank": 4, "time": "01:37:46" }
+            ]
+        },
+        {
+            "kai": 19,
+            "year": 1938,
+            "rank": "失格",
+            "totalTime": "12:41:38",
+            "outbound": { "rank": 2, "time": "06:25:59" },
+            "inbound": { "rank": 2, "time": "06:15:39" },
+            "runners": [
+                { "section": 1, "name": "名島忠雄", "rank": 2, "time": "01:14:08" },
+                { "section": 2, "name": "内田賢", "rank": 3, "time": "01:12:54" },
+                { "section": 3, "name": "浜克己", "rank": 1, "time": "01:13:00" },
+                { "section": 4, "name": "宮城礼次", "rank": 1, "time": "01:09:58" },
+                { "section": 5, "name": "佐藤八郎", "rank": 2, "time": "01:35:59" },
+                { "section": 6, "name": "志村英治", "rank": 2, "time": "01:22:54" },
+                { "section": 7, "name": "山崎政夫", "rank": 1, "time": "01:10:30" },
+                { "section": 8, "name": "大森伊三治", "rank": 2, "time": "01:15:14" },
+                { "section": 9, "name": "樋口義武", "rank": 2, "time": "01:09:03" },
+                { "section": 10, "name": "田口栄一", "rank": 2, "time": "01:17:58" }
+            ]
+        },
+        {
+            "kai": 18,
+            "year": 1937,
+            "rank": 3,
+            "totalTime": "13:06:36",
+            "outbound": { "rank": 2, "time": "06:23:01" },
+            "inbound": { "rank": 5, "time": "06:43:35" },
+            "runners": [
+                { "section": 1, "name": "鬼塚悟", "rank": 2, "time": "01:16:19" },
+                { "section": 2, "name": "大森伊三治", "rank": 1, "time": "01:07:17" },
+                { "section": 3, "name": "南昇竜", "rank": 1, "time": "01:14:21" },
+                { "section": 4, "name": "名島忠雄", "rank": 1, "time": "01:07:42" },
+                { "section": 5, "name": "佐藤八郎", "rank": 4, "time": "01:37:22" },
+                { "section": 6, "name": "浜克己", "rank": 8, "time": "01:31:05" },
+                { "section": 7, "name": "山崎政夫", "rank": 2, "time": "01:13:18" },
+                { "section": 8, "name": "内田賢", "rank": 3, "time": "01:16:56" },
+                { "section": 9, "name": "古山泰也", "rank": 5, "time": "01:17:08" },
+                { "section": 10, "name": "田口栄一", "rank": 8, "time": "01:25:08" }
+            ]
+        },
+        {
+            "kai": 17,
+            "year": 1936,
+            "rank": 8,
+            "totalTime": "14:11:11",
+            "outbound": { "rank": 9, "time": "07:06:53" },
+            "inbound": { "rank": 9, "time": "07:04:18" },
+            "runners": [
+                { "section": 1, "name": "長谷川多喜男", "rank": 7, "time": "01:17:42" },
+                { "section": 2, "name": "米田菊治", "rank": 6, "time": "01:15:25" },
+                { "section": 3, "name": "南昇竜", "rank": 5, "time": "01:19:19" },
+                { "section": 4, "name": "大森伊三治", "rank": 14, "time": "01:29:32" },
+                { "section": 5, "name": "佐藤八郎", "rank": 5, "time": "01:44:55" },
+                { "section": 6, "name": "菊地平吉", "rank": 11, "time": "01:33:56" },
+                { "section": 7, "name": "松野武雄", "rank": 7, "time": "01:19:55" },
+                { "section": 8, "name": "鬼塚悟", "rank": 6, "time": "01:22:21" },
+                { "section": 9, "name": "古山素也", "rank": 10, "time": "01:19:56" },
+                { "section": 10, "name": "中田正男", "rank": 12, "time": "01:28:10" }
+            ]
+        },
+        {
+            "kai": 16,
+            "year": 1935,
+            "rank": 5,
+            "totalTime": "13:27:11",
+            "outbound": { "rank": 3, "time": "06:37:36" },
+            "inbound": { "rank": 6, "time": "06:49:35" },
+            "runners": [
+                { "section": 1, "name": "岡沢吉夫", "rank": 4, "time": "01:16:20" },
+                { "section": 2, "name": "鬼塚悟", "rank": 3, "time": "01:08:55" },
+                { "section": 3, "name": "名島忠雄", "rank": 9, "time": "01:19:30" },
+                { "section": 4, "name": "長谷川多喜男", "rank": 8, "time": "01:15:34" },
+                { "section": 5, "name": "南昇竜", "rank": 2, "time": "01:37:17" },
+                { "section": 6, "name": "小島節次", "rank": 8, "time": "01:32:42" },
+                { "section": 7, "name": "鄭商熙", "rank": 5, "time": "01:17:47" },
+                { "section": 8, "name": "富江利直", "rank": 4, "time": "01:21:59" },
+                { "section": 9, "name": "西沢茂雄", "rank": 8, "time": "01:18:19" },
+                { "section": 10, "name": "松野武雄", "rank": 6, "time": "01:18:48" }
+            ]
+        },
+        {
+            "kai": 15,
+            "year": 1934,
+            "rank": 6,
+            "totalTime": "13:50:47",
+            "outbound": { "rank": 5, "time": "06:56:55" },
+            "inbound": { "rank": 6, "time": "06:53:52" },
+            "runners": [
+                { "section": 1, "name": "内田賢", "rank": 4, "time": "01:15:06" },
+                { "section": 2, "name": "土本良信", "rank": 7, "time": "01:13:59" },
+                { "section": 3, "name": "長谷川多喜男", "rank": 6, "time": "01:20:44" },
+                { "section": 4, "name": "鄭商熙", "rank": 8, "time": "01:20:30" },
+                { "section": 5, "name": "名島忠雄", "rank": 9, "time": "01:46:36" },
+                { "section": 6, "name": "清水重雄", "rank": 3, "time": "01:26:55" },
+                { "section": 7, "name": "松野武雄", "rank": 7, "time": "01:21:39" },
+                { "section": 8, "name": "米田菊治", "rank": 11, "time": "01:30:18" },
+                { "section": 9, "name": "剣持茂", "rank": 6, "time": "01:17:12" },
+                { "section": 10, "name": "小島道雄", "rank": 6, "time": "01:17:48" }
+            ]
+        },
+        {
+            "kai": 14,
+            "year": 1933,
+            "rank": 4,
+            "totalTime": "13:19:48",
+            "outbound": { "rank": 4, "time": "06:50:07" },
+            "inbound": { "rank": 4, "time": "06:29:41" },
+            "runners": [
+                { "section": 1, "name": "富江利直", "rank": 6, "time": "01:20:25" },
+                { "section": 2, "name": "内田賢", "rank": 4, "time": "01:12:59" },
+                { "section": 3, "name": "名島忠雄", "rank": 4, "time": "01:18:27" },
+                { "section": 4, "name": "鄭商熙", "rank": 5, "time": "01:18:39" },
+                { "section": 5, "name": "片渕昇", "rank": 2, "time": "01:39:37" },
+                { "section": 6, "name": "清水重雄", "rank": 5, "time": "01:29:26" },
+                { "section": 7, "name": "岩崎源五平", "rank": 1, "time": "01:12:19" },
+                { "section": 8, "name": "大場要", "rank": 3, "time": "01:18:08" },
+                { "section": 9, "name": "陸口正一", "rank": 5, "time": "01:13:55" },
+                { "section": 10, "name": "小島道雄", "rank": 3, "time": "01:15:53" }
+            ]
+        },
+        {
+            "kai": 13,
+            "year": 1932,
+            "rank": 9,
+            "totalTime": "15:45:37",
+            "outbound": { "rank": 9, "time": "08:46:02" },
+            "inbound": { "rank": 7, "time": "06:59:35" },
+            "runners": [
+                { "section": 1, "name": "富江利直", "rank": 4, "time": "01:16:00" },
+                { "section": 2, "name": "大場要", "rank": 5, "time": "01:12:20" },
+                { "section": 3, "name": "鄭商熙", "rank": 8, "time": "01:22:01" },
+                { "section": 4, "name": "大西正光/秋山卯一", "rank": 9, "time": "--:--:--" },
+                { "section": 5, "name": "権泰夏", "rank": null, "time": "--:--:--" },
+                { "section": 6, "name": "片渕昇", "rank": 1, "time": "01:19:28" },
+                { "section": 7, "name": "浜田耕作", "rank": 6, "time": "01:26:35" },
+                { "section": 8, "name": "清水重雄", "rank": 4, "time": "01:20:18" },
+                { "section": 9, "name": "伊沢教三", "rank": 9, "time": "01:29:34" },
+                { "section": 10, "name": "小島道夫", "rank": 6, "time": "01:23:40" }
+            ]
+        },
+        {
+            "kai": 12,
+            "year": 1931,
+            "rank": 5,
+            "totalTime": "13:51:45",
+            "outbound": { "rank": 6, "time": "07:11:34" },
+            "inbound": { "rank": 4, "time": "06:40:11" },
+            "runners": [
+                { "section": 1, "name": "光田博", "rank": 5, "time": "01:20:30" },
+                { "section": 2, "name": "富江利直", "rank": 2, "time": "01:12:50" },
+                { "section": 3, "name": "清水重雄", "rank": 8, "time": "01:24:48" },
+                { "section": 4, "name": "田名瀬保", "rank": 7, "time": "01:24:50" },
+                { "section": 5, "name": "小島道雄", "rank": 6, "time": "01:48:36" },
+                { "section": 6, "name": "常藤俊雄", "rank": 6, "time": "01:32:02" },
+                { "section": 7, "name": "西岡徹雄", "rank": 5, "time": "01:17:07" },
+                { "section": 8, "name": "浜田耕作", "rank": 6, "time": "01:21:44" },
+                { "section": 9, "name": "村上讃", "rank": 1, "time": "01:11:19" },
+                { "section": 10, "name": "権泰夏", "rank": 3, "time": "01:17:59" }
+            ]
+        },
+        {
+            "kai": 11,
+            "year": 1930,
+            "rank": 2,
+            "totalTime": "13:42:17",
+            "outbound": { "rank": 4, "time": "07:00:18" },
+            "inbound": { "rank": 3, "time": "06:41:59" },
+            "runners": [
+                { "section": 1, "name": "村上讃", "rank": 5, "time": "01:21:02" },
+                { "section": 2, "name": "大場要", "rank": 6, "time": "01:18:23" },
+                { "section": 3, "name": "光田博", "rank": 6, "time": "01:22:03" },
+                { "section": 4, "name": "小島道雄", "rank": 1, "time": "01:11:06" },
+                { "section": 5, "name": "常藤俊雄", "rank": 5, "time": "01:47:44" },
+                { "section": 6, "name": "永瀬芳雄", "rank": 5, "time": "01:29:08" },
+                { "section": 7, "name": "権泰夏", "rank": 1, "time": "01:15:32" },
+                { "section": 8, "name": "北角昌利", "rank": 4, "time": "01:19:44" },
+                { "section": 9, "name": "大西正光", "rank": 5, "time": "01:20:17" },
+                { "section": 10, "name": "浜田耕作", "rank": 1, "time": "01:17:18" }
+            ]
+        },
+        {
+            "kai": 10,
+            "year": 1929,
+            "rank": 1,
+            "totalTime": "13:32:50",
+            "outbound": { "rank": 2, "time": "07:01:06" },
+            "inbound": { "rank": 1, "time": "06:31:44" },
+            "runners": [
+                { "section": 1, "name": "古沢英一", "rank": 4, "time": "01:21:41" },
+                { "section": 2, "name": "笠井重雄", "rank": 3, "time": "01:15:47" },
+                { "section": 3, "name": "光田博", "rank": 2, "time": "01:18:26" },
+                { "section": 4, "name": "小島道雄", "rank": 1, "time": "01:17:26" },
+                { "section": 5, "name": "山本巌雄", "rank": 5, "time": "01:47:45" },
+                { "section": 6, "name": "永瀬芳雄", "rank": 3, "time": "01:27:15" },
+                { "section": 7, "name": "浜田耕作", "rank": 3, "time": "01:17:05" },
+                { "section": 8, "name": "北角昌利", "rank": 1, "time": "01:15:02" },
+                { "section": 9, "name": "村上讃", "rank": 2, "time": "01:15:49" },
+                { "section": 10, "name": "権泰夏", "rank": 3, "time": "01:16:33" }
+            ]
+        },
+        {
+            "kai": 9,
+            "year": 1928,
+            "rank": 1,
+            "totalTime": "13:54:56",
+            "outbound": { "rank": 1, "time": "07:02:41" },
+            "inbound": { "rank": 2, "time": "06:52:15" },
+            "runners": [
+                { "section": 1, "name": "古沢英一", "rank": 3, "time": "01:23:24" },
+                { "section": 2, "name": "千葉毅", "rank": 2, "time": "01:14:35" },
+                { "section": 3, "name": "村野正雄", "rank": 6, "time": "01:27:05" },
+                { "section": 4, "name": "権泰夏", "rank": 1, "time": "01:14:24" },
+                { "section": 5, "name": "八島健三", "rank": 4, "time": "01:43:12" },
+                { "section": 6, "name": "永瀬芳雄", "rank": 2, "time": "01:29:39" },
+                { "section": 7, "name": "山本巌雄", "rank": 1, "time": "01:18:53" },
+                { "section": 8, "name": "光田博", "rank": 9, "time": "01:26:50" },
+                { "section": 9, "name": "笠井重雄", "rank": 6, "time": "01:17:47" },
+                { "section": 10, "name": "北角昌利", "rank": 2, "time": "01:19:05" }
+            ]
+        },
+        {
+            "kai": 8,
+            "year": 1927,
+            "rank": 3,
+            "totalTime": "14:55:35",
+            "outbound": { "rank": 2, "time": "07:30:42" },
+            "inbound": { "rank": 3, "time": "07:24:53" },
+            "runners": [
+                { "section": 1, "name": "窪田武夫", "rank": 1, "time": "01:22:39" },
+                { "section": 2, "name": "佐原東三郎", "rank": 3, "time": "01:20:25" },
+                { "section": 3, "name": "重城靖夫", "rank": 4, "time": "01:30:33" },
+                { "section": 4, "name": "沢田信美", "rank": 2, "time": "01:26:26" },
+                { "section": 5, "name": "八島健三", "rank": 1, "time": "01:50:38" },
+                { "section": 6, "name": "山本巌雄", "rank": 3, "time": "01:39:03" },
+                { "section": 7, "name": "光田博", "rank": 5, "time": "01:30:52" },
+                { "section": 8, "name": "権泰夏", "rank": 3, "time": "01:27:22" },
+                { "section": 9, "name": "笹原二郎", "rank": 3, "time": "01:22:31" },
+                { "section": 10, "name": "永瀬芳雄", "rank": 3, "time": "01:25:04" }
+            ]
+        },
+        {
+            "kai": 7,
+            "year": 1926,
+            "rank": 2,
+            "totalTime": "14:18:12",
+            "outbound": { "rank": 2, "time": "07:25:34" },
+            "inbound": { "rank": 1, "time": "06:52:38" },
+            "runners": [
+                { "section": 1, "name": "牧田与一", "rank": 4, "time": "01:27:00" },
+                { "section": 2, "name": "泉勘次郎", "rank": 3, "time": "01:22:22" },
+                { "section": 3, "name": "橋本彦一", "rank": 4, "time": "01:27:42" },
+                { "section": 4, "name": "佐原東三郎", "rank": 2, "time": "01:25:45" },
+                { "section": 5, "name": "八島健三", "rank": 1, "time": "01:42:43" },
+                { "section": 6, "name": "永瀬芳雄", "rank": 2, "time": "01:32:39" },
+                { "section": 7, "name": "山口栄", "rank": 2, "time": "01:18:56" },
+                { "section": 8, "name": "原田嘉七", "rank": 2, "time": "01:23:11" },
+                { "section": 9, "name": "笹原二郎", "rank": 4, "time": "01:16:30" },
+                { "section": 10, "name": "永谷寿一", "rank": 1, "time": "01:21:20" }
+            ]
+        },
+        {
+            "kai": 6,
+            "year": 1925,
+            "rank": 1,
+            "totalTime": "14:09:54",
+            "outbound": { "rank": 2, "time": "07:26:20" },
+            "inbound": { "rank": 1, "time": "06:43:34" },
+            "runners": [
+                { "section": 1, "name": "松尾昇", "rank": 7, "time": "01:31:12" },
+                { "section": 2, "name": "樋口亮", "rank": 4, "time": "01:19:26" },
+                { "section": 3, "name": "原田嘉七", "rank": 4, "time": "01:22:42" },
+                { "section": 4, "name": "川上正蔵", "rank": 6, "time": "01:27:26" },
+                { "section": 5, "name": "八島健三", "rank": 1, "time": "01:45:34" },
+                { "section": 6, "name": "江俣広", "rank": 2, "time": "01:33:02" },
+                { "section": 7, "name": "天野重朗", "rank": 1, "time": "01:17:50" },
+                { "section": 8, "name": "山口栄", "rank": null, "time": "--:--:--" },
+                { "section": 9, "name": "泉勘次郎", "rank": null, "time": "--:--:--" },
+                { "section": 10, "name": "永谷寿一", "rank": 1, "time": "01:19:04" }
+            ]
+        },
+        {
+            "kai": 5,
+            "year": 1924,
+            "rank": 1,
+            "totalTime": "14:25:09",
+            "outbound": { "rank": 2, "time": "07:29:26" },
+            "inbound": { "rank": 1, "time": "06:55:43" },
+            "runners": [
+                { "section": 1, "name": "江俣広", "rank": 5, "time": "01:30:01" },
+                { "section": 2, "name": "伊藤兼吉", "rank": 2, "time": "01:18:43" },
+                { "section": 3, "name": "高橋釋三郎", "rank": 1, "time": "01:22:31" },
+                { "section": 4, "name": "川上正蔵", "rank": null, "time": "01:28:15" },
+                { "section": 5, "name": "下村広次", "rank": 2, "time": "01:49:57" },
+                { "section": 6, "name": "天野重朗", "rank": 4, "time": "01:36:51" },
+                { "section": 7, "name": "永谷寿一", "rank": 1, "time": "01:15:35" },
+                { "section": 8, "name": "山口栄", "rank": null, "time": "--:--:--" },
+                { "section": 9, "name": "泉勘次郎", "rank": null, "time": "--:--:--" },
+                { "section": 10, "name": "八島健三", "rank": 1, "time": "01:18:43" }
+            ]
+        },
+        {
+            "kai": 4,
+            "year": 1923,
+            "rank": 4,
+            "totalTime": "14:38:50",
+            "outbound": { "rank": 1, "time": "07:17:11" },
+            "inbound": { "rank": 5, "time": "07:21:39" },
+            "runners": [
+                { "section": 1, "name": "須永甫", "rank": 4, "time": "01:27:37" },
+                { "section": 2, "name": "坂尾潔", "rank": 5, "time": "01:19:54" },
+                { "section": 3, "name": "八島健三", "rank": 1, "time": "01:19:20" },
+                { "section": 4, "name": "川上正蔵", "rank": 3, "time": "01:26:54" },
+                { "section": 5, "name": "下村広次", "rank": 1, "time": "01:43:26" },
+                { "section": 6, "name": "江俣広", "rank": 6, "time": "01:40:41" },
+                { "section": 7, "name": "石井宕", "rank": 5, "time": "01:24:48" },
+                { "section": 8, "name": "西崎実一", "rank": 6, "time": "01:28:28" },
+                { "section": 9, "name": "天野重朗", "rank": 7, "time": "01:23:50" },
+                { "section": 10, "name": "文天吉", "rank": 4, "time": "01:23:52" }
+            ]
+        },
+        {
+            "kai": 3,
+            "year": 1922,
+            "rank": 3,
+            "totalTime": "14:47:08",
+            "outbound": { "rank": 5, "time": "07:36:41" },
+            "inbound": { "rank": 2, "time": "07:10:27" },
+            "runners": [
+                { "section": 1, "name": "石井宕", "rank": 5, "time": "01:32:20" },
+                { "section": 2, "name": "高見将三", "rank": 4, "time": "01:15:38" },
+                { "section": 3, "name": "高橋釋三郎", "rank": 7, "time": "01:30:32" },
+                { "section": 4, "name": "須永甫", "rank": 4, "time": "01:20:45" },
+                { "section": 5, "name": "西本勉", "rank": 7, "time": "01:57:26" },
+                { "section": 6, "name": "江俣広", "rank": 4, "time": "01:35:55" },
+                { "section": 7, "name": "文天吉", "rank": 2, "time": "01:21:30" },
+                { "section": 8, "name": "神尾友枝", "rank": 4, "time": "01:30:03" },
+                { "section": 9, "name": "西崎実一", "rank": 3, "time": "01:22:17" },
+                { "section": 10, "name": "下村広次", "rank": 1, "time": "01:20:42" }
+            ]
+        },
+        {
+            "kai": 2,
+            "year": 1921,
+            "rank": 1,
+            "totalTime": "14:39:01",
+            "outbound": { "rank": 2, "time": "07:26:20" },
+            "inbound": { "rank": 2, "time": "07:12:41" },
+            "runners": [
+                { "section": 1, "name": "加藤富之助", "rank": 3, "time": "01:32:00" },
+                { "section": 2, "name": "高見将三", "rank": 1, "time": "01:15:15" },
+                { "section": 3, "name": "西本勉", "rank": 3, "time": "01:25:55" },
+                { "section": 4, "name": "稲毛田安三", "rank": 2, "time": "01:15:55" },
+                { "section": 5, "name": "後藤長一", "rank": 2, "time": "01:57:15" },
+                { "section": 6, "name": "江俣広", "rank": 1, "time": "01:34:20" },
+                { "section": 7, "name": "得能末吉", "rank": 2, "time": "01:31:00" },
+                { "section": 8, "name": "小島三郎", "rank": 3, "time": "01:25:30" },
+                { "section": 9, "name": "藤井嘉市", "rank": null, "time": "01:22:10" },
+                { "section": 10, "name": "下村広次", "rank": null, "time": "01:19:41" }
+            ]
+        },
+        {
+            "kai": 1,
+            "year": 1920,
+            "rank": 2,
+            "totalTime": "15:05:41",
+            "outbound": { "rank": 1, "time": "07:30:36" },
+            "inbound": { "rank": 3, "time": "07:35:05" },
+            "runners": [
+                { "section": 1, "name": "稲毛田安三", "rank": 2, "time": "01:28:00" },
+                { "section": 2, "name": "下村広次", "rank": 1, "time": "01:13:00" },
+                { "section": 3, "name": "藤井嘉市", "rank": 1, "time": "01:25:09" },
+                { "section": 4, "name": "小島三郎", "rank": 2, "time": "01:21:56" },
+                { "section": 5, "name": "沢田英一", "rank": 2, "time": "02:02:31" },
+                { "section": 6, "name": "山口六郎次", "rank": 1, "time": "01:37:30" },
+                { "section": 7, "name": "得能末吉", "rank": 1, "time": "01:25:20" },
+                { "section": 8, "name": "後藤長一", "rank": 2, "time": "01:27:10" },
+                { "section": 9, "name": "加藤富之助", "rank": 2, "time": "01:24:00" },
+                { "section": 10, "name": "西岡吉平", "rank": 4, "time": "01:41:27" }
+            ]
+        }
+    ]
+}

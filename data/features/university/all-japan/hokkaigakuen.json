@@ -1,0 +1,28 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "北海学園大学",
+  "history": [
+      {
+          "kai": 4,
+          "year": 1973,
+          "rank": 20,
+          "totalTime": "7:03:34",
+          "runners": [
+              { "section": 1, "name": "大畑 孝裕", "grade": null, "rank": 20, "time": "0:56:22" },
+              { "section": 2, "name": "竹中 正明", "grade": null, "rank": 20, "time": "0:45:06" },
+              { "section": 3, "name": "中島 達", "grade": null, "rank": 20, "time": "0:23:25" },
+              { "section": 4, "name": "岩崎 雅史", "grade": null, "rank": 19, "time": "1:28:44" },
+              { "section": 5, "name": "斎藤 重信", "grade": null, "rank": 19, "time": "0:50:49" },
+              { "section": 6, "name": "住吉 景一", "grade": null, "rank": 18, "time": "0:30:03" },
+              { "section": 7, "name": "三国 信義", "grade": null, "rank": 20, "time": "0:53:40" },
+              { "section": 8, "name": "本谷 健", "grade": null, "rank": 20, "time": "1:15:25" }
+          ]
+      }
+  ]
+}

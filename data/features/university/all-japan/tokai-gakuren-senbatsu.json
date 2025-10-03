@@ -1,0 +1,300 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "東海学連選抜",
+  "history": [
+      {
+          "kai": 56,
+          "year": 2024,
+          "rank": 19,
+          "totalTime": "5:32:20",
+          "runners": [
+              { "section": 1, "name": "岩田 玄弥", "grade": 2, "rank": 22, "time": "0:28:43" },
+              { "section": 2, "name": "中嶋 希", "grade": 2, "rank": 18, "time": "0:33:40" },
+              { "section": 3, "name": "天野 佑哉", "grade": 4, "rank": 21, "time": "0:36:45" },
+              { "section": 4, "name": "浅井 駿良", "grade": 4, "rank": 23, "time": "0:37:06" },
+              { "section": 5, "name": "日比 健仁", "grade": 2, "rank": 23, "time": "0:39:43" },
+              { "section": 6, "name": "河﨑 憲祐", "grade": "M1", "rank": 13, "time": "0:38:39" },
+              { "section": 7, "name": "田中 海吏", "grade": 4, "rank": 26, "time": "0:56:22" },
+              { "section": 8, "name": "木山 敬士郎", "grade": 3, "rank": 19, "time": "1:01:22" }
+          ]
+      },
+      {
+          "kai": 55,
+          "year": 2023,
+          "rank": 24,
+          "totalTime": "5:47:31",
+          "runners": [
+              { "section": 1, "name": "小渕 稜央", "grade": 4, "rank": 22, "time": "0:28:46" },
+              { "section": 2, "name": "中嶋 希", "grade": 1, "rank": 19, "time": "0:33:42" },
+              { "section": 3, "name": "吉田 椋哉", "grade": 3, "rank": 25, "time": "0:38:00" },
+              { "section": 4, "name": "橋本 平良", "grade": 4, "rank": 19, "time": "0:36:43" },
+              { "section": 5, "name": "天野 佑哉", "grade": 3, "rank": 22, "time": "0:39:23" },
+              { "section": 6, "name": "曽越 大成", "grade": 3, "rank": 20, "time": "0:40:38" },
+              { "section": 7, "name": "岩島 昇汰", "grade": 3, "rank": 24, "time": "0:58:44" },
+              { "section": 8, "name": "畠山 大輔", "grade": 3, "rank": 27, "time": "1:11:35" }
+          ]
+      },
+      {
+          "kai": 54,
+          "year": 2022,
+          "rank": 20,
+          "totalTime": "5:31:50",
+          "runners": [
+              { "section": 1, "name": "鈴木 雄登", "grade": 4, "rank": 23, "time": "0:28:12" },
+              { "section": 2, "name": "河﨑 憲祐", "grade": 3, "rank": 20, "time": "0:33:48" },
+              { "section": 3, "name": "中尾 啓哉", "grade": 4, "rank": 24, "time": "0:37:03" },
+              { "section": 4, "name": "浅井 駿良", "grade": 2, "rank": 21, "time": "0:36:36" },
+              { "section": 5, "name": "吉原 諒", "grade": 2, "rank": 26, "time": "0:40:19" },
+              { "section": 6, "name": "小渕 稜央", "grade": 3, "rank": 12, "time": "0:38:34" },
+              { "section": 7, "name": "村松 俊哉", "grade": 4, "rank": 24, "time": "0:56:40" },
+              { "section": 8, "name": "森川 陽之", "grade": "M1", "rank": 19, "time": "1:00:38" }
+          ]
+      },
+      {
+          "kai": 53,
+          "year": 2021,
+          "rank": 25,
+          "totalTime": "5:42:04",
+          "runners": [
+              { "section": 1, "name": "重田 直賢 (名古屋大学)", "grade": 3, "rank": 23, "time": "0:28:48" },
+              { "section": 2, "name": "勝田 哲史 (名古屋大学)", "grade": "M1", "rank": 25, "time": "0:35:09" },
+              { "section": 3, "name": "深谷 涼太 (愛知工業大学)", "grade": 3, "rank": 20, "time": "0:36:10" },
+              { "section": 4, "name": "渡邉 大誠 (愛知工業大学)", "grade": 3, "rank": 22, "time": "0:36:50" },
+              { "section": 5, "name": "河﨑 憲祐 (名古屋大学)", "grade": 2, "rank": 24, "time": "0:40:06" },
+              { "section": 6, "name": "鵜飼 涼矢 (中部大学)", "grade": 4, "rank": 26, "time": "0:42:23" },
+              { "section": 7, "name": "鵜飼 雄矢 (中京大学)", "grade": 1, "rank": 26, "time": "0:57:36" },
+              { "section": 8, "name": "堀田 翔紀 (愛知工業大学)", "grade": 4, "rank": 22, "time": "1:05:02" }
+          ]
+      },
+      {
+          "kai": 51,
+          "year": 2019,
+          "rank": 22,
+          "totalTime": "5:35:26",
+          "runners": [
+              { "section": 1, "name": "横田 佳介 (中京学院大学)", "grade": 2, "rank": 20, "time": "0:28:37" },
+              { "section": 2, "name": "森川 陽之 (名古屋大学)", "grade": 2, "rank": 21, "time": "0:33:56" },
+              { "section": 3, "name": "勝田 哲史 (名古屋大学)", "grade": 3, "rank": 23, "time": "0:36:46" },
+              { "section": 4, "name": "戸村 将 (岐阜大学)", "grade": 4, "rank": 22, "time": "0:36:31" },
+              { "section": 5, "name": "近藤 啓太 (静岡大学)", "grade": "S2", "rank": 18, "time": "0:38:30" },
+              { "section": 6, "name": "田村 陸 (愛知工業大学)", "grade": 2, "rank": 21, "time": "0:41:07" },
+              { "section": 7, "name": "石川 陽一 (愛知大学)", "grade": 3, "rank": 23, "time": "0:57:33" },
+              { "section": 8, "name": "國司 寛人 (名古屋大学)", "grade": "D2", "rank": 21, "time": "1:02:26" }
+          ]
+      },
+      {
+          "kai": 50,
+          "year": 2018,
+          "rank": 20,
+          "totalTime": "5:36:34",
+          "runners": [
+              { "section": 1, "name": "國司 寛人 (名古屋大学)", "grade": "D1", "rank": 20, "time": "0:28:23" },
+              { "section": 2, "name": "岸田 裕也 (名古屋大学)", "grade": "M2", "rank": 19, "time": "0:34:05" },
+              { "section": 3, "name": "武隈 泰貴 (岐阜経済大学)", "grade": 4, "rank": 22, "time": "0:37:15" },
+              { "section": 4, "name": "久田 淳司 (豊田高等専門学校)", "grade": 5, "rank": 17, "time": "0:36:26" },
+              { "section": 5, "name": "下地 健介 (愛知教育大学)", "grade": 4, "rank": 20, "time": "0:39:13" },
+              { "section": 6, "name": "細澤 幸輝 (三重大学)", "grade": 6, "rank": 21, "time": "0:40:14" },
+              { "section": 7, "name": "石川 陽一 (愛知大学)", "grade": 2, "rank": 24, "time": "0:58:03" },
+              { "section": 8, "name": "塚本 亮司 (名古屋大学)", "grade": 3, "rank": 21, "time": "1:02:55" }
+          ]
+      },
+      {
+          "kai": 49,
+          "year": 2017,
+          "rank": 24,
+          "totalTime": "5:38:03",
+          "runners": [
+              { "section": 1, "name": "岸田 裕也 (名古屋大学)", "grade": "M1", "rank": 24, "time": "0:46:33" },
+              { "section": 2, "name": "國司 寛人 (名古屋大学)", "grade": "M2", "rank": 17, "time": "0:40:18" },
+              { "section": 3, "name": "塚本 亮司 (名古屋大学)", "grade": 2, "rank": 22, "time": "0:29:42" },
+              { "section": 4, "name": "金子 雅也 (静岡大学)", "grade": 3, "rank": 25, "time": "0:44:48" },
+              { "section": 5, "name": "細澤 幸輝 (三重大学)", "grade": 5, "rank": 17, "time": "0:35:53" },
+              { "section": 6, "name": "武藤 広樹 (中京大学)", "grade": 2, "rank": 24, "time": "0:38:42" },
+              { "section": 7, "name": "円尾 翔吾 (東海学園大学)", "grade": 3, "rank": 23, "time": "0:38:22" },
+              { "section": 8, "name": "神里 裕司 (岐阜経済大学)", "grade": 2, "rank": 25, "time": "1:03:45" }
+          ]
+      },
+      {
+          "kai": 48,
+          "year": 2016,
+          "rank": 16,
+          "totalTime": "5:30:40",
+          "runners": [
+              { "section": 1, "name": "辻村 公佑", "grade": 2, "rank": 16, "time": "0:45:03" },
+              { "section": 2, "name": "岩﨑 祐也", "grade": 3, "rank": 15, "time": "0:40:17" },
+              { "section": 3, "name": "中井 拓実", "grade": 1, "rank": 14, "time": "0:28:44" },
+              { "section": 4, "name": "西川 諒", "grade": 2, "rank": 18, "time": "0:43:18" },
+              { "section": 5, "name": "村武 慎平", "grade": 4, "rank": 10, "time": "0:35:54" },
+              { "section": 6, "name": "藤田 孝介", "grade": 1, "rank": 19, "time": "0:37:44" },
+              { "section": 7, "name": "森 太一", "grade": 2, "rank": 17, "time": "0:36:13" },
+              { "section": 8, "name": "土井 政人", "grade": 4, "rank": 23, "time": "1:03:27" }
+          ]
+      },
+      {
+          "kai": 47,
+          "year": 2015,
+          "rank": 22,
+          "totalTime": "5:36:43",
+          "runners": [
+              { "section": 1, "name": "中西 玄気 (静岡大学)", "grade": 4, "rank": 18, "time": "0:44:24" },
+              { "section": 2, "name": "細澤 幸輝 (三重大学)", "grade": 3, "rank": 20, "time": "0:40:07" },
+              { "section": 3, "name": "芦崎 陽介 (名古屋大学)", "grade": "M2", "rank": 22, "time": "0:29:10" },
+              { "section": 4, "name": "高柳 佳怜 (中京大学)", "grade": 2, "rank": 27, "time": "0:47:38" },
+              { "section": 5, "name": "唐澤 研太 (愛知工業大学)", "grade": 2, "rank": 22, "time": "0:36:26" },
+              { "section": 6, "name": "吉田 新規 (愛知工業大学)", "grade": 4, "rank": 19, "time": "0:38:09" },
+              { "section": 7, "name": "鈴木 紀公 (中京大学)", "grade": 4, "rank": 19, "time": "0:37:28" },
+              { "section": 8, "name": "田中 雄也 (皇學館大学)", "grade": 2, "rank": 23, "time": "1:03:21" }
+          ]
+      },
+      {
+          "kai": 46,
+          "year": 2014,
+          "rank": 19,
+          "totalTime": "5:38:17",
+          "runners": [
+              { "section": 1, "name": "朝倉 和眞 (静岡大学)", "grade": 4, "rank": 20, "time": "0:46:09" },
+              { "section": 2, "name": "平岩 篤弥 (名城大学)", "grade": 4, "rank": 18, "time": "0:40:43" },
+              { "section": 3, "name": "田中 雄也 (皇學館大学)", "grade": 1, "rank": 23, "time": "0:30:31" },
+              { "section": 4, "name": "中西 玄気 (静岡大学)", "grade": 3, "rank": 18, "time": "0:43:25" },
+              { "section": 5, "name": "安田 翔一 (岐阜経済大学)", "grade": 2, "rank": 17, "time": "0:36:30" },
+              { "section": 6, "name": "田中 静 (至学館大学)", "grade": 4, "rank": 20, "time": "0:39:04" },
+              { "section": 7, "name": "細澤 幸輝 (三重大学)", "grade": 2, "rank": 20, "time": "0:38:01" },
+              { "section": 8, "name": "三浦 修 (名古屋工業大学)", "grade": "M2", "rank": 23, "time": "1:03:54" }
+          ]
+      },
+      {
+          "kai": 45,
+          "year": 2013,
+          "rank": 17,
+          "totalTime": "5:37:16",
+          "runners": [
+              { "section": 1, "name": "萱垣 義樹 (岐阜経済大学)", "grade": 4, "rank": 21, "time": "0:47:10" },
+              { "section": 2, "name": "平岩 篤弥 (名城大学)", "grade": 3, "rank": 15, "time": "0:40:44" },
+              { "section": 3, "name": "池亀 透 (名古屋大学)", "grade": 4, "rank": 14, "time": "0:28:46" },
+              { "section": 4, "name": "朝倉 和眞 (静岡大学)", "grade": 3, "rank": 13, "time": "0:42:41" },
+              { "section": 5, "name": "細澤 幸輝 (三重大学)", "grade": 1, "rank": 17, "time": "0:36:46" },
+              { "section": 6, "name": "吉田 新規 (愛知工業大学)", "grade": 2, "rank": 19, "time": "0:39:37" },
+              { "section": 7, "name": "三浦 修 (名古屋工業大学)", "grade": "M1", "rank": 13, "time": "0:37:02" },
+              { "section": 8, "name": "矢野 祥一 (中京大学)", "grade": 4, "rank": 21, "time": "1:04:30" }
+          ]
+      },
+      {
+          "kai": 44,
+          "year": 2012,
+          "rank": 18,
+          "totalTime": "5:37:54",
+          "runners": [
+              { "section": 1, "name": "萱垣 義樹 (愛知工業大学)", "grade": 3, "rank": 23, "time": "0:45:44" },
+              { "section": 2, "name": "平岩 篤弥 (名城大学)", "grade": 2, "rank": 16, "time": "0:40:25" },
+              { "section": 3, "name": "吉田 新規 (愛知工業大学)", "grade": 1, "rank": 22, "time": "0:30:04" },
+              { "section": 4, "name": "朝倉 和眞 (静岡大学)", "grade": 2, "rank": 17, "time": "0:43:49" },
+              { "section": 5, "name": "小塚 雄介 (愛知教育大学)", "grade": "M2", "rank": 16, "time": "0:36:51" },
+              { "section": 6, "name": "小川満太郎 (静岡大学)", "grade": "M1", "rank": 15, "time": "0:38:20" },
+              { "section": 7, "name": "舘林 洸介 (愛知工業大学)", "grade": 3, "rank": 19, "time": "0:37:48" },
+              { "section": 8, "name": "三浦 健嗣 (皇學館大学)", "grade": 2, "rank": 20, "time": "1:04:53" }
+          ]
+      },
+      {
+          "kai": 43,
+          "year": 2011,
+          "rank": 20,
+          "totalTime": "5:44:10",
+          "runners": [
+              { "section": 1, "name": "平岡 悠 (名古屋大学)", "grade": 4, "rank": 25, "time": "0:47:37" },
+              { "section": 2, "name": "森本 善智 (名古屋大学)", "grade": 1, "rank": 23, "time": "0:42:18" },
+              { "section": 3, "name": "石坂 健太 (皇學館大学)", "grade": 2, "rank": 19, "time": "0:29:40" },
+              { "section": 4, "name": "油井 一成 (愛知大学)", "grade": 3, "rank": 21, "time": "0:45:17" },
+              { "section": 5, "name": "小塚 雄介 (愛知教育大学)", "grade": "M1", "rank": 18, "time": "0:37:18" },
+              { "section": 6, "name": "小川満太郎 (静岡大学)", "grade": 4, "rank": 19, "time": "0:39:36" },
+              { "section": 7, "name": "三浦 修 (名古屋工業大学)", "grade": 3, "rank": 18, "time": "0:38:44" },
+              { "section": 8, "name": "鈴木 慎 (名古屋大学)", "grade": "M2", "rank": 13, "time": "1:03:40" }
+          ]
+      },
+      {
+          "kai": 42,
+          "year": 2010,
+          "rank": 16,
+          "totalTime": "5:35:03",
+          "runners": [
+              { "section": 1, "name": "長坂 公靖", "grade": 3, "rank": 18, "time": "0:45:45" },
+              { "section": 2, "name": "林 育生", "grade": 2, "rank": 20, "time": "0:41:30" },
+              { "section": 3, "name": "大原 司", "grade": 3, "rank": 14, "time": "0:28:42" },
+              { "section": 4, "name": "小野 郁文", "grade": 3, "rank": 18, "time": "0:43:35" },
+              { "section": 5, "name": "伊藤 友明", "grade": 4, "rank": 16, "time": "0:36:26" },
+              { "section": 6, "name": "小塚 雄介", "grade": 4, "rank": 18, "time": "0:39:18" },
+              { "section": 7, "name": "尾崎 将也", "grade": 4, "rank": 18, "time": "0:37:56" },
+              { "section": 8, "name": "中田 剛司", "grade": 4, "rank": 14, "time": "1:01:51" }
+          ]
+      },
+      {
+          "kai": 41,
+          "year": 2009,
+          "rank": 16,
+          "totalTime": "5:37:42",
+          "runners": [
+              { "section": 1, "name": "中田 剛司 (三重中京大学)", "grade": 3, "rank": 16, "time": "0:46:00" },
+              { "section": 2, "name": "伊藤 文浩 (愛知教育大学)", "grade": "M1", "rank": 20, "time": "0:41:23" },
+              { "section": 3, "name": "林 育生 (豊橋技術科学大学)", "grade": "M1", "rank": 15, "time": "0:29:26" },
+              { "section": 4, "name": "鈴木 慎 (静岡大学)", "grade": 4, "rank": 18, "time": "0:45:31" },
+              { "section": 5, "name": "田中 智博 (愛知工業大学)", "grade": 4, "rank": 9, "time": "0:36:01" },
+              { "section": 6, "name": "中山 祐平 (愛知工業大学)", "grade": 4, "rank": 10, "time": "0:38:09" },
+              { "section": 7, "name": "長坂 公靖 (愛知工業大学)", "grade": 2, "rank": 12, "time": "0:37:09" },
+              { "section": 8, "name": "池田麻保呂 (三重中京大学)", "grade": 4, "rank": 17, "time": "1:04:03" }
+          ]
+      },
+      {
+          "kai": 40,
+          "year": 2008,
+          "rank": 16,
+          "totalTime": "5:34:45",
+          "runners": [
+              { "section": 1, "name": "中田 剛司", "grade": 2, "rank": 21, "time": "0:46:30" },
+              { "section": 2, "name": "池田 麻保呂", "grade": 4, "rank": 13, "time": "0:39:54" },
+              { "section": 3, "name": "山本 崇博", "grade": 2, "rank": 15, "time": "0:28:51" },
+              { "section": 4, "name": "藤永 紘基", "grade": "M1", "rank": 16, "time": "0:43:47" },
+              { "section": 5, "name": "林 育生", "grade": 4, "rank": 20, "time": "0:36:58" },
+              { "section": 6, "name": "松崎 友希", "grade": 2, "rank": 22, "time": "0:39:42" },
+              { "section": 7, "name": "村西 研郎", "grade": 2, "rank": 14, "time": "0:37:03" },
+              { "section": 8, "name": "長谷川 真一", "grade": 3, "rank": 13, "time": "1:02:00" }
+          ]
+      },
+      {
+          "kai": 39,
+          "year": 2007,
+          "rank": 18,
+          "totalTime": "5:38:07",
+          "runners": [
+              { "section": 1, "name": "中村 高洋 (名古屋大学)", "grade": "M2", "rank": 16, "time": "0:44:05" },
+              { "section": 2, "name": "中田 剛司 (三重中京大学)", "grade": 1, "rank": 18, "time": "0:40:53" },
+              { "section": 3, "name": "林 育生 (豊橋技術科学大学)", "grade": 3, "rank": 17, "time": "0:29:35" },
+              { "section": 4, "name": "酒井 達哉 (愛知教育大学)", "grade": "M1", "rank": 21, "time": "0:45:35" },
+              { "section": 5, "name": "石塚 誠 (愛知学院大学)", "grade": 2, "rank": 14, "time": "0:36:27" },
+              { "section": 6, "name": "篠崎 暢哉 (中京大学)", "grade": 3, "rank": 16, "time": "0:39:03" },
+              { "section": 7, "name": "勝又 翼 (中京大学)", "grade": 4, "rank": 11, "time": "0:37:07" },
+              { "section": 8, "name": "渡邊 大介 (中京大学)", "grade": 2, "rank": 24, "time": "1:05:22" }
+          ]
+      },
+      {
+          "kai": 38,
+          "year": 2006,
+          "rank": 17,
+          "totalTime": "5:37:55",
+          "runners": [
+              { "section": 1, "name": "中村 高洋 (名古屋大学)", "grade": "M1", "rank": 17, "time": "0:45:06" },
+              { "section": 2, "name": "内藤 聖貴 (名古屋大学)", "grade": "D3", "rank": 14, "time": "0:40:31" },
+              { "section": 3, "name": "原田 恵輔 (中京大学)", "grade": 3, "rank": 18, "time": "0:29:45" },
+              { "section": 4, "name": "伊藤 正人 (中京大学)", "grade": 3, "rank": 23, "time": "0:44:52" },
+              { "section": 5, "name": "長田 裕也 (鈴鹿高等専門学校)", "grade": "S2", "rank": 19, "time": "0:36:37" },
+              { "section": 6, "name": "野村 真司 (愛知工業大学)", "grade": 3, "rank": 18, "time": "0:38:36" },
+              { "section": 7, "name": "山内 広幸 (愛知工業大学)", "grade": 4, "rank": 18, "time": "0:37:51" },
+              { "section": 8, "name": "藤永 紘基 (名古屋大学)", "grade": 3, "rank": 21, "time": "1:04:37" }
+          ]
+      }
+  ]
+}

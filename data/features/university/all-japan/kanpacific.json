@@ -1,0 +1,76 @@
+{
+  "config": {
+    "type": "university",
+    "term": { "singular": "大学", "plural": "大学" },
+    "sections": 8,
+    "hasHalfway": false,
+    "showGrade": true
+  },
+  "teamName": "環太平洋大学",
+  "history": [
+      {
+          "kai": 55,
+          "year": 2023,
+          "rank": 25,
+          "totalTime": "5:48:21",
+          "runners": [
+              { "section": 1, "name": "谷末 智哉", "grade": 2, "rank": 23, "time": "0:28:50" },
+              { "section": 2, "name": "髙嶋 荘太", "grade": 2, "rank": 26, "time": "0:35:15" },
+              { "section": 3, "name": "松崎 寧生", "grade": 2, "rank": 24, "time": "0:37:13" },
+              { "section": 4, "name": "佐野 泰斗", "grade": 1, "rank": 24, "time": "0:37:38" },
+              { "section": 5, "name": "中川 大智", "grade": 4, "rank": 25, "time": "0:40:12" },
+              { "section": 6, "name": "林本 涼", "grade": 4, "rank": 21, "time": "0:40:43" },
+              { "section": 7, "name": "勝部 遼", "grade": 3, "rank": 27, "time": "1:02:39" },
+              { "section": 8, "name": "脇 健斗", "grade": 4, "rank": 23, "time": "1:05:51" }
+          ]
+      },
+      {
+          "kai": 54,
+          "year": 2022,
+          "rank": 24,
+          "totalTime": "5:37:03",
+          "runners": [
+              { "section": 1, "name": "谷末 智哉", "grade": 1, "rank": 19, "time": "0:28:06" },
+              { "section": 2, "name": "脇 健斗", "grade": 3, "rank": 22, "time": "0:33:53" },
+              { "section": 3, "name": "土倉 光貴", "grade": 3, "rank": 26, "time": "0:38:11" },
+              { "section": 4, "name": "髙嶋 荘太", "grade": 1, "rank": 24, "time": "0:37:10" },
+              { "section": 5, "name": "山﨑 大空", "grade": 3, "rank": 27, "time": "0:40:57" },
+              { "section": 6, "name": "本河 里玖斗", "grade": 1, "rank": 23, "time": "0:41:09" },
+              { "section": 7, "name": "杉原 健吾", "grade": 4, "rank": 22, "time": "0:55:53" },
+              { "section": 8, "name": "林本 涼", "grade": 3, "rank": 21, "time": "1:01:44" }
+          ]
+      },
+      {
+          "kai": 53,
+          "year": 2021,
+          "rank": 23,
+          "totalTime": "5:40:20",
+          "runners": [
+              { "section": 1, "name": "片山 直人", "grade": 3, "rank": 24, "time": "0:28:52" },
+              { "section": 2, "name": "脇 健斗", "grade": 2, "rank": 19, "time": "0:33:52" },
+              { "section": 3, "name": "土倉 稜貴", "grade": 4, "rank": 25, "time": "0:37:26" },
+              { "section": 4, "name": "土倉 光貴", "grade": 2, "rank": 24, "time": "0:37:13" },
+              { "section": 5, "name": "山﨑 大空", "grade": 2, "rank": 22, "time": "0:39:55" },
+              { "section": 6, "name": "林本 涼", "grade": 2, "rank": 18, "time": "0:39:53" },
+              { "section": 7, "name": "勝部 遼", "grade": 1, "rank": 25, "time": "0:57:09" },
+              { "section": 8, "name": "杉原 健吾", "grade": 3, "rank": 26, "time": "1:06:00" }
+          ]
+      },
+      {
+          "kai": 51,
+          "year": 2019,
+          "rank": 24,
+          "totalTime": "5:40:32",
+          "runners": [
+              { "section": 1, "name": "実近 力丸", "grade": 3, "rank": 25, "time": "0:29:04" },
+              { "section": 2, "name": "土倉 稜貴", "grade": 2, "rank": 23, "time": "0:34:28" },
+              { "section": 3, "name": "小山 太一", "grade": 2, "rank": 21, "time": "0:36:43" },
+              { "section": 4, "name": "平岡 錬", "grade": 4, "rank": 24, "time": "0:36:56" },
+              { "section": 5, "name": "千原 康大", "grade": 4, "rank": 25, "time": "0:41:23" },
+              { "section": 6, "name": "梅田 大輝", "grade": 4, "rank": 23, "time": "0:41:43" },
+              { "section": 7, "name": "熊井 康", "grade": 1, "rank": 25, "time": "0:58:05" },
+              { "section": 8, "name": "土居森 諒", "grade": 4, "rank": 19, "time": "1:02:10" }
+          ]
+      }
+  ]
+}
