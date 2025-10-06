@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { NewyearYearClient } from "./NewyearYearClient"
+import { IzumoYearClient } from "./IzumoYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
@@ -15,30 +15,30 @@ export async function generateMetadata({
   let winner = ''
   
   try {
-    const data = await fetchNewyearData(year)
+    const data = await fetchIzumoData(year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `ニューイヤー駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `ニューイヤー駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
+  const title = `出雲駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
+  const description = `出雲駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
 
   return {
     title,
     description,
     keywords: [
-      'ニューイヤー駅伝',
-      `ニューイヤー駅伝${year}`,
+      '出雲駅伝',
+      `出雲駅伝${year}`,
       winner,
-      '全日本実業団対抗駅伝競走大会',
-      '実業団駅伝'
+      '出雲全日本大学選抜駅伝競走',
+      '大学駅伝'
     ].filter(Boolean),
   }
 }
 
-export default async function NewyearYearPage({ 
+export default async function IzumoYearPage({ 
   params 
 }: { 
   params: { year: string } 
@@ -47,7 +47,7 @@ export default async function NewyearYearPage({
   let data: EkidenData | null = null
   
   try {
-    data = await fetchNewyearData(params.year)
+    data = await fetchIzumoData(params.year)
   } catch (error) {
     console.error('データ読み込みエラー:', error)
   }
@@ -58,9 +58,9 @@ export default async function NewyearYearPage({
 
   const breadcrumbItems = [
     { name: 'ホーム', url: '/' },
-    { name: '実業団駅伝', url: '/#corporate' },
-    { name: 'ニューイヤー駅伝', url: '/ekiden/newyear' },
-    { name: `${year}年`, url: `/ekiden/newyear/${year}` },
+    { name: '大学駅伝', url: '/#university' },
+    { name: '出雲駅伝', url: '/ekiden/izumo' },
+    { name: `${year}年`, url: `/ekiden/izumo/${year}` },
   ]
 
   return (
@@ -68,36 +68,40 @@ export default async function NewyearYearPage({
       <BreadcrumbStructuredData items={breadcrumbItems} />
       <Header />
       <main className="flex-grow pt-20">
-        <NewyearYearClient data={data} year={year} />
+        <IzumoYearClient data={data} year={year} />
       </main>
       <Footer />
     </div>
   )
 }
 
-async function fetchNewyearData(year: string): Promise<EkidenData | null> {
+async function fetchIzumoData(year: string): Promise<EkidenData | null> {
   try {
     const fs = await import('fs/promises')
     const path = await import('path')
     
-    const filePath = path.join(process.cwd(), 'public', 'data', 'corporate', 'newyear', `${year}.json`)
+    const filePath = path.join(process.cwd(), 'public', 'data', 'university', 'izumo', `${year}.json`)
     const fileContent = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(fileContent)
     
     return data
   } catch (error) {
-    console.error(`ニューイヤー駅伝 ${year}年のデータ読み込みエラー:`, error)
+    console.error(`出雲駅伝 ${year}年のデータ読み込みエラー:`, error)
     return null
   }
 }
 
 export async function generateStaticParams() {
   const years: string[] = []
-  const currentYear = new Date().getFullYear() + 1 // ニューイヤーは翌年1月開催
+  const currentYear = new Date().getFullYear()
   
-  for (let year = 1957; year <= currentYear; year++) {
-    years.push(year.toString())
+  for (let year = 1989; year <= currentYear; year++) {
+    // 中止年を除く
+    if (![1990, 2020, 2021].includes(year)) {
+      years.push(year.toString())
+    }
   }
   
   return years.map((year) => ({ year }))
 }
+

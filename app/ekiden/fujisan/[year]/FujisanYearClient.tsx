@@ -1,23 +1,24 @@
 "use client"
 
 import Link from "next/link"
-import { getCorporateColor } from "@/data/corporate-colors"
+import { getUniversityColor } from "@/data/university-colors"
 import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
-import { getMedalEmoji, normalizeForSearch } from "@/lib/format-utils"
+import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
-interface NewyearYearClientProps {
+interface FujisanYearClientProps {
   data: EkidenData
   year: number
 }
 
-export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
+export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
 
+  // 区間別データを作成
   const sectionCount = data.config?.sections || 7
   const sectionData = Array.from({ length: sectionCount }, (_, i) => {
     const section = i + 1
@@ -30,7 +31,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
           ...runner,
           teamName: team.name,
           teamRank: team.rank,
-          color: getCorporateColor(team.name)
+          color: getUniversityColor(team.name)
         })
       }
     })
@@ -45,12 +46,13 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     return { section, runners }
   })
 
+  // 選手検索（曖昧検索対応）
   const filteredRunners = (data.teams || []).flatMap(team =>
     (team.runners || []).map(runner => ({
       ...runner,
       teamName: team.name,
       teamRank: team.rank,
-      color: getCorporateColor(team.name)
+      color: getUniversityColor(team.name)
     }))
   ).filter(runner => {
     if (!searchQuery) return true
@@ -60,6 +62,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     return normalizedName.includes(normalizedQuery) || normalizedTeam.includes(normalizedQuery)
   })
 
+  // 統計・記録 (区間賞一覧)
   const sectionAwards = sectionData.map(section => {
     const topRunner = section.runners.find(r => r.rank === 1)
     return {
@@ -74,11 +77,11 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     <>
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/newyear" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+          <Link href="/ekiden/fujisan" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            ニューイヤー駅伝 歴代結果に戻る
+            富士山女子駅伝 歴代結果に戻る
           </Link>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
         </div>
@@ -96,7 +99,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                   <div className="flex items-center mb-4">
                     <div 
                       className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg mr-3" 
-                      style={{ backgroundColor: getCorporateColor(team.name) }}
+                      style={{ backgroundColor: getUniversityColor(team.name) }}
                     >
                       {team.rank}
                     </div>
@@ -121,7 +124,9 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                         {(team.runners || []).map((runner) => (
                           <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
                             <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
-                            <td className="py-3 px-4 whitespace-nowrap">{runner.name}</td>
+                            <td className="py-3 px-4 whitespace-nowrap">
+                              {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                            </td>
                             <td className="py-3 px-4 whitespace-nowrap">
                               {runner.time}
                               {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
@@ -152,7 +157,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                       <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
                         <th className="py-3 px-4 text-left">順位</th>
                         <th className="py-3 px-4 text-left">選手</th>
-                        <th className="py-3 px-4 text-left">チーム</th>
+                        <th className="py-3 px-4 text-left">大学</th>
                         <th className="py-3 px-4 text-left">タイム</th>
                       </tr>
                     </thead>
@@ -162,7 +167,9 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                           <td className="py-3 px-4 whitespace-nowrap">
                             {runner.rank}{getMedalEmoji(runner.rank)}
                           </td>
-                          <td className="py-3 px-4 whitespace-nowrap">{runner.name}</td>
+                          <td className="py-3 px-4 whitespace-nowrap">
+                            {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                          </td>
                           <td className="py-3 px-4 whitespace-nowrap">
                             <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
                             {runner.teamName}
@@ -185,7 +192,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-6">選手検索</h2>
             <SearchBox
-              placeholder="選手名またはチーム名で検索（ひらがな・カタカナ・漢字OK）"
+              placeholder="選手名または大学名で検索（ひらがな・カタカナ・漢字OK）"
               onSearch={setSearchQuery}
               className="mb-6"
             />
@@ -200,7 +207,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                 <thead>
                   <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
                     <th className="py-3 px-4 text-left">選手</th>
-                    <th className="py-3 px-4 text-left">チーム</th>
+                    <th className="py-3 px-4 text-left">大学</th>
                     <th className="py-3 px-4 text-left">区間</th>
                     <th className="py-3 px-4 text-left">タイム</th>
                     <th className="py-3 px-4 text-left">区間順位</th>
@@ -210,7 +217,9 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                   {filteredRunners.length > 0 ? (
                     filteredRunners.map((runner, index) => (
                       <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                        <td className="py-3 px-4 whitespace-nowrap">{runner.name}</td>
+                        <td className="py-3 px-4 whitespace-nowrap">
+                          {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                        </td>
                         <td className="py-3 px-4 whitespace-nowrap">
                           <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
                           {runner.teamName}
@@ -238,6 +247,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
 
         <TabPanel id="stats" activeTab={activeTab}>
           <div className="space-y-8">
+            {/* 区間タイム比較チャート */}
             <SectionTimeChart
               data={sectionData.map(section => ({
                 section: section.section,
@@ -258,7 +268,7 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
                 <thead>
                   <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
                     <th className="py-3 px-4 text-left">区間</th>
-                    <th className="py-3 px-4 text-left">選手 (チーム)</th>
+                    <th className="py-3 px-4 text-left">選手 (大学)</th>
                     <th className="py-3 px-4 text-left">タイム</th>
                     <th className="py-3 px-4 text-left">区間新</th>
                   </tr>
@@ -282,3 +292,4 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     </>
   )
 }
+

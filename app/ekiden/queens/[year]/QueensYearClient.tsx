@@ -9,16 +9,16 @@ import { SearchBox } from "@/components/SearchBox"
 import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
-interface NewyearYearClientProps {
+interface QueensYearClientProps {
   data: EkidenData
   year: number
 }
 
-export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
+export function QueensYearClient({ data, year }: QueensYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
 
-  const sectionCount = data.config?.sections || 7
+  const sectionCount = data.config?.sections || 6
   const sectionData = Array.from({ length: sectionCount }, (_, i) => {
     const section = i + 1
     const runners: RunnerWithTeam[] = []
@@ -74,11 +74,11 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     <>
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/newyear" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+          <Link href="/ekiden/queens" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            ニューイヤー駅伝 歴代結果に戻る
+            クイーンズ駅伝 歴代結果に戻る
           </Link>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
         </div>
@@ -282,3 +282,4 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
     </>
   )
 }
+

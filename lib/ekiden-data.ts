@@ -10,12 +10,12 @@ export interface EkidenRace {
 export const ekidenRaces: EkidenRace[] = [
   // 実業団駅伝
   {
-    id: "new-year",
+    id: "newyear",
     name: "ニューイヤー駅伝",
     subtitle: "全日本実業団対抗駅伝競走大会",
     description: "群馬県で開催される男子実業団駅伝の最高峰",
     category: "corporate",
-    url: "/ekiden/new-year",
+    url: "/ekiden/newyear",
   },
   {
     id: "queens",
