@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ekiden-results.com'
+  const currentDate = new Date()
 
   // 各駅伝大会のURL
   const raceUrls = [
@@ -65,28 +66,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'daily',
-      priority: 1,
+      priority: 1.0,
     },
     ...raceUrls.map((url) => ({
       url: `${baseUrl}${url}`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     })),
     ...yearUrls.map((url) => ({
       url: `${baseUrl}${url}`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'yearly' as const,
       priority: 0.7,
     })),
     ...infoUrls.map((url) => ({
       url: `${baseUrl}${url}`,
-      lastModified: new Date(),
+      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.5,
     })),
   ]
 }
+
 

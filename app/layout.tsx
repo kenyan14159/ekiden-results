@@ -8,15 +8,19 @@ import { ContentProtection } from "@/components/ContentProtection"
 
 const notoSansJP = Noto_Sans_JP({ 
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "700"], // 使用する太さのみに絞る
   variable: "--font-noto-sans-jp",
   display: "swap",
+  preload: true, // 事前読み込み
+  adjustFontFallback: true, // レイアウトシフト防止
 })
 
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export const viewport: Viewport = {

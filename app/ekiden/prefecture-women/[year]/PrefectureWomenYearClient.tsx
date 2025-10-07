@@ -8,6 +8,10 @@ import { getMedalEmoji, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
+import { YearNavigation } from "@/components/YearNavigation"
+import { ResponsiveTable } from "@/components/ResponsiveTable"
+import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
+import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface PrefectureWomenYearClientProps {
@@ -20,6 +24,23 @@ export function PrefectureWomenYearClient({ data, year }: PrefectureWomenYearCli
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
+  const router = useRouter()
+
+  const getPrevYear = () => year > 1983 ? year - 1 : null
+  const getNextYear = () => {
+    const maxYear = new Date().getFullYear()
+    return year < maxYear ? year + 1 : null
+  }
+
+  const handleSwipeLeft = () => {
+    const nextYear = getNextYear()
+    if (nextYear) router.push(`/ekiden/prefecture-women/${nextYear}`)
+  }
+
+  const handleSwipeRight = () => {
+    const prevYear = getPrevYear()
+    if (prevYear) router.push(`/ekiden/prefecture-women/${prevYear}`)
+  }
 
   const toggleTeam = (teamName: string) => {
     setExpandedTeams(prev => {
@@ -100,17 +121,28 @@ export function PrefectureWomenYearClient({ data, year }: PrefectureWomenYearCli
 
   return (
     <>
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/prefecture-women" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            都道府県対抗女子駅伝 歴代結果に戻る
-          </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+      <MobileSwipeContainer
+        onSwipeLeft={handleSwipeLeft}
+        onSwipeRight={handleSwipeRight}
+        showIndicators={true}
+      >
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 lg:px-8 py-8">
+            <Link href="/ekiden/prefecture-women" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              都道府県対抗女子駅伝 歴代結果に戻る
+            </Link>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+          </div>
         </div>
-      </div>
+
+      <YearNavigation 
+        currentYear={year} 
+        baseUrl="/ekiden/prefecture-women" 
+        minYear={1983}
+      />
 
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
@@ -313,6 +345,7 @@ export function PrefectureWomenYearClient({ data, year }: PrefectureWomenYearCli
           </div>
         </TabPanel>
       </div>
+      </MobileSwipeContainer>
     </>
   )
 }

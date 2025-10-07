@@ -35,6 +35,8 @@ export function Hero() {
                   height={120}
                   className="relative rounded-2xl shadow-2xl"
                   priority
+                  quality={90}
+                  sizes="120px"
                 />
               </div>
             </motion.div>
@@ -46,7 +48,7 @@ export function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
-                日本全国の駅伝大会リザルト
+                駅伝リザルト
               </span>
             </motion.h1>
             
@@ -61,44 +63,6 @@ export function Hero() {
               主要な駅伝大会の情報を美しく、分かりやすく
             </motion.p>
           </div>
-
-          {/* 特徴カード */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-          >
-            {[
-              {
-                icon: "📊",
-                title: "豊富なデータ",
-                description: "歴代大会の詳細な結果"
-              },
-              {
-                icon: "⚡",
-                title: "高速アクセス",
-                description: "素早く情報を検索"
-              },
-              {
-                icon: "🎯",
-                title: "全カテゴリー",
-                description: "実業団から中学まで網羅"
-              }
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="relative group"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-blue-50/60 backdrop-blur-sm rounded-2xl border border-white/40 shadow-lg group-hover:shadow-xl transition-all"></div>
-                <div className="relative p-6 text-center">
-                  <div className="text-4xl mb-3">{feature.icon}</div>
-                  <h3 className="font-semibold text-slate-900 mb-2">{feature.title}</h3>
-                  <p className="text-sm text-slate-600">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
 

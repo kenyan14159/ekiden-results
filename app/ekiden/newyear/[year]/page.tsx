@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
-import { NewyearYearClient } from "./NewyearYearClient"
+import { NewyearYearClient } from "./NewYearYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'

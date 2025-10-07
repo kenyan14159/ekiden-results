@@ -271,18 +271,6 @@ export function MiyakoojiWomenYearClient({ data, year }: MiyakoojiWomenYearClien
 
         <TabPanel id="stats" activeTab={activeTab}>
           <div className="space-y-8">
-            <SectionTimeChart
-              data={sectionData.map(section => ({
-                section: section.section,
-                teams: section.runners.slice(0, 5).map(runner => ({
-                  name: runner.teamName,
-                  time: runner.time,
-                  color: runner.color
-                }))
-              }))}
-              title="区間タイム比較（上位5チーム）"
-            />
-
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4">統計・記録</h2>
               <h3 className="text-lg font-semibold text-gray-800 mb-4">区間賞一覧</h3>

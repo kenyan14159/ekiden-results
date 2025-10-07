@@ -20,6 +20,15 @@ export interface Team {
   runners: Runner[]
 }
 
+export interface RaceOverview {
+  weather?: string // 天候
+  temperature?: string // 気温
+  wind?: string // 風
+  highlights?: string[] // 見どころ・注目ポイント
+  summary?: string // 大会概要（200-300文字）
+  notes?: string[] // 特記事項
+}
+
 export interface EkidenData {
   eventName: string
   year: number
@@ -28,6 +37,7 @@ export interface EkidenData {
   config?: {
     sections: number
   }
+  overview?: RaceOverview // 大会概要を追加
 }
 
 export type TabType = 'team' | 'section' | 'runner' | 'chart' | 'awards' | 'search' | 'stats'

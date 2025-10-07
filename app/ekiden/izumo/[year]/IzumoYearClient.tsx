@@ -7,6 +7,10 @@ import { TabNavigation, TabPanel } from "@/components/TabNavigation"
 import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { YearNavigation } from "@/components/YearNavigation"
+import { ResponsiveTable } from "@/components/ResponsiveTable"
+import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
+import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface IzumoYearClientProps {
@@ -19,6 +23,35 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
+  const router = useRouter()
+
+  // スワイプナビゲーション用のヘルパー関数
+  const getPrevYear = () => {
+    let checkYear = year - 1
+    while (checkYear >= 1989) {
+      return checkYear
+    }
+    return null
+  }
+
+  const getNextYear = () => {
+    const maxYear = new Date().getFullYear()
+    let checkYear = year + 1
+    while (checkYear <= maxYear) {
+      return checkYear
+    }
+    return null
+  }
+
+  const handleSwipeLeft = () => {
+    const nextYear = getNextYear()
+    if (nextYear) router.push(`/ekiden/izumo/${nextYear}`)
+  }
+
+  const handleSwipeRight = () => {
+    const prevYear = getPrevYear()
+    if (prevYear) router.push(`/ekiden/izumo/${prevYear}`)
+  }
 
   const toggleTeam = (teamName: string) => {
     setExpandedTeams(prev => {
@@ -98,17 +131,28 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
 
   return (
     <>
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/izumo" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            出雲駅伝 歴代結果に戻る
-          </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+      <MobileSwipeContainer
+        onSwipeLeft={handleSwipeLeft}
+        onSwipeRight={handleSwipeRight}
+        showIndicators={true}
+      >
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 lg:px-8 py-8">
+            <Link href="/ekiden/izumo" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              出雲駅伝 歴代結果に戻る
+            </Link>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+          </div>
         </div>
-      </div>
+
+      <YearNavigation 
+        currentYear={year} 
+        baseUrl="/ekiden/izumo" 
+        minYear={1989}
+      />
 
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
@@ -152,36 +196,20 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                   {isExpanded && (
                     <div className="px-6 pb-6 border-t border-gray-100">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 mt-4">区間成績</h3>
-                      <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white">
-                          <thead>
-                            <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                              <th className="py-3 px-4 text-left">区間</th>
-                              <th className="py-3 px-4 text-left">選手</th>
-                              <th className="py-3 px-4 text-left">タイム</th>
-                              <th className="py-3 px-4 text-left">順位</th>
-                            </tr>
-                          </thead>
-                          <tbody className="text-gray-700 text-sm font-light">
-                            {(team.runners || []).map((runner) => (
-                              <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
-                                <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {isOP ? '-' : `${runner.rank}位`}
-                                  {!isOP && getMedalEmoji(runner.rank)}
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
+                      <ResponsiveTable
+                        headers={['区間', '選手', 'タイム', '順位']}
+                        rows={(team.runners || []).map((runner) => [
+                          `${runner.section}区`,
+                          <span key={runner.section}>
+                            {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                          </span>,
+                          <span key={`time-${runner.section}`}>
+                            {runner.time}
+                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                          </span>,
+                          isOP ? '-' : `${runner.rank}位${getMedalEmoji(runner.rank)}`
+                        ])}
+                      />
                     </div>
                   )}
                 </div>
@@ -362,6 +390,7 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
           </div>
         </TabPanel>
       </div>
+      </MobileSwipeContainer>
       <ScrollToTop />
     </>
   )

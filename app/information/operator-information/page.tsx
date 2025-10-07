@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function OperatorInformationPage() {
   return (
@@ -46,6 +47,39 @@ export default function OperatorInformationPage() {
                 <p className="text-gray-700 leading-relaxed">
                   日本全国の駅伝大会の結果情報を、わかりやすく提供することを目的としています。実業団駅伝、大学駅伝、高校駅伝、中学駅伝など、幅広い駅伝大会の情報を網羅し、駅伝ファンの皆様に役立つ情報源となることを目指しています。
                 </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">運営者</h2>
+                <div className="space-y-4">
+                  <p className="text-gray-700 font-semibold text-lg">ピーナッツ</p>
+                  
+                  <div className="bg-gray-50 rounded-lg p-6 space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      関東の某大学駅伝部に所属していました。箱根駅伝・全日本大学駅伝・関東ICに出場。<br />
+                      5000m 13分台、10000m 29分台前半の自己ベスト。<br />
+                      引退後も趣味でランニングを継続し、駅伝・陸上競技の魅力を伝えるため本サイトを運営。
+                    </p>
+                    
+                    <p className="text-gray-600 text-sm">
+                      ※プライバシー保護のため、詳細な個人情報は非公開としています。
+                    </p>
+                  </div>
+
+                  <div className="mt-6">
+                    <p className="text-gray-700 font-medium mb-3">駅伝のゼッケン</p>
+                    <div className="relative w-full max-w-2xl mx-auto aspect-[4/3] rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                      <Image
+                        src="https://wprs.my-hobby.space/wp-content/uploads/2025/10/IMG_6881.jpg"
+                        alt="駅伝出場時の写真"
+                        fill
+                        className="object-contain bg-gray-100"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
               </section>
 
               <section>

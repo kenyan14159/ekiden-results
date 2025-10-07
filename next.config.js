@@ -3,6 +3,14 @@ const nextConfig = {
   // 静的サイトとしてエクスポート
   output: 'export',
   
+  // ベースパスとアセットプレフィックスの設定
+  // 本番環境のドメインに合わせて設定
+  basePath: '',
+  assetPrefix: '',
+  
+  // トレーリングスラッシュを追加（静的ホスティング用）
+  trailingSlash: true,
+  
   // 画像最適化の設定（静的エクスポート用）
   // 注意: output: 'export'の場合、Next.jsの画像最適化は利用できないため、
   // unoptimizedをtrueにする必要があります。
@@ -16,6 +24,9 @@ const nextConfig = {
 
   // パフォーマンス最適化
   compress: true,
+  
+  // 静的エクスポート用の設定
+  distDir: '.next',
   
   // 注意: 静的エクスポート（output: 'export'）を使用しているため、
   // カスタムヘッダーはホスティング先のWebサーバー（Nginx、Vercel、Netlifyなど）で設定してください。

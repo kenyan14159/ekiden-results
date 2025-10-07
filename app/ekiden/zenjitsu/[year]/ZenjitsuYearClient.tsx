@@ -7,6 +7,9 @@ import { TabNavigation, TabPanel } from "@/components/TabNavigation"
 import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
+import { ResponsiveTable } from "@/components/ResponsiveTable"
+import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
+import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface ZenjitsuYearClientProps {
@@ -19,6 +22,23 @@ export function ZenjitsuYearClient({ data, year }: ZenjitsuYearClientProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
+  const router = useRouter()
+
+  const getPrevYear = () => year > 1970 ? year - 1 : null
+  const getNextYear = () => {
+    const maxYear = new Date().getFullYear()
+    return year < maxYear ? year + 1 : null
+  }
+
+  const handleSwipeLeft = () => {
+    const nextYear = getNextYear()
+    if (nextYear) router.push(`/ekiden/zenjitsu/${nextYear}`)
+  }
+
+  const handleSwipeRight = () => {
+    const prevYear = getPrevYear()
+    if (prevYear) router.push(`/ekiden/zenjitsu/${prevYear}`)
+  }
 
   const toggleTeam = (teamName: string) => {
     setExpandedTeams(prev => {
@@ -98,17 +118,22 @@ export function ZenjitsuYearClient({ data, year }: ZenjitsuYearClientProps) {
 
   return (
     <>
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/zenjitsu" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            全日本大学駅伝 歴代結果に戻る
-          </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+      <MobileSwipeContainer
+        onSwipeLeft={handleSwipeLeft}
+        onSwipeRight={handleSwipeRight}
+        showIndicators={true}
+      >
+        <div className="bg-white border-b">
+          <div className="container mx-auto px-4 lg:px-8 py-8">
+            <Link href="/ekiden/zenjitsu" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              全日本大学駅伝 歴代結果に戻る
+            </Link>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+          </div>
         </div>
-      </div>
 
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
@@ -354,6 +379,7 @@ export function ZenjitsuYearClient({ data, year }: ZenjitsuYearClientProps) {
           </div>
         </TabPanel>
       </div>
+      </MobileSwipeContainer>
       
       <ScrollToTop />
     </>
