@@ -1,0 +1,63 @@
+[
+  {
+    "slug": "vaporfly-3-review",
+    "title": "Nike Vaporfly 3 徹底レビュー｜箱根駅伝出場選手が実際に履いて評価",
+    "description": "箱根駅伝で最も使用されているNike ZoomX Vaporfly Next% 3を徹底レビュー。実際に履いた感想、メリット・デメリット、他シューズとの比較を解説。",
+    "category": "gear-review",
+    "tags": [
+      "シューズ",
+      "Nike",
+      "Vaporfly",
+      "レビュー",
+      "厚底シューズ"
+    ],
+    "date": "2025-10-08",
+    "author": "元箱根ランナー",
+    "ogImage": "https://ekiden-results.com/WordPress/wp-content/uploads/2025/10/ekiden3.png",
+    "keywords": [
+      "Vaporfly 3",
+      "ヴェイパーフライ3",
+      "Nike シューズ",
+      "厚底シューズ",
+      "レーシングシューズ"
+    ],
+    "hasAffiliateLinks": true,
+    "mainProducts": [
+      "nike-vaporfly-3"
+    ]
+  },
+  {
+    "slug": "izumo-2025-guide",
+    "title": "出雲駅伝2025 完全ガイド｜エントリーメンバー・注目選手・優勝予想を徹底解説",
+    "description": "2025年10月13日開催の出雲駅伝の全22チームのエントリーメンバー、注目選手、優勝予想を箱根駅伝出場経験者が徹底解説。青山学院、駒澤、國學院の三つ巴の戦いを予想。",
+    "category": "race-preview",
+    "tags": [
+      "出雲駅伝",
+      "2025",
+      "大学駅伝",
+      "エントリーメンバー",
+      "注目選手"
+    ],
+    "date": "2025-10-07",
+    "author": "元箱根ランナー",
+    "ogImage": "https://ekiden-results.com/WordPress/wp-content/uploads/2025/10/ekiden3.png",
+    "keywords": [
+      "出雲駅伝",
+      "出雲駅伝2025",
+      "大学駅伝",
+      "青山学院大学",
+      "駒澤大学",
+      "エントリーメンバー"
+    ],
+    "hasAffiliateLinks": true,
+    "mainProducts": [
+      "nike-vaporfly-3",
+      "adidas-adios-pro-evo1"
+    ],
+    "race": {
+      "name": "出雲駅伝",
+      "year": 2025,
+      "date": "2025-10-13"
+    }
+  }
+]

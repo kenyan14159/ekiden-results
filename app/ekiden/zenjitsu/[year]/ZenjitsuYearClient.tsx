@@ -348,6 +348,35 @@ export function ZenjitsuYearClient({ data, year }: ZenjitsuYearClientProps) {
           </div>
         </TabPanel>
 
+        <TabPanel id="search" activeTab={activeTab}>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">選手検索</h2>
+            <SearchBox
+              placeholder="選手名または大学名で検索"
+              onSearch={setSearchQuery}
+              className="mb-6"
+            />
+            {searchQuery && (
+              <div className="mb-4 text-sm text-gray-600">
+                <span className="font-medium">{filteredRunners.length}件</span> の検索結果
+              </div>
+            )}
+            <ResponsiveTable
+              headers={['選手', '大学', '区間', 'タイム', '順位']}
+              rows={filteredRunners.map((runner) => [
+                runner.name,
+                <span key={`team-${runner.section}`}>
+                  <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
+                  {runner.teamName}
+                </span>,
+                `${runner.section}区`,
+                runner.time,
+                `${runner.rank}${getMedalEmoji(runner.rank)}`
+              ])}
+            />
+          </div>
+        </TabPanel>
+
         <TabPanel id="stats" activeTab={activeTab}>
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">

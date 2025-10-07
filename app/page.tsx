@@ -6,6 +6,11 @@ import { Footer } from "@/components/Footer"
 import dynamic from 'next/dynamic'
 
 // 遅延ロードコンポーネント
+// 【一時的に非表示】ブログ記事セクション - 準備ができたら以下のコメントを解除
+// const LatestArticles = dynamic(() => import("@/components/blog/LatestArticles"), {
+//   loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded-lg mb-16"></div>,
+//   ssr: true
+// })
 const CorporateEkiden = dynamic(() => import("@/components/sections/CorporateEkiden").then(mod => ({ default: mod.CorporateEkiden })), {
   loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>
 })
@@ -32,6 +37,9 @@ export default function Home() {
       <main className="flex-grow pt-20">
         <Hero />
         <div className="container mx-auto px-4 lg:px-8 py-12">
+          {/* 【一時的に非表示】新着ブログ記事セクション - 準備ができたら以下のコメントを解除 */}
+          {/* <LatestArticles /> */}
+          
           <CorporateEkiden />
           <UniversityEkiden />
           <HighSchoolEkiden />
@@ -44,5 +52,4 @@ export default function Home() {
     </div>
   )
 }
-
 

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "nike-vaporfly-3",
+    "type": "shoes",
+    "brand": "Nike",
+    "name": "ZoomX Vaporfly Next% 3",
+    "model": "Vaporfly 3",
+    "price": {
+      "list": 33000,
+      "amazon": 29800,
+      "rakuten": 30500
+    },
+    "links": {
+      "amazon": "https://amzn.to/xxxxx",
+      "rakuten": "https://hb.afl.rakuten.co.jp/xxxxx",
+      "official": "https://www.nike.com/jp/..."
+    },
+    "specs": {
+      "weight": 196,
+      "drop": 8,
+      "plate": "カーボンファイバープレート",
+      "foam": "ZoomXフォーム"
+    },
+    "usage": {
+      "hakone2025": 45,
+      "izumo2025": 12
+    },
+    "reviewArticle": "vaporfly-3-review",
+    "images": [
+      "/images/products/nike-vaporfly-3-01.jpg",
+      "/images/products/nike-vaporfly-3-02.jpg"
+    ],
+    "description": "箱根駅伝で最も使用されているレーシングシューズ。軽量性と反発性を両立し、長距離でも高速走行が可能。カーボンプレートとZoomXフォームの組み合わせが特徴。"
+  },
+  {
+    "id": "adidas-adios-pro-evo1",
+    "type": "shoes",
+    "brand": "Adidas",
+    "name": "Adizero Adios Pro Evo 1",
+    "model": "Adios Pro Evo 1",
+    "price": {
+      "list": 55000,
+      "amazon": 52000,
+      "rakuten": 53000
+    },
+    "links": {
+      "amazon": "https://amzn.to/xxxxx",
+      "rakuten": "https://hb.afl.rakuten.co.jp/xxxxx",
+      "official": "https://shop.adidas.jp/..."
+    },
+    "specs": {
+      "weight": 138,
+      "drop": 6,
+      "plate": "カーボンロッド",
+      "foam": "Lightstrike Pro"
+    },
+    "usage": {
+      "hakone2025": 18,
+      "izumo2025": 5
+    },
+    "reviewArticle": "adios-pro-evo1-review",
+    "description": "超軽量のレーシングシューズ。138gという圧倒的な軽さが特徴。駒澤大学の選手を中心に使用されている。"
+  },
+  {
+    "id": "asics-metaspeed-sky-paris",
+    "type": "shoes",
+    "brand": "Asics",
+    "name": "MetaSpeed Sky Paris",
+    "model": "Metaspeed Sky+",
+    "price": {
+      "list": 30800,
+      "amazon": 28000,
+      "rakuten": 29000
+    },
+    "links": {
+      "amazon": "https://amzn.to/xxxxx",
+      "rakuten": "https://hb.afl.rakuten.co.jp/xxxxx",
+      "official": "https://www.asics.com/jp/..."
+    },
+    "specs": {
+      "weight": 210,
+      "drop": 5,
+      "plate": "カーボンプレート",
+      "foam": "FF Blast Turbo"
+    },
+    "usage": {
+      "hakone2025": 32,
+      "izumo2025": 8
+    },
+    "reviewArticle": "metaspeed-sky-paris-review",
+    "description": "アシックスのフラッグシップモデル。安定性と反発性のバランスが良く、日本人ランナーの足型に合いやすい。"
+  }
+]

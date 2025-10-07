@@ -142,6 +142,15 @@ export function Header() {
               )
             })}
             
+            {/* 【一時的に非表示】ブログリンク - 準備ができたら以下のコメントを解除 */}
+            {/* <Link
+              href="/blog"
+              className="px-4 py-2.5 text-sm font-medium text-gray-700 hover:text-gray-900 relative group"
+            >
+              ブログ
+              <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 group-hover:w-4/5 transition-all duration-300"></span>
+            </Link> */}
+            
             {/* サイト情報 */}
             <div
               className="relative"
@@ -284,6 +293,15 @@ export function Header() {
                   </div>
                 )
               })}
+              
+              {/* 【一時的に非表示】ブログリンク (Mobile) - 準備ができたら以下のコメントを解除 */}
+              {/* <Link
+                href="/blog"
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-xl transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ブログ
+              </Link> */}
               
               {/* サイト情報 (Mobile) */}
               <div className="mb-2">

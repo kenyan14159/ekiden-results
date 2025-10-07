@@ -136,7 +136,6 @@ export function SearchBox({
           <p className="font-medium mb-1">💡 検索のヒント:</p>
           <ul className="list-disc list-inside space-y-1">
             <li>選手名または大学名・チーム名で検索できます</li>
-            <li>ひらがな・カタカナ・漢字どれでもOK</li>
             <li>部分一致で検索されます</li>
           </ul>
         </div>

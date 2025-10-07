@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // 静的サイトとしてエクスポート
-  output: 'export',
+  // 開発中はコメントアウト（動的ルートの問題を回避）
+  // output: 'export',
   
   // ベースパスとアセットプレフィックスの設定
   // 本番環境のドメインに合わせて設定
@@ -20,6 +21,13 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ekiden-results.com',
+        pathname: '/WordPress/wp-content/uploads/**',
+      },
+    ],
   },
 
   // パフォーマンス最適化

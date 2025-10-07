@@ -15,6 +15,7 @@ import { SocialShareButtons } from "@/components/SocialShareButtons"
 import { RelatedLinks } from "@/components/RelatedLinks"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
 import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
+import { Accordion } from "@/components/Accordion"
 import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
@@ -263,10 +264,13 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
         </TabPanel>
 
         <TabPanel id="section" activeTab={activeTab}>
-          <div className="space-y-8">
-            {sectionData.map((section) => (
-              <div key={section.section} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">{section.section}区 ランキング</h2>
+          <div className="space-y-4">
+            {sectionData.map((section, index) => (
+              <Accordion 
+                key={section.section} 
+                title={`${section.section}区 ランキング`}
+                defaultOpen={false}
+              >
                 <ResponsiveTable
                   headers={['順位', '選手', '大学', 'タイム']}
                   rows={section.runners.slice(0, 10).map((runner) => [
@@ -284,7 +288,7 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
                     </span>
                   ])}
                 />
-              </div>
+              </Accordion>
             ))}
           </div>
         </TabPanel>
@@ -293,7 +297,7 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-6">選手検索</h2>
             <SearchBox
-              placeholder="選手名または大学名で検索（ひらがな・カタカナ・漢字OK）"
+              placeholder="選手名または大学名で検索"
               onSearch={setSearchQuery}
               className="mb-6"
             />
