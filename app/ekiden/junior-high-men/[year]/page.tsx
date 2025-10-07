@@ -58,7 +58,7 @@ export default async function JuniorHighMenYearPage({
 
   const breadcrumbItems = [
     { name: 'ホーム', url: '/' },
-    { name: '高校駅伝', url: '/#highschool' },
+    { name: '中学駅伝', url: '/#junior-high' },
     { name: '全国中学男子駅伝', url: '/ekiden/junior-high-men' },
     { name: `${year}年`, url: `/ekiden/junior-high-men/${year}` },
   ]
@@ -80,7 +80,7 @@ async function fetchJuniorHighMenData(year: string): Promise<EkidenData | null> 
     const fs = await import('fs/promises')
     const path = await import('path')
     
-    const filePath = path.join(process.cwd(), 'public', 'data', 'prefectures', 'boys', `${year}.json`)
+    const filePath = path.join(process.cwd(), 'public', 'data', 'junior-high', 'boys', `${year}.json`)
     const fileContent = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(fileContent)
     

@@ -4,8 +4,14 @@ const nextConfig = {
   output: 'export',
   
   // 画像最適化の設定（静的エクスポート用）
+  // 注意: output: 'export'の場合、Next.jsの画像最適化は利用できないため、
+  // unoptimizedをtrueにする必要があります。
+  // 代わりに、ビルド時の画像最適化やCDN側での最適化を検討してください。
   images: {
-    unoptimized: true, // 静的エクスポートでは画像最適化を無効化
+    unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
   // パフォーマンス最適化

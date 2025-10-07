@@ -6,7 +6,7 @@ import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
 import { getMedalEmoji, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
-import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
+import { ScrollToTop } from "@/components/ScrollToTop"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface JuniorHighMenYearClientProps {
@@ -17,6 +17,32 @@ interface JuniorHighMenYearClientProps {
 export function JuniorHighMenYearClient({ data, year }: JuniorHighMenYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
+  const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
+  const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
+
+  const toggleTeam = (teamName: string) => {
+    setExpandedTeams(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(teamName)) {
+        newSet.delete(teamName)
+      } else {
+        newSet.add(teamName)
+      }
+      return newSet
+    })
+  }
+
+  const toggleSection = (section: number) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(section)) {
+        newSet.delete(section)
+      } else {
+        newSet.add(section)
+      }
+      return newSet
+    })
+  }
 
   const sectionCount = data.config?.sections || 7
   const sectionData = Array.from({ length: sectionCount }, (_, i) => {

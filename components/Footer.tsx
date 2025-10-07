@@ -107,7 +107,7 @@ export function Footer() {
             >
               <Image
                 src="/ekiden-logo.png"
-                alt="駅伝リザルト"
+                alt="駅伝リザルト サイトロゴ"
                 width={50}
                 height={50}
                 className="rounded-lg"

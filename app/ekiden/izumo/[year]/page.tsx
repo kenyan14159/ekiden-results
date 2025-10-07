@@ -28,13 +28,26 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [
-      '出雲駅伝',
-      `出雲駅伝${year}`,
-      winner,
-      '出雲全日本大学選抜駅伝競走',
-      '大学駅伝'
-    ].filter(Boolean),
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      url: `https://ekiden-results.com/ekiden/izumo/${year}`,
+      siteName: '駅伝リザルト',
+      locale: 'ja_JP',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://ekiden-results.com/ekiden/izumo/${year}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   }
 }
 

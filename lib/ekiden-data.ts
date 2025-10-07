@@ -66,6 +66,14 @@ export const ekidenRaces: EkidenRace[] = [
     category: "university",
     url: "/ekiden/fujisan",
   },
+  {
+    id: "mixed-gender",
+    name: "男女混合駅伝",
+    subtitle: "大学男女混合駅伝",
+    description: "男女が混合チームで競う大学駅伝",
+    category: "university",
+    url: "/ekiden/mixed-gender",
+  },
   // 高校駅伝
   {
     id: "miyakooji-men",

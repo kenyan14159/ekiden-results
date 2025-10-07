@@ -9,9 +9,15 @@ import { useEffect } from 'react'
  * - キーボードショートカット（Ctrl+C, Ctrl+S等）禁止
  * - 開発者ツール検知（警告表示）
  * - スクリーンショット抑止（透かし）
+ * 
+ * 注: 開発中は制限を無効化しています
  */
 export function ContentProtection() {
   useEffect(() => {
+    // 開発環境では保護機能を無効化
+    if (process.env.NODE_ENV === 'development') {
+      return
+    }
     // 右クリック禁止
     const handleContextMenu = (e: MouseEvent) => {
       e.preventDefault()
@@ -129,47 +135,52 @@ export function ContentProtection() {
 
   return (
     <>
-      {/* CSSでテキスト選択を禁止 */}
-      <style jsx global>{`
-        body {
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          -webkit-touch-callout: none;
-        }
+      {/* 開発環境では保護機能を無効化 */}
+      {process.env.NODE_ENV !== 'development' && (
+        <>
+          {/* CSSでテキスト選択を禁止 */}
+          <style jsx global>{`
+            body {
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              -webkit-touch-callout: none;
+            }
 
-        /* スクリーンショット抑止用の透かし */
-        body::before {
-          content: "© 駅伝リザルト - ekiden-results.com";
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%) rotate(-45deg);
-          font-size: 4rem;
-          color: rgba(0, 0, 0, 0.03);
-          pointer-events: none;
-          z-index: 9998;
-          white-space: nowrap;
-          font-weight: bold;
-        }
+            /* スクリーンショット抑止用の透かし */
+            body::before {
+              content: "© 駅伝リザルト - ekiden-results.com";
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(-45deg);
+              font-size: 4rem;
+              color: rgba(0, 0, 0, 0.03);
+              pointer-events: none;
+              z-index: 9998;
+              white-space: nowrap;
+              font-weight: bold;
+            }
 
-        /* 入力フィールドやボタンは選択可能にする */
-        input,
-        textarea,
-        button,
-        a,
-        [role="button"],
-        [role="link"] {
-          -webkit-user-select: text !important;
-          -moz-user-select: text !important;
-          -ms-user-select: text !important;
-          user-select: text !important;
-        }
-      `}</style>
+            /* 入力フィールドやボタンは選択可能にする */
+            input,
+            textarea,
+            button,
+            a,
+            [role="button"],
+            [role="link"] {
+              -webkit-user-select: text !important;
+              -moz-user-select: text !important;
+              -ms-user-select: text !important;
+              user-select: text !important;
+            }
+          `}</style>
 
-      {/* 保護通知エリア */}
-      <div id="protection-notice" className="hidden"></div>
+          {/* 保護通知エリア */}
+          <div id="protection-notice" className="hidden"></div>
+        </>
+      )}
     </>
   )
 }

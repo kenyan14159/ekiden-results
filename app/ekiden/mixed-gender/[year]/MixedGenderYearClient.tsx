@@ -9,12 +9,12 @@ import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
-interface IzumoYearClientProps {
+interface MixedGenderYearClientProps {
   data: EkidenData
   year: number
 }
 
-export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
+export function MixedGenderYearClient({ data, year }: MixedGenderYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
@@ -32,13 +32,13 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
     })
   }
 
-  const toggleSection = (section: number) => {
+  const toggleSection = (sectionNum: number) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev)
-      if (newSet.has(section)) {
-        newSet.delete(section)
+      if (newSet.has(sectionNum)) {
+        newSet.delete(sectionNum)
       } else {
-        newSet.add(section)
+        newSet.add(sectionNum)
       }
       return newSet
     })
@@ -100,11 +100,11 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
     <>
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 lg:px-8 py-8">
-          <Link href="/ekiden/izumo" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+          <Link href="/ekiden/mixed-gender" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            出雲駅伝 歴代結果に戻る
+            男女混合駅伝 歴代結果に戻る
           </Link>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
         </div>
@@ -234,19 +234,16 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                           <thead>
                             <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
                               <th className="py-3 px-4 text-left">順位</th>
-                              <th className="py-3 px-4 text-left">選手</th>
                               <th className="py-3 px-4 text-left">大学</th>
+                              <th className="py-3 px-4 text-left">選手</th>
                               <th className="py-3 px-4 text-left">タイム</th>
                             </tr>
                           </thead>
                           <tbody className="text-gray-700 text-sm font-light">
-                            {section.runners.map((runner, index) => (
-                              <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                            {section.runners.map((runner) => (
+                              <tr key={`${runner.teamName}-${runner.section}`} className="border-b border-gray-200 hover:bg-gray-50">
                                 <td className="py-3 px-4 whitespace-nowrap">
                                   {runner.rank}位 {getMedalEmoji(runner.rank)}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
                                   <div className="flex items-center">
@@ -256,6 +253,9 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                                     ></div>
                                     {runner.teamName}
                                   </div>
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
                                   {runner.time}
@@ -274,57 +274,49 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
           </div>
         </TabPanel>
 
-        <TabPanel id="search" activeTab={activeTab}>
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-6">選手検索</h2>
-            <SearchBox
-              placeholder="選手名で検索..."
+        <TabPanel id="runner" activeTab={activeTab}>
+          <div className="space-y-8">
+            <SearchBox 
+              placeholder="選手名で検索..." 
               onSearch={setSearchQuery}
-              className="mb-6"
             />
-            {searchQuery && (
-              <div className="mb-4 text-sm text-gray-600">
-                <span className="font-medium">{filteredRunners.length}件</span> の検索結果
-                {filteredRunners.length === 0 && " - 別のキーワードをお試しください"}
-              </div>
-            )}
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
               <table className="min-w-full bg-white">
                 <thead>
                   <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                    <th className="py-3 px-4 text-left">選手</th>
                     <th className="py-3 px-4 text-left">大学</th>
                     <th className="py-3 px-4 text-left">区間</th>
+                    <th className="py-3 px-4 text-left">選手</th>
                     <th className="py-3 px-4 text-left">タイム</th>
-                    <th className="py-3 px-4 text-left">区間順位</th>
+                    <th className="py-3 px-4 text-left">順位</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-700 text-sm font-light">
-                  {filteredRunners.length > 0 ? (
-                    filteredRunners.map((runner, index) => (
-                      <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                        <td className="py-3 px-4 whitespace-nowrap">
-                          {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
-                        </td>
-                        <td className="py-3 px-4 whitespace-nowrap">
-                          <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
+                  {filteredRunners.map((runner, index) => (
+                    <tr key={`${runner.teamName}-${runner.section}-${index}`} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 whitespace-nowrap">
+                        <div className="flex items-center">
+                          <div 
+                            className="w-3 h-3 rounded-full mr-2" 
+                            style={{ backgroundColor: runner.color }}
+                          ></div>
                           {runner.teamName}
-                        </td>
-                        <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
-                        <td className="py-3 px-4 whitespace-nowrap">
-                          {runner.time}
-                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
-                        </td>
-                        <td className="py-3 px-4 whitespace-nowrap">{runner.rank}</td>
-                      </tr>
-                    ))
-                  ) : (
-                    <tr>
-                      <td colSpan={5} className="py-3 px-4 text-center text-gray-500">
-                        該当する選手が見つかりません。
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
+                      <td className="py-3 px-4 whitespace-nowrap">
+                        {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                      </td>
+                      <td className="py-3 px-4 whitespace-nowrap">
+                        {runner.time}
+                        {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                      </td>
+                      <td className="py-3 px-4 whitespace-nowrap">
+                        {runner.teamRank === 'OP' ? '-' : `${runner.rank}位`}
+                        {runner.teamRank !== 'OP' && getMedalEmoji(runner.rank)}
                       </td>
                     </tr>
-                  )}
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -334,36 +326,36 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
         <TabPanel id="stats" activeTab={activeTab}>
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">統計・記録</h2>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">区間賞一覧</h3>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white">
-                <thead>
-                  <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                    <th className="py-3 px-4 text-left">区間</th>
-                    <th className="py-3 px-4 text-left">選手 (大学)</th>
-                    <th className="py-3 px-4 text-left">タイム</th>
-                    <th className="py-3 px-4 text-left">区間新</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700 text-sm font-light">
-                  {sectionAwards.map((award, index) => (
-                    <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="py-3 px-4 whitespace-nowrap">{award.section}区</td>
-                      <td className="py-3 px-4 whitespace-nowrap">{award.runner}</td>
-                      <td className="py-3 px-4 whitespace-nowrap">{award.time}</td>
-                      <td className="py-3 px-4 whitespace-nowrap">{award.isSectionRecord ? '★' : ''}</td>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">区間賞一覧</h2>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-white">
+                  <thead>
+                    <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
+                      <th className="py-3 px-4 text-left">区間</th>
+                      <th className="py-3 px-4 text-left">選手</th>
+                      <th className="py-3 px-4 text-left">タイム</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody className="text-gray-700 text-sm font-light">
+                    {sectionAwards.map((award) => (
+                      <tr key={award.section} className="border-b border-gray-200 hover:bg-gray-50">
+                        <td className="py-3 px-4 whitespace-nowrap">{award.section}区 🥇</td>
+                        <td className="py-3 px-4 whitespace-nowrap">{award.runner}</td>
+                        <td className="py-3 px-4 whitespace-nowrap">
+                          {award.time}
+                          {award.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </TabPanel>
       </div>
+      
       <ScrollToTop />
     </>
   )
 }
-

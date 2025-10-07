@@ -2,8 +2,10 @@
 
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { ScrollToTop } from "@/components/ScrollToTop"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import Head from 'next/head'
 
 // データインポート（これらは後で追加）
 import menSprints1 from './data/men/menSprints1.json'
@@ -539,6 +541,35 @@ export default function ScoringTablePage() {
     }))
   }
 
+  // 比較セクション用のポイント増減関数
+  const handleComparisonIncrement = (id: number) => {
+    const comparison = comparisons.find(c => c.id === id)
+    if (!comparison) return
+    
+    const currentPoints = parseInt(comparison.points, 10)
+    if (isNaN(currentPoints)) {
+      handleComparisonChange(id, 'points', '800')
+    } else if (currentPoints >= 1400) {
+      handleComparisonChange(id, 'points', '800')
+    } else {
+      handleComparisonChange(id, 'points', String(currentPoints + 1))
+    }
+  }
+
+  const handleComparisonDecrement = (id: number) => {
+    const comparison = comparisons.find(c => c.id === id)
+    if (!comparison) return
+    
+    const currentPoints = parseInt(comparison.points, 10)
+    if (isNaN(currentPoints)) {
+      handleComparisonChange(id, 'points', '1400')
+    } else if (currentPoints <= 800) {
+      handleComparisonChange(id, 'points', '1400')
+    } else {
+      handleComparisonChange(id, 'points', String(currentPoints - 1))
+    }
+  }
+
   // イベント選択肢を取得
   const getEventOptions = (cat: string, gen: string) => {
     const groups = eventDefinitions[cat]?.[gen] || {}
@@ -548,6 +579,73 @@ export default function ScoringTablePage() {
       options.push({ group: group.displayName, events: group.events })
     })
     return options
+  }
+
+  // 種目に応じたプレースホルダーを取得
+  const getPlaceholderForEvent = (eventKey: string): string => {
+    if (!eventKey) return '記録を入力 (例: 10.5 または 3:45.2)'
+    
+    // 短距離 (100m-500m)
+    if (['100m', '200m', '300m', '400m', '500m'].includes(eventKey)) {
+      return '例: 10.50 (秒単位)'
+    }
+    
+    // 中距離 (600m-2000m)
+    if (['600m', '800m', '1000m', '1500m', 'mile', '2000m'].includes(eventKey)) {
+      return '例: 1:45.50 (分:秒)'
+    }
+    
+    // 長距離・ハーフマラソン以上
+    if (['hm', 'HMW', 'marathon', 'MarW', '100km'].includes(eventKey)) {
+      return '例: 1:05:30 (時:分:秒)'
+    }
+    
+    // その他の長距離・ロードランニング
+    if (eventKey.includes('m3000') || eventKey.includes('3000m') || 
+        eventKey.includes('m5000') || eventKey.includes('5000m') || 
+        eventKey.includes('m10000') || eventKey.includes('10000m') ||
+        eventKey.includes('miles_2') || eventKey.includes('2_miles') ||
+        ['5km', '10km', '15km', '20km', '25km', '30km'].includes(eventKey)) {
+      return '例: 13:45.50 (分:秒)'
+    }
+    
+    // ハードル
+    if (eventKey.includes('H') || eventKey.includes('h')) {
+      return '例: 13.50 (秒単位)'
+    }
+    
+    // 障害走
+    if (eventKey.includes('sc') || eventKey.includes('SC')) {
+      return '例: 8:15.50 (分:秒)'
+    }
+    
+    // 競歩 (トラック・ロード)
+    if (eventKey.includes('W') || eventKey.includes('w')) {
+      if (['3000mW', '5000mW', 'km3_w', 'km5_w'].includes(eventKey)) {
+        return '例: 11:45.50 (分:秒)'
+      }
+      return '例: 38:45.50 (分:秒) または 1:18:45 (時:分:秒)'
+    }
+    
+    // リレー
+    if (eventKey.includes('x')) {
+      if (eventKey === '4x100m') {
+        return '例: 38.50 (秒単位)'
+      }
+      return '例: 3:05.50 (分:秒)'
+    }
+    
+    // 跳躍・投てき
+    if (['HJ', 'PV', 'LJ', 'TJ', 'SP', 'DT', 'HT', 'JT'].includes(eventKey)) {
+      return '例: 7.50 (メートル単位)'
+    }
+    
+    // 混成競技
+    if (['Dec', 'Hept'].includes(eventKey)) {
+      return '例: 8500 (合計点)'
+    }
+    
+    return '記録を入力 (例: 10.5 または 3:45.2)'
   }
 
   // 記録からポイントを逆算する
@@ -785,26 +883,40 @@ export default function ScoringTablePage() {
 
   // 長押し処理
   const [pressTimer, setPressTimer] = useState<NodeJS.Timeout | null>(null)
+  const [intervalTimer, setIntervalTimer] = useState<NodeJS.Timeout | null>(null)
   const [isLongPress, setIsLongPress] = useState(false)
 
   const startLongPress = (callback: () => void) => {
     setIsLongPress(false)
+    // 初回実行を遅延させる
     const timer = setTimeout(() => {
       setIsLongPress(true)
-      const interval = setInterval(callback, 50) // 50msごとに実行
-      setPressTimer(interval)
-    }, 500) // 500ms長押しで開始
+      // 連続実行のインターバルを設定
+      const interval = setInterval(callback, 100) // 100msごとに実行
+      setIntervalTimer(interval)
+    }, 300) // 300ms長押しで開始
     setPressTimer(timer)
   }
 
   const stopLongPress = () => {
     if (pressTimer) {
       clearTimeout(pressTimer)
-      clearInterval(pressTimer)
       setPressTimer(null)
+    }
+    if (intervalTimer) {
+      clearInterval(intervalTimer)
+      setIntervalTimer(null)
     }
     setIsLongPress(false)
   }
+
+  // コンポーネントのアンマウント時にタイマーをクリア
+  useEffect(() => {
+    return () => {
+      if (pressTimer) clearTimeout(pressTimer)
+      if (intervalTimer) clearInterval(intervalTimer)
+    }
+  }, [pressTimer, intervalTimer])
 
   const eventOptions = getEventOptions(category, gender)
 
@@ -1019,7 +1131,7 @@ export default function ScoringTablePage() {
                       onChange={(e) => inputMode === 'mark' && setMarkInput(e.target.value)}
                       onFocus={() => inputMode === 'points' && setInputMode('mark')}
                       readOnly={inputMode === 'points'}
-                      placeholder={inputMode === 'mark' ? '記録を入力 (例: 10.5 または 3:45.2)' : 'ここに記録が表示されます'}
+                      placeholder={inputMode === 'mark' ? getPlaceholderForEvent(event) : 'ここに記録が表示されます'}
                       className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-12 ${inputMode === 'points' ? 'bg-gray-50' : ''}`}
                     />
                     <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">{unit}</span>
@@ -1114,7 +1226,22 @@ export default function ScoringTablePage() {
                           <label className="block text-sm font-medium text-gray-700 mb-2">
                             ポイント
                           </label>
-                          <div className="relative">
+                          <div className="relative flex items-center">
+                            <button
+                              type="button"
+                              onClick={() => handleComparisonDecrement(comparison.id)}
+                              onMouseDown={() => startLongPress(() => handleComparisonDecrement(comparison.id))}
+                              onMouseUp={stopLongPress}
+                              onMouseLeave={stopLongPress}
+                              onTouchStart={() => startLongPress(() => handleComparisonDecrement(comparison.id))}
+                              onTouchEnd={stopLongPress}
+                              className="absolute left-1 z-10 w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors"
+                              aria-label="ポイントを減らす"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5" />
+                              </svg>
+                            </button>
                             <input
                               type="number"
                               value={comparison.points}
@@ -1123,8 +1250,23 @@ export default function ScoringTablePage() {
                               min="800"
                               max="1400"
                               step="1"
-                              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                              className="w-full px-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                             />
+                            <button
+                              type="button"
+                              onClick={() => handleComparisonIncrement(comparison.id)}
+                              onMouseDown={() => startLongPress(() => handleComparisonIncrement(comparison.id))}
+                              onMouseUp={stopLongPress}
+                              onMouseLeave={stopLongPress}
+                              onTouchStart={() => startLongPress(() => handleComparisonIncrement(comparison.id))}
+                              onTouchEnd={stopLongPress}
+                              className="absolute right-10 z-10 w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors"
+                              aria-label="ポイントを増やす"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                              </svg>
+                            </button>
                             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">pt</span>
                           </div>
                         </div>
@@ -1228,6 +1370,7 @@ export default function ScoringTablePage() {
         </div>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

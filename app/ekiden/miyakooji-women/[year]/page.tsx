@@ -80,7 +80,7 @@ async function fetchMiyakoojiWomenData(year: string): Promise<EkidenData | null>
     const fs = await import('fs/promises')
     const path = await import('path')
     
-    const filePath = path.join(process.cwd(), 'public', 'data', 'prefectures', 'girls', `${year}.json`)
+    const filePath = path.join(process.cwd(), 'public', 'data', 'highschool', 'girls', `${year}.json`)
     const fileContent = await fs.readFile(filePath, 'utf-8')
     const data = JSON.parse(fileContent)
     

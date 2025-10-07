@@ -30,7 +30,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-2xl blur-xl"></div>
                 <Image
                   src="/ekiden-logo.png"
-                  alt="駅伝リザルト"
+                  alt="駅伝リザルト - 箱根駅伝、ニューイヤー駅伝など全国駅伝大会の結果を網羅するロゴマーク"
                   width={120}
                   height={120}
                   className="relative rounded-2xl shadow-2xl"

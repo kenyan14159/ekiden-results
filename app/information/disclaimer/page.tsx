@@ -20,7 +20,7 @@ export default function DisclaimerPage() {
             </Link>
 
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">免責事項</h1>
-            <p className="text-sm text-gray-500">最終更新日: 2025年1月</p>
+            <p className="text-sm text-gray-500">最終更新日: 2025年10月</p>
           </div>
         </div>
 

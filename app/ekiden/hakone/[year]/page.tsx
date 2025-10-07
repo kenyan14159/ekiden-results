@@ -32,19 +32,6 @@ export async function generateMetadata({
   return {
     title,
     description,
-    keywords: [
-      '箱根駅伝',
-      `箱根駅伝${year}`,
-      `第${count}回箱根駅伝`,
-      winner,
-      '箱根駅伝結果',
-      '箱根駅伝成績',
-      '区間記録',
-      '往路',
-      '復路',
-      '大学駅伝',
-      '東京箱根間往復大学駅伝競走'
-    ].filter(Boolean),
     openGraph: {
       title,
       description,

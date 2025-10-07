@@ -6,7 +6,7 @@ import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
 import { getMedalEmoji, normalizeForSearch } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
-import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
+import { ScrollToTop } from "@/components/ScrollToTop"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface HiroshimaYearClientProps {
@@ -17,6 +17,32 @@ interface HiroshimaYearClientProps {
 export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
+  const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
+  const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
+
+  const toggleTeam = (teamName: string) => {
+    setExpandedTeams(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(teamName)) {
+        newSet.delete(teamName)
+      } else {
+        newSet.add(teamName)
+      }
+      return newSet
+    })
+  }
+
+  const toggleSection = (section: number) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(section)) {
+        newSet.delete(section)
+      } else {
+        newSet.add(section)
+      }
+      return newSet
+    })
+  }
 
   const sectionCount = data.config?.sections || 7
   const sectionData = Array.from({ length: sectionCount }, (_, i) => {
@@ -88,56 +114,74 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
       <div className="container mx-auto px-4 lg:px-8 py-8">
-        <TabPanel id="team" activeTab={activeTab}>
-          <div className="space-y-8">
+                <TabPanel id="team" activeTab={activeTab}>
+          <div className="space-y-4">
             {(data.teams || []).map((team) => {
               const isOP = team.rank === 'OP'
+              const isExpanded = expandedTeams.has(team.name)
               return (
-                <div key={team.name} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                  <div className="flex items-center mb-4">
-                    <div 
-                      className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg mr-3" 
-                      style={{ backgroundColor: getPrefectureColor(team.name) }}
-                    >
-                      {team.rank}
+                <div key={team.name} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                  <button
+                    onClick={() => toggleTeam(team.name)}
+                    className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center">
+                      <div 
+                        className="flex items-center justify-center w-10 h-10 rounded-full text-white font-bold text-lg mr-3" 
+                        style={{ backgroundColor: getPrefectureColor(team.name) }}
+                      >
+                        {team.rank}
+                      </div>
+                      <div className="text-left">
+                        <h2 className="text-xl font-bold text-gray-900">{team.name}</h2>
+                        <p className="text-sm text-gray-600 mt-1">総合タイム: {team.totalTime}</p>
+                      </div>
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900">{team.name}</h2>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-700 mb-6">
-                    <p><strong>総合タイム:</strong> {team.totalTime}</p>
-                  </div>
+                    <svg
+                      className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">区間成績</h3>
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full bg-white">
-                      <thead>
-                        <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                          <th className="py-3 px-4 text-left">区間</th>
-                          <th className="py-3 px-4 text-left">選手</th>
-                          <th className="py-3 px-4 text-left">タイム</th>
-                          <th className="py-3 px-4 text-left">順位</th>
-                        </tr>
-                      </thead>
-                      <tbody className="text-gray-700 text-sm font-light">
-                        {(team.runners || []).map((runner) => (
-                          <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
-                            <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
-                            <td className="py-3 px-4 whitespace-nowrap">
-                              {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
-                            </td>
-                            <td className="py-3 px-4 whitespace-nowrap">
-                              {runner.time}
-                              {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
-                            </td>
-                            <td className="py-3 px-4 whitespace-nowrap">
-                              {isOP ? '-' : `${runner.rank}位`}
-                              {!isOP && getMedalEmoji(runner.rank)}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                  {isExpanded && (
+                    <div className="px-6 pb-6">
+                      <h3 className="text-lg font-semibold text-gray-800 mb-4">区間成績</h3>
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full bg-white">
+                          <thead>
+                            <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
+                              <th className="py-3 px-4 text-left">区間</th>
+                              <th className="py-3 px-4 text-left">選手</th>
+                              <th className="py-3 px-4 text-left">タイム</th>
+                              <th className="py-3 px-4 text-left">順位</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-gray-700 text-sm font-light">
+                            {(team.runners || []).map((runner) => (
+                              <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
+                                <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.time}
+                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {isOP ? '-' : `${runner.rank}位`}
+                                  {!isOP && getMedalEmoji(runner.rank)}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )
             })}
@@ -145,44 +189,78 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
         </TabPanel>
 
         <TabPanel id="section" activeTab={activeTab}>
-          <div className="space-y-8">
-            {sectionData.map((section) => (
-              <div key={section.section} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">{section.section}区 ランキング</h2>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white">
-                    <thead>
-                      <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                        <th className="py-3 px-4 text-left">順位</th>
-                        <th className="py-3 px-4 text-left">選手</th>
-                        <th className="py-3 px-4 text-left">都道府県</th>
-                        <th className="py-3 px-4 text-left">タイム</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-gray-700 text-sm font-light">
-                      {section.runners.slice(0, 10).map((runner, index) => (
-                        <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                          <td className="py-3 px-4 whitespace-nowrap">
-                            {runner.rank}{getMedalEmoji(runner.rank)}
-                          </td>
-                          <td className="py-3 px-4 whitespace-nowrap">
-                            {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
-                          </td>
-                          <td className="py-3 px-4 whitespace-nowrap">
-                            <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
-                            {runner.teamName}
-                          </td>
-                          <td className="py-3 px-4 whitespace-nowrap">
-                            {runner.time}
-                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+          <div className="space-y-4">
+            {sectionData.map((section) => {
+              const isExpanded = expandedSections.has(section.section)
+              const topRunner = section.runners[0]
+              return (
+                <div key={section.section} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                  <button
+                    onClick={() => toggleSection(section.section)}
+                    className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-lg mr-3">
+                        {section.section}
+                      </div>
+                      <div className="text-left">
+                        <h2 className="text-xl font-bold text-gray-900">{section.section}区 ランキング</h2>
+                        {topRunner && (
+                          <p className="text-sm text-gray-600 mt-1">
+                            区間賞: {topRunner.name} ({topRunner.teamName}) - {topRunner.time}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <svg
+                      className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isExpanded && (
+                    <div className="px-6 pb-6">
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full bg-white">
+                          <thead>
+                            <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
+                              <th className="py-3 px-4 text-left">順位</th>
+                              <th className="py-3 px-4 text-left">選手</th>
+                              <th className="py-3 px-4 text-left">都道府県</th>
+                              <th className="py-3 px-4 text-left">タイム</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-gray-700 text-sm font-light">
+                            {section.runners.slice(0, 10).map((runner, index) => (
+                              <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.rank}{getMedalEmoji(runner.rank)}
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
+                                  {runner.teamName}
+                                </td>
+                                <td className="py-3 px-4 whitespace-nowrap">
+                                  {runner.time}
+                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </TabPanel>
 
@@ -190,7 +268,7 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-xl font-bold text-gray-900 mb-6">選手検索</h2>
             <SearchBox
-              placeholder="選手名、都道府県名、所属で検索（ひらがな・カタカナ・漢字OK）"
+              placeholder="選手名で検索..."
               onSearch={setSearchQuery}
               className="mb-6"
             />
@@ -244,22 +322,9 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
         </TabPanel>
 
         <TabPanel id="stats" activeTab={activeTab}>
-          <div className="space-y-8">
-            <SectionTimeChart
-              data={sectionData.map(section => ({
-                section: section.section,
-                teams: section.runners.slice(0, 5).map(runner => ({
-                  name: runner.teamName,
-                  time: runner.time,
-                  color: runner.color
-                }))
-              }))}
-              title="区間タイム比較（上位5チーム）"
-            />
-
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">統計・記録</h2>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">区間賞一覧</h3>
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">統計・記録</h2>
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">区間賞一覧</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white">
                 <thead>
@@ -282,10 +347,10 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
                 </tbody>
               </table>
             </div>
-            </div>
           </div>
         </TabPanel>
       </div>
+      <ScrollToTop />
     </>
   )
 }

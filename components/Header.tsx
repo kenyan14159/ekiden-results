@@ -57,7 +57,7 @@ export function Header() {
             >
               <Image
                 src="/ekiden-logo.png"
-                alt="駅伝リザルト"
+                alt="駅伝リザルト ホームに戻る"
                 width={50}
                 height={50}
                 className="rounded-lg"
@@ -109,7 +109,7 @@ export function Header() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden"
+                      className="absolute top-full left-0 mt-0.5 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 pointer-events-none"></div>
                       {races.map((race, index) => (
@@ -172,7 +172,7 @@ export function Header() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden"
+                  className="absolute top-full left-0 mt-0.5 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 py-3 overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-slate-50/50 pointer-events-none"></div>
                   {siteInfo.map((item) => (

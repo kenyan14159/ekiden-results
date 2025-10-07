@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Noto_Sans_JP, Inter } from "next/font/google"
 import "./globals.css"
 import { StructuredData } from "@/components/StructuredData"
@@ -19,10 +19,16 @@ const inter = Inter({
   display: "swap",
 })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#1e40af',
+}
+
 export const metadata: Metadata = {
   title: "駅伝リザルト | 全国駅伝大会の結果一覧",
   description: "箱根駅伝、ニューイヤー駅伝、クイーンズ駅伝など、実業団駅伝、大学駅伝、高校駅伝、中学駅伝の結果をまとめたサイトです。最新の大会情報を分かりやすく掲載。",
-  keywords: ["駅伝", "箱根駅伝", "ニューイヤー駅伝", "クイーンズ駅伝", "全日本大学駅伝", "出雲駅伝", "都大路", "駅伝結果", "駅伝速報"],
   authors: [{ name: "駅伝リザルト" }],
   creator: "駅伝リザルト",
   publisher: "駅伝リザルト",

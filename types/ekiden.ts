@@ -6,6 +6,7 @@ export interface Runner {
   time: string
   name: string
   grade?: number // 大学駅伝のみ
+  affiliation?: string // 高校・中学駅伝の所属校
   rank: number | string
   isSectionRecord: boolean
 }
@@ -24,9 +25,12 @@ export interface EkidenData {
   year: number
   count?: number
   teams: Team[]
+  config?: {
+    sections: number
+  }
 }
 
-export type TabType = 'team' | 'section' | 'search' | 'stats'
+export type TabType = 'team' | 'section' | 'runner' | 'chart' | 'awards' | 'search' | 'stats'
 
 export interface RunnerWithTeam extends Runner {
   teamName: string

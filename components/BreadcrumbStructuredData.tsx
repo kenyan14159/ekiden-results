@@ -32,13 +32,13 @@ export function Breadcrumb({ items }: BreadcrumbStructuredDataProps) {
   return (
     <>
       <BreadcrumbStructuredData items={items} />
-      <nav aria-label="パンくずリスト" className="mb-6">
-        <ol className="flex items-center space-x-2 text-sm">
+      <nav aria-label="パンくずリスト" className="mb-6 bg-gray-50 rounded-lg px-4 py-3 border border-gray-200">
+        <ol className="flex items-center flex-wrap gap-2 text-sm">
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
                 <svg
-                  className="w-4 h-4 mx-2 text-gray-400"
+                  className="w-4 h-4 mx-2 text-gray-400 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -53,13 +53,13 @@ export function Breadcrumb({ items }: BreadcrumbStructuredDataProps) {
                 </svg>
               )}
               {index === items.length - 1 ? (
-                <span className="text-gray-900 font-medium" aria-current="page">
+                <span className="text-gray-900 font-semibold bg-white px-3 py-1.5 rounded-md shadow-sm" aria-current="page">
                   {item.name}
                 </span>
               ) : (
                 <a
                   href={item.url}
-                  className="text-blue-600 hover:text-blue-800 hover:underline"
+                  className="text-blue-700 hover:text-blue-900 hover:underline font-medium px-2 py-1 rounded-md hover:bg-blue-50 transition-colors"
                 >
                   {item.name}
                 </a>
