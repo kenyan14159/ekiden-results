@@ -33,6 +33,19 @@ const nextConfig = {
   // パフォーマンス最適化
   compress: true,
   
+  // 実験的機能の有効化（パフォーマンス向上）
+  experimental: {
+    optimizeCss: true, // CSS最適化
+    optimizePackageImports: ['framer-motion', 'lucide-react'], // パッケージの最適化
+  },
+  
+  // コンパイラ設定
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
   // 静的エクスポート用の設定
   distDir: '.next',
   

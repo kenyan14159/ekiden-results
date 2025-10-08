@@ -136,6 +136,9 @@ export function Footer() {
                 width={50}
                 height={50}
                 className="rounded-lg"
+                loading="lazy"
+                quality={85}
+                sizes="50px"
               />
               <div>
                 <p className="font-bold text-xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">

@@ -5,6 +5,7 @@ import { StructuredData } from "@/components/StructuredData"
 import { GoogleAnalytics } from "@/components/GoogleAnalytics"
 import { GoogleAdSense } from "@/components/GoogleAdSense"
 import { ContentProtection } from "@/components/ContentProtection"
+import { WebVitals } from "@/components/WebVitals"
 
 const notoSansJP = Noto_Sans_JP({ 
   subsets: ["latin"],
@@ -86,12 +87,14 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${inter.variable}`}>
       <head>
+        <meta name="msvalidate.01" content="73F7D8BA7F66661D40546A332A7A8C22" />
         <StructuredData />
       </head>
       <body className="font-noto antialiased">
         <ContentProtection />
         <GoogleAnalytics />
         <GoogleAdSense />
+        <WebVitals />
         {children}
       </body>
     </html>

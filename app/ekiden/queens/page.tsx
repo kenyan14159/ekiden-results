@@ -2,10 +2,14 @@
 
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateRaceListLinks } from "@/lib/internal-links"
+import { RaceListStructuredDataScript } from "@/lib/event-structured-data"
 import Link from "next/link"
 import { queensResults } from "@/data/queens-results"
 import { getCorporateColor } from "@/data/corporate-colors"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const decades = [
@@ -18,6 +22,19 @@ const decades = [
 
 export default function QueensEkidenPage() {
   const [selectedDecade, setSelectedDecade] = useState<string | null>(null)
+  const [years, setYears] = useState<number[]>([])
+
+  const breadcrumbItems = [
+    { name: 'ホーム', url: '/' },
+    { name: 'クイーンズ駅伝', url: '/ekiden/queens' }
+  ]
+  const relatedLinks = generateRaceListLinks('queens')
+
+  // クライアント側でyearsを生成
+  useEffect(() => {
+    setYears(queensResults.map(result => result.year))
+  }, [])
+
 
   const filteredResults = selectedDecade
     ? queensResults.filter(result => {
@@ -30,8 +47,15 @@ export default function QueensEkidenPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      {years.length > 0 && (
+        <RaceListStructuredDataScript raceSlug="queens" years={years} />
+      )}
       <Header />
       <main className="flex-grow pt-20">
+        <div className="container mx-auto px-4 lg:px-8 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
         <div className="bg-gradient-to-br from-pink-50 via-white to-rose-50 border-b">
           <div className="container mx-auto px-4 lg:px-8 py-12">
             <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm">
@@ -119,6 +143,13 @@ export default function QueensEkidenPage() {
               </Link>
             ))}
           </div>
+        </div>
+        {/* 関連リンク */}
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          <InternalRelatedLinks 
+            raceName="クイーンズ駅伝"
+            links={relatedLinks}
+          />
         </div>
       </main>
       <Footer />

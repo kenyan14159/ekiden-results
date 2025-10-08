@@ -37,11 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/information/operator-information',
   ]
 
-  // 年度別ページ（箱根駅伝の例 - 1920年から現在まで）
+  // 年度別ページ
   const currentYear = new Date().getFullYear()
   const yearUrls: string[] = []
   
-  // 箱根駅伝
+  // 箱根駅伝（1920年から、1944-1946年は中止）
   for (let year = 1920; year <= currentYear; year++) {
     if (![1944, 1945, 1946].includes(year)) {
       yearUrls.push(`/ekiden/hakone/${year}`)
@@ -61,6 +61,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // クイーンズ駅伝（1981年から）
   for (let year = 1981; year <= currentYear; year++) {
     yearUrls.push(`/ekiden/queens/${year}`)
+  }
+  
+  // 出雲駅伝（1989年から）
+  for (let year = 1989; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/izumo/${year}`)
+  }
+  
+  // 富士山女子駅伝（2006年から）
+  for (let year = 2006; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/fujisan/${year}`)
+  }
+  
+  // 杜の都駅伝（1983年から）
+  for (let year = 1983; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/morinomiyako/${year}`)
+  }
+  
+  // 都大路 男子（1950年から）
+  for (let year = 1950; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/miyakooji-men/${year}`)
+  }
+  
+  // 都大路 女子（1989年から）
+  for (let year = 1989; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/miyakooji-women/${year}`)
+  }
+  
+  // ひろしま駅伝（1996年から）
+  for (let year = 1996; year <= currentYear + 1; year++) {
+    yearUrls.push(`/ekiden/hiroshima/${year}`)
+  }
+  
+  // 都道府県対抗女子駅伝（1983年から）
+  for (let year = 1983; year <= currentYear + 1; year++) {
+    yearUrls.push(`/ekiden/prefecture-women/${year}`)
+  }
+  
+  // 全中男子駅伝（1993年から）
+  for (let year = 1993; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/junior-high-men/${year}`)
+  }
+  
+  // 全中女子駅伝（1993年から）
+  for (let year = 1993; year <= currentYear; year++) {
+    yearUrls.push(`/ekiden/junior-high-women/${year}`)
   }
 
   return [

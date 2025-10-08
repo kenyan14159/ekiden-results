@@ -2,6 +2,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { HakoneYearClient } from "./HakoneYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
+import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
@@ -50,35 +51,6 @@ export default async function HakoneYearPage({
     notFound()
   }
 
-  // 構造化データ (JSON-LD)
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'SportsEvent',
-    name: `${data.eventName} ${year}年 第${data.count || getHakoneCount(year)}回大会`,
-    description: `箱根駅伝 ${year}年大会の詳細結果`,
-    startDate: `${year}-01-02T08:00:00+09:00`,
-    endDate: `${year}-01-03T14:00:00+09:00`,
-    location: {
-      '@type': 'Place',
-      name: '東京・箱根間',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'JP',
-        addressRegion: '東京都・神奈川県',
-      },
-    },
-    organizer: {
-      '@type': 'Organization',
-      name: '関東学生陸上競技連盟',
-    },
-    ...(data.teams?.[0] && {
-      winner: {
-        '@type': 'Person',
-        name: data.teams[0].name,
-      },
-    }),
-  }
-
   // パンくずリスト
   const breadcrumbItems = [
     { name: 'ホーム', url: '/' },
@@ -90,9 +62,10 @@ export default async function HakoneYearPage({
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      <EventStructuredDataScript 
+        raceSlug="hakone" 
+        year={params.year} 
+        result={data}
       />
       <Header />
       <main className="flex-grow pt-20">

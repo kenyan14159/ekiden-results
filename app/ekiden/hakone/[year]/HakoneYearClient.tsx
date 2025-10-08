@@ -13,6 +13,8 @@ import { RaceOverviewSection } from "@/components/RaceOverviewSection"
 import { SportsEventStructuredData, ArticleStructuredData } from "@/components/EkidenStructuredData"
 import { SocialShareButtons } from "@/components/SocialShareButtons"
 import { RelatedLinks } from "@/components/RelatedLinks"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateYearDetailLinks } from "@/lib/internal-links"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
 import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
 import { Accordion } from "@/components/Accordion"
@@ -29,6 +31,9 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const router = useRouter()
+
+  // 関連リンクを生成
+  const relatedLinks = generateYearDetailLinks('hakone', year.toString())
 
   // スワイプナビゲーション用のヘルパー関数
   const getPrevYear = () => {
@@ -370,7 +375,14 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
               description={winner ? `優勝は${winner.name}。詳細な成績をチェック！` : undefined}
             />
 
-            {/* 関連リンク */}
+            {/* 内部関連リンク */}
+            <InternalRelatedLinks 
+              raceName="箱根駅伝"
+              currentYear={year.toString()}
+              links={relatedLinks}
+            />
+
+            {/* 外部関連リンク */}
             <RelatedLinks raceName="箱根駅伝" />
           </div>
         </TabPanel>

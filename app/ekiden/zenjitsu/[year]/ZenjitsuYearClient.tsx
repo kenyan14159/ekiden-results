@@ -10,6 +10,8 @@ import { ScrollToTop } from "@/components/ScrollToTop"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
 import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
 import { useRouter } from "next/navigation"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateYearDetailLinks } from "@/lib/internal-links"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface ZenjitsuYearClientProps {
@@ -23,6 +25,9 @@ export function ZenjitsuYearClient({ data, year }: ZenjitsuYearClientProps) {
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
   const router = useRouter()
+
+  // 関連リンクを生成
+  const relatedLinks = generateYearDetailLinks('zenjitsu', year.toString())
 
   const getPrevYear = () => year > 1970 ? year - 1 : null
   const getNextYear = () => {

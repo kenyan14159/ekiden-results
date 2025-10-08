@@ -11,6 +11,8 @@ import { YearNavigation } from "@/components/YearNavigation"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
 import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
 import { useRouter } from "next/navigation"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateYearDetailLinks } from "@/lib/internal-links"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface NewyearYearClientProps {
@@ -24,6 +26,9 @@ export function NewyearYearClient({ data, year }: NewyearYearClientProps) {
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
   const router = useRouter()
+
+  // 関連リンクを生成
+  const relatedLinks = generateYearDetailLinks('newyear', year.toString())
 
   const getPrevYear = () => year > 1988 ? year - 1 : null
   const getNextYear = () => {

@@ -2,10 +2,14 @@
 
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateRaceListLinks } from "@/lib/internal-links"
+import { RaceListStructuredDataScript } from "@/lib/event-structured-data"
 import Link from "next/link"
 import { juniorHighMenResults } from "@/data/juniorhigh-men-results"
 import { getPrefectureColor } from "@/data/prefecture-colors"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const decades = [
@@ -17,6 +21,19 @@ const decades = [
 
 export default function JuniorHighMenPage() {
   const [selectedDecade, setSelectedDecade] = useState<string | null>(null)
+  const [years, setYears] = useState<number[]>([])
+
+  const breadcrumbItems = [
+    { name: 'ホーム', url: '/' },
+    { name: '全中男子駅伝', url: '/ekiden/junior-high-men' }
+  ]
+  const relatedLinks = generateRaceListLinks('junior-high-men')
+
+  // クライアント側でyearsを生成
+  useEffect(() => {
+    setYears(juniorHighMenResults.map(result => result.year))
+  }, [])
+
 
   const filteredResults = selectedDecade
     ? juniorHighMenResults.filter(result => {
@@ -27,8 +44,15 @@ export default function JuniorHighMenPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      {years.length > 0 && (
+        <RaceListStructuredDataScript raceSlug="junior-high-men" years={years} />
+      )}
       <Header />
       <main className="flex-grow pt-20">
+        <div className="container mx-auto px-4 lg:px-8 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
         <div className="bg-gradient-to-br from-sky-50 via-white to-blue-50 border-b">
           <div className="container mx-auto px-4 lg:px-8 py-12">
             <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm">
@@ -131,6 +155,13 @@ export default function JuniorHighMenPage() {
               </div>
             ))}
           </div>
+        </div>
+        {/* 関連リンク */}
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          <InternalRelatedLinks 
+            raceName="全国中学校駅伝男子"
+            links={relatedLinks}
+          />
         </div>
       </main>
       <Footer />

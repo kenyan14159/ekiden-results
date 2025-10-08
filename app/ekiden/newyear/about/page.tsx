@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
 import Link from "next/link"
 import { generateRaceAboutMetadata } from '@/lib/metadata-utils'
 
@@ -51,10 +52,20 @@ const sectionFeatures = [
 ]
 
 export default function NewyearAboutPage() {
+  const breadcrumbItems = [
+    { name: 'ホーム', url: '/' },
+    { name: 'ニューイヤー駅伝', url: '/ekiden/newyear' },
+    { name: '大会概要', url: '/ekiden/newyear/about' }
+  ]
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow pt-20">
+        <div className="container mx-auto px-4 lg:px-8 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
         <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 border-b">
           <div className="container mx-auto px-4 lg:px-8 py-12">
             <Link

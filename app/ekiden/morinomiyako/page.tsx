@@ -2,10 +2,14 @@
 
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateRaceListLinks } from "@/lib/internal-links"
+import { RaceListStructuredDataScript } from "@/lib/event-structured-data"
 import Link from "next/link"
 import { morinomiyakoResults } from "@/data/morinomiyako-results"
 import { getUniversityColor } from "@/data/university-colors"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const decades = [
@@ -18,6 +22,19 @@ const decades = [
 
 export default function MorinomiyakoEkidenPage() {
   const [selectedDecade, setSelectedDecade] = useState<string | null>(null)
+  const [years, setYears] = useState<number[]>([])
+
+  const breadcrumbItems = [
+    { name: 'ホーム', url: '/' },
+    { name: '杜の都駅伝', url: '/ekiden/morinomiyako' }
+  ]
+  const relatedLinks = generateRaceListLinks('morinomiyako')
+
+  // クライアント側でyearsを生成
+  useEffect(() => {
+    setYears(morinomiyakoResults.map(result => result.year))
+  }, [])
+
 
   const filteredResults = selectedDecade
     ? morinomiyakoResults.filter(result => {
@@ -28,8 +45,15 @@ export default function MorinomiyakoEkidenPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      {years.length > 0 && (
+        <RaceListStructuredDataScript raceSlug="morinomiyako" years={years} />
+      )}
       <Header />
       <main className="flex-grow pt-20">
+        <div className="container mx-auto px-4 lg:px-8 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
         <div className="bg-gradient-to-br from-emerald-50 via-white to-green-50 border-b">
           <div className="container mx-auto px-4 lg:px-8 py-12">
             <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm">
@@ -115,6 +139,13 @@ export default function MorinomiyakoEkidenPage() {
               </Link>
             ))}
           </div>
+        </div>
+        {/* 関連リンク */}
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          <InternalRelatedLinks 
+            raceName="全国女子駅伝"
+            links={relatedLinks}
+          />
         </div>
       </main>
       <Footer />

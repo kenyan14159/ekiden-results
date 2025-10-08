@@ -2,6 +2,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { IzumoYearClient } from "./IzumoYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
+import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
@@ -79,6 +80,11 @@ export default async function IzumoYearPage({
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <BreadcrumbStructuredData items={breadcrumbItems} />
+      <EventStructuredDataScript 
+        raceSlug="izumo" 
+        year={params.year} 
+        result={data}
+      />
       <Header />
       <main className="flex-grow pt-20">
         <IzumoYearClient data={data} year={year} />

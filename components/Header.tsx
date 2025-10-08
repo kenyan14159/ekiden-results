@@ -62,6 +62,8 @@ export function Header() {
                 height={50}
                 className="rounded-lg"
                 priority
+                quality={85}
+                sizes="50px"
               />
             </motion.div>
             <div>

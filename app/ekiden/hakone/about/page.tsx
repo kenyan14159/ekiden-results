@@ -1,15 +1,26 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
 import Link from "next/link"
 import { generateRaceAboutMetadata } from '@/lib/metadata-utils'
 
 export const metadata = generateRaceAboutMetadata('hakone')
 
 export default function HakoneAboutPage() {
+  const breadcrumbItems = [
+    { name: 'ホーム', url: '/' },
+    { name: '箱根駅伝', url: '/ekiden/hakone' },
+    { name: '大会概要', url: '/ekiden/hakone/about' }
+  ]
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow pt-20">
+        <div className="container mx-auto px-4 lg:px-8 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        
         {/* ヘッダー */}
         <div className="bg-white border-b">
           <div className="container mx-auto px-4 lg:px-8 py-12">

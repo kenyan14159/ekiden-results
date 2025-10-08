@@ -2,6 +2,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { MorinomiyakoYearClient } from "./MorinomiyakoYearClient"
 import { BreadcrumbStructuredData } from "@/components/BreadcrumbStructuredData"
+import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
@@ -96,36 +97,7 @@ export default async function MorinomiyakoYearPage({
     notFound()
   }
 
-  // 構造化データ (JSON-LD)
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'SportsEvent',
-    name: `${data.eventName}`,
-    description: `杜の都駅伝 ${year}年大会の詳細結果`,
-    startDate: `${year}-12-30T10:00:00+09:00`,
-    endDate: `${year}-12-30T13:00:00+09:00`,
-    location: {
-      '@type': 'Place',
-      name: '静岡県富士市',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'JP',
-        addressRegion: '静岡県',
-      },
-    },
-    organizer: {
-      '@type': 'Organization',
-      name: '富士市',
-    },
-    ...(data.teams?.[0] && {
-      winner: {
-        '@type': 'Person',
-        name: data.teams[0].name,
-      },
-    }),
-  }
-
-  // パンくずリスト
+    // パンくずリスト
   const breadcrumbItems = [
     { name: 'ホーム', url: '/' },
     { name: '大学駅伝', url: '/#university' },
@@ -136,9 +108,10 @@ export default async function MorinomiyakoYearPage({
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      <EventStructuredDataScript 
+        raceSlug="morinomiyako" 
+        year={params.year} 
+        result={data}
       />
       <Header />
       <main className="flex-grow pt-20">

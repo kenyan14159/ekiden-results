@@ -13,6 +13,8 @@ import { ResponsiveTable } from "@/components/ResponsiveTable"
 import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
 import { Accordion } from "@/components/Accordion"
 import { useRouter } from "next/navigation"
+import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
+import { generateYearDetailLinks } from "@/lib/internal-links"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface PrefectureWomenYearClientProps {
@@ -26,6 +28,9 @@ export function PrefectureWomenYearClient({ data, year }: PrefectureWomenYearCli
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
   const router = useRouter()
+
+  // 関連リンクを生成
+  const relatedLinks = generateYearDetailLinks('prefecture-women', year.toString())
 
   const getPrevYear = () => year > 1983 ? year - 1 : null
   const getNextYear = () => {
