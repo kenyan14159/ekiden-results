@@ -2,6 +2,8 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { notFound } from 'next/navigation'
 import { ZenjitsuYearClient } from "./ZenjitsuYearClient"
+import { Metadata } from 'next'
+import { generateRaceYearMetadata } from '@/lib/metadata-utils'
 
 interface ZenjitsuData {
   eventName: string
@@ -10,6 +12,27 @@ interface ZenjitsuData {
   config?: {
     sections: number
   }
+}
+
+// 動的メタデータ生成
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { year: string } 
+}): Promise<Metadata> {
+  const year = parseInt(params.year)
+  let winner = ''
+  
+  try {
+    const data = await fetchZenjitsuData(params.year)
+    const topTeam = data?.teams?.find((t: any) => t.rank === 1)
+    winner = topTeam ? topTeam.name : ''
+  } catch (error) {
+    console.error('メタデータ生成エラー:', error)
+  }
+
+  // ユーティリティ関数を使用してメタデータ生成（SEO最適化済み）
+  return generateRaceYearMetadata('zenjitsu', year, winner)
 }
 
 // Server Component: データフェッチはサーバーサイドで

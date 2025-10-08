@@ -6,6 +6,7 @@ import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
+import { generateRaceYearMetadata } from '@/lib/metadata-utils'
 
 // 動的メタデータ生成
 export async function generateMetadata({ 
@@ -13,68 +14,19 @@ export async function generateMetadata({
 }: { 
   params: { year: string } 
 }): Promise<Metadata> {
-  const year = params.year
-  
-  // データを取得して優勝校を特定
+  const year = parseInt(params.year)
   let winner = ''
   
   try {
-    const data = await fetchMorinomiyakoData(year)
+    const data = await fetchMorinomiyakoData(params.year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `杜の都駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `杜の都駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
-
-  return {
-    title,
-    description,
-    keywords: [
-      '杜の都駅伝',
-      `杜の都駅伝${year}`,
-      winner,
-      '杜の都駅伝結果',
-      '全日本大学女子駅伝',
-      '大学駅伝',
-      '女子駅伝'
-    ].filter(Boolean),
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime: `${year}-12-30T10:00:00+09:00`,
-      modifiedTime: new Date().toISOString(),
-      authors: ['駅伝リザルト'],
-      section: '大学駅伝',
-      tags: ['杜の都駅伝', `${year}年`, '大学駅伝', winner].filter(Boolean),
-      url: `https://ekiden-results.com/ekiden/morinomiyako/${year}`,
-      siteName: '駅伝リザルト',
-      locale: 'ja_JP',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      site: '@ekiden_results',
-      title,
-      description,
-    },
-    alternates: {
-      canonical: `https://ekiden-results.com/ekiden/morinomiyako/${year}`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-  }
+  // ユーティリティ関数を使用してメタデータ生成（SEO最適化済み）
+  return generateRaceYearMetadata('morinomiyako', year, winner)
 }
 
 // Server Component: データフェッチはサーバーサイドで

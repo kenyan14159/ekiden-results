@@ -6,37 +6,26 @@ import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
+import { generateRaceYearMetadata } from '@/lib/metadata-utils'
 
 export async function generateMetadata({ 
   params 
 }: { 
   params: { year: string } 
 }): Promise<Metadata> {
-  const year = params.year
+  const year = parseInt(params.year)
   let winner = ''
   
   try {
-    const data = await fetchHiroshimaData(year)
+    const data = await fetchHiroshimaData(params.year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `ひろしま駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `ひろしま駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}都道府県別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
-
-  return {
-    title,
-    description,
-    keywords: [
-      'ひろしま駅伝',
-      `ひろしま駅伝${year}`,
-      winner,
-      '全国都道府県対抗男子駅伝競走大会',
-      '都道府県駅伝'
-    ].filter(Boolean),
-  }
+  // ユーティリティ関数を使用してメタデータ生成（SEO最適化済み）
+  return generateRaceYearMetadata('hiroshima', year, winner)
 }
 
 export default async function HiroshimaYearPage({ 

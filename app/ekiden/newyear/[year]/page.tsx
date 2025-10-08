@@ -6,37 +6,26 @@ import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
+import { generateRaceYearMetadata } from '@/lib/metadata-utils'
 
 export async function generateMetadata({ 
   params 
 }: { 
   params: { year: string } 
 }): Promise<Metadata> {
-  const year = params.year
+  const year = parseInt(params.year)
   let winner = ''
   
   try {
-    const data = await fetchNewyearData(year)
+    const data = await fetchNewyearData(params.year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `ニューイヤー駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `ニューイヤー駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
-
-  return {
-    title,
-    description,
-    keywords: [
-      'ニューイヤー駅伝',
-      `ニューイヤー駅伝${year}`,
-      winner,
-      '全日本実業団対抗駅伝競走大会',
-      '実業団駅伝'
-    ].filter(Boolean),
-  }
+  // ユーティリティ関数を使用してメタデータ生成（SEO最適化済み）
+  return generateRaceYearMetadata('newyear', year, winner)
 }
 
 export default async function NewyearYearPage({ 

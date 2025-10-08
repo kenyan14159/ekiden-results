@@ -6,50 +6,26 @@ import { EventStructuredDataScript } from "@/lib/event-structured-data"
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import type { EkidenData } from "@/types/ekiden"
+import { generateRaceYearMetadata } from '@/lib/metadata-utils'
 
 export async function generateMetadata({ 
   params 
 }: { 
   params: { year: string } 
 }): Promise<Metadata> {
-  const year = params.year
+  const year = parseInt(params.year)
   let winner = ''
   
   try {
-    const data = await fetchIzumoData(year)
+    const data = await fetchIzumoData(params.year)
     const topTeam = data?.teams?.find((t) => t.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
   }
 
-  const title = `出雲駅伝 ${year}年 結果${winner ? ` - ${winner}優勝` : ''} | 駅伝リザルト`
-  const description = `出雲駅伝 ${year}年の詳細な結果。${winner ? `優勝は${winner}。` : ''}チーム別成績、区間別成績、選手別記録、統計データを網羅的に掲載。`
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      url: `https://ekiden-results.com/ekiden/izumo/${year}`,
-      siteName: '駅伝リザルト',
-      locale: 'ja_JP',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-    },
-    alternates: {
-      canonical: `https://ekiden-results.com/ekiden/izumo/${year}`,
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  }
+  // ユーティリティ関数を使用してメタデータ生成(SEO最適化済み)
+  return generateRaceYearMetadata('izumo', year, winner)
 }
 
 export default async function IzumoYearPage({ 
