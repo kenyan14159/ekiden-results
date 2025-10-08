@@ -1,6 +1,9 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import Link from "next/link"
+import { generateRaceAboutMetadata } from '@/lib/metadata-utils'
+
+export const metadata = generateRaceAboutMetadata('fujisan')
 
 const sectionFeatures = [
   {

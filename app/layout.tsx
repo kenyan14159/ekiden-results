@@ -31,6 +31,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ekiden-results.com'),
   title: "駅伝リザルト | 全国駅伝大会の結果一覧",
   description: "箱根駅伝、ニューイヤー駅伝、クイーンズ駅伝など、実業団駅伝、大学駅伝、高校駅伝、中学駅伝の結果をまとめたサイトです。最新の大会情報を分かりやすく掲載。",
   authors: [{ name: "駅伝リザルト" }],
