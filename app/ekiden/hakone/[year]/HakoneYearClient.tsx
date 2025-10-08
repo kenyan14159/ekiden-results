@@ -184,8 +184,10 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
               </svg>
               箱根駅伝 歴代結果に戻る
             </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName} {year}</h1>
-          {data.count && <p className="text-md text-gray-600">第{data.count}回大会</p>}
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+              箱根駅伝{year}結果速報 | 区間記録・{winner?.name ? `優勝${winner.name}・` : ''}成績一覧
+            </h1>
+            {data.count && <p className="text-md text-gray-600">第{data.count}回大会</p>}
         </div>
       </div>
 
