@@ -24,37 +24,8 @@
       { "rank": 12, "name": "大日本紡績", "federation": "", "totalTime": "5:02:15", "runners": [{ "section": 1, "dist": "16.1km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 2, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 3, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 4, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 7, "dist": "16.4km", "time": "", "name": "", "rank": null, "isNewRecord": false }] },
       { "rank": 13, "name": "住友金属", "federation": "", "totalTime": "5:06:13", "runners": [{ "section": 1, "dist": "16.1km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 2, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 3, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 4, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 7, "dist": "16.4km", "time": "", "name": "", "rank": null, "isNewRecord": false }] },
       { "rank": 14, "name": "電電近畿", "federation": "", "totalTime": "5:24:35", "runners": [{ "section": 1, "dist": "16.1km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 2, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 3, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 4, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 7, "dist": "16.4km", "time": "", "name": "", "rank": null, "isNewRecord": false }] },
+      { "rank": 14, "name": "電電近畿", "federation": "", "totalTime": "5:24:35", "runners": [{ "section": 1, "dist": "16.1km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 2, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 3, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 4, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 7, "dist": "16.4km", "time": "", "name": "", "rank": null, "isNewRecord": false }] },
       { "rank": 15, "name": "センサント化成", "federation": "", "totalTime": "5:41:17", "runners": [{ "section": 1, "dist": "16.1km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 2, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 3, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 4, "dist": "10.0km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "", "name": "", "rank": null, "isNewRecord": false }, { "section": 7, "dist": "16.4km", "time": "", "name": "", "rank": null, "isNewRecord": false }] }
-    ],
-    "rankProgression": []
-}
-
-{
-    "config": {
-      "type": "corporate",
-      "term": { "singular": "チーム", "plural": "チーム" },
-      "sections": 7,
-      "hasHalfway": false,
-      "showGrade": false,
-      "specialTeams": []
-    },
-    "eventName": "第1回実業団駅伝",
-    "year": 1957,
-    "teams": [
-      { "rank": 1, "name": "八幡製鐵", "totalTime": "4:27:58", "runners": [{ "section": 2, "dist": "15.65km", "time": "0:49:38", "name": "高橋　進", "rank": 1, "isNewRecord": false }, { "section": 3, "dist": "10.00km", "time": "0:32:45", "name": "代本丈春", "rank": 1, "isNewRecord": false }, { "section": 5, "dist": "15.65km", "time": "0:51:00", "name": "三村清登", "rank": 1, "isNewRecord": false }, { "section": 6, "dist": "8.05km", "time": "0:25:25", "name": "岡山典朗", "rank": 1, "isNewRecord": false }, { "section": 7, "dist": "8.05km", "time": "0:24:42", "name": "室矢芳隆", "rank": 1, "isNewRecord": false }] },
-      { "rank": 2, "name": "旭化成", "totalTime": "4:32:11", "runners": [{ "section": 4, "dist": "10.00km", "time": "0:33:01", "name": "小野憲也", "rank": 1, "isNewRecord": false }] },
-      { "rank": 3, "name": "国鉄", "totalTime": "4:37:11", "runners": [] },
-      { "rank": 4, "name": "全鐘紡", "totalTime": "4:37:31", "runners": [] },
-      { "rank": 5, "name": "富士製鉄", "totalTime": "4:38:06", "runners": [{ "section": 1, "dist": "16.10km", "time": "0:51:16", "name": "井上　治", "rank": 1, "isNewRecord": false }] },
-      { "rank": 6, "name": "東洋ベアリング", "totalTime": "4:39:39", "runners": [] },
-      { "rank": 7, "name": "倉敷レーヨン", "totalTime": "4:41:46", "runners": [] },
-      { "rank": 8, "name": "中央発條", "totalTime": "4:47:48", "runners": [] },
-      { "rank": 9, "name": "神戸製鋼", "totalTime": "4:50:28", "runners": [] },
-      { "rank": 10, "name": "大阪ガス", "totalTime": "4:53:57", "runners": [] },
-      { "rank": 11, "name": "大日本紡績", "totalTime": "4:54:07", "runners": [] },
-      { "rank": 12, "name": "石野染工", "totalTime": "4:57:18", "runners": [] },
-      { "rank": 13, "name": "住友金属", "totalTime": "5:04:54", "runners": [] },
-      { "rank": 14, "name": "電電近畿", "totalTime": "5:15:06", "runners": [] }
     ],
     "rankProgression": []
 }

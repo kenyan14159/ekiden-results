@@ -1,0 +1,787 @@
+
+> ekiden-results@1.0.0 build
+> node scripts/generate-articles.js && next build
+
+✅ Generated 2 articles to /Users/shotaro/Webサイト/EKIDEN/public/articles.json
+  ▲ Next.js 14.2.33
+  - Experiments (use with caution):
+    · optimizeCss
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+ ⚠ Using edge runtime on a page currently disables static generation for that page
+   Generating static pages (0/574) ...
+
+Error occurred prerendering page "/404". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Cannot find module 'critters'
+Require stack:
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/compiled/next-server/pages.runtime.prod.js
+- /Users/shotaro/Webサイト/EKIDEN/.next/server/pages/_document.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/load-components.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/build/utils.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/build/worker.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+
+Error occurred prerendering page "/500". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Cannot find module 'critters'
+Require stack:
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/compiled/next-server/pages.runtime.prod.js
+- /Users/shotaro/Webサイト/EKIDEN/.next/server/pages/_document.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/load-components.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/build/utils.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/build/worker.js
+- /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/shotaro/Webサイト/EKIDEN/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+ひろしま駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:16265)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:15566) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+}
+ひろしま駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:16265)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:15367) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+}
+ひろしま駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:16265)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:15566) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+}
+ひろしま駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:16265)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/hiroshima/[year]/page.js:1:15367) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/boys/2026.json'
+}
+富士山女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:16362)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:15666) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+}
+富士山女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:16362)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:15469) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+}
+富士山女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:16362)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:15666) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+}
+富士山女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:16362)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/fujisan/[year]/page.js:1:15469) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/fujisan/2025.json'
+}
+   Generating static pages (143/574) 
+都大路 男子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:21371) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+}
+都大路 男子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:20986) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+}
+都大路 男子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:21371) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+}
+都大路 男子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:20986) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2026.json'
+}
+都大路 男子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:21371) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+}
+都大路 男子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:20986) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+}
+都大路 男子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:21371) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+}
+都大路 男子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:22081)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-men/[year]/page.js:1:20986) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/boys/2025.json'
+}
+全国中学女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14140) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+}
+全国中学女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:13748) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+}
+全国中学女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14140) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+}
+全国中学女子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:13748) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2025.json'
+}
+全国中学女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14140) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+}
+全国中学女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:13748) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+}
+全国中学女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14140) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+}
+全国中学女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:14867)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-women/[year]/page.js:1:13748) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/girls/2026.json'
+}
+   Generating static pages (286/574) 
+都大路 女子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14206) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+}
+都大路 女子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:13821) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+}
+都大路 女子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14206) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+}
+都大路 女子 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:13821) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2025.json'
+}
+都大路 女子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14206) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+}
+都大路 女子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:13821) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+}
+都大路 女子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14206) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+}
+都大路 女子 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:14923)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/miyakooji-women/[year]/page.js:1:13821) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/highschool/girls/2026.json'
+}
+出雲駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:21468)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:20783) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+}
+出雲駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:21468)
+    at async Module.x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:20588) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+}
+出雲駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:21468)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:20783) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+}
+出雲駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:21468)
+    at async Module.x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/izumo/[year]/page.js:1:20588) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/izumo/2025.json'
+}
+男女混合駅伝 2024年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2552) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+}
+男女混合駅伝 2024年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2177) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+}
+男女混合駅伝 2024年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2552) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+}
+男女混合駅伝 2024年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2177) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2024.json'
+}
+男女混合駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2552) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+}
+男女混合駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2177) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+}
+男女混合駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2552) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+}
+男女混合駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:3166)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/mixed-gender/[year]/page.js:12:2177) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/data/university/mixed-gender/2025.json'
+}
+クイーンズ駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:20667)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:19976) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+}
+クイーンズ駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:20667)
+    at async Module.u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:19780) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+}
+クイーンズ駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:20667)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:19976) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+}
+クイーンズ駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:20667)
+    at async Module.u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/queens/[year]/page.js:1:19780) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/queens/2025.json'
+}
+   Generating static pages (430/574) 
+ニューイヤー駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:24380)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:23684) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+}
+ニューイヤー駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:24380)
+    at async Module.u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:23487) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+}
+ニューイヤー駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:24380)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:23684) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+}
+ニューイヤー駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:24380)
+    at async Module.u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/newyear/[year]/page.js:1:23487) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/corporate/newyear/2026.json'
+}
+都道府県対抗女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:21251)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:20526) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+}
+都道府県対抗女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:21251)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:20121) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+}
+都道府県対抗女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:21251)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:20526) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+}
+都道府県対抗女子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:21251)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/prefecture-women/[year]/page.js:1:20121) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/prefectures/girls/2026.json'
+}
+全日本大学駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3699)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3218) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+}
+全日本大学駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3699)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3020) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+}
+全日本大学駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3699)
+    at async c (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3218) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+}
+全日本大学駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async x (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3699)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/zenjitsu/[year]/page.js:12:3020) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/all-japan/2025.json'
+}
+杜の都駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:16446)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:15732) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+}
+杜の都駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:16446)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:15530) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+}
+杜の都駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:16446)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:15732) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+}
+杜の都駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async h (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:16446)
+    at async Module.m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/morinomiyako/[year]/page.js:1:15530) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/university/morinomiyako/2025.json'
+}
+全国中学男子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14116) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+}
+全国中学男子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:13724) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+}
+全国中学男子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14116) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+}
+全国中学男子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14116) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+}
+全国中学男子駅伝 2025年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:13724) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2025.json'
+}
+全国中学男子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:13724) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+}
+全国中学男子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async m (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14116) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+}
+全国中学男子駅伝 2026年のデータ読み込みエラー: Error: ENOENT: no such file or directory, open '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async Module.readFile (node:internal/fs/promises:1277:14)
+    at async u (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:14836)
+    at async Module.d (/Users/shotaro/Webサイト/EKIDEN/.next/server/app/ekiden/junior-high-men/[year]/page.js:1:13724) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shotaro/Webサイト/EKIDEN/public/data/junior-high/boys/2026.json'
+}
+ ✓ Generating static pages (574/574)
+
+> Export encountered errors on following paths:
+	/_error: /404
+	/_error: /500
