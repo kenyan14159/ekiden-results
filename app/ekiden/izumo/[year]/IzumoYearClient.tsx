@@ -149,7 +149,9 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
               </svg>
               出雲駅伝 歴代結果に戻る
             </Link>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{data.eventName}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+              出雲駅伝{year}結果速報 | 区間記録・{data.teams?.[0]?.name ? `優勝${data.teams[0].name}・` : ''}成績一覧
+            </h1>
           </div>
         </div>
 
