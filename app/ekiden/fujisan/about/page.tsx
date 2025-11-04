@@ -62,36 +62,36 @@ export default function FujisanAboutPage() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow pt-20">
-        <div className="container mx-auto px-4 lg:px-8 pt-6">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 pt-3 sm:pt-6">
           <Breadcrumb items={breadcrumbItems} />
         </div>
         
         <div className="bg-gradient-to-br from-purple-50 via-white to-pink-50 border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-12">
-            <Link href="/ekiden/fujisan" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
+            <Link href="/ekiden/fujisan" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               富士山女子駅伝 歴代結果に戻る
             </Link>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
               富士山女子駅伝 区間特徴
             </h1>
-            <p className="text-lg text-gray-600 mb-4">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4">
               富士山麓の過酷な高低差174m、7区間43.4km。女子大学駅伝最大の難関コース。
             </p>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {sectionFeatures.map((section, index) => (
               <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-purple-100 text-purple-800">
                   {section.num} ({section.distance})
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{section.title}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">{section.title}</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">{section.description}</p>
               </div>
             ))}

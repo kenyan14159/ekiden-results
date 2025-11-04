@@ -125,3 +125,25 @@ export function formatTimeDifference(diffSeconds: number): string {
   return `${sign}${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
 }
 
+/**
+ * タイム表示を整形（1時間未満の場合、先頭の0:を削除）
+ * 例: "0:29:22" → "29:22", "0:08:04" → "8:04", "1:02:30" → "1:02:30"
+ */
+export function formatDisplayTime(time: string | undefined | null): string {
+  if (!time) return '-'
+  
+  // タイムが "0:" で始まる場合、先頭の "0:" を削除
+  if (time.startsWith('0:')) {
+    // "0:08:04" → "08:04" → "8:04" のように、分の先頭の0も削除
+    const withoutHour = time.substring(2)
+    const parts = withoutHour.split(':')
+    if (parts.length === 2) {
+      const minutes = parseInt(parts[0], 10)
+      return `${minutes}:${parts[1]}`
+    }
+    return withoutHour
+  }
+  
+  return time
+}
+

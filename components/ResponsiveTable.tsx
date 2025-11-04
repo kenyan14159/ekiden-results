@@ -93,21 +93,21 @@ export function ResponsiveTable({ headers, rows, mobileCardView = true }: Respon
       </div>
 
       {/* モバイル表示（カード形式） */}
-      <div className="md:hidden space-y-3">
+      <div className="md:hidden space-y-2">
         {rows.map((row, rowIndex) => {
           const isExpanded = expandedRows.has(rowIndex)
           return (
             <div
               key={rowIndex}
-              className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm"
             >
               <button
                 onClick={() => toggleRow(rowIndex)}
-                className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors touch-manipulation"
-                style={{ minHeight: '60px' }} // タッチ領域確保
+                className="w-full p-3 flex items-center justify-between hover:bg-gray-50 transition-colors touch-manipulation active:bg-gray-100"
+                style={{ minHeight: '56px' }}
               >
-                <div className="flex items-center gap-3 flex-1 text-left">
-                  <div className="font-semibold text-gray-900">{row[0]}</div>
+                <div className="flex items-center gap-2 flex-1 text-left overflow-hidden">
+                  <div className="font-medium text-gray-900 text-sm truncate">{row[0]}</div>
                 </div>
                 {isExpanded ? (
                   <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0" />
@@ -117,13 +117,13 @@ export function ResponsiveTable({ headers, rows, mobileCardView = true }: Respon
               </button>
 
               {isExpanded && (
-                <div className="px-4 pb-4 space-y-3 border-t border-gray-100">
+                <div className="px-3 pb-3 space-y-2 border-t border-gray-100 bg-gray-50/30">
                   {row.slice(1).map((cell, cellIndex) => (
-                    <div key={cellIndex} className="flex justify-between items-start py-2">
-                      <span className="text-sm font-medium text-gray-600">
+                    <div key={cellIndex} className="flex justify-between items-start py-1.5 gap-3">
+                      <span className="text-xs font-medium text-gray-600 flex-shrink-0">
                         {headers[cellIndex + 1]}
                       </span>
-                      <span className="text-sm text-gray-900 text-right ml-4">
+                      <span className="text-xs text-gray-900 text-right break-words">
                         {cell}
                       </span>
                     </div>

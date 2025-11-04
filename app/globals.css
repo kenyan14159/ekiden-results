@@ -126,5 +126,22 @@
   .fade-in {
     animation: fadeIn 0.3s ease-in-out;
   }
+  
+  /* スクロールバーを隠す（モバイル向け） */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* 水平スクロール最適化 */
+  .scroll-smooth-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
 }
 

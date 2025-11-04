@@ -34,7 +34,7 @@ const nextConfig = {
   
   // 実験的機能の有効化（パフォーマンス向上）
   experimental: {
-    optimizeCss: true, // CSS最適化
+    // optimizeCss: true, // CSS最適化 - 一時的に無効化（crittersモジュールの問題）
     optimizePackageImports: ['framer-motion', 'lucide-react'], // パッケージの最適化
   },
   

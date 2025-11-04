@@ -110,15 +110,23 @@ function getHakoneCount(year: number): number {
 
 // 静的パスの生成（ビルド時に全ページを生成）
 export async function generateStaticParams() {
-  // 1920年から現在までの箱根駅伝
-  const currentYear = new Date().getFullYear()
   const years: string[] = []
   
-  for (let year = 1920; year <= currentYear; year++) {
-    // 中止年を除く
-    if (![1944, 1945, 1946].includes(year)) {
-      years.push(year.toString())
+  try {
+    const fs = await import('fs/promises')
+    const path = await import('path')
+    
+    const dataDir = path.join(process.cwd(), 'public', 'data', 'university', 'hakone')
+    const files = await fs.readdir(dataDir)
+    
+    // .json ファイルのみを抽出し、拡張子を除去
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        years.push(file.replace('.json', ''))
+      }
     }
+  } catch (error) {
+    console.error('generateStaticParams エラー:', error)
   }
   
   return years.map((year) => ({

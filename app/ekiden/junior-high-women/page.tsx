@@ -49,14 +49,14 @@ export default function JuniorHighWomenPage() {
       )}
       <Header />
       <main className="flex-grow pt-20">
-        <div className="container mx-auto px-4 lg:px-8 pt-6">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 pt-3 sm:pt-6">
           <Breadcrumb items={breadcrumbItems} />
         </div>
         
         <div className="bg-gradient-to-br from-pink-50 via-white to-fuchsia-50 border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-12">
-            <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
+            <Link href="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm">
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               トップページに戻る
@@ -65,7 +65,7 @@ export default function JuniorHighWomenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2"
             >
               全国中学女子駅伝
             </motion.h1>
@@ -73,7 +73,7 @@ export default function JuniorHighWomenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-lg text-gray-600 mb-1"
+              className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1"
             >
               全国中学校駅伝大会 女子
             </motion.p>
@@ -81,7 +81,7 @@ export default function JuniorHighWomenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm text-gray-500"
+              className="text-xs sm:text-sm text-gray-500"
             >
               毎年12月開催 | 5区間 12.0km（滋賀県/山口県/千葉県/熊本県）
             </motion.p>
@@ -89,61 +89,61 @@ export default function JuniorHighWomenPage() {
         </div>
 
         <div className="bg-white border-b sticky top-20 z-10">
-          <div className="container mx-auto px-4 lg:px-8 py-4">
-            <div className="flex items-center gap-2 overflow-x-auto">
-              <button onClick={() => setSelectedDecade(null)} className={`px-4 py-2 text-sm whitespace-nowrap border rounded ${selectedDecade === null ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}>全て</button>
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-3 lg:py-4">
+            <div className="flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-hide">
+              <button onClick={() => setSelectedDecade(null)} className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 text-xs sm:text-sm whitespace-nowrap border rounded touch-manipulation ${selectedDecade === null ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}>全て</button>
               {decades.map(decade => (
-                <button key={decade.label} onClick={() => setSelectedDecade(decade.label)} className={`px-4 py-2 text-sm whitespace-nowrap border rounded ${selectedDecade === decade.label ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}>{decade.label}</button>
+                <button key={decade.label} onClick={() => setSelectedDecade(decade.label)} className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 text-xs sm:text-sm whitespace-nowrap border rounded touch-manipulation ${selectedDecade === decade.label ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}>{decade.label}</button>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <div className="space-y-2">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
+          <div className="space-y-2 sm:space-y-3">
             {filteredResults.map((result) => (
               <div key={result.year}>
                 {result.canceled ? (
-                  <div className="bg-white border border-gray-200 rounded p-4">
-                    <div className="flex items-center gap-4">
-                      <div className="text-center min-w-[60px]">
-                        <p className="text-2xl font-bold text-gray-900">{result.year}</p>
+                  <div className="bg-white border border-gray-200 rounded p-3 sm:p-4">
+                    <div className="flex items-center gap-2 sm:gap-3 sm:gap-4">
+                      <div className="text-center min-w-[50px] sm:min-w-[60px]">
+                        <p className="text-xl sm:text-2xl font-bold text-gray-900">{result.year}</p>
                         <p className="text-xs text-gray-500">年</p>
                       </div>
-                      <div className="h-10 w-px bg-gray-200"></div>
-                      <div><p className="text-lg font-medium text-gray-400">{result.text}</p></div>
+                      <div className="h-8 sm:h-10 w-px bg-gray-200"></div>
+                      <div><p className="text-sm sm:text-base lg:text-lg font-medium text-gray-400">{result.text}</p></div>
                     </div>
                   </div>
                 ) : (
                   <Link href={`/ekiden/junior-high-women/${result.year}`}>
-                    <div className="bg-white border border-gray-200 rounded p-4 hover:bg-gray-50">
-                      <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-                        <div className="flex items-center gap-4 min-w-fit">
-                          <div className="text-center min-w-[50px]">
+                    <div className="bg-white border border-gray-200 rounded p-3 sm:p-4 hover:bg-gray-50 touch-manipulation active:bg-gray-100">
+                      <div className="flex flex-col lg:flex-row lg:items-center gap-2 sm:gap-3 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-3 sm:gap-4 min-w-fit">
+                          <div className="text-center min-w-[40px] sm:min-w-[50px]">
                             <p className="text-xs text-gray-500">第</p>
-                            <p className="text-xl font-bold text-gray-900">{result.count}</p>
+                            <p className="text-lg sm:text-xl font-bold text-gray-900">{result.count}</p>
                             <p className="text-xs text-gray-500">回</p>
                           </div>
-                          <div className="text-center min-w-[60px]">
-                            <p className="text-2xl font-bold text-gray-900">{result.year}</p>
+                          <div className="text-center min-w-[50px] sm:min-w-[60px]">
+                            <p className="text-xl sm:text-2xl font-bold text-gray-900">{result.year}</p>
                             <p className="text-xs text-gray-500">年</p>
                           </div>
                           {result.venue && (
-                            <div className="text-center min-w-[50px]">
+                            <div className="text-center min-w-[40px] sm:min-w-[50px]">
                               <p className="text-xs text-gray-400 px-2 py-1 bg-gray-100 rounded">{result.venue}</p>
                             </div>
                           )}
                         </div>
                         <div className="h-px lg:h-12 lg:w-px bg-gray-200"></div>
-                        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3">
                           {result.teams?.map((team, teamIndex) => {
                             const color = getPrefectureColor(team.prefecture)
                             const rank = teamIndex + 1
                             return (
-                              <div key={teamIndex} className="flex items-center gap-3">
-                                <div className="flex items-center justify-center w-8 h-8 rounded text-white font-bold text-sm flex-shrink-0" style={{ backgroundColor: color }}>{rank}</div>
+                              <div key={teamIndex} className="flex items-center gap-2 sm:gap-3">
+                                <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded text-white font-bold text-xs sm:text-sm flex-shrink-0" style={{ backgroundColor: color }}>{rank}</div>
                                 <div className="flex-1 min-w-0">
-                                  <p className="font-medium text-gray-900 text-sm truncate">{team.school}</p>
+                                  <p className="font-medium text-gray-900 text-xs sm:text-sm truncate">{team.school}</p>
                                   <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5">
                                     <span className="px-1.5 py-0.5 rounded bg-gray-100">{team.prefecture}</span>
                                     <span>{result.times?.[teamIndex]}</span>
@@ -162,7 +162,7 @@ export default function JuniorHighWomenPage() {
           </div>
         </div>
         {/* 関連リンク */}
-        <div className="container mx-auto px-4 lg:px-8 py-8">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
           <InternalRelatedLinks 
             raceName="全国中学校駅伝女子"
             links={relatedLinks}

@@ -56,19 +56,19 @@ export default function HakoneEkidenPage() {
       )}
       <Header />
       <main className="flex-grow pt-20">
-        <div className="container mx-auto px-4 lg:px-8 pt-6">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 pt-3 sm:pt-6">
           <Breadcrumb items={breadcrumbItems} />
         </div>
         
         {/* ヘッダー */}
         <div className="bg-gradient-to-br from-purple-50 via-white to-violet-50 border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-12">
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
             <Link 
               href="/" 
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm"
             >
               <svg
-                className="w-4 h-4 mr-2"
+                className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ export default function HakoneEkidenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2"
             >
               箱根駅伝
             </motion.h1>
@@ -95,7 +95,7 @@ export default function HakoneEkidenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-lg text-gray-600 mb-1"
+              className="text-sm sm:text-base lg:text-lg text-gray-600 mb-1"
             >
               東京箱根間往復大学駅伝競走
             </motion.p>
@@ -103,30 +103,30 @@ export default function HakoneEkidenPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm text-gray-500 mb-4"
+              className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4"
             >
               毎年1月2日・3日開催 | 往復10区間 217.1km
             </motion.p>
             
             <Link 
               href="/ekiden/hakone/about" 
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700"
+              className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-600 text-white text-xs sm:text-sm font-medium rounded hover:bg-blue-700 touch-manipulation"
             >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              箱根駅伝 区間特徴を見る
+              <span className="hidden sm:inline">箱根駅伝 </span>区間特徴を見る
             </Link>
           </div>
         </div>
 
         {/* 年代別フィルター */}
         <div className="bg-white border-b sticky top-20 z-10">
-          <div className="container mx-auto px-4 lg:px-8 py-4">
-            <div className="flex items-center gap-2 overflow-x-auto">
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-2 sm:py-3 lg:py-4">
+            <div className="flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-hide">
               <button
                 onClick={() => setSelectedDecade(null)}
-                className={`px-4 py-2 text-sm whitespace-nowrap border rounded ${
+                className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 text-xs sm:text-sm whitespace-nowrap border rounded touch-manipulation ${
                   selectedDecade === null
                     ? 'bg-gray-900 text-white border-gray-900'
                     : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
@@ -138,7 +138,7 @@ export default function HakoneEkidenPage() {
                 <button
                   key={decade.label}
                   onClick={() => setSelectedDecade(decade.label)}
-                  className={`px-4 py-2 text-sm whitespace-nowrap border rounded ${
+                  className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 text-xs sm:text-sm whitespace-nowrap border rounded touch-manipulation ${
                     selectedDecade === decade.label
                       ? 'bg-gray-900 text-white border-gray-900'
                       : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
@@ -152,36 +152,36 @@ export default function HakoneEkidenPage() {
         </div>
 
         {/* 大会結果一覧 */}
-        <div className="container mx-auto px-4 lg:px-8 py-8">
-          <div className="space-y-2">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8">
+          <div className="space-y-2 sm:space-y-3">
             {filteredResults.map((result) => (
               <div key={result.year}>
                 {result.canceled ? (
-                  <div className="bg-white border border-gray-200 rounded p-4">
-                    <div className="flex items-center gap-4">
-                      <div className="text-center min-w-[60px]">
-                        <p className="text-2xl font-bold text-gray-900">{result.year}</p>
+                  <div className="bg-white border border-gray-200 rounded p-3 sm:p-4">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="text-center min-w-[50px] sm:min-w-[60px]">
+                        <p className="text-xl sm:text-2xl font-bold text-gray-900">{result.year}</p>
                         <p className="text-xs text-gray-500">年</p>
                       </div>
-                      <div className="h-10 w-px bg-gray-200"></div>
+                      <div className="h-8 sm:h-10 w-px bg-gray-200"></div>
                       <div>
-                        <p className="text-lg font-medium text-gray-400">{result.text}</p>
+                        <p className="text-sm sm:text-base lg:text-lg font-medium text-gray-400">{result.text}</p>
                       </div>
                     </div>
                   </div>
                 ) : (
                   <Link href={`/ekiden/hakone/${result.year}`}>
-                    <div className="bg-white border border-gray-200 rounded p-4 hover:bg-gray-50">
-                      <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+                    <div className="bg-white border border-gray-200 rounded p-3 sm:p-4 hover:bg-gray-50 touch-manipulation active:bg-gray-100">
+                      <div className="flex flex-col lg:flex-row lg:items-center gap-3 sm:gap-4">
                         {/* 回数と年 */}
-                        <div className="flex items-center gap-4 min-w-fit">
-                          <div className="text-center min-w-[50px]">
+                        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 min-w-fit">
+                          <div className="text-center min-w-[40px] sm:min-w-[50px]">
                             <p className="text-xs text-gray-500">第</p>
-                            <p className="text-xl font-bold text-gray-900">{result.count}</p>
+                            <p className="text-lg sm:text-xl font-bold text-gray-900">{result.count}</p>
                             <p className="text-xs text-gray-500">回</p>
                           </div>
-                          <div className="text-center min-w-[60px]">
-                            <p className="text-2xl font-bold text-gray-900">{result.year}</p>
+                          <div className="text-center min-w-[50px] sm:min-w-[60px]">
+                            <p className="text-xl sm:text-2xl font-bold text-gray-900">{result.year}</p>
                             <p className="text-xs text-gray-500">年</p>
                           </div>
                         </div>
@@ -189,20 +189,20 @@ export default function HakoneEkidenPage() {
                         <div className="h-px lg:h-12 lg:w-px bg-gray-200"></div>
 
                         {/* トップ3 */}
-                        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3">
                           {result.teams?.map((team, teamIndex) => {
                             const color = getUniversityColor(team)
                             const rank = teamIndex + 1
                             return (
-                              <div key={teamIndex} className="flex items-center gap-3">
+                              <div key={teamIndex} className="flex items-center gap-2 sm:gap-3">
                                 <div 
-                                  className="flex items-center justify-center w-8 h-8 rounded text-white font-bold text-sm flex-shrink-0"
+                                  className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded text-white font-bold text-xs sm:text-sm flex-shrink-0"
                                   style={{ backgroundColor: color }}
                                 >
                                   {rank}
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                  <p className="font-medium text-gray-900 text-sm truncate">{team}</p>
+                                  <p className="font-medium text-gray-900 text-xs sm:text-sm truncate">{team}</p>
                                   <p className="text-xs text-gray-500">{result.times?.[teamIndex]}</p>
                                 </div>
                               </div>

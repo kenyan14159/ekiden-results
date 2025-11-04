@@ -68,18 +68,18 @@ export default function ZenjitsuAboutPage() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       <main className="flex-grow pt-20">
-        <div className="container mx-auto px-4 lg:px-8 pt-6">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 pt-3 sm:pt-6">
           <Breadcrumb items={breadcrumbItems} />
         </div>
         
         <div className="bg-gradient-to-br from-cyan-50 via-white to-blue-50 border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-12">
+          <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
             <Link
               href="/ekiden/zenjitsu"
-              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 text-sm"
+              className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm"
             >
               <svg
-                className="w-4 h-4 mr-2"
+                className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -94,16 +94,16 @@ export default function ZenjitsuAboutPage() {
               全日本大学駅伝 歴代結果に戻る
             </Link>
 
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
               全日本大学駅伝 区間特徴
             </h1>
-            <p className="text-lg text-gray-600 mb-4">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-4">
               距離106.8km、名古屋・熱田神宮から伊勢神宮までを襷でつなぐ大学駅伝日本一決定戦。序盤のスピードバトルから中盤のごぼう抜き劇、後半のスタミナ戦まで、８区間それぞれがドラマにあふれる！
             </p>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 lg:px-8 py-12">
+        <div className="container mx-auto px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-12">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {sectionFeatures.map((section, index) => (
               <div
@@ -113,7 +113,7 @@ export default function ZenjitsuAboutPage() {
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-cyan-100 text-cyan-800">
                   {section.num} ({section.distance})
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
                   {section.title}
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">

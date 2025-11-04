@@ -65,20 +65,6 @@ export default function OperatorInformationPage() {
                       ※プライバシー保護のため、詳細な個人情報は非公開としています。
                     </p>
                   </div>
-
-                  <div className="mt-6">
-                    <p className="text-gray-700 font-medium mb-3">駅伝のゼッケン</p>
-                    <div className="relative w-full max-w-2xl mx-auto aspect-[4/3] rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                      <Image
-                        src="https://wprs.my-hobby.space/wp-content/uploads/2025/10/IMG_6881.jpg"
-                        alt="駅伝出場時の写真"
-                        fill
-                        className="object-contain bg-gray-100"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-                        priority
-                      />
-                    </div>
-                  </div>
                 </div>
               </section>
 

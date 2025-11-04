@@ -96,10 +96,21 @@ async function fetchMorinomiyakoData(year: string): Promise<EkidenData | null> {
 export async function generateStaticParams() {
   const years: string[] = []
   
-  // 2013年から現在まで
-  const currentYear = new Date().getFullYear()
-  for (let year = 2013; year <= currentYear; year++) {
-    years.push(year.toString())
+  try {
+    const fs = await import('fs/promises')
+    const path = await import('path')
+    
+    const dataDir = path.join(process.cwd(), 'public', 'data', 'university', 'morinomiyako')
+    const files = await fs.readdir(dataDir)
+    
+    // .json ファイルのみを抽出し、拡張子を除去
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        years.push(file.replace('.json', ''))
+      }
+    }
+  } catch (error) {
+    console.error('generateStaticParams エラー:', error)
   }
   
   return years.map((year) => ({

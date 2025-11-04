@@ -85,15 +85,24 @@ async function fetchZenjitsuData(year: string): Promise<ZenjitsuData | null> {
 
 // 静的パスの生成（ビルド時に全ページを生成）
 export async function generateStaticParams() {
-  const currentYear = new Date().getFullYear()
   const years: string[] = []
   
-  for (let year = 1970; year <= currentYear; year++) {
-    years.push(year.toString())
+  try {
+    const fs = await import('fs/promises')
+    const path = await import('path')
+    
+    const dataDir = path.join(process.cwd(), 'public', 'data', 'university', 'all-japan')
+    const files = await fs.readdir(dataDir)
+    
+    // .json ファイルのみを抽出し、拡張子を除去
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        years.push(file.replace('.json', ''))
+      }
+    }
+  } catch (error) {
+    console.error('generateStaticParams エラー:', error)
   }
-  
-  // 1988年は2回開催
-  years.push('1988-2')
   
   return years.map((year) => ({
     year,
