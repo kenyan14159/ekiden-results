@@ -7,10 +7,15 @@ interface ResponsiveTableProps {
   headers: string[]
   rows: Array<Array<string | React.ReactNode>>
   mobileCardView?: boolean
+  defaultExpanded?: boolean // モバイル表示時にデフォルトで全て展開するか
 }
 
-export function ResponsiveTable({ headers, rows, mobileCardView = true }: ResponsiveTableProps) {
-  const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set())
+export function ResponsiveTable({ headers, rows, mobileCardView = true, defaultExpanded = false }: ResponsiveTableProps) {
+  // デフォルトで展開する場合、全ての行を初期状態で展開
+  const initialExpanded = defaultExpanded 
+    ? new Set(rows.map((_, index) => index))
+    : new Set<number>()
+  const [expandedRows, setExpandedRows] = useState<Set<number>>(initialExpanded)
 
   const toggleRow = (index: number) => {
     const newExpanded = new Set(expandedRows)

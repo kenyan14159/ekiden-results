@@ -184,9 +184,9 @@ export function generateEventStructuredData(
       ...(raceInfo.organizerUrl && { url: raceInfo.organizerUrl }),
     },
     ...(result && result.teams && result.teams.length > 0 && {
-      competitor: result.teams.slice(0, 10).map((team: any, index: number) => ({
+      competitor: result.teams.slice(0, 10).map((team, index) => ({
         "@type": "SportsTeam",
-        name: team.name || team,
+        name: team.name,
         ...(index < 3 && {
           award: index === 0 ? "優勝" : index === 1 ? "準優勝" : "3位",
         }),

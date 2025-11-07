@@ -4,15 +4,7 @@ import { notFound } from 'next/navigation'
 import { ZenjitsuYearClient } from "./ZenjitsuYearClient"
 import { Metadata } from 'next'
 import { generateRaceYearMetadata } from '@/lib/metadata-utils'
-
-interface ZenjitsuData {
-  eventName: string
-  year: number
-  teams: any[]
-  config?: {
-    sections: number
-  }
-}
+import type { EkidenData } from '@/types/ekiden'
 
 // 動的メタデータ生成
 export async function generateMetadata({ 
@@ -25,7 +17,7 @@ export async function generateMetadata({
   
   try {
     const data = await fetchZenjitsuData(params.year)
-    const topTeam = data?.teams?.find((t: any) => t.rank === 1)
+    const topTeam = data?.teams?.find((team) => team.rank === 1)
     winner = topTeam ? topTeam.name : ''
   } catch (error) {
     console.error('メタデータ生成エラー:', error)
@@ -43,7 +35,7 @@ export default async function ZenjitsuYearPage({
 }) {
   const year = parseInt(params.year)
   
-  let data: ZenjitsuData | null = null
+  let data: EkidenData | null = null
   
   try {
     data = await fetchZenjitsuData(params.year)
@@ -67,14 +59,14 @@ export default async function ZenjitsuYearPage({
 }
 
 // データフェッチ関数（サーバーサイド）
-async function fetchZenjitsuData(year: string): Promise<ZenjitsuData | null> {
+async function fetchZenjitsuData(year: string): Promise<EkidenData | null> {
   try {
     const fs = await import('fs/promises')
     const path = await import('path')
     
     const filePath = path.join(process.cwd(), 'public', 'data', 'university', 'all-japan', `${year}.json`)
     const fileContent = await fs.readFile(filePath, 'utf-8')
-    const data = JSON.parse(fileContent)
+    const data = JSON.parse(fileContent) as EkidenData
     
     return data
   } catch (error) {

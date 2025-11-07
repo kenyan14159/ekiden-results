@@ -4,6 +4,13 @@ import matter from 'gray-matter';
 import { ArticleMetadata } from '@/types/content';
 
 const contentDirectory = path.join(process.cwd(), 'content');
+const ARTICLE_CATEGORIES = ['race-preview', 'race-report', 'gear-review', 'training'] as const;
+type ArticleCategory = typeof ARTICLE_CATEGORIES[number];
+const CONTENT_CATEGORIES: readonly ArticleCategory[] = ['race-preview', 'race-report', 'gear-review'];
+
+const isArticleCategory = (value: unknown): value is ArticleCategory => {
+  return typeof value === 'string' && ARTICLE_CATEGORIES.includes(value as ArticleCategory);
+};
 
 /**
  * すべての記事のメタデータを取得
@@ -12,7 +19,7 @@ export function getAllArticles(): ArticleMetadata[] {
   const articles: ArticleMetadata[] = [];
   
   // content配下のすべてのカテゴリを取得
-  const categories = ['race-preview', 'race-report', 'gear-review'];
+  const categories = CONTENT_CATEGORIES;
   
   categories.forEach(category => {
     const categoryPath = path.join(contentDirectory, category);
@@ -29,11 +36,13 @@ export function getAllArticles(): ArticleMetadata[] {
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const { data } = matter(fileContents);
         
+        const resolvedCategory: ArticleCategory = isArticleCategory(data.category) ? data.category : category;
+
         articles.push({
           slug: data.slug || filename.replace(/\.mdx?$/, ''),
           title: data.title || '',
           description: data.description || '',
-          category: data.category || category as any,
+          category: resolvedCategory,
           tags: data.tags || [],
           date: data.date || '',
           updatedAt: data.updatedAt,
@@ -69,7 +78,7 @@ export function getArticleBySlug(slug: string): {
   metadata: ArticleMetadata;
   content: string;
 } | null {
-  const categories = ['race-preview', 'race-report', 'gear-review'];
+  const categories = CONTENT_CATEGORIES;
   
   for (const category of categories) {
     const categoryPath = path.join(contentDirectory, category);
@@ -87,12 +96,14 @@ export function getArticleBySlug(slug: string): {
         const { data, content } = matter(fileContents);
         
         if (data.slug === slug || filename.replace(/\.mdx?$/, '') === slug) {
+          const resolvedCategory: ArticleCategory = isArticleCategory(data.category) ? data.category : category;
+
           return {
             metadata: {
               slug: data.slug || filename.replace(/\.mdx?$/, ''),
               title: data.title || '',
               description: data.description || '',
-              category: data.category || category as any,
+              category: resolvedCategory,
               tags: data.tags || [],
               date: data.date || '',
               updatedAt: data.updatedAt,

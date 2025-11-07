@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface YearNavigationProps {
@@ -10,7 +9,6 @@ interface YearNavigationProps {
   minYear?: number
   maxYear?: number
   excludedYears?: number[]
-  enableSwipe?: boolean
 }
 
 export function YearNavigation({ 
@@ -18,11 +16,8 @@ export function YearNavigation({
   baseUrl, 
   minYear = 1920, 
   maxYear = new Date().getFullYear(),
-  excludedYears = [],
-  enableSwipe = true
+  excludedYears = []
 }: YearNavigationProps) {
-  const router = useRouter()
-  
   const getPrevYear = () => {
     let year = currentYear - 1
     while (year >= minYear) {
@@ -47,19 +42,6 @@ export function YearNavigation({
 
   const prevYear = getPrevYear()
   const nextYear = getNextYear()
-
-  // スワイプハンドラー
-  const handleSwipeLeft = () => {
-    if (nextYear && enableSwipe) {
-      router.push(`${baseUrl}/${nextYear}`)
-    }
-  }
-
-  const handleSwipeRight = () => {
-    if (prevYear && enableSwipe) {
-      router.push(`${baseUrl}/${prevYear}`)
-    }
-  }
 
   return (
     <nav className="bg-white border-t border-b border-gray-200 py-4 touch-manipulation" aria-label="年度ナビゲーション">

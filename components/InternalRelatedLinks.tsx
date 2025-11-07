@@ -15,7 +15,7 @@ interface InternalRelatedLinksProps {
   links?: InternalLink[]
 }
 
-export function InternalRelatedLinks({ raceName, currentYear, links }: InternalRelatedLinksProps) {
+export function InternalRelatedLinks({ links }: InternalRelatedLinksProps) {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-sm border border-blue-200 p-6">
       <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">

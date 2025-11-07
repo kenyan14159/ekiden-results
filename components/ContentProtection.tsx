@@ -55,27 +55,6 @@ export function ContentProtection() {
         return false
       }
 
-      // Ctrl+Shift+I, Cmd+Option+I (開発者ツール)
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') {
-        e.preventDefault()
-        showProtectionNotice('開発者ツールの使用は禁止されています')
-        return false
-      }
-
-      // F12 (開発者ツール)
-      if (e.key === 'F12') {
-        e.preventDefault()
-        showProtectionNotice('開発者ツールの使用は禁止されています')
-        return false
-      }
-
-      // Ctrl+Shift+C, Cmd+Option+C (要素の検証)
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C') {
-        e.preventDefault()
-        showProtectionNotice('要素の検証は禁止されています')
-        return false
-      }
-
       // PrintScreen (スクリーンショット)
       if (e.key === 'PrintScreen') {
         showProtectionNotice('スクリーンショットは禁止されています')
@@ -95,32 +74,12 @@ export function ContentProtection() {
       return false
     }
 
-    // 開発者ツール検知
-    let devtoolsOpen = false
-    const detectDevTools = () => {
-      const threshold = 160
-      const widthThreshold = window.outerWidth - window.innerWidth > threshold
-      const heightThreshold = window.outerHeight - window.innerHeight > threshold
-      
-      if (widthThreshold || heightThreshold) {
-        if (!devtoolsOpen) {
-          devtoolsOpen = true
-          showProtectionNotice('開発者ツールが検出されました。コンテンツの保護のため、一部機能が制限されます。', true)
-        }
-      } else {
-        devtoolsOpen = false
-      }
-    }
-
     // イベントリスナー登録
     document.addEventListener('contextmenu', handleContextMenu)
     document.addEventListener('copy', handleCopy)
     document.addEventListener('keydown', handleKeyDown)
     document.addEventListener('dragstart', handleDragStart)
     document.addEventListener('selectstart', handleSelectStart)
-
-    // 開発者ツール検知（定期的にチェック）
-    const devToolsInterval = setInterval(detectDevTools, 1000)
 
     // クリーンアップ
     return () => {
@@ -129,7 +88,6 @@ export function ContentProtection() {
       document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('dragstart', handleDragStart)
       document.removeEventListener('selectstart', handleSelectStart)
-      clearInterval(devToolsInterval)
     }
   }, [])
 

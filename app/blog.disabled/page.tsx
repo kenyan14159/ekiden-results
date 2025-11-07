@@ -78,13 +78,6 @@ function WordPressArticleCard({ article }: { article: WordPressArticle }) {
 export default function BlogPage() {
   const articles = wordpressConfig.articles;
   
-  const categories = [
-    { id: 'all', label: 'すべて' },
-    { id: 'race-preview', label: 'レース情報' },
-    { id: 'race-report', label: 'レース速報' },
-    { id: 'gear-review', label: 'ギアレビュー' },
-  ];
-
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-white">
       <Header />

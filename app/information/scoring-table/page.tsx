@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import Head from 'next/head'
 
 // データインポート（これらは後で追加）
 import menSprints1 from './data/men/menSprints1.json'
@@ -44,7 +43,7 @@ type EventDefinition = {
   name: string
   unit: string
   isTime: boolean
-  source: any[]
+  source: Array<Record<string, unknown>>
 }
 
 type EventGroup = {
@@ -675,17 +674,24 @@ export default function ScoringTablePage() {
 
       if (isNaN(targetValue) || targetValue <= 0) return null
 
-      const table: any[] = eventDef.source
+      const table: Array<Record<string, unknown>> = eventDef.source
 
       // 二分探索で近似ポイントを見つける
-      let bestPoints = null
+      let bestPoints: number | null = null
       let bestDiff = Infinity
 
       for (const row of table) {
-        if (row[eventKey] === null || row[eventKey] === undefined) continue
-        
-        const rowMark = eventDef.isTime ? timeToSeconds(row[eventKey]) : parseFloat(row[eventKey])
-        if (rowMark === null || isNaN(rowMark)) continue
+        const rawValue = row[eventKey]
+        if (rawValue === null || rawValue === undefined) continue
+
+        const parsedMark = eventDef.isTime
+          ? timeToSeconds(rawValue as string | number | null)
+          : typeof rawValue === 'number'
+            ? rawValue
+            : parseFloat(String(rawValue))
+
+        if (parsedMark === null || Number.isNaN(parsedMark)) continue
+        const rowMark = parsedMark
 
         // 時間種目は小さいほうが良い、距離種目は大きいほうが良い
         const diff = eventDef.isTime 
@@ -694,7 +700,11 @@ export default function ScoringTablePage() {
 
         if (diff < bestDiff) {
           bestDiff = diff
-          bestPoints = row.points
+          const pointsRaw = row.points
+          const numericPoints = typeof pointsRaw === 'number' ? pointsRaw : Number(pointsRaw)
+          if (!Number.isNaN(numericPoints)) {
+            bestPoints = numericPoints
+          }
         }
 
         // 完全一致したら終了
@@ -727,17 +737,21 @@ export default function ScoringTablePage() {
         return { mark: '', unitValue: '-', isTime: false, seconds: null }
       }
 
-      const table: any[] = eventDef.source
-      const foundRow = table.find((row: any) => row.points <= pointsValue && row[eventKey] != null)
+      const table: Array<Record<string, unknown>> = eventDef.source
+      const foundRow = table.find((row: Record<string, unknown>) => (row.points as number) <= pointsValue && row[eventKey] != null)
       
       if (!foundRow || foundRow[eventKey] === null) {
         return { mark: '', unitValue: eventDef.unit, isTime: eventDef.isTime, seconds: null }
       }
 
       const rawMark = foundRow[eventKey]
-      const numericMark = eventDef.isTime ? timeToSeconds(rawMark) : parseFloat(rawMark)
-      
-      if (numericMark === null || isNaN(numericMark)) {
+      const numericMark = eventDef.isTime
+        ? timeToSeconds(rawMark as string | number | null)
+        : typeof rawMark === 'number'
+          ? rawMark
+          : parseFloat(String(rawMark))
+
+      if (numericMark === null || Number.isNaN(numericMark)) {
         return { mark: '', unitValue: eventDef.unit, isTime: eventDef.isTime, seconds: null }
       }
 
@@ -884,13 +898,10 @@ export default function ScoringTablePage() {
   // 長押し処理
   const [pressTimer, setPressTimer] = useState<NodeJS.Timeout | null>(null)
   const [intervalTimer, setIntervalTimer] = useState<NodeJS.Timeout | null>(null)
-  const [isLongPress, setIsLongPress] = useState(false)
 
   const startLongPress = (callback: () => void) => {
-    setIsLongPress(false)
     // 初回実行を遅延させる
     const timer = setTimeout(() => {
-      setIsLongPress(true)
       // 連続実行のインターバルを設定
       const interval = setInterval(callback, 100) // 100msごとに実行
       setIntervalTimer(interval)
@@ -907,7 +918,6 @@ export default function ScoringTablePage() {
       clearInterval(intervalTimer)
       setIntervalTimer(null)
     }
-    setIsLongPress(false)
   }
 
   // コンポーネントのアンマウント時にタイマーをクリア
@@ -1330,7 +1340,7 @@ export default function ScoringTablePage() {
                         const standardPoints = [1400, 1300, 1200, 1100, 1000, 900, 800]
                         
                         // 現在のポイントが標準ポイントに含まれていなければ追加
-                        let displayPoints = [...standardPoints]
+                        const displayPoints = [...standardPoints]
                         if (currentPoints && !isNaN(currentPoints) && currentPoints >= 800 && currentPoints <= 1400) {
                           if (!standardPoints.includes(currentPoints)) {
                             displayPoints.push(currentPoints)

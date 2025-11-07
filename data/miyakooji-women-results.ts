@@ -4,6 +4,11 @@ export interface MiyakoojiWomenResult {
   time?: string;
   school?: string;
   prefecture?: string;
+  schools?: Array<{
+    name: string;
+    prefecture: string;
+  }>;
+  times?: string[];
   canceled?: boolean;
   text?: string;
 }

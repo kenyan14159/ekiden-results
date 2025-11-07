@@ -5,6 +5,11 @@ export interface MiyakoojiMenResult {
     name: string;
     prefecture: string;
   };
+  teams?: Array<{
+    name: string;
+    prefecture: string;
+  }>;
+  times?: string[];
   time?: string;
   canceled?: boolean;
   text?: string;

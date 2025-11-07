@@ -75,7 +75,22 @@ export const universityColors: Record<string, string> = {
   '関東学連選抜': '#2F4F4F',         // ダークグレー（選抜チーム）
 }
 
+// 文字列から色を生成する関数（ハッシュベース）
+function generateColorFromString(str: string): string {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash)
+  }
+  
+  // HSL色空間で彩度と明度を調整して見やすい色を生成
+  const hue = Math.abs(hash) % 360
+  const saturation = 50 + (Math.abs(hash) % 30) // 50-80%
+  const lightness = 40 + (Math.abs(hash) % 20) // 40-60%
+  
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+}
+
 export function getUniversityColor(universityName: string): string {
-  return universityColors[universityName] || '#6B7280' // デフォルトはグレー
+  return universityColors[universityName] || generateColorFromString(universityName) // デフォルトは文字列から生成した色
 }
 

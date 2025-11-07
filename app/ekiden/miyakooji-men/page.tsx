@@ -120,8 +120,20 @@ export default function MiyakoojiMenPage() {
                       </div>
                     </div>
                     <div className="h-px md:h-12 md:w-px bg-gray-200"></div>
-                    <div className="flex-1">
-                      {result.team && (
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3">
+                      {result.teams && result.times ? (
+                        result.teams.slice(0, 3).map((team, teamIndex) => (
+                          <div key={teamIndex} className="flex items-center gap-2 sm:gap-3">
+                            <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded text-white font-bold text-xs sm:text-sm flex-shrink-0" style={{ backgroundColor: getPrefectureColor(team.prefecture) }}>
+                              {teamIndex + 1}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-medium text-gray-900 text-xs sm:text-sm truncate">{team.name}</p>
+                              <p className="text-xs text-gray-500">{result.times?.[teamIndex]}</p>
+                            </div>
+                          </div>
+                        ))
+                      ) : result.team ? (
                         <div className="flex items-center gap-2 sm:gap-3">
                           <div className="flex items-center justify-center w-10 h-10 rounded text-white font-bold text-lg flex-shrink-0" style={{ backgroundColor: getPrefectureColor(result.team.prefecture) }}>
                             1
@@ -134,7 +146,7 @@ export default function MiyakoojiMenPage() {
                             <p className="text-xs sm:text-sm text-gray-500 mt-1">{result.time}</p>
                           </div>
                         </div>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>

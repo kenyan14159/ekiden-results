@@ -101,7 +101,22 @@ export const corporateColors: Record<string, string> = {
   '肥後銀行': '#228B22',             // グリーン
 }
 
+// 文字列から色を生成する関数（ハッシュベース）
+function generateColorFromString(str: string): string {
+  let hash = 0
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash)
+  }
+  
+  // HSL色空間で彩度と明度を調整して見やすい色を生成
+  const hue = Math.abs(hash) % 360
+  const saturation = 50 + (Math.abs(hash) % 30) // 50-80%
+  const lightness = 40 + (Math.abs(hash) % 20) // 40-60%
+  
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+}
+
 export function getCorporateColor(teamName: string): string {
-  return corporateColors[teamName] || '#6B7280' // デフォルトはグレー
+  return corporateColors[teamName] || generateColorFromString(teamName) // デフォルトは文字列から生成した色
 }
 

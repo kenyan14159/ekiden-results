@@ -4,7 +4,7 @@ import Link from "next/link"
 import { getPrefectureColor } from "@/data/prefecture-colors"
 import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
-import { getMedalEmoji, normalizeForSearch } from "@/lib/format-utils"
+import { getMedalEmoji, normalizeForSearch, removeLeadingZero, formatAffiliation } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
@@ -167,11 +167,11 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
                               <tr key={runner.section} className="border-b border-gray-200 hover:bg-gray-50">
                                 <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
                                 <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
+                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({formatAffiliation(runner.affiliation)})</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
                                   {isOP ? '-' : `${runner.rank}位`}
@@ -201,57 +201,65 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
                     onClick={() => toggleSection(section.section)}
                     className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <div className="flex items-center">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-lg mr-3">
-                        {section.section}
-                      </div>
-                      <div className="text-left">
-                        <h2 className="text-xl font-bold text-gray-900">{section.section}区 ランキング</h2>
-                        {topRunner && (
-                          <p className="text-sm text-gray-600 mt-1">
-                            区間賞: {topRunner.name} ({topRunner.teamName}) - {topRunner.time}
-                          </p>
-                        )}
-                      </div>
+                    <div className="flex items-center flex-1">
+                      <h2 className="text-xl font-bold text-gray-900">{section.section}区</h2>
                     </div>
-                    <svg
-                      className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <div className="flex items-center gap-6">
+                      {topRunner && (
+                        <div className="text-right">
+                          <div className="text-sm text-gray-600">区間賞</div>
+                          <div className="text-lg font-bold text-gray-900">{topRunner.name} ({topRunner.teamName})</div>
+                          <div className="text-sm text-gray-600">{removeLeadingZero(topRunner.time)}</div>
+                        </div>
+                      )}
+                      <svg
+                        className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
                   </button>
 
                   {isExpanded && (
-                    <div className="px-6 pb-6">
+                    <div className="px-6 pb-6 border-t border-gray-100">
+                      <h3 className="text-lg font-semibold text-gray-800 mb-4 mt-4">ランキング</h3>
                       <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white">
+                        <table className="min-w-full bg-white section-results-table">
                           <thead>
                             <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                              <th className="py-3 px-4 text-left">順位</th>
-                              <th className="py-3 px-4 text-left">選手</th>
-                              <th className="py-3 px-4 text-left">都道府県</th>
-                              <th className="py-3 px-4 text-left">タイム</th>
+                              <th className="py-3 px-2 md:px-4 text-left">順位</th>
+                              <th className="py-3 px-2 md:px-4 text-left hidden md:table-cell">選手</th>
+                              <th className="py-3 px-2 md:px-4 text-left">都道府県</th>
+                              <th className="py-3 px-2 md:px-4 text-left">タイム</th>
                             </tr>
                           </thead>
                           <tbody className="text-gray-700 text-sm font-light">
-                            {section.runners.slice(0, 10).map((runner, index) => (
+                            {section.runners.map((runner, index) => (
                               <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.rank}{getMedalEmoji(runner.rank)}
+                                <td className="py-2 px-2 md:px-4 md:whitespace-nowrap">
+                                  <div className="flex flex-col md:block gap-1">
+                                    <span className="font-bold text-sm md:text-base">{runner.rank}位 {getMedalEmoji(runner.rank)}</span>
+                                    <span className="text-xs md:hidden text-gray-700 break-words">{runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({formatAffiliation(runner.affiliation)})</span>}</span>
+                                  </div>
                                 </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({runner.affiliation})</span>}
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap hidden md:table-cell">
+                                  {runner.name} {runner.affiliation && <span className="text-gray-500 text-xs">({formatAffiliation(runner.affiliation)})</span>}
                                 </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
-                                  {runner.teamName}
+                                <td className="py-2 px-2 md:px-4">
+                                  <div className="flex items-center">
+                                    <div 
+                                      className="w-3 h-3 rounded-full mr-2 flex-shrink-0" 
+                                      style={{ backgroundColor: runner.color }}
+                                    ></div>
+                                    <span className="text-xs md:text-sm break-words md:break-normal">{runner.teamName}</span>
+                                  </div>
                                 </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap text-xs md:text-sm">
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-1 md:ml-2 text-orange-600 font-bold">★</span>}
                                 </td>
                               </tr>
                             ))}
@@ -304,8 +312,8 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
                         </td>
                         <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
                         <td className="py-3 px-4 whitespace-nowrap">
-                          {runner.time}
-                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                          {removeLeadingZero(runner.time)}
+                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                         </td>
                         <td className="py-3 px-4 whitespace-nowrap">{runner.rank}</td>
                       </tr>
@@ -342,7 +350,7 @@ export function HiroshimaYearClient({ data, year }: HiroshimaYearClientProps) {
                     <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
                       <td className="py-3 px-4 whitespace-nowrap">{award.section}区</td>
                       <td className="py-3 px-4 whitespace-nowrap">{award.runner}</td>
-                      <td className="py-3 px-4 whitespace-nowrap">{award.time}</td>
+                      <td className="py-3 px-4 whitespace-nowrap">{removeLeadingZero(award.time)}</td>
                       <td className="py-3 px-4 whitespace-nowrap">{award.isSectionRecord ? '★' : ''}</td>
                     </tr>
                   ))}

@@ -53,9 +53,13 @@ export function formatGrade(grade: number): string {
 }
 
 /**
- * メダル絵文字を取得
+ * メダル絵文字を順位に応じて取得
  */
 export function getMedalEmoji(rank: number | string): string {
+  if (typeof rank !== 'number') {
+    return ''
+  }
+
   if (rank === 1) return '🥇'
   if (rank === 2) return '🥈'
   if (rank === 3) return '🥉'
@@ -145,5 +149,62 @@ export function formatDisplayTime(time: string | undefined | null): string {
   }
   
   return time
+}
+
+/**
+ * タイム表示から先頭の0を削除
+ * 例: "01:09:11" → "1:09:11", "00:56:47" → "0:56:47", "0:29:22" → "29:22"
+ */
+export function removeLeadingZero(time: string | undefined | null): string {
+  if (!time) return '-'
+  
+  // "0:MM:SS" 形式の場合（時間が0の場合）
+  if (time.startsWith('0:')) {
+    const withoutHour = time.substring(2)
+    const parts = withoutHour.split(':')
+    if (parts.length === 2) {
+      const minutes = parseInt(parts[0], 10)
+      const seconds = parts[1]
+      return `${minutes}:${seconds}`
+    }
+    return withoutHour
+  }
+  
+  // "HH:MM:SS" 形式の場合
+  const parts = time.split(':')
+  if (parts.length === 3) {
+    const hours = parseInt(parts[0], 10)
+    const minutes = parts[1]
+    const seconds = parts[2]
+    return `${hours}:${minutes}:${seconds}`
+  }
+  
+  // "MM:SS" 形式の場合
+  if (parts.length === 2) {
+    const minutes = parseInt(parts[0], 10)
+    const seconds = parts[1]
+    return `${minutes}:${seconds}`
+  }
+  
+  return time
+}
+
+/**
+ * 選手の所属情報から括弧内の括弧を削除
+ * 例: "佐久長聖高(3)" → "佐久長聖高3"
+ */
+export function formatAffiliation(affiliation: string | undefined | null): string {
+  if (!affiliation) return ''
+  // 括弧内の括弧を削除: 佐久長聖高(3) → 佐久長聖高3
+  return affiliation.replace(/\(([^)]+)\)/g, '$1')
+}
+
+/**
+ * モバイル表示用に大学名から「大学」を削除
+ * 例: "大東文化大学" → "大東文化"
+ */
+export function shortenUniversityName(name: string | undefined | null): string {
+  if (!name) return ''
+  return name.replace(/大学$/, '')
 }
 

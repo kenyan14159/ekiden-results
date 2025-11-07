@@ -14,7 +14,7 @@ interface RelatedLinksProps {
   links?: RelatedLink[]
 }
 
-export function RelatedLinks({ raceName, links }: RelatedLinksProps) {
+export function RelatedLinks({ links }: RelatedLinksProps) {
   // デフォルトの関連リンク
   const defaultLinks: RelatedLink[] = [
     {

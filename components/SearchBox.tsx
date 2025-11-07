@@ -26,7 +26,6 @@ export function SearchBox({
 }: SearchBoxProps) {
   const [query, setQuery] = useState('')
   const [isFocused, setIsFocused] = useState(false)
-  const [suggestions, setSuggestions] = useState<string[]>([])
 
   useEffect(() => {
     const timer = setTimeout(() => {

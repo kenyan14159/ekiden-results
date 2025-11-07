@@ -159,6 +159,7 @@ export function generateYearDetailLinks(
 
   const links: InternalLink[] = []
   const year = parseInt(currentYear)
+  const years: number[] = [...raceInfo.years]
 
   // 大会一覧ページへのリンク
   links.push({
@@ -169,11 +170,11 @@ export function generateYearDetailLinks(
   })
 
   // 前後の年度へのリンク
-  const currentIndex = raceInfo.years.indexOf(year as any)
+  const currentIndex = years.indexOf(year)
   
   // 次の年 (より新しい)
   if (currentIndex > 0) {
-    const nextYear = raceInfo.years[currentIndex - 1]
+    const nextYear = years[currentIndex - 1]
     links.push({
       title: `${nextYear}年 ${raceInfo.name}`,
       url: `/ekiden/${raceSlug}/${nextYear}`,
@@ -184,8 +185,8 @@ export function generateYearDetailLinks(
   }
 
   // 前の年 (より古い)
-  if (currentIndex < raceInfo.years.length - 1) {
-    const prevYear = raceInfo.years[currentIndex + 1]
+  if (currentIndex < years.length - 1) {
+    const prevYear = years[currentIndex + 1]
     links.push({
       title: `${prevYear}年 ${raceInfo.name}`,
       url: `/ekiden/${raceSlug}/${prevYear}`,
@@ -198,7 +199,12 @@ export function generateYearDetailLinks(
   // 関連する大会の同年度へのリンク
   raceInfo.relatedRaces.slice(0, 3).forEach((relatedSlug) => {
     const relatedInfo = RACE_INFO[relatedSlug as keyof typeof RACE_INFO]
-    if (relatedInfo && relatedInfo.years.includes(year as any)) {
+    if (relatedInfo) {
+      const relatedYears: number[] = [...relatedInfo.years]
+      if (!relatedYears.includes(year)) {
+        return
+      }
+
       links.push({
         title: `${year}年 ${relatedInfo.name}`,
         url: `/ekiden/${relatedSlug}/${year}`,

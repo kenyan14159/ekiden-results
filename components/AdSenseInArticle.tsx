@@ -29,7 +29,7 @@ export function AdSenseInArticle({
   useEffect(() => {
     try {
       if (typeof window !== 'undefined' && adRef.current) {
-        // @ts-ignore
+        // @ts-expect-error - AdSense API types are not available
         (window.adsbygoogle = window.adsbygoogle || []).push({})
       }
     } catch (err) {

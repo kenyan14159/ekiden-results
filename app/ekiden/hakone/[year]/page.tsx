@@ -94,20 +94,6 @@ async function fetchHakoneData(year: string): Promise<EkidenData | null> {
   }
 }
 
-// 箱根駅伝の回数計算
-function getHakoneCount(year: number): number {
-  const canceledYears = [1944, 1945, 1946]
-  let count = year - 1920 + 1
-  
-  for (const canceledYear of canceledYears) {
-    if (year > canceledYear) {
-      count--
-    }
-  }
-  
-  return count
-}
-
 // 静的パスの生成（ビルド時に全ページを生成）
 export async function generateStaticParams() {
   const years: string[] = []

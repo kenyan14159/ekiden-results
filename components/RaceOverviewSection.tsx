@@ -9,7 +9,7 @@ interface RaceOverviewSectionProps {
   year: number
 }
 
-export function RaceOverviewSection({ overview, eventName, year }: RaceOverviewSectionProps) {
+export function RaceOverviewSection({ overview }: RaceOverviewSectionProps) {
   if (!overview) return null
 
   const hasConditions = overview.weather || overview.temperature || overview.wind

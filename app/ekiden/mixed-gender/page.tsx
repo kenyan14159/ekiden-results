@@ -4,7 +4,6 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { Breadcrumb } from "@/components/BreadcrumbStructuredData"
 import Link from "next/link"
-import { useState } from "react"
 import { motion } from "framer-motion"
 
 export default function MixedGenderEkidenPage() {

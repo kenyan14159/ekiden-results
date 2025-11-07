@@ -2,17 +2,34 @@
 
 import { useEffect } from 'react'
 import { onCLS, onLCP, onFCP, onTTFB, onINP } from 'web-vitals'
+import type { Metric } from 'web-vitals'
+
+type WindowWithGtag = Window & {
+  gtag?: (
+    command: 'event',
+    eventName: string,
+    params: {
+      value: number
+      event_category: string
+      event_label: string
+      non_interaction: boolean
+    }
+  ) => void
+}
 
 // Web Vitalsのメトリクスを送信する関数
-function sendToAnalytics(metric: any) {
+function sendToAnalytics(metric: Metric) {
   // Google Analyticsに送信
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,
-    })
+  if (typeof window !== 'undefined') {
+    const { gtag } = window as WindowWithGtag
+    if (gtag) {
+      gtag('event', metric.name, {
+        value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+        event_category: 'Web Vitals',
+        event_label: metric.id,
+        non_interaction: true,
+      })
+    }
   }
 
   // コンソールにも出力（開発環境）
@@ -63,7 +80,7 @@ export function WebVitalsDebug() {
     `
     document.body.appendChild(metricsDisplay)
 
-    const metrics: any = {}
+    const metrics: Record<string, number> = {}
 
     const updateDisplay = () => {
       const getColor = (name: string, value: number) => {
@@ -77,14 +94,14 @@ export function WebVitalsDebug() {
 
       const formatValue = (name: string, value: number) => {
         if (name === 'CLS') return value.toFixed(3)
-        return Math.round(value) + 'ms'
+        return `${Math.round(value)}ms`
       }
 
       metricsDisplay.innerHTML = `
         <div style="font-weight: bold; margin-bottom: 10px; font-size: 14px;">
           📊 Core Web Vitals
         </div>
-        ${Object.entries(metrics).map(([name, value]: [string, any]) => `
+        ${Object.entries(metrics).map(([name, value]) => `
           <div style="margin: 5px 0; display: flex; justify-content: space-between; align-items: center;">
             <span style="color: ${getColor(name, value)};">●</span>
             <span style="flex: 1; margin: 0 8px;">${name}</span>
@@ -97,7 +114,7 @@ export function WebVitalsDebug() {
       `
     }
 
-    const recordMetric = (metric: any) => {
+    const recordMetric = (metric: Metric) => {
       metrics[metric.name] = metric.value
       updateDisplay()
     }

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { getUniversityColor } from "@/data/university-colors"
 import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
-import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
+import { getMedalEmoji, formatGrade, normalizeForSearch, removeLeadingZero, shortenUniversityName } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { SectionTimeChart } from "@/components/charts/SectionTimeChart"
 import { ScrollToTop } from "@/components/ScrollToTop"
@@ -16,9 +16,6 @@ import { RelatedLinks } from "@/components/RelatedLinks"
 import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
 import { generateYearDetailLinks } from "@/lib/internal-links"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
-import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
-import { Accordion } from "@/components/Accordion"
-import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface HakoneYearClientProps {
@@ -30,42 +27,10 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
   const [activeTab, setActiveTab] = useState<TabType>('team')
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
-  const router = useRouter()
+  const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
 
   // 関連リンクを生成
   const relatedLinks = generateYearDetailLinks('hakone', year.toString())
-
-  // スワイプナビゲーション用のヘルパー関数
-  const getPrevYear = () => {
-    const excludedYears = [1944, 1945, 1946]
-    let checkYear = year - 1
-    while (checkYear >= 1920) {
-      if (!excludedYears.includes(checkYear)) return checkYear
-      checkYear--
-    }
-    return null
-  }
-
-  const getNextYear = () => {
-    const excludedYears = [1944, 1945, 1946]
-    const maxYear = new Date().getFullYear()
-    let checkYear = year + 1
-    while (checkYear <= maxYear) {
-      if (!excludedYears.includes(checkYear)) return checkYear
-      checkYear++
-    }
-    return null
-  }
-
-  const handleSwipeLeft = () => {
-    const nextYear = getNextYear()
-    if (nextYear) router.push(`/ekiden/hakone/${nextYear}`)
-  }
-
-  const handleSwipeRight = () => {
-    const prevYear = getPrevYear()
-    if (prevYear) router.push(`/ekiden/hakone/${prevYear}`)
-  }
 
   // 区間別データを作成
   const sectionData = Array.from({ length: 10 }, (_, i) => {
@@ -132,6 +97,16 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
     setExpandedTeams(newExpanded)
   }
 
+  const toggleSection = (section: number) => {
+    const newExpanded = new Set(expandedSections)
+    if (newExpanded.has(section)) {
+      newExpanded.delete(section)
+    } else {
+      newExpanded.add(section)
+    }
+    setExpandedSections(newExpanded)
+  }
+
   // 構造化データの準備
   const winner = data.teams?.find(t => t.rank === 1)
   const competitors = data.teams?.slice(0, 10).map(t => ({
@@ -171,23 +146,18 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
         }}
       />
 
-      <MobileSwipeContainer
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
-        showIndicators={true}
-      >
-        <div className="bg-white border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-8">
-            <Link href="/ekiden/hakone" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              箱根駅伝 歴代結果に戻る
-            </Link>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
-              箱根駅伝{year}結果速報 | 区間記録・{winner?.name ? `優勝${winner.name}・` : ''}成績一覧
-            </h1>
-            {data.count && <p className="text-md text-gray-600">第{data.count}回大会</p>}
+      <div className="bg-white border-b">
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          <Link href="/ekiden/hakone" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            箱根駅伝 歴代結果に戻る
+          </Link>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+            箱根駅伝{year}結果速報 | 区間記録・{winner?.name ? `優勝${winner.name}・` : ''}成績一覧
+          </h1>
+          {data.count && <p className="text-md text-gray-600">第{data.count}回大会</p>}
         </div>
       </div>
 
@@ -256,11 +226,12 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
                             {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
                           </span>,
                           <span key={`time-${runner.section}`}>
-                            {runner.time}
-                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                            {removeLeadingZero(runner.time)}
+                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                           </span>,
                           isOP ? '-' : `${runner.rank}位${getMedalEmoji(runner.rank)}`
                         ])}
+                        mobileCardView={false}
                       />
                     </div>
                   )}
@@ -272,31 +243,86 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
 
         <TabPanel id="section" activeTab={activeTab}>
           <div className="space-y-4">
-            {sectionData.map((section, index) => (
-              <Accordion 
-                key={section.section} 
-                title={`${section.section}区 ランキング`}
-                defaultOpen={false}
-              >
-                <ResponsiveTable
-                  headers={['順位', '選手', '大学', 'タイム']}
-                  rows={section.runners.slice(0, 10).map((runner) => [
-                    `${runner.rank}${getMedalEmoji(runner.rank)}`,
-                    <span key={`runner-${runner.section}`}>
-                      {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
-                    </span>,
-                    <span key={`team-${runner.section}`}>
-                      <span className="inline-block w-3 h-3 rounded-full mr-2" style={{ backgroundColor: runner.color }}></span>
-                      {runner.teamName}
-                    </span>,
-                    <span key={`time-${runner.section}`}>
-                      {runner.time}
-                      {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
-                    </span>
-                  ])}
-                />
-              </Accordion>
-            ))}
+            {sectionData.map((section) => {
+              const isExpanded = expandedSections.has(section.section)
+              const topRunner = section.runners[0]
+              return (
+                <div key={section.section} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                  <button 
+                    onClick={() => toggleSection(section.section)}
+                    className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center flex-1">
+                      <h2 className="text-xl font-bold text-gray-900">{section.section}区</h2>
+                    </div>
+                    <div className="flex items-center gap-6">
+                      {topRunner && (
+                        <div className="text-right">
+                          <div className="text-sm text-gray-600">区間賞</div>
+                          <div className="text-lg font-bold text-gray-900">{topRunner.name} ({topRunner.teamName})</div>
+                          <div className="text-sm text-gray-600">{removeLeadingZero(topRunner.time)}</div>
+                        </div>
+                      )}
+                      <svg 
+                        className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </button>
+                  
+                  {isExpanded && (
+                    <div className="px-6 pb-6 border-t border-gray-100">
+                      <h3 className="text-lg font-semibold text-gray-800 mb-4 mt-4">ランキング</h3>
+                      <div className="overflow-x-auto">
+                        <table className="min-w-full bg-white section-results-table">
+                          <thead>
+                            <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
+                              <th className="py-3 px-2 md:px-4 text-left">順位</th>
+                              <th className="py-3 px-2 md:px-4 text-left hidden md:table-cell">選手</th>
+                              <th className="py-3 px-2 md:px-4 text-left">大学</th>
+                              <th className="py-3 px-2 md:px-4 text-left">タイム</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-gray-700 text-sm font-light">
+                            {section.runners.map((runner, index) => (
+                              <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                                <td className="py-2 px-2 md:px-4 md:whitespace-nowrap">
+                                  <div className="flex flex-col md:block gap-1">
+                                    <span className="font-bold text-sm md:text-base">{runner.rank}位 {getMedalEmoji(runner.rank)}</span>
+                                    <span className="text-xs md:hidden text-gray-700 break-words">{runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}</span>
+                                  </div>
+                                </td>
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap hidden md:table-cell">
+                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                                </td>
+                                <td className="py-2 px-2 md:px-4">
+                                  <div className="flex items-center">
+                                    <div 
+                                      className="w-3 h-3 rounded-full mr-2 flex-shrink-0" 
+                                      style={{ backgroundColor: runner.color }}
+                                    ></div>
+                                    <span className="text-xs md:text-sm break-words md:break-normal">{shortenUniversityName(runner.teamName)}</span>
+                                    <span className="hidden md:inline ml-1">{runner.teamName !== shortenUniversityName(runner.teamName) ? runner.teamName : ''}</span>
+                                  </div>
+                                </td>
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap text-xs md:text-sm">
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-1 md:ml-2 text-orange-600 font-bold">★</span>}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </TabPanel>
 
@@ -327,8 +353,8 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
                   </span>,
                   `${runner.section}区`,
                   <span key={`time-${index}`}>
-                    {runner.time}
-                    {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                    {removeLeadingZero(runner.time)}
+                    {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                   </span>,
                   String(runner.rank)
                 ])}
@@ -364,7 +390,7 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
                 rows={sectionAwards.map((award) => [
                   `${award.section}区`,
                   award.runner,
-                  award.time,
+                  removeLeadingZero(award.time),
                   award.isSectionRecord ? '★' : ''
                 ])}
               />
@@ -389,7 +415,6 @@ export function HakoneYearClient({ data, year }: HakoneYearClientProps) {
           </div>
         </TabPanel>
       </div>
-      </MobileSwipeContainer>
       <ScrollToTop />
     </>
   )

@@ -37,6 +37,40 @@ const nextConfig = {
     // optimizeCss: true, // CSS最適化 - 一時的に無効化（crittersモジュールの問題）
     optimizePackageImports: ['framer-motion', 'lucide-react'], // パッケージの最適化
   },
+
+  // Webpack設定（チャンクロードエラー対策）
+  webpack: (config, { isServer }) => {
+    // クライアントサイドのみの設定
+    if (!isServer) {
+      // チャンク分割の最適化
+      config.optimization = {
+        ...config.optimization,
+        runtimeChunk: false, // ランタイムチャンクを無効化してエラーを軽減
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            // 共通コンポーネントをひとつのチャンクにまとめる
+            commons: {
+              name: 'commons',
+              chunks: 'all',
+              minChunks: 2,
+              priority: 10,
+            },
+            // React関連を別チャンクに
+            react: {
+              name: 'react',
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+              priority: 20,
+            },
+          },
+        },
+      }
+    }
+    return config
+  },
   
   // コンパイラ設定
   compiler: {

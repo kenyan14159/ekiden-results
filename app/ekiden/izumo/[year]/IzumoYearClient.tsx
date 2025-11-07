@@ -4,15 +4,11 @@ import Link from "next/link"
 import { getUniversityColor } from "@/data/university-colors"
 import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
-import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
+import { getMedalEmoji, formatGrade, normalizeForSearch, removeLeadingZero, shortenUniversityName } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import { YearNavigation } from "@/components/YearNavigation"
-import { InternalRelatedLinks } from "@/components/InternalRelatedLinks"
-import { generateYearDetailLinks } from "@/lib/internal-links"
 import { ResponsiveTable } from "@/components/ResponsiveTable"
-import { MobileSwipeContainer } from "@/components/MobileSwipeContainer"
-import { useRouter } from "next/navigation"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
 
 interface IzumoYearClientProps {
@@ -25,38 +21,6 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [expandedTeams, setExpandedTeams] = useState<Set<string>>(new Set())
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set())
-  const router = useRouter()
-
-  // 関連リンクを生成
-  const relatedLinks = generateYearDetailLinks('izumo', year.toString())
-
-  // スワイプナビゲーション用のヘルパー関数
-  const getPrevYear = () => {
-    let checkYear = year - 1
-    while (checkYear >= 1989) {
-      return checkYear
-    }
-    return null
-  }
-
-  const getNextYear = () => {
-    const maxYear = new Date().getFullYear()
-    let checkYear = year + 1
-    while (checkYear <= maxYear) {
-      return checkYear
-    }
-    return null
-  }
-
-  const handleSwipeLeft = () => {
-    const nextYear = getNextYear()
-    if (nextYear) router.push(`/ekiden/izumo/${nextYear}`)
-  }
-
-  const handleSwipeRight = () => {
-    const prevYear = getPrevYear()
-    if (prevYear) router.push(`/ekiden/izumo/${prevYear}`)
-  }
 
   const toggleTeam = (teamName: string) => {
     setExpandedTeams(prev => {
@@ -136,24 +100,19 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
 
   return (
     <>
-      <MobileSwipeContainer
-        onSwipeLeft={handleSwipeLeft}
-        onSwipeRight={handleSwipeRight}
-        showIndicators={true}
-      >
-        <div className="bg-white border-b">
-          <div className="container mx-auto px-4 lg:px-8 py-8">
-            <Link href="/ekiden/izumo" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              出雲駅伝 歴代結果に戻る
-            </Link>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
-              出雲駅伝{year}結果速報 | 区間記録・{data.teams?.[0]?.name ? `優勝${data.teams[0].name}・` : ''}成績一覧
-            </h1>
-          </div>
+      <div className="bg-white border-b">
+        <div className="container mx-auto px-4 lg:px-8 py-8">
+          <Link href="/ekiden/izumo" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 text-sm">
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            出雲駅伝 歴代結果に戻る
+          </Link>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">
+            出雲駅伝{year}結果速報 | 区間記録・{data.teams?.[0]?.name ? `優勝${data.teams[0].name}・` : ''}成績一覧
+          </h1>
         </div>
+      </div>
 
       <YearNavigation 
         currentYear={year} 
@@ -187,7 +146,7 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                     <div className="flex items-center gap-6">
                       <div className="text-right">
                         <div className="text-sm text-gray-600">総合タイム</div>
-                        <div className="text-lg font-bold text-gray-900">{team.totalTime}</div>
+                        <div className="text-lg font-bold text-gray-900">{removeLeadingZero(team.totalTime)}</div>
                       </div>
                       <svg 
                         className={`w-6 h-6 text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
@@ -211,11 +170,12 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                             {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
                           </span>,
                           <span key={`time-${runner.section}`}>
-                            {runner.time}
-                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                            {removeLeadingZero(runner.time)}
+                            {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                           </span>,
                           isOP ? '-' : `${runner.rank}位${getMedalEmoji(runner.rank)}`
                         ])}
+                        mobileCardView={false}
                       />
                     </div>
                   )}
@@ -237,9 +197,6 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                     className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center flex-1">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-lg mr-3">
-                        {section.section}
-                      </div>
                       <h2 className="text-xl font-bold text-gray-900">{section.section}区</h2>
                     </div>
                     <div className="flex items-center gap-6">
@@ -247,7 +204,7 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                         <div className="text-right">
                           <div className="text-sm text-gray-600">区間賞</div>
                           <div className="text-lg font-bold text-gray-900">{topRunner.name} ({topRunner.teamName})</div>
-                          <div className="text-sm text-gray-600">{topRunner.time}</div>
+                          <div className="text-sm text-gray-600">{removeLeadingZero(topRunner.time)}</div>
                         </div>
                       )}
                       <svg 
@@ -265,36 +222,40 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                     <div className="px-6 pb-6 border-t border-gray-100">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 mt-4">ランキング</h3>
                       <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white">
+                        <table className="min-w-full bg-white section-results-table">
                           <thead>
                             <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                              <th className="py-3 px-4 text-left">順位</th>
-                              <th className="py-3 px-4 text-left">選手</th>
-                              <th className="py-3 px-4 text-left">大学</th>
-                              <th className="py-3 px-4 text-left">タイム</th>
+                              <th className="py-3 px-2 md:px-4 text-left">順位</th>
+                              <th className="py-3 px-2 md:px-4 text-left hidden md:table-cell">選手</th>
+                              <th className="py-3 px-2 md:px-4 text-left">大学</th>
+                              <th className="py-3 px-2 md:px-4 text-left">タイム</th>
                             </tr>
                           </thead>
                           <tbody className="text-gray-700 text-sm font-light">
                             {section.runners.map((runner, index) => (
                               <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.rank}位 {getMedalEmoji(runner.rank)}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  <div className="flex items-center">
-                                    <div 
-                                      className="w-3 h-3 rounded-full mr-2" 
-                                      style={{ backgroundColor: runner.color }}
-                                    ></div>
-                                    {runner.teamName}
+                                <td className="py-2 px-2 md:px-4 md:whitespace-nowrap">
+                                  <div className="flex flex-col md:block gap-1">
+                                    <span className="font-bold text-sm md:text-base">{runner.rank}位 {getMedalEmoji(runner.rank)}</span>
+                                    <span className="text-xs md:hidden text-gray-700 break-words">{runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}</span>
                                   </div>
                                 </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap hidden md:table-cell">
+                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                                </td>
+                                <td className="py-2 px-2 md:px-4">
+                                  <div className="flex items-center">
+                                    <div 
+                                      className="w-3 h-3 rounded-full mr-2 flex-shrink-0" 
+                                      style={{ backgroundColor: runner.color }}
+                                    ></div>
+                                    <span className="text-xs md:text-sm break-words md:break-normal">{shortenUniversityName(runner.teamName)}</span>
+                                    <span className="hidden md:inline ml-1">{runner.teamName !== shortenUniversityName(runner.teamName) ? runner.teamName : ''}</span>
+                                  </div>
+                                </td>
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap text-xs md:text-sm">
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-1 md:ml-2 text-orange-600 font-bold">★</span>}
                                 </td>
                               </tr>
                             ))}
@@ -347,8 +308,8 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
                         </td>
                         <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
                         <td className="py-3 px-4 whitespace-nowrap">
-                          {runner.time}
-                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                          {removeLeadingZero(runner.time)}
+                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                         </td>
                         <td className="py-3 px-4 whitespace-nowrap">{runner.rank}</td>
                       </tr>
@@ -397,7 +358,6 @@ export function IzumoYearClient({ data, year }: IzumoYearClientProps) {
           </div>
         </TabPanel>
       </div>
-      </MobileSwipeContainer>
       <ScrollToTop />
     </>
   )

@@ -118,8 +118,20 @@ export default function MiyakoojiWomenPage() {
                       </div>
                     </div>
                     <div className="h-px md:h-12 md:w-px bg-gray-200"></div>
-                    <div className="flex-1">
-                      {result.school && result.prefecture && (
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3">
+                      {result.schools && result.times ? (
+                        result.schools.slice(0, 3).map((school, schoolIndex) => (
+                          <div key={schoolIndex} className="flex items-center gap-2 sm:gap-3">
+                            <div className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded text-white font-bold text-xs sm:text-sm flex-shrink-0" style={{ backgroundColor: getPrefectureColor(school.prefecture) }}>
+                              {schoolIndex + 1}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-medium text-gray-900 text-xs sm:text-sm truncate">{school.name}</p>
+                              <p className="text-xs text-gray-500">{result.times?.[schoolIndex]}</p>
+                            </div>
+                          </div>
+                        ))
+                      ) : result.school && result.prefecture ? (
                         <div className="flex items-center gap-2 sm:gap-3">
                           <div className="flex items-center justify-center w-10 h-10 rounded text-white font-bold text-lg flex-shrink-0" style={{ backgroundColor: getPrefectureColor(result.prefecture) }}>
                             1
@@ -132,7 +144,7 @@ export default function MiyakoojiWomenPage() {
                             <p className="text-xs sm:text-sm text-gray-500 mt-1">{result.time}</p>
                           </div>
                         </div>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 </div>

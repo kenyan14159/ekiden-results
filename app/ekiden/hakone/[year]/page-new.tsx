@@ -15,7 +15,7 @@ export async function generateMetadata({
   
   // データを取得して優勝校を特定
   let winner = ''
-  let count = getHakoneCount(parseInt(year))
+  const count = getHakoneCount(parseInt(year))
   
   try {
     const data = await fetchHakoneData(year)

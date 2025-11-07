@@ -14,8 +14,8 @@ export function SocialShareButtons({ url, title, description }: SocialShareButto
 
   const shareUrl = `https://ekiden-results.com${url}`
   const encodedUrl = encodeURIComponent(shareUrl)
-  const encodedTitle = encodeURIComponent(title)
-  const encodedDescription = description ? encodeURIComponent(description) : ''
+  const shareText = description ? `${title}｜${description}` : title
+  const encodedTitle = encodeURIComponent(shareText)
 
   const handleCopyLink = async () => {
     try {

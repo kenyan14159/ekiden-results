@@ -3,7 +3,6 @@
 import { Card } from '@/components/ui/card';
 import AmazonLink from './AmazonLink';
 import RakutenLink from './RakutenLink';
-import { ExternalLink } from 'lucide-react';
 
 interface ProductCardProps {
   id: string;

@@ -15,7 +15,7 @@ export async function generateMetadata({
     })
     if (response.ok) {
       const data = await response.json()
-      const topTeam = data.teams?.find((t: any) => t.rank === 1)
+      const topTeam = data.teams?.find((t: { rank: number | string; name: string }) => t.rank === 1)
       winner = topTeam ? topTeam.name : ''
     }
   } catch (error) {

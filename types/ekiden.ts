@@ -14,6 +14,7 @@ export interface Runner {
 export interface Team {
   rank: number | string
   name: string
+  prefecture?: string
   totalTime: string
   outboundTime?: string // 箱根駅伝のみ
   inboundTime?: string  // 箱根駅伝のみ

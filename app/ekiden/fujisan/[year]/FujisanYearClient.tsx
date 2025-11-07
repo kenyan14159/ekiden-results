@@ -4,7 +4,7 @@ import Link from "next/link"
 import { getUniversityColor } from "@/data/university-colors"
 import { useState } from "react"
 import { TabNavigation, TabPanel } from "@/components/TabNavigation"
-import { getMedalEmoji, formatGrade, normalizeForSearch } from "@/lib/format-utils"
+import { getMedalEmoji, formatGrade, normalizeForSearch, removeLeadingZero, shortenUniversityName } from "@/lib/format-utils"
 import { SearchBox } from "@/components/SearchBox"
 import { ScrollToTop } from "@/components/ScrollToTop"
 import type { EkidenData, TabType, RunnerWithTeam } from "@/types/ekiden"
@@ -175,8 +175,8 @@ export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
                                   {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                                 </td>
                                 <td className="py-3 px-4 whitespace-nowrap">
                                   {isOP ? '-' : `${runner.rank}位`}
@@ -207,9 +207,6 @@ export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
                     className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center flex-1">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold text-lg mr-3">
-                        {section.section}
-                      </div>
                       <h2 className="text-xl font-bold text-gray-900">{section.section}区</h2>
                     </div>
                     <div className="flex items-center gap-6">
@@ -217,7 +214,7 @@ export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
                         <div className="text-right">
                           <div className="text-sm text-gray-600">区間賞</div>
                           <div className="text-lg font-bold text-gray-900">{topRunner.name} ({topRunner.teamName})</div>
-                          <div className="text-sm text-gray-600">{topRunner.time}</div>
+                          <div className="text-sm text-gray-600">{removeLeadingZero(topRunner.time)}</div>
                         </div>
                       )}
                       <svg 
@@ -235,36 +232,40 @@ export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
                     <div className="px-6 pb-6 border-t border-gray-100">
                       <h3 className="text-lg font-semibold text-gray-800 mb-4 mt-4">ランキング</h3>
                       <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white">
+                        <table className="min-w-full bg-white section-results-table">
                           <thead>
                             <tr className="bg-gray-100 text-gray-600 text-sm leading-normal">
-                              <th className="py-3 px-4 text-left">順位</th>
-                              <th className="py-3 px-4 text-left">選手</th>
-                              <th className="py-3 px-4 text-left">大学</th>
-                              <th className="py-3 px-4 text-left">タイム</th>
+                              <th className="py-3 px-2 md:px-4 text-left">順位</th>
+                              <th className="py-3 px-2 md:px-4 text-left hidden md:table-cell">選手</th>
+                              <th className="py-3 px-2 md:px-4 text-left">大学</th>
+                              <th className="py-3 px-2 md:px-4 text-left">タイム</th>
                             </tr>
                           </thead>
                           <tbody className="text-gray-700 text-sm font-light">
                             {section.runners.map((runner, index) => (
                               <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.rank}位 {getMedalEmoji(runner.rank)}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
-                                </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  <div className="flex items-center">
-                                    <div 
-                                      className="w-3 h-3 rounded-full mr-2" 
-                                      style={{ backgroundColor: runner.color }}
-                                    ></div>
-                                    {runner.teamName}
+                                <td className="py-2 px-2 md:px-4 md:whitespace-nowrap">
+                                  <div className="flex flex-col md:block gap-1">
+                                    <span className="font-bold text-sm md:text-base">{runner.rank}位 {getMedalEmoji(runner.rank)}</span>
+                                    <span className="text-xs md:hidden text-gray-700 break-words">{runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}</span>
                                   </div>
                                 </td>
-                                <td className="py-3 px-4 whitespace-nowrap">
-                                  {runner.time}
-                                  {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap hidden md:table-cell">
+                                  {runner.name} {runner.grade && <span className="text-gray-500">{formatGrade(runner.grade)}</span>}
+                                </td>
+                                <td className="py-2 px-2 md:px-4">
+                                  <div className="flex items-center">
+                                    <div 
+                                      className="w-3 h-3 rounded-full mr-2 flex-shrink-0" 
+                                      style={{ backgroundColor: runner.color }}
+                                    ></div>
+                                    <span className="text-xs md:text-sm break-words md:break-normal">{shortenUniversityName(runner.teamName)}</span>
+                                    <span className="hidden md:inline ml-1">{runner.teamName !== shortenUniversityName(runner.teamName) ? runner.teamName : ''}</span>
+                                  </div>
+                                </td>
+                                <td className="py-2 px-2 md:px-4 whitespace-nowrap text-xs md:text-sm">
+                                  {removeLeadingZero(runner.time)}
+                                  {runner.isSectionRecord && <span className="ml-1 md:ml-2 text-orange-600 font-bold">★</span>}
                                 </td>
                               </tr>
                             ))}
@@ -318,7 +319,7 @@ export function FujisanYearClient({ data, year }: FujisanYearClientProps) {
                         <td className="py-3 px-4 whitespace-nowrap">{runner.section}区</td>
                         <td className="py-3 px-4 whitespace-nowrap">
                           {runner.time}
-                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★区間新</span>}
+                          {runner.isSectionRecord && <span className="ml-2 text-orange-600 font-bold">★</span>}
                         </td>
                         <td className="py-3 px-4 whitespace-nowrap">{runner.rank}</td>
                       </tr>

@@ -10,7 +10,7 @@ export function GoogleAdSense() {
     // AdSense自動広告の初期化
     try {
       if (typeof window !== 'undefined') {
-        // @ts-ignore
+        // @ts-expect-error - AdSense API types are not available
         (window.adsbygoogle = window.adsbygoogle || []).push({})
       }
     } catch (err) {
