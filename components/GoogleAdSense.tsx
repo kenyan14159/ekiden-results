@@ -4,7 +4,8 @@ import Script from 'next/script'
 import { useEffect } from 'react'
 
 export function GoogleAdSense() {
-  const adClient = 'ca-pub-7505086484817015'
+  // AdSenseクライアントID（環境変数から取得、なければデフォルト値を使用）
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_ID || 'ca-pub-7505086484817015'
 
   useEffect(() => {
     // AdSense自動広告の初期化

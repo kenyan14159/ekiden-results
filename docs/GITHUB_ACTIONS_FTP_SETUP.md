@@ -25,18 +25,20 @@
 
 #### Secret 1: FTP_SERVER
 - **Name**: `FTP_SERVER`
-- **Value**: `sv16346.xserver.jp`
+- **Value**: `あなたのFTPサーバーアドレス` (例: `sv16346.xserver.jp`)
 - **Add secret** をクリック
 
 #### Secret 2: FTP_USERNAME
 - **Name**: `FTP_USERNAME`
-- **Value**: `nittaiekiden`
+- **Value**: `あなたのFTPユーザー名` (例: `your-username`)
 - **Add secret** をクリック
 
 #### Secret 3: FTP_PASSWORD
 - **Name**: `FTP_PASSWORD`
-- **Value**: `z3cvk4gi`
+- **Value**: `あなたのFTPパスワード` (例: `your-secure-password`)
 - **Add secret** をクリック
+
+⚠️ **重要**: 実際の認証情報は絶対にこのドキュメントに記載しないでください。GitHub Secretsにのみ保存してください。
 
 ### 1.4 設定完了の確認
 3つのSecretが登録されていることを確認してください：
@@ -101,7 +103,7 @@ GitHubのUIから手動で実行することもできます：
 
 ### 4.3 ウェブサイトでの確認
 デプロイ完了後、以下のURLでサイトが正しく表示されることを確認：
-- https://ekiden.nittai.info
+- https://ekiden-results.com
 
 ---
 
@@ -124,7 +126,7 @@ GitHubのUIから手動で実行することもできます：
 ### エラー: FTP upload failed
 **原因**: FTPサーバーへの接続やアップロードに問題
 **解決策**:
-- server-dirのパスを確認: `/ekiden.nittai.info/public_html/`
+- server-dirのパスを確認: `/ekiden-results.com/public_html/`
 - エックスサーバーのFTP接続制限を確認
 - ファイルサイズやディスク容量を確認
 
@@ -143,7 +145,7 @@ GitHubのUIから手動で実行することもできます：
 サーバー上のデプロイ先を変更する場合は、`deploy.yml` の以下の行を編集：
 
 ```yaml
-server-dir: /ekiden.nittai.info/public_html/
+server-dir: /ekiden-results.com/public_html/
 ```
 
 ### 既存ファイルの削除（危険）

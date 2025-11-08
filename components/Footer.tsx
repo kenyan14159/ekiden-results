@@ -66,37 +66,12 @@ export function Footer() {
             )
           })}
           
-          {/* ブログ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: categories.length * 0.1 }}
-          >
-            <h3 className="font-bold text-gray-900 mb-4 text-sm lg:text-base">
-              ブログ
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-sm text-gray-600 hover:text-blue-600 transition-colors inline-flex items-center group"
-                >
-                  <span className="relative">
-                    記事一覧
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-                  </span>
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-          
           {/* サイト情報 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: (categories.length + 1) * 0.1 }}
+            transition={{ duration: 0.5, delay: categories.length * 0.1 }}
           >
             <h3 className="font-bold text-gray-900 mb-4 text-sm lg:text-base">
               サイト情報

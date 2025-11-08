@@ -34,8 +34,9 @@ const nextConfig = {
   
   // 実験的機能の有効化（パフォーマンス向上）
   experimental: {
-    // optimizeCss: true, // CSS最適化 - 一時的に無効化（crittersモジュールの問題）
-    optimizePackageImports: ['framer-motion', 'lucide-react'], // パッケージの最適化
+    // optimizeCss: true, // CSS最適化 - Next.js 14ではデフォルトで最適化されるため、明示的な設定は不要
+    // パッケージの最適化: 使用しているパッケージのみをインポートしてバンドルサイズを削減
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
 
   // Webpack設定（チャンクロードエラー対策）

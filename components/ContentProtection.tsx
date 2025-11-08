@@ -1,222 +1,39 @@
 "use client"
 
-import { useEffect } from 'react'
-
 /**
- * コンテンツ保護コンポーネント
+ * コンテンツ保護コンポーネント（軽量版）
+ * 
+ * 注意: このコンポーネントは著作権表示のための透かしのみを提供します。
+ * ユーザビリティとアクセシビリティを考慮し、以下の制限は削除されました:
  * - 右クリック禁止
  * - テキスト選択禁止
- * - キーボードショートカット（Ctrl+C, Ctrl+S等）禁止
- * - 開発者ツール検知（警告表示）
- * - スクリーンショット抑止（透かし）
+ * - キーボードショートカット禁止
  * 
- * 注: 開発中は制限を無効化しています
+ * これらの制限は、スクリーンリーダーやブラウザ拡張機能の動作を妨げ、
+ * ユーザー体験を悪化させるため削除されました。
  */
 export function ContentProtection() {
-  useEffect(() => {
-    // 開発環境では保護機能を無効化
-    if (process.env.NODE_ENV === 'development') {
-      return
-    }
-    // 右クリック禁止
-    const handleContextMenu = (e: MouseEvent) => {
-      e.preventDefault()
-      showProtectionNotice('右クリックは無効化されています')
-      return false
-    }
-
-    // コピー禁止（Ctrl+C, Cmd+C）
-    const handleCopy = (e: ClipboardEvent) => {
-      e.preventDefault()
-      showProtectionNotice('コンテンツのコピーは禁止されています')
-      return false
-    }
-
-    // キーボードショートカット禁止
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ctrl+C, Cmd+C (コピー)
-      if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-        e.preventDefault()
-        showProtectionNotice('コンテンツのコピーは禁止されています')
-        return false
-      }
-
-      // Ctrl+S, Cmd+S (保存)
-      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-        e.preventDefault()
-        showProtectionNotice('ページの保存は禁止されています')
-        return false
-      }
-
-      // Ctrl+U, Cmd+U (ソース表示)
-      if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-        e.preventDefault()
-        showProtectionNotice('ソースコードの表示は禁止されています')
-        return false
-      }
-
-      // PrintScreen (スクリーンショット)
-      if (e.key === 'PrintScreen') {
-        showProtectionNotice('スクリーンショットは禁止されています')
-        // PrintScreenは完全には防げないが、警告を表示
-      }
-    }
-
-    // ドラッグ禁止
-    const handleDragStart = (e: DragEvent) => {
-      e.preventDefault()
-      return false
-    }
-
-    // テキスト選択禁止（追加の保護）
-    const handleSelectStart = (e: Event) => {
-      e.preventDefault()
-      return false
-    }
-
-    // イベントリスナー登録
-    document.addEventListener('contextmenu', handleContextMenu)
-    document.addEventListener('copy', handleCopy)
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('dragstart', handleDragStart)
-    document.addEventListener('selectstart', handleSelectStart)
-
-    // クリーンアップ
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu)
-      document.removeEventListener('copy', handleCopy)
-      document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('dragstart', handleDragStart)
-      document.removeEventListener('selectstart', handleSelectStart)
-    }
-  }, [])
-
   return (
     <>
-      {/* 開発環境では保護機能を無効化 */}
-      {process.env.NODE_ENV !== 'development' && (
-        <>
-          {/* CSSでテキスト選択を禁止 */}
-          <style jsx global>{`
-            body {
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-              -webkit-touch-callout: none;
-            }
-
-            /* スクリーンショット抑止用の透かし */
-            body::before {
-              content: "© 駅伝リザルト - ekiden-results.com";
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%) rotate(-45deg);
-              font-size: 4rem;
-              color: rgba(0, 0, 0, 0.03);
-              pointer-events: none;
-              z-index: 9998;
-              white-space: nowrap;
-              font-weight: bold;
-            }
-
-            /* 入力フィールドやボタンは選択可能にする */
-            input,
-            textarea,
-            button,
-            a,
-            [role="button"],
-            [role="link"] {
-              -webkit-user-select: text !important;
-              -moz-user-select: text !important;
-              -ms-user-select: text !important;
-              user-select: text !important;
-            }
-          `}</style>
-
-          {/* 保護通知エリア */}
-          <div id="protection-notice" className="hidden"></div>
-        </>
-      )}
+      {/* 著作権表示のための透かしのみ（ユーザー操作には影響しません） */}
+      <style jsx global>{`
+        /* スクリーンショット時の著作権表示用の透かし */
+        body::before {
+          content: "© 駅伝リザルト - ekiden-results.com";
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          font-size: 4rem;
+          color: rgba(0, 0, 0, 0.03);
+          pointer-events: none;
+          z-index: 9998;
+          white-space: nowrap;
+          font-weight: bold;
+          user-select: none;
+        }
+      `}</style>
     </>
   )
-}
-
-// 保護通知を表示
-function showProtectionNotice(message: string, persistent = false) {
-  const noticeEl = document.getElementById('protection-notice')
-  if (!noticeEl) return
-
-  // 既存の通知を削除
-  noticeEl.innerHTML = ''
-
-  // 新しい通知を作成
-  const notice = document.createElement('div')
-  notice.className = 'fixed top-4 right-4 bg-red-600 text-white px-6 py-4 rounded-lg shadow-2xl z-[9999] max-w-md animate-slide-in'
-  notice.innerHTML = `
-    <div class="flex items-start gap-3">
-      <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-      </svg>
-      <div class="flex-1">
-        <p class="font-semibold mb-1">コンテンツ保護</p>
-        <p class="text-sm">${message}</p>
-      </div>
-    </div>
-  `
-
-  noticeEl.appendChild(notice)
-  noticeEl.classList.remove('hidden')
-
-  // 一定時間後に非表示（persistentでなければ）
-  if (!persistent) {
-    setTimeout(() => {
-      notice.classList.add('animate-slide-out')
-      setTimeout(() => {
-        noticeEl.classList.add('hidden')
-        noticeEl.innerHTML = ''
-      }, 300)
-    }, 3000)
-  }
-}
-
-// アニメーション用のCSS
-const styles = `
-  @keyframes slide-in {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slide-out {
-    from {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-  }
-
-  .animate-slide-in {
-    animation: slide-in 0.3s ease-out;
-  }
-
-  .animate-slide-out {
-    animation: slide-out 0.3s ease-in;
-  }
-`
-
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style')
-  styleSheet.textContent = styles
-  document.head.appendChild(styleSheet)
 }
 

@@ -17,7 +17,7 @@ GitHub Actionsを使用して、mainブランチへのpush時に自動的にエ�
 詳細は [GitHub Actions FTP設定ガイド](./docs/GITHUB_ACTIONS_FTP_SETUP.md) を参照してください。
 
 ## 🌐 サイトURL
-https://ekiden.nittai.info
+https://ekiden-results.com
 
 ## 💻 ローカル開発
 
@@ -25,6 +25,11 @@ https://ekiden.nittai.info
 ```bash
 npm install
 ```
+
+### 環境変数の設定（オプション）
+Google Analyticsを使用する場合、`.env.local` ファイルを作成して環境変数を設定してください。
+
+詳細は [環境変数設定ガイド](./docs/ENV_SETUP.md) を参照してください。
 
 ### 開発サーバー起動
 ```bash

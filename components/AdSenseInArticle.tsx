@@ -25,6 +25,8 @@ export function AdSenseInArticle({
   style = {}
 }: AdSenseInArticleProps) {
   const adRef = useRef<HTMLModElement>(null)
+  // AdSenseクライアントID（環境変数から取得、なければデフォルト値を使用）
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_ID || 'ca-pub-7505086484817015'
 
   useEffect(() => {
     try {
@@ -66,7 +68,7 @@ export function AdSenseInArticle({
         ref={adRef}
         className="adsbygoogle"
         style={getAdStyle()}
-        data-ad-client="ca-pub-7505086484817015"
+        data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive="true"

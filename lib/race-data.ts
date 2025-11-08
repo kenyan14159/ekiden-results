@@ -77,7 +77,18 @@ export async function getAvailableYears(raceId: string): Promise<number[]> {
 
     return years;
   } catch (error) {
-    console.error(`Error reading years for ${raceId}:`, error);
+    // エラーの種類に応じた詳細なログ出力
+    if (error instanceof Error) {
+      // Node.jsのファイルシステムエラー型チェック
+      const nodeError = error as NodeJS.ErrnoException;
+      if (nodeError.code === 'ENOENT') {
+        console.warn(`データディレクトリが見つかりません: ${dataPath} (raceId: ${raceId})`);
+      } else {
+        console.error(`年度一覧の取得エラー (raceId: ${raceId}):`, error.message);
+      }
+    } else {
+      console.error(`年度一覧の取得エラー (raceId: ${raceId}):`, error);
+    }
     return [];
   }
 }
@@ -98,9 +109,32 @@ export async function getRaceData(
     const filePath = path.join(process.cwd(), "data", dataPath, `${year}.json`);
     const fileContents = await fs.readFile(filePath, "utf8");
     const data: RaceData = JSON.parse(fileContents);
+    
+    // データの基本的な検証
+    if (!data.teams || !Array.isArray(data.teams)) {
+      console.warn(`無効なデータ形式: ${raceId} ${year} - teams配列が見つかりません`);
+      return null;
+    }
+    
     return data;
   } catch (error) {
-    console.error(`Error reading data for ${raceId} ${year}:`, error);
+    // エラーの種類に応じた詳細なログ出力
+    if (error instanceof Error) {
+      // Node.jsのファイルシステムエラー型チェック
+      const nodeError = error as NodeJS.ErrnoException;
+      if (nodeError.code === 'ENOENT') {
+        // ファイルが存在しない場合（開発環境でのみ警告）
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`データファイルが見つかりません: ${raceId} ${year}`);
+        }
+      } else if (error instanceof SyntaxError) {
+        console.error(`JSON解析エラー (${raceId} ${year}):`, error.message);
+      } else {
+        console.error(`データ読み込みエラー (${raceId} ${year}):`, error.message);
+      }
+    } else {
+      console.error(`データ読み込みエラー (${raceId} ${year}):`, error);
+    }
     return null;
   }
 }

@@ -7,19 +7,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const year = params.year
   
-  // データを取得して優勝校を特定
+  // データを取得して優勝校を特定（ファイルシステムから直接読み込み）
   let winner = ''
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'}/data/university/hakone/${year}.json`, {
-      cache: 'force-cache'
-    })
-    if (response.ok) {
-      const data = await response.json()
-      const topTeam = data.teams?.find((t: { rank: number | string; name: string }) => t.rank === 1)
-      winner = topTeam ? topTeam.name : ''
-    }
+    const fs = await import('fs/promises')
+    const path = await import('path')
+    
+    const filePath = path.join(process.cwd(), 'public', 'data', 'university', 'hakone', `${year}.json`)
+    const fileContent = await fs.readFile(filePath, 'utf-8')
+    const data = JSON.parse(fileContent)
+    
+    const topTeam = data.teams?.find((t: { rank: number | string; name: string }) => t.rank === 1)
+    winner = topTeam ? topTeam.name : ''
   } catch (error) {
-    console.error('メタデータ生成エラー:', error)
+    // ファイルが存在しない場合や読み込みエラーは無視（メタデータは生成される）
+    // 開発環境でのみログ出力
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`箱根駅伝 ${year}年のデータ読み込みエラー（メタデータ生成）:`, error)
+    }
   }
 
   const title = `箱根駅伝 ${year}年 第${getHakoneCount(parseInt(year))}回大会 結果${winner ? ` - ${winner}優勝` : ''}`

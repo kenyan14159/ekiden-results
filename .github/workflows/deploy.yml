@@ -57,7 +57,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ${{ env.DEPLOY_DIR }}/
-          server-dir: /ekiden.nittai.info/public_html/
+          server-dir: /ekiden-results.com/public_html/
           # 以下のオプションで不要なファイルを除外
           exclude: |
             **/.git*
@@ -74,4 +74,4 @@ jobs:
       - name: Deployment completed
         run: |
           echo "✅ Deployment to Xserver completed successfully!"
-          echo "🌐 Site URL: https://ekiden.nittai.info"
+          echo "🌐 Site URL: https://ekiden-results.com"
