@@ -1,0 +1,36 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build Next.js application
+        run: npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Build completed
+        run: |
+          echo "✅ Build completed successfully!"
+          echo "📦 Output directory: out"
+          echo "🌐 This project is deployed to Cloudflare Pages"
+

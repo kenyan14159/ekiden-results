@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 静的サイトとしてエクスポート（エックスサーバーデプロイ用）
+  // 静的サイトとしてエクスポート（Cloudflare Pagesデプロイ用）
   output: 'export',
   
   // ベースパスとアセットプレフィックスの設定
@@ -24,7 +24,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'ekiden-results.com',
-        pathname: '/WordPress/wp-content/uploads/**',
       },
     ],
   },
@@ -84,7 +83,8 @@ const nextConfig = {
   distDir: '.next',
   
   // 注意: 静的エクスポート（output: 'export'）を使用しているため、
-  // カスタムヘッダーはホスティング先のWebサーバー（Nginx、Vercel、Netlifyなど）で設定してください。
+  // カスタムヘッダーはホスティング先のWebサーバー（Cloudflare Pages、Nginx、Vercel、Netlifyなど）で設定してください。
+  // Cloudflare Pagesの場合は、public/_headersファイルで設定します。
   // 
   // 推奨ヘッダー設定:
   // - Strict-Transport-Security: max-age=31536000; includeSubDomains

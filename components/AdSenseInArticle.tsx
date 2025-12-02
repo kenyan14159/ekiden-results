@@ -25,19 +25,36 @@ export function AdSenseInArticle({
   style = {}
 }: AdSenseInArticleProps) {
   const adRef = useRef<HTMLModElement>(null)
+  const isAdPushed = useRef(false)
   // AdSenseクライアントID（環境変数から取得、なければデフォルト値を使用）
   const adClient = process.env.NEXT_PUBLIC_ADSENSE_ID || 'ca-pub-7505086484817015'
 
   useEffect(() => {
+    // 既にプッシュ済みの場合はスキップ
+    if (isAdPushed.current) {
+      return
+    }
+
+    // 広告要素が既に初期化されている場合はスキップ
+    if (adRef.current?.getAttribute('data-adsbygoogle-status')) {
+      return
+    }
+
     try {
       if (typeof window !== 'undefined' && adRef.current) {
         // @ts-expect-error - AdSense API types are not available
         (window.adsbygoogle = window.adsbygoogle || []).push({})
+        isAdPushed.current = true
       }
     } catch (err) {
+      // 重複エラーは無視（既に広告が読み込まれている場合）
+      if (err instanceof Error && err.message.includes('already have ads')) {
+        isAdPushed.current = true
+        return
+      }
       console.error('AdSense push error:', err)
     }
-  }, [])
+  }, [adSlot])
 
   const defaultStyles = {
     display: 'block',

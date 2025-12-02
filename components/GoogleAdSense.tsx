@@ -1,23 +1,14 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
 
 export function GoogleAdSense() {
   // AdSenseクライアントID（環境変数から取得、なければデフォルト値を使用）
   const adClient = process.env.NEXT_PUBLIC_ADSENSE_ID || 'ca-pub-7505086484817015'
 
-  useEffect(() => {
-    // AdSense自動広告の初期化
-    try {
-      if (typeof window !== 'undefined') {
-        // @ts-expect-error - AdSense API types are not available
-        (window.adsbygoogle = window.adsbygoogle || []).push({})
-      }
-    } catch (err) {
-      console.error('AdSense initialization error:', err)
-    }
-  }, [])
+  // 注意: 自動広告はスクリプト読み込み後に自動的に初期化されるため、
+  // 手動でpush({})を呼ぶ必要はありません。
+  // 手動でpushすると重複エラーの原因になります。
 
   return (
     <Script

@@ -1,0 +1,6 @@
+# Cloudflare Pages用のリダイレクト設定
+# 必要に応じて追加してください
+
+# 例: 古いURLから新しいURLへのリダイレクト
+# /old-path /new-path 301
+

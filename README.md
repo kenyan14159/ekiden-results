@@ -7,14 +7,14 @@
 - **フレームワーク**: Next.js 14 (App Router)
 - **言語**: TypeScript
 - **スタイリング**: Tailwind CSS
-- **ホスティング**: エックスサーバー
+- **ホスティング**: Cloudflare Pages
 
 ## 📦 自動デプロイ
-GitHub Actionsを使用して、mainブランチへのpush時に自動的にエックスサーバーへデプロイされます。
+Cloudflare Pagesを使用して、mainブランチへのpush時に自動的にデプロイされます。
 
-✅ **デプロイ設定完了** (2025年10月9日)
+✅ **Cloudflare Pagesデプロイ設定完了**
 
-詳細は [GitHub Actions FTP設定ガイド](./docs/GITHUB_ACTIONS_FTP_SETUP.md) を参照してください。
+詳細は [Cloudflare Pagesデプロイガイド](./docs/CLOUDFLARE_PAGES_DEPLOY.md) を参照してください。
 
 ## 🌐 サイトURL
 https://ekiden-results.com
@@ -42,10 +42,10 @@ npm run build
 ```
 
 ## 📝 ドキュメント
+- [Cloudflare Pagesデプロイガイド](./docs/CLOUDFLARE_PAGES_DEPLOY.md)
 - [SEO改善プラン](./docs/SEO_IMPROVEMENT_PLAN.md)
 - [コンテンツ構造ガイド](./docs/CONTENT_STRUCTURE_GUIDE.md)
 - [内部リンク戦略](./docs/INTERNAL_LINK_STRATEGY.md)
-- [GitHub Actions FTP設定](./docs/GITHUB_ACTIONS_FTP_SETUP.md)
 
 ## 📊 主要コンテンツ
 - 箱根駅伝の歴史と記録
@@ -55,4 +55,4 @@ npm run build
 
 ---
 
-**Last Updated**: 2025年10月9日
+**Last Updated**: 2025年1月10日
