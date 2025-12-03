@@ -1,6 +1,10 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import Link from "next/link"
+import { Metadata } from "next"
+import { generateInfoPageMetadata } from "@/lib/metadata-utils"
+
+export const metadata: Metadata = generateInfoPageMetadata('contact')
 
 export default function ContactPage() {
   return (
@@ -46,6 +50,7 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     required
+                    autoComplete="name"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -59,6 +64,7 @@ export default function ContactPage() {
                     id="email"
                     name="email"
                     required
+                    autoComplete="email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>

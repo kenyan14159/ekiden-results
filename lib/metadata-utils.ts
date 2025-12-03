@@ -73,20 +73,20 @@ export const RACE_METADATA: Record<string, RaceMetadata> = {
     keywords: ['女子', '大学女子', '仙台', '杜の都']
   },
   'miyakooji-men': {
-    name: '全国男子駅伝（都道府県対抗駅伝）',
-    nameEn: 'National Men\'s Ekiden',
-    shortName: '都道府県男子',
-    category: 'その他',
-    season: '1月',
-    keywords: ['都道府県対抗', '広島', '平和記念公園', '高校生', '中学生']
+    name: '全国高校駅伝 男子（都大路）',
+    nameEn: 'National High School Ekiden (Boys)',
+    shortName: '都大路男子',
+    category: '高校',
+    season: '12月',
+    keywords: ['高校駅伝', '都大路', '京都', '西京極', '全国高等学校駅伝']
   },
   'miyakooji-women': {
-    name: '全国女子駅伝（都道府県対抗駅伝）',
-    nameEn: 'National Women\'s Ekiden',
-    shortName: '都道府県女子',
-    category: 'その他',
-    season: '1月',
-    keywords: ['都道府県対抗', '京都', '高校生', '中学生']
+    name: '全国高校駅伝 女子（都大路）',
+    nameEn: 'National High School Ekiden (Girls)',
+    shortName: '都大路女子',
+    category: '高校',
+    season: '12月',
+    keywords: ['高校駅伝', '都大路', '京都', '西京極', '全国高等学校駅伝']
   },
   'prefecture-women': {
     name: '全国都道府県対抗女子駅伝',
@@ -97,12 +97,12 @@ export const RACE_METADATA: Record<string, RaceMetadata> = {
     keywords: ['都道府県対抗', '京都', '西京極']
   },
   hiroshima: {
-    name: '全国都道府県対抗男子駅伝',
-    nameEn: 'National Men\'s Ekiden',
-    shortName: '都道府県男子',
+    name: '全国都道府県対抗男子駅伝（ひろしま駅伝）',
+    nameEn: 'National Men\'s Prefectural Ekiden',
+    shortName: 'ひろしま男子',
     category: 'その他',
     season: '1月',
-    keywords: ['都道府県対抗', '広島', '平和記念公園']
+    keywords: ['都道府県対抗', '広島', '平和記念公園', 'ひろしま駅伝', '天皇盃']
   },
   'junior-high-men': {
     name: '全国中学校駅伝（男子）',
@@ -173,7 +173,7 @@ export function generateRaceListMetadata(raceKey: string): Metadata {
       description,
     },
     alternates: {
-      canonical: `https://ekiden-results.com/ekiden/${raceKey}`,
+      canonical: `https://ekiden-results.com/ekiden/${raceKey}/`,
     },
   }
 }
@@ -229,7 +229,7 @@ export function generateRaceYearMetadata(
       description,
     },
     alternates: {
-      canonical: `https://ekiden-results.com/ekiden/${raceKey}/${year}`,
+      canonical: `https://ekiden-results.com/ekiden/${raceKey}/${year}/`,
     },
   }
 }
@@ -275,7 +275,7 @@ export function generateRaceAboutMetadata(raceKey: string): Metadata {
       description,
     },
     alternates: {
-      canonical: `https://ekiden-results.com/ekiden/${raceKey}/about`,
+      canonical: `https://ekiden-results.com/ekiden/${raceKey}/about/`,
     },
   }
 }
@@ -332,7 +332,7 @@ export function generateInfoPageMetadata(
       description: metadata.description,
     },
     alternates: {
-      canonical: `https://ekiden-results.com/information/${pageType}`,
+      canonical: `https://ekiden-results.com/information/${pageType}/`,
     },
   }
 }

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/generate-articles.js && next dev",
-    "build": "node scripts/generate-articles.js && next build",
+    "dev": "node scripts/generate-articles.js && node scripts/generate-race-indices.js && next dev",
+    "build": "node scripts/generate-articles.js && node scripts/generate-race-indices.js && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
@@ -24,7 +24,8 @@
     "server-only": "^0.0.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
-    "web-vitals": "^5.1.0"
+    "web-vitals": "^5.1.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.9.1",

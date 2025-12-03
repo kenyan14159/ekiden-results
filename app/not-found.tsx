@@ -98,6 +98,48 @@ export default function NotFound() {
                 </Button>
               </Link>
             </motion.div>
+
+            {/* 人気の大会 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mt-12 pt-8 border-t border-gray-200"
+            >
+              <p className="text-sm text-gray-500 mb-4">または、人気の大会をチェック</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link 
+                  href="/ekiden/hakone/" 
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                >
+                  箱根駅伝
+                </Link>
+                <Link 
+                  href="/ekiden/newyear/" 
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                >
+                  ニューイヤー駅伝
+                </Link>
+                <Link 
+                  href="/ekiden/queens/" 
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                >
+                  クイーンズ駅伝
+                </Link>
+                <Link 
+                  href="/ekiden/zenjitsu/" 
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                >
+                  全日本大学駅伝
+                </Link>
+                <Link 
+                  href="/ekiden/izumo/" 
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                >
+                  出雲駅伝
+                </Link>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </main>

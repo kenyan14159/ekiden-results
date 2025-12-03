@@ -74,8 +74,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    other: {
+      "msvalidate.01": "73F7D8BA7F66661D40546A332A7A8C22",
+    },
+  },
   alternates: {
-    canonical: "https://ekiden-results.com",
+    canonical: "https://ekiden-results.com/",
   },
 }
 
@@ -86,11 +91,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${inter.variable}`}>
-      <head>
-        <meta name="msvalidate.01" content="73F7D8BA7F66661D40546A332A7A8C22" />
-        <StructuredData />
-      </head>
       <body className="font-noto antialiased">
+        <StructuredData />
         <ContentProtection />
         <GoogleAnalytics />
         <GoogleAdSense />
@@ -100,5 +102,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
