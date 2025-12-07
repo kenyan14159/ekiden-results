@@ -8,7 +8,8 @@ export interface Runner {
   grade?: number // 大学駅伝のみ
   affiliation?: string // 高校・中学駅伝の所属校
   rank: number | string
-  isSectionRecord: boolean
+  isSectionRecord?: boolean // 区間記録かどうか
+  isNewRecord?: boolean // 区間新記録かどうか（isSectionRecordの別名）
 }
 
 export interface Team {

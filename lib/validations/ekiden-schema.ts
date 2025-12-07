@@ -9,7 +9,8 @@ export const RunnerSchema = z.object({
   grade: z.number().optional(), // 大学駅伝用
   affiliation: z.string().optional(), // 高校・中学駅伝の所属校
   rank: z.union([z.number(), z.string()]), // 順位（"OP"などの場合があるため文字列も許容）
-  isSectionRecord: z.boolean(),
+  isSectionRecord: z.boolean().optional(), // 区間記録かどうか
+  isNewRecord: z.boolean().optional(), // 区間新記録かどうか（isSectionRecordの別名）
 })
 
 // チーム情報のスキーマ
