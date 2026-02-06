@@ -52,7 +52,7 @@ export function Footer() {
               </motion.div>
             )
           })}
-          
+
           {/* サイト情報 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export function Footer() {
                 <span className="font-light">各大会の公式結果をご確認ください</span>
               </div>
               <p className="text-sm text-gray-500 font-light">
-                © 2025 駅伝リザルト. All rights reserved.
+                © 2026 駅伝リザルト. All rights reserved.
               </p>
             </motion.div>
           </div>
